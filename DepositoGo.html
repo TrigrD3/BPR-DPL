@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Tabungan - BPR Dana Permata Lestari</title>
+    <title>Deposito Go - BPR Dana Permata Lestari</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,7 +17,7 @@
     ================================================== -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/Tabungan.css">
+    <link rel="stylesheet" href="css/DepositoLestari.css">
 
     <!-- script
     ================================================== -->
@@ -43,13 +43,14 @@
         </div>
     </div>
 
+
     <!-- header 
     ================================================== -->
     <header class="s-header">
 
         <div class="row">
             <div class="header-logo">
-                <a class="site-logo" href="#">
+                <a class="site-logo" href="index.php">
                     <img src="images/logo.svg" alt="Homepage">
 					<img src="images/tulisan.svg" alt="Homepage">
                 </a>
@@ -59,8 +60,8 @@
                 <div class="header-cta">
                     <ul class="header-main-nav">
                     <li><a href="index.html" title="Home">Home</a></li>
-                    <li class="current"><a class="smoothscroll" href="#tabungan" title="Tabungan">Tabungan</a></li>
-                    <li><a href="Deposito.html" title="Deposito">Deposito</a></li>
+                    <li><a href="Tabungan.html" title="Tabungan">Tabungan</a></li>
+                    <li class="current"><a href="Deposito.html" title="Deposito">Deposito</a></li>
                     <li><a href="Kredit.html" title="Kredit">Kredit</a></li>
                     <li><a href="Tentang.html" title="Tentang">Tentang</a></li>
                 </div>
@@ -71,27 +72,26 @@
 
     </header> <!-- end header -->
 
+
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home" data-parallax="scroll" data-image-src="images/bgutama.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home" data-parallax="scroll" data-image-src="images/bgutama.jpg" data-natural-width=3000 data-natural-height=1500 data-position-y=center>
+
+        <div class="shadow-overlay"></div>
 
         <div class="home-content">
 
             <div class="row home-content__main">
                     <h1>
-                        TABUNGAN
+                    Deposito <br> Deposito Lestari
                     </h1>
     
-                    <h3>
-                        Produk Tabungan di Bank Pengreditan Rakyat Dana Permata Lestari dirancang untuk Anda yang menginginkan program Tabungan menarik, berkualitas, dan berhadiah langsung.
-                    </h3>
-    
                     <div class="home-content__btn-wrap">
-                        <a href="#tabungan" class="btn home-content__btn smoothscroll">
+                        <a href="#deposito" class="btn home-content__btn smoothscroll">
                             Selengkapnya
                         </a>
                     </div>
-            </div> <!-- end home-content__main-->
+            </div> <!-- end home-content__left-->
 
             <ul class="home-content__social">
                 <li><a href="#0">Facebook</a></li>
@@ -101,62 +101,83 @@
 
         </div> <!-- end home-content -->
 
-        <a href="#tabungan" class="home-scroll smoothscroll">
+        <a href="#deposito" class="home-scroll smoothscroll">
             <span class="home-scroll__text">Scroll</span>
             <span class="home-scroll__icon"></span>
         </a> 
 
     </section> <!-- end s-home -->
 
-    <!-- isi
+    <!-- tabungan
     ================================================== -->
-    <section id="tabungan" class="s-tabungan target-section">
+    <section id="deposito" class="s-deposito target-section">
 
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
                 <h1 class="display-1">
-                    Tabungan<br>BPR Dana Permata Lestari
+                    Deposito Lestari
                 </h1>
+                <p class="lead">
+                    Pastikan dana cadangan Anda tidak terusik dan aman dengan DepositoGo. Sekarang, menyimpan dana cadangan
+                    jadi mudah dengan DepositoGo BPR Dana Permata Lestari. Bisa nego bunga, praktis, dan fleksibel. 
+                    Bisa dari mana saja dan kapan saja.
+                </p>
             </div>
         </div> <!-- end section-header -->
 
-        <div class="container">
-            <div class="menu-halaman">
-                <div class="card zoom" onclick="location.href='BukaTabungan.html'">
-                    <div class="bglogo">
-                        <!--<img src="../../assets/img/Inputdata.png" alt="">-->
-                    </div>
-                    <h2>Buka Tabungan</h2>
-                </div>
-    
-                <div class="card zoom" onclick="location.href='DaftarDebiturMaster.php'">
-                    <div class="bglogo1">
-                        <!--<img src="../../assets/img/Inputdata.png" alt="">-->
-                    </div>
-                    <h2>Tabungan Sikaya</h2>
-                </div>
+        <div class="row wide deposito-desc" data-aos="fade-up">
 
-                <div class="card zoom" onclick="location.href='sidebar.php'">
-                    <div class="bglogo2">
-                        <!--<img src="../../assets/img/logo1.png" alt="">-->
-                    </div>
-                    <h2>Tabungan Jumbo</h2>
+            <div class="col-full slick-slider deposito-desc__slider">
+
+                <div class="deposito-desc__slide">
+                    <h3>Promo Bulan Ini</h3>
+                    <ul class="item-plan__features"> 
+                        <li>Dapatkan spesial bunga deposito 5% p.a* untuk pembukaan rekening melalui LestariMobile</li>
+                    </ul>
                 </div>
-    
-                <div class="card zoom" onclick="location.href='sidebar.php'">
-                    <div class="bglogo3">
-                        <!--<img src="../../assets/img/logo1.png" alt="">-->
-                    </div>
-                    <h2>Tabungan U-Style</h2>
-                </div> 
-            </div>
+                <div class="deposito-desc__slide">
+                    <h3>Keunggulan</h3>
+
+                    <ul class="item-plan__features">
+                        <li>Lebih menguntungkan, bunga tinggi</li>
+                        <li>Dana aman, dijamin LPS sampai dengan 2 miliar</li>
+                        <li>Mudah penempatan dari rumah tanpa perlu datang ke bank</li>
+                        <li>Mudah atur cashflow, pencairan bebas penalti</li>
+                        <li>Mudah atur cashflow, pencairan bebas penalti</li>
+                    </ul>
+                </div>  <!-- end deposito-desc__slide -->
+
+                <div class="deposito-desc__slide">
+                    <h3>Skema</h3>
+
+                    <ul class="item-plan__features">
+                        <li>Jangka waktu simpanan : 1 bulan, 3 bulan, 6 bulan dan 12 bulan</li>
+                        <li>Bunga dikenakan pajak sesuai ketentuan yang berlaku</li>
+                        <li>Bunga dihitung berdasarkan jumlah hari sebenarnya (1 tahun dihitung 365 hari)</li>
+                    </ul>
+                </div>  <!-- end deposito-desc__slide --> 
+				
+				<div class="deposito-desc__slide">
+                    <h3>Langkah Berikutnya</h3>
+
+                    <ul class="item-plan__features">
+                        <li>Buka Apps LestariMobile Klik Disini, jika belum memiliki rekening BPR Lestari silakan kunjungi halaman pembukaan rekening online disini.</li>
+                        <li>Kemudian pilih menu pembukaan deposito</li>
+                        <li>Jika telah memiliki Deal Code (dari PBO) silakan pilih 'Buka Deposito dengan Deal Code', jika belum langsung saja memilih 'Buka Deposito'</li>
+                        <li>Masukkan informasi yang dibutuhkan saat pembukaan deposito </li>
+                        <li>Setelah selesai mengisi data, silakan submit kemudian akan keluar konfirmasi apakah kita yakin untuk membuka rekening deposito</li>
+                        <li>Masukkan MPIN anda</li>
+                        <li>Pembukaan rekening Deposito dari rumah aja telah berhasil</li>
+                        <li>Jika masih bingung, tonton saja video tutorial membuka DepositoGo klik disini</li>
+                    </ul>
+                </div>  <!-- end deposito-desc__slide --> 
+
+            </div> <!-- end deposito-desc__slider -->
             
-        </div>
-        
-        
-    </section>
+        </div> <!-- end deposito-desc -->
 
-    
+    </section> <!-- end s-deposito -->
+
     <!-- footer
     ================================================== -->
     <footer class="s-footer footer">
@@ -220,6 +241,7 @@
         </div>
 
     </footer> <!-- end s-footer -->
+
 
     <!-- Java Script
     ================================================== -->
