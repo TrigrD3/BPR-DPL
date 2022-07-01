@@ -60,8 +60,6 @@
  *
  * =================================================================== */
 
-
-
 /* ===================================================================
  * # base style overrides
  *
@@ -70,11 +68,10 @@ html {
   font-size: 10px;
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   html {
     font-size: 9.444444444444444px;
   }
-
 }
 
 html,
@@ -84,7 +81,7 @@ body {
 
 body {
   background: #121619;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: normal;
@@ -94,12 +91,11 @@ body {
   padding: 0;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #4282C8;
+  color: #4282c8;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -119,74 +115,112 @@ a:active {
  * # typography & general theme styles
  * 
  * ------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Chivo", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Chivo', sans-serif;
   font-weight: 600;
   color: #000000;
   text-rendering: optimizeLegibility;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
   margin-top: 6rem;
   margin-bottom: 1.6rem;
 }
 
-@media only screen and (max-width:600px) {
-  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+@media only screen and (max-width: 600px) {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4 {
     margin-top: 5.6rem;
   }
 }
 
-h5, .h5, h6, .h6 {
+h5,
+.h5,
+h6,
+.h6 {
   margin-top: 4.8rem;
   margin-bottom: 1.2rem;
 }
 
-@media only screen and (max-width:600px) {
-  h5, .h5, h6, .h6 {
+@media only screen and (max-width: 600px) {
+  h5,
+  .h5,
+  h6,
+  .h6 {
     margin-top: 4rem;
     margin-bottom: 0.8rem;
   }
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 3.6rem;
   line-height: 1.222;
-  letter-spacing: -.05rem;
+  letter-spacing: -0.05rem;
 }
 
-@media only screen and (max-width:600px) {
-  h1, .h1 {
+@media only screen and (max-width: 600px) {
+  h1,
+  .h1 {
     font-size: 3.3rem;
-    letter-spacing: -.07rem;
+    letter-spacing: -0.07rem;
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 3rem;
   line-height: 1.2;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 2.4rem;
   line-height: 1.333;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 2.1rem;
   line-height: 1.333;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 1.8rem;
   line-height: 1.333;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 1.6rem;
   line-height: 1.25;
   text-transform: uppercase;
-  letter-spacing: .16rem;
+  letter-spacing: 0.16rem;
 }
 
 p img {
@@ -194,7 +228,7 @@ p img {
 }
 
 p.lead {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   font-size: 2.8rem;
   line-height: 1.571;
@@ -202,18 +236,16 @@ p.lead {
   color: #898989;
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   p.lead {
     font-size: 2.6rem;
   }
-
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   p.lead {
     font-size: 2.4rem;
   }
-
 }
 
 em,
@@ -226,13 +258,13 @@ b {
 
 em,
 i {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: italic;
 }
 
 strong,
 b {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
 }
 
@@ -248,12 +280,12 @@ blockquote {
 }
 
 blockquote:before {
-  content: "\201C";
+  content: '\201C';
   font-size: 10rem;
   line-height: 0px;
   margin: 0;
   color: #c2c2c2;
-  color: #4282C8;
+  color: #4282c8;
   font-family: Arial, Sans-serif;
   position: absolute;
   top: 4.4rem;
@@ -261,7 +293,7 @@ blockquote:before {
 }
 
 blockquote p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   padding: 0;
   font-size: 2.6rem;
@@ -271,14 +303,14 @@ blockquote p {
 
 blockquote cite {
   display: block;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.25;
 }
 
 blockquote cite:before {
-  content: "\2014 \0020";
+  content: '\2014 \0020';
 }
 
 blockquote cite,
@@ -289,11 +321,11 @@ blockquote cite a:visited {
 }
 
 abbr {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   font-variant: small-caps;
   text-transform: lowercase;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
   color: #898989;
 }
 
@@ -302,7 +334,7 @@ kbd,
 samp,
 code,
 pre {
-  font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+  font-family: Consolas, 'Andale Mono', Courier, 'Courier New', monospace;
 }
 
 pre {
@@ -313,8 +345,8 @@ pre {
 
 code {
   font-size: 1.4rem;
-  margin: 0 .2rem;
-  padding: .3rem .7rem;
+  margin: 0 0.2rem;
+  padding: 0.3rem 0.7rem;
   white-space: nowrap;
   background: #eaeaea;
   border: 1px solid #d6d6d6;
@@ -358,7 +390,6 @@ hr {
   height: 0;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## Lists
  * ------------------------------------------------------------------- */
@@ -380,30 +411,30 @@ ul {
 }
 
 ul li {
-  padding-left: .4rem;
+  padding-left: 0.4rem;
 }
 
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: .8rem 0 .8rem 1.6rem;
+  margin: 0.8rem 0 0.8rem 1.6rem;
 }
 
 ul.disc li {
   display: list-item;
   list-style: none;
-  padding: 0 0 0 .8rem;
+  padding: 0 0 0 0.8rem;
   position: relative;
 }
 
 ul.disc li::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #4282C8;
+  background: #4282c8;
   position: absolute;
   left: -16px;
   top: 11px;
@@ -412,13 +443,12 @@ ul.disc li::before {
 
 dt {
   margin: 0;
-  color: #4282C8;
+  color: #4282c8;
 }
 
 dd {
   margin: 0 0 0 2rem;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## responsive video container
@@ -441,7 +471,6 @@ dd {
   height: 100%;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## floated image
  * ------------------------------------------------------------------- */
@@ -453,7 +482,6 @@ img.pull-left {
   margin: 1.2rem 2.8rem 0 0;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## tables
  * ------------------------------------------------------------------- */
@@ -461,7 +489,7 @@ table {
   border-width: 0;
   width: 100%;
   max-width: 100%;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   border-collapse: collapse;
 }
 
@@ -474,7 +502,7 @@ td {
 
 th {
   color: #000000;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
 }
 
@@ -492,7 +520,6 @@ td:last-child {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## Spacing 
@@ -520,7 +547,6 @@ form,
   margin-bottom: 3.2rem;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## pace.js styles - minimal 
  * ------------------------------------------------------------------- */
@@ -538,7 +564,7 @@ form,
 
 .pace .pace-progress {
   z-index: 900;
-  background: #4282C8;
+  background: #4282c8;
   width: 100%;
   height: 4px;
   position: fixed;
@@ -549,8 +575,6 @@ form,
 .oldie .pace {
   display: none;
 }
-
-
 
 /* ===================================================================
  * # preloader 
@@ -588,8 +612,8 @@ form,
 }
 
 #loader > div {
-  content: "";
-  background: #4282C8;
+  content: '';
+  background: #4282c8;
   width: 6px;
   height: 6px;
   position: absolute;
@@ -633,7 +657,6 @@ form,
   80% {
     top: 0;
   }
-
 }
 
 @keyframes dots-jump {
@@ -648,7 +671,6 @@ form,
   80% {
     top: 0;
   }
-
 }
 
 /* dots fade */
@@ -678,7 +700,6 @@ form,
   80% {
     opacity: 1;
   }
-
 }
 
 @keyframes dots-fade {
@@ -693,7 +714,6 @@ form,
   80% {
     opacity: 1;
   }
-
 }
 
 /* dots pulse */
@@ -726,7 +746,6 @@ form,
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-
 }
 
 @keyframes dots-pulse {
@@ -744,10 +763,7 @@ form,
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-
 }
-
-
 
 /* ===================================================================
  * # forms 
@@ -757,13 +773,13 @@ fieldset {
   border: none;
 }
 
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
 textarea,
 select {
   display: block;
@@ -772,7 +788,7 @@ select {
   border: 0;
   outline: none;
   color: #545454;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.6rem;
   line-height: 3.2rem;
   max-width: 100%;
@@ -841,88 +857,81 @@ textarea {
   min-height: 25.6rem;
 }
 
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
 textarea:focus,
 select:focus {
   color: #000000;
   box-shadow: 0 0 5px rgba(91, 79, 150, 0.8);
-  border: 1px solid #4282C8;
+  border: 1px solid #4282c8;
 }
 
 label,
 legend {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 2;
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   color: #000000;
   display: block;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   display: inline;
 }
 
 label > .label-text {
   display: inline-block;
   margin-left: 1rem;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   line-height: inherit;
 }
 
-label > input[type="checkbox"],
-label > input[type="radio"] {
+label > input[type='checkbox'],
+label > input[type='radio'] {
   margin: 0;
   position: relative;
-  top: .2rem;
+  top: 0.2rem;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## Style Placeholder Text
  * ------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
-
   /* WebKit, Blink, Edge */
   color: #9c9c9c;
 }
 
 :-moz-placeholder {
-
   /* Mozilla Firefox 4 to 18 */
   color: #9c9c9c;
   opacity: 1;
 }
 
 ::-moz-placeholder {
-
   /* Mozilla Firefox 19+ */
   color: #9c9c9c;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-
   /* Internet Explorer 10-11 */
   color: #9c9c9c;
 }
 
 ::-ms-input-placeholder {
-
   /* Microsoft Edge */
   color: #9c9c9c;
 }
 
 ::placeholder {
-
   /* Most modern browsers support this now. */
   color: #9c9c9c;
 }
@@ -931,25 +940,20 @@ label > input[type="radio"] {
   color: #9c9c9c !important;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## Change Autocomplete styles in Chrome
  * ------------------------------------------------------------------- */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
+input:-webkit-autofill:focus input:-webkit-autofill,
 textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #4282C8;
+  -webkit-text-fill-color: #4282c8;
   transition: background-color 5000s ease-in-out 0s;
 }
-
-
 
 /* ===================================================================
  * # buttons
@@ -957,19 +961,19 @@ select:-webkit-autofill:focus {
  * ------------------------------------------------------------------- */
 .btn,
 button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
   display: inline-block;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   height: 6rem;
   line-height: 5.6rem;
   padding: 0 3.2rem;
-  margin: 0 .4rem 1.6rem 0;
+  margin: 0 0.4rem 1.6rem 0;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -984,14 +988,14 @@ input[type="button"] {
 
 .btn:hover,
 button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover,
+input[type='submit']:hover,
+input[type='reset']:hover,
+input[type='button']:hover,
 .btn:focus,
 button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
+input[type='submit']:focus,
+input[type='reset']:focus,
+input[type='button']:focus {
   background-color: #c2c2c2;
   border-color: #c2c2c2;
   color: #000000;
@@ -1002,24 +1006,24 @@ input[type="button"]:focus {
  * ------------------------------------------------- */
 .btn.btn--primary,
 button.btn--primary,
-input[type="submit"].btn--primary,
-input[type="reset"].btn--primary,
-input[type="button"].btn--primary {
-  background: #4282C8;
-  border-color: #4282C8;
+input[type='submit'].btn--primary,
+input[type='reset'].btn--primary,
+input[type='button'].btn--primary {
+  background: #4282c8;
+  border-color: #4282c8;
   color: #ffffff;
 }
 
 .btn.btn--primary:hover,
 button.btn--primary:hover,
-input[type="submit"].btn--primary:hover,
-input[type="reset"].btn--primary:hover,
-input[type="button"].btn--primary:hover,
+input[type='submit'].btn--primary:hover,
+input[type='reset'].btn--primary:hover,
+input[type='button'].btn--primary:hover,
 .btn.btn--primary:focus,
 button.btn--primary:focus,
-input[type="submit"].btn--primary:focus,
-input[type="reset"].btn--primary:focus,
-input[type="button"].btn--primary:focus {
+input[type='submit'].btn--primary:focus,
+input[type='reset'].btn--primary:focus,
+input[type='button'].btn--primary:focus {
   background: #514686;
   border-color: #514686;
 }
@@ -1071,13 +1075,10 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-
-
 /* =================================================================== 
  * # additional components
  *
  * ------------------------------------------------------------------- */
-
 
 /* ------------------------------------------------------------------- 
  * ## alert box 
@@ -1087,7 +1088,7 @@ input::-moz-focus-inner {
   position: relative;
   margin-bottom: 3.2rem;
   border-radius: 4px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.6;
@@ -1124,7 +1125,6 @@ input::-moz-focus-inner {
   color: #c3ab22;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## additional typo styles 
  * ------------------------------------------------------------------- */
@@ -1134,8 +1134,8 @@ input::-moz-focus-inner {
 .drop-cap:first-letter {
   float: left;
   margin: 0;
-  padding: 1.6rem .8rem 0 0;
-  font-family: "Chivo", sans-serif;
+  padding: 1.6rem 0.8rem 0 0;
+  font-family: 'Chivo', sans-serif;
   font-weight: 700;
   font-size: 8.6rem;
   line-height: 6rem;
@@ -1154,20 +1154,20 @@ input::-moz-focus-inner {
 
 .lining dt + dt:before,
 .lining dd + dt:before {
-  content: "\A";
+  content: '\A';
   white-space: pre;
 }
 
 .lining dd + dd:before {
-  content: ", ";
+  content: ', ';
 }
 
 .lining dd + dd:before {
-  content: ", ";
+  content: ', ';
 }
 
 .lining dd:before {
-  content: ": ";
+  content: ': ';
   margin-left: -0.2em;
 }
 
@@ -1179,7 +1179,7 @@ input::-moz-focus-inner {
 }
 
 .dictionary-style dt + dt:before {
-  content: ", ";
+  content: ', ';
   margin-left: -0.2em;
 }
 
@@ -1189,7 +1189,7 @@ input::-moz-focus-inner {
 }
 
 .dictionary-style dd:before {
-  content: counter(definitions, decimal) ". ";
+  content: counter(definitions, decimal) '. ';
 }
 
 /** 
@@ -1215,11 +1215,11 @@ input::-moz-focus-inner {
   position: absolute;
   font-size: 10rem;
   font-family: Arial, Sans-serif;
-  color: #4282C8;
+  color: #4282c8;
 }
 
 .pull-quote:before {
-  content: "\201C";
+  content: '\201C';
   top: -2.8rem;
   left: -6px;
 }
@@ -1238,7 +1238,7 @@ input::-moz-focus-inner {
 }
 
 .pull-quote blockquote p {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   padding: 0;
   font-size: 2.6rem;
@@ -1282,7 +1282,7 @@ input::-moz-focus-inner {
 
 .stats-tabs li a {
   display: inline-block;
-  font-family: "Chivo", sans-serif;
+  font-family: 'Chivo', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 1.6;
@@ -1291,20 +1291,19 @@ input::-moz-focus-inner {
 }
 
 .stats-tabs li a:hover {
-  color: #4282C8;
+  color: #4282c8;
 }
 
 .stats-tabs li a em {
   display: block;
-  margin: .8rem 0 0 0;
-  font-family: "Nunito Sans", sans-serif;
+  margin: 0.8rem 0 0 0;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5rem;
   line-height: 2.4rem;
   font-weight: normal;
   font-style: normal;
   color: #898989;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## skillbars 
@@ -1315,7 +1314,7 @@ input::-moz-focus-inner {
 }
 
 .skill-bars li {
-  height: .4rem;
+  height: 0.4rem;
   background: #d6d6d6;
   width: 100%;
   margin-bottom: 6.8rem;
@@ -1327,17 +1326,17 @@ input::-moz-focus-inner {
   position: absolute;
   left: 0;
   top: -4rem;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   font-size: 1.4rem;
   line-height: 2.4rem;
 }
 
 .skill-bars li .progress {
-  background: #4282C8;
+  background: #4282c8;
   position: relative;
   height: 100%;
 }
@@ -1347,12 +1346,12 @@ input::-moz-focus-inner {
   right: 0;
   top: -3.6rem;
   display: block;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #ffffff;
   font-size: 1.1rem;
   line-height: 1;
   background: #000000;
-  padding: .8rem .8rem;
+  padding: 0.8rem 0.8rem;
   border-radius: 3px;
 }
 
@@ -1364,7 +1363,7 @@ input::-moz-focus-inner {
   border-right: 5px solid transparent;
   border-left: 5px solid transparent;
   border-top: 5px solid #000000;
-  content: "";
+  content: '';
 }
 
 .skill-bars li .percent5 {
@@ -1447,8 +1446,6 @@ input::-moz-focus-inner {
   width: 100%;
 }
 
-
-
 /* ===================================================================
  * # reusable and common theme styles
  * ------------------------------------------------------------------- */
@@ -1459,12 +1456,11 @@ input::-moz-focus-inner {
   max-width: 1000px;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## display headings
  * ------------------------------------------------------------------- */
 .display-1 {
-  font-family: "Chivo", sans-serif;
+  font-family: 'Chivo', sans-serif;
   font-weight: 600;
   font-size: 5.5rem;
   line-height: 1.236;
@@ -1474,7 +1470,7 @@ input::-moz-focus-inner {
 }
 
 .display-2 {
-  font-family: "Chivo", sans-serif;
+  font-family: 'Chivo', sans-serif;
   font-weight: 600;
   font-size: 4.6rem;
   line-height: 1.217;
@@ -1504,13 +1500,13 @@ input::-moz-focus-inner {
 }
 
 .section-header.has-bottom-sep:after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
 
 .section-header.has-bottom-sep::before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 1px;
   width: 320px;
@@ -1538,7 +1534,7 @@ input::-moz-focus-inner {
  * responsive:
  * reusable and common theme styles
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .display-1 {
     font-size: 5.2rem;
   }
@@ -1550,7 +1546,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .display-1 {
     font-size: 4.4rem;
   }
@@ -1568,13 +1564,13 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .section-header.has-bottom-sep::before {
     width: 240px;
   }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .display-1 {
     font-size: 4.2rem;
   }
@@ -1583,7 +1579,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .display-1 {
     font-size: 3.8rem;
   }
@@ -1595,7 +1591,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:350px) {
+@media only screen and (max-width: 350px) {
   .display-1 {
     font-size: 3.6rem;
   }
@@ -1623,7 +1619,7 @@ input::-moz-focus-inner {
 }
 
 .s-header.sticky {
-  background-color: #4282C8;
+  background-color: #4282c8;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: fixed;
@@ -1636,7 +1632,7 @@ input::-moz-focus-inner {
 .header-logo {
   z-index: 601;
   display: inline-block;
-  margin:6px 0 0 0;
+  margin: 6px 0 0 0;
   padding: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1664,7 +1660,7 @@ input::-moz-focus-inner {
  * ## navigation 
  * ------------------------------------------------------------------- */
 .header-nav-wrap {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   padding-left: 180px;
 }
@@ -1719,10 +1715,10 @@ input::-moz-focus-inner {
   height: 42px;
   width: 42px;
   line-height: 42px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1.4rem;
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -1803,19 +1799,19 @@ input::-moz-focus-inner {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width: 1400px) {
   .header-nav-wrap .header-cta {
     right: 20px;
   }
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   .header-nav-wrap .header-cta {
     right: 0;
   }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .header-nav-wrap {
     padding-left: 170px;
   }
@@ -1829,7 +1825,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .header-nav-wrap {
     text-align: right;
   }
@@ -1838,7 +1834,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .s-header {
     background-color: #0e1113;
     position: fixed;
@@ -1901,7 +1897,7 @@ input::-moz-focus-inner {
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .header-logo {
     left: 40px;
   }
@@ -1916,7 +1912,7 @@ input::-moz-focus-inner {
 /* -------------------------------------------------------------------
  * make sure the menu is visible on larger screens
  * ------------------------------------------------------------------- */
-@media only screen and (min-width:801px) {
+@media only screen and (min-width: 801px) {
   .header-nav-wrap {
     display: block !important;
   }
@@ -1934,13 +1930,13 @@ input::-moz-focus-inner {
 
 .s-home::before {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: .8;
+  opacity: 0.8;
   background-color: #000000;
 }
 
@@ -1961,7 +1957,7 @@ input::-moz-focus-inner {
 }
 
 .home-content h1 {
-  font-family: "Chivo", sans-serif;
+  font-family: 'Chivo', sans-serif;
   font-weight: 600;
   font-size: 7.2rem;
   line-height: 1.222;
@@ -1974,17 +1970,17 @@ input::-moz-focus-inner {
 
 .home-content h1::before {
   display: block;
-  content: "";
+  content: '';
   height: 2px;
   width: 8rem;
-  background-color: #4282C8;
+  background-color: #4282c8;
   position: absolute;
   left: 8px;
   top: 0;
 }
 
 .home-content h3 {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   font-size: 2.4rem;
   line-height: 1.667;
@@ -2017,8 +2013,8 @@ input::-moz-focus-inner {
 
 .home-content__btn-wrap .home-content__btn:hover,
 .home-content__btn-wrap .home-content__btn:focus {
-  background-color: #4282C8;
-  border: 0.2rem solid #4282C8;
+  background-color: #4282c8;
+  border: 0.2rem solid #4282c8;
   color: #ffffff;
 }
 
@@ -2033,7 +2029,7 @@ input::-moz-focus-inner {
   text-transform: uppercase;
   letter-spacing: 4px;
   position: absolute;
-  right: calc(40px + (5.6rem/2));
+  right: calc(40px + (5.6rem / 2));
   top: 50%;
   -webkit-transform: rotate(-90deg) translate3d(50%, 0, 0);
   -ms-transform: rotate(-90deg) translate3d(50%, 0, 0);
@@ -2075,13 +2071,13 @@ input::-moz-focus-inner {
 
 .home-scroll__text {
   display: inline-block;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 600;
   font-size: 11px;
   line-height: 5.6rem;
   text-transform: uppercase;
-  letter-spacing: .3rem;
-  color: #4282C8;
+  letter-spacing: 0.3rem;
+  color: #4282c8;
   border-bottom: 1px solid transparent;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -2161,7 +2157,6 @@ html.no-csstransitions .home-content__main {
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-
 }
 
 /* fade out */
@@ -2177,7 +2172,6 @@ html.no-csstransitions .home-content__main {
     -ms-transform: translate3d(0, -150%, 0);
     transform: translate3d(0, -150%, 0);
   }
-
 }
 
 @keyframes fadeOut {
@@ -2197,7 +2191,7 @@ html.no-csstransitions .home-content__main {
 /* ------------------------------------------------------------------- 
  * responsive: home
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1700px) {
+@media only screen and (max-width: 1700px) {
   .home-content h1 {
     font-size: 6.8rem;
   }
@@ -2209,13 +2203,13 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:1600px) {
+@media only screen and (max-width: 1600px) {
   .home-scroll__text {
     display: none;
   }
 }
 
-@media only screen and (max-width:1500px) {
+@media only screen and (max-width: 1500px) {
   .home-content {
     padding-top: 23.2rem;
   }
@@ -2236,7 +2230,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width: 1400px) {
   .home-content h1 {
     font-size: 6rem;
   }
@@ -2253,7 +2247,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:1300px) {
+@media only screen and (max-width: 1300px) {
   .home-content {
     padding-top: 20rem;
   }
@@ -2272,7 +2266,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   .s-home {
     display: block;
     overflow: hidden;
@@ -2318,7 +2312,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .home-content {
     padding-top: 16.8rem;
   }
@@ -2332,14 +2326,14 @@ html.no-csstransitions .home-content__main {
     max-width: 500px;
   }
   .home-content__social {
-    right: calc(30px + (5.6rem/2));
+    right: calc(30px + (5.6rem / 2));
   }
   .home-scroll {
     right: 3rem;
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .home-content h1 {
     font-size: 6rem;
   }
@@ -2351,7 +2345,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width: 700px) {
   .home-content h1 {
     font-size: 5.6rem;
   }
@@ -2364,7 +2358,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .home-content h1 {
     font-size: 5.2rem;
   }
@@ -2385,7 +2379,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .home-content {
     padding-top: 16rem;
   }
@@ -2401,7 +2395,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .home-content {
     padding-top: 15.2rem;
   }
@@ -2423,7 +2417,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:350px) {
+@media only screen and (max-width: 350px) {
   .home-content__right {
     width: 280px;
   }
@@ -2464,7 +2458,7 @@ html.no-csstransitions .home-content__main {
   width: 50%;
 }
 
-.kredit-desc__slide h3{
+.kredit-desc__slide h3 {
   font-weight: 800;
   color: #000000;
 }
@@ -2472,7 +2466,7 @@ html.no-csstransitions .home-content__main {
 .kredit-desc__slide h3:hover,
 .kredit-desc__slide h3:focus,
 .kredit-desc__slide h3:active {
-  color: #4282C8;
+  color: #4282c8;
 }
 
 .item-plan__features {
@@ -2484,38 +2478,37 @@ html.no-csstransitions .home-content__main {
 .item-plan__features li {
   display: list-item;
   list-style: none;
-  padding: .2rem 0 .2rem .8rem;
+  padding: 0.2rem 0 0.2rem 0.8rem;
   position: relative;
 }
 
 .item-plan__features li::before {
-  content: "\f00c";
+  content: '\f00c';
   font-family: 'Font Awesome 5 Free';
   font-size: 1.2rem;
   font-weight: 900;
   display: inline-block;
-  color: #4282C8;
+  color: #4282c8;
   margin-right: 18px;
 }
-
 
 /* ------------------------------------------------------------------- 
  * responsive:
  * tabungan
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1400px) {
+@media only screen and (max-width: 1400px) {
   .s-kredit {
-    padding-bottom: calc((62.4rem/2) + 9.6rem);
+    padding-bottom: calc((62.4rem / 2) + 9.6rem);
   }
 }
 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   .s-kredit {
     padding-top: 18.4rem;
   }
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .s-kredit {
     padding-top: 17.2rem;
   }
@@ -2524,13 +2517,13 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .s-kredit {
     padding-top: 16rem;
   }
 }
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width: 700px) {
   .kredit-desc {
     max-width: 550px;
   }
@@ -2540,10 +2533,10 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .s-kredit {
     padding-top: 14.8rem;
-    padding-bottom: calc((60rem/2) + 9.6rem);
+    padding-bottom: calc((60rem / 2) + 9.6rem);
   }
   .kredit-desc {
     max-width: 500px;
@@ -2553,16 +2546,16 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   .s-kredit {
-    padding-bottom: calc((52rem/2) + 9.6rem);
+    padding-bottom: calc((52rem / 2) + 9.6rem);
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .s-kredit {
     padding-top: 14rem;
-    padding-bottom: calc((48rem/2) + 9.6rem);
+    padding-bottom: calc((48rem / 2) + 9.6rem);
   }
 }
 /* ===================================================================
@@ -2577,8 +2570,8 @@ html.no-csstransitions .home-content__main {
 
 .s-footer h4 {
   margin-top: 0;
-  margin-bottom: 1.6rem;	
-  color: #4282C8;
+  margin-bottom: 1.6rem;
+  color: #4282c8;
 }
 
 .s-footer .footer__mail-link {
@@ -2589,7 +2582,7 @@ html.no-csstransitions .home-content__main {
 .s-footer .footer__mail-link:hover,
 .s-footer .footer__mail-link:focus,
 .s-footer .footer__mail-link:active {
-  color: #4282C8;
+  color: #4282c8;
 }
 
 .footer__bottom {
@@ -2625,7 +2618,7 @@ html.no-csstransitions .home-content__main {
 .footer__social li a:hover,
 .footer__social li a:focus,
 .footer__social li a:active {
-  background-color: #4282C8;
+  background-color: #4282c8;
   color: #ffffff;
 }
 
@@ -2649,7 +2642,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .ss-copyright span::after {
-  content: "·";
+  content: '·';
   display: inline-block;
   padding: 0 1rem 0 1.2rem;
   color: white;
@@ -2701,7 +2694,7 @@ html.no-csstransitions .home-content__main {
 .go-top a:hover,
 .go-top a:focus,
 .go-top a:active {
-  background-color: #4282C8;
+  background-color: #4282c8;
 }
 
 .go-top.link-is-visible {
@@ -2716,20 +2709,20 @@ html.no-csstransitions .home-content__main {
  * responsive:
  * footer
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width: 1200px) {
   .footer__bottom {
     font-size: 1.7rem;
     line-height: 1.882;
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
   .go-top {
     right: 3rem;
   }
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
   .s-footer {
     padding-top: 14.8rem;
   }
@@ -2737,10 +2730,9 @@ html.no-csstransitions .home-content__main {
   .footer__bottom .right {
     margin-top: 5.6rem;
   }
-
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .s-footer {
     padding-top: 12rem;
     padding-bottom: 4rem;
@@ -2773,7 +2765,7 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
   .ss-copyright span {
     font-size: 16px;
   }

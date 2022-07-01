@@ -39,9 +39,9 @@
  *    ## home social
  *    ## home scroll
  *    ## home animations
- *  # about
- *    ## about-desc slider
- *  # s-about-how
+ *  # tabungan
+ *    ## tabungan-desc slider
+ *  # s-tabungan-how
  *    ## video button
  *    ## stats
  *    ## process
@@ -66,6 +66,24 @@
  * ------------------------------------------------------------------- */
 html {
   font-size: 10px;
+}
+
+.container-simulasi {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group1 {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.border {
+  border: 1px solid #929090;
 }
 
 @media only screen and (max-width: 400px) {
@@ -383,10 +401,10 @@ mark {
 }
 
 hr {
-  border: solid #eaeaea;
+  border: solid #b1b1b1;
   border-width: 1px 0 0;
   clear: both;
-  margin: 2.4rem 0 1.6rem;
+  margin: 2rem 0 1.6rem;
   height: 0;
 }
 
@@ -1530,6 +1548,53 @@ input::-moz-focus-inner {
   outline: none;
 }
 
+.slick-slider .slick-dots {
+  display: block;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 4.2rem 0 0 0;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.slick-slider .slick-dots li {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin: 0;
+  padding: 9px;
+  cursor: pointer;
+}
+
+.slick-slider .slick-dots li button {
+  display: block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.slick-slider .slick-dots li button:hover,
+.slick-slider .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-slider .slick-dots li.slick-active button,
+.slick-slider .slick-dots li:hover button {
+  background: #4282c8;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * reusable and common theme styles
@@ -1924,7 +1989,7 @@ input::-moz-focus-inner {
 .s-home {
   display: table;
   width: 100%;
-  height: 500px;
+  min-height: 788px;
   position: relative;
 }
 
@@ -2423,447 +2488,268 @@ html.no-csstransitions .home-content__main {
   }
 }
 
-/* ------------------------------------------------------------------- 
- * sejarah
+/* ===================================================================
+ * # kredit
  * ------------------------------------------------------------------- */
-.s-sejarah {
-  background-color: #ffffff;
-  padding-bottom: 16rem;
-}
-
-.process-wrap {
+.s-pricing {
   padding-top: 10rem;
-}
-
-.process-wrap h2 {
-  margin-bottom: 4rem;
-  padding: 0 10px;
-}
-
-.process {
-  position: relative;
-  left: 27px;
-  width: 100%;
-  max-width: 1080px;
-  margin-top: 8rem;
-  margin-left: auto;
-  margin-right: auto;
-  clear: both;
-  counter-reset: ctr;
-}
-
-.process:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.process::before,
-.process::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: #eaeaea;
-  position: absolute;
-  top: 0;
-}
-
-.process::before {
-  left: 0;
-}
-
-.process::after {
-  left: 50%;
-}
-
-.process .process__steps {
-  width: 100%;
-}
-
-.process .step {
-  padding: 0 40px 1.5rem 60px;
-  position: relative;
-  min-height: 240px;
-}
-
-.process .step h3 {
-  margin-bottom: 2.4rem;
-}
-
-.process .step::before {
-  display: block;
-  font-family: 'Chivo', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  content: counter(ctr);
-  counter-increment: ctr;
-  color: #ffffff;
-  height: 54px;
-  width: 54px;
-  line-height: 54px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #4282c8;
-  box-shadow: 0 0 0 15px #ffffff;
-  z-index: 500;
-  position: absolute;
-  top: -12px;
-  left: -27px;
-}
-
-.process .btnTabungan {
-  padding: 0.5rem;
   background-color: #ffffff;
-  border-radius: 5px;
-  border: 0.1rem solid #000000;
-  color: #000000;
-  float: right;
+  position: relative;
 }
 
-.process .btnTabungan:hover,
-.process .btnTabungan:focus {
+.plans {
+  max-width: 100%;
+}
+
+.item-plan {
+  padding: 0 30px;
+}
+
+.item-plan__block {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.item-plan__title {
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.333;
+  color: #000000;
+  margin: 0 0 1.6rem 0;
+  text-align: center;
+}
+
+.item-plan--popular {
+  color: white;
+}
+
+.item-plan--popular .item-plan__block {
   background-color: #4282c8;
-  border: 0.2rem solid #4282c8;
+  border: none;
+}
+
+.item-plan--popular .item-plan__title {
   color: #ffffff;
+}
+
+.item-plan__bottom-part p {
+  text-align: justify;
+}
+
+.ket {
+  font-size: 70%;
+}
+
+.item-plan--popular .btn {
+  background-color: #4282c8;
+  font-size: 60%;
+  font-weight: 5px;
+  border: 0.2rem solid #ffffff;
+  color: #ffffff;
+}
+
+.item-plan--popular .btn:hover,
+.item-plan--popular .btn:focus {
+  background-color: #ffffff;
+  border: 0.2rem solid #ffffff;
+  color: #4282c8;
 }
 
 /* ------------------------------------------------------------------- 
-   * responsive:
-   * deposito
-   * ------------------------------------------------------------------- */
-@media only screen and (max-width: 1400px) {
-  .process {
-    max-width: 1000px;
-  }
-}
-
+ * responsive:
+ * kredit
+ * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
-  .btn-video {
-    left: 9%;
+  .s-pricing {
+    padding-top: 18.4rem;
   }
-
-  .stats {
-    padding: 0 10%;
-  }
-
-  .item-stats {
-    font-size: 2.6rem;
-  }
-
-  .item-stats span {
-    line-height: 7.2rem;
-  }
-
-  .item-stats__num {
-    font-size: 6.6rem;
-  }
-
-  .process {
-    max-width: 900px;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .process {
+  .plans {
     max-width: 800px;
+  }
+  .item-plan--popular .btn {
+    margin-left: 65px;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  .item-stats {
-    font-size: 2.2rem;
-  }
-
-  .item-stats span {
-    line-height: 6rem;
-  }
-
-  .item-stats__num {
-    font-size: 6rem;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .stats {
-    bottom: 5.6rem;
-  }
-
-  .item-stats {
-    float: none;
-    width: auto;
-    font-size: 1.8rem;
-    margin-bottom: 1.6rem;
-  }
-
-  .item-stats span {
-    display: block;
-    line-height: 1;
-  }
-
-  .item-stats__num {
-    font-size: 5.4rem;
-  }
-
-  .item-stats__title {
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .process {
-    max-width: 600px;
-  }
-
-  .process::after {
-    display: none;
-  }
-
-  .process .step {
-    width: 100% !important;
-    float: none !important;
-    clear: both !important;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 16px;
-    min-height: auto;
-    padding: 0 30px 0.9rem 50px;
+  .s-pricing {
+    padding-top: 17.2rem;
+    padding-bottom: 17.2rem;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .process {
-    left: 0;
+  .s-pricing {
+    padding-top: 16rem;
+    padding-bottom: 14.8rem;
   }
-
-  .process::before {
-    left: 30px;
+  .plans {
+    max-width: 500px;
   }
-
-  .process .step {
-    padding: 0 10px 0 80px;
-  }
-
-  .process .step::before {
-    font-size: 1.6rem;
-    height: 44px;
-    width: 44px;
-    line-height: 44px;
-    top: -8px;
-    left: 8px;
+  .item-plan--popular .btn {
+    margin-left: 117px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .s-tabungan-how {
-    padding-bottom: 14.4rem;
-  }
-
-  .video-bg {
-    height: 60rem;
-    margin-top: calc((60rem / 2) * -1);
-  }
-
-  .video-icon {
-    height: 96px;
-    width: 96px;
-    background-size: 20px 22px;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .video-bg {
-    height: 52rem;
-    margin-top: calc((52rem / 2) * -1);
-  }
-
-  .btn-video {
-    top: 4.8rem;
-  }
-
-  .item-stats__num {
-    font-size: 5rem;
-  }
-  .process .btnTabungan {
-    float: left;
-    margin-bottom: 3rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .s-tabungan-how {
+  .s-pricing {
+    padding-top: 14.8rem;
     padding-bottom: 12rem;
   }
-
-  .video-bg {
-    height: 48rem;
-    margin-top: calc((48rem / 2) * -1);
+  .item-plan--popular .btn {
+    margin-left: 90px;
   }
+}
 
-  .video-icon {
-    height: 80px;
-    width: 80px;
+@media only screen and (max-width: 450px) {
+  .item-plan {
+    padding: 0 20px;
   }
+  .item-plan--popular .btn {
+    margin-left: 75px;
+  }
+}
 
-  .process {
-    text-align: center;
+@media only screen and (max-width: 350px) {
+  .item-plan__block {
+    padding: 5.4rem 3.2rem 4.8rem;
   }
-
-  .process::before {
-    display: none;
-  }
-
-  .process .step {
-    padding: 60px 0 0 0;
-  }
-
-  .process .step::before {
-    top: 0;
-    left: 50%;
-    -webkit-transform: translate3d(-50%, 0, 0);
-    -ms-transform: translate3d(-50%, 0, 0);
-    transform: translate3d(-50%, 0, 0);
-  }
-  .process .btnTabungan {
-    float: center;
-    margin-bottom: 3rem;
+  .item-plan--popular .btn {
+    margin-left: 30px;
   }
 }
 
 /* ===================================================================
- * # kredit
- * ------------------------------------------------------------------- 
-.s-kredit {
+ * # deposito
+ * ------------------------------------------------------------------- */
+.s-features {
   padding-top: 10rem;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #4282c8;
   overflow: hidden;
   position: relative;
 }
 
-.s-kredit .section-header.has-bottom-sep::before {
-  background-color: #000000;
+.s-features .display-1,
+.s-features h3 {
+  color: #ffffff;
 }
 
-.s-kredit .display-1,
-.s-kredit h3 {
-  color: #000000;
+.s-features p.lead {
+  color: rgba(255, 255, 255, 20);
 }
 
-.s-kredit p.lead {
-  color: #000000;
+.features {
+  color: #ffffff;
 }
 
-.kredit-desc {
-  width: 100%;
-  margin-left: 25%;
+.item-feature {
+  text-align: center;
+  color: #ffffff;
 }
 
-.kredit-desc__slide {
-  padding: 0 10px;
-  margin: 0 30px;
-  width: 50%;
-}
+/*.item-feature__icon {
+  color: #ffffff;
+  font-size: 4.8rem;
+}*/
 
-.kredit-desc__slide h3{
+.item-titleDeposito .titleDeposito {
   font-weight: 800;
+  color: #ffffff;
+}
+
+.item-titleDeposito .titleDeposito:hover,
+.item-titleDeposito .titleDeposito:focus,
+.item-titleDeposito .titleDeposito:active {
   color: #000000;
 }
-
-.kredit-desc__slide h3:hover,
-.kredit-desc__slide h3:focus,
-.kredit-desc__slide h3:active {
-  color: #4282C8;
-}
-
-.item-plan__features {
-  font-size: 1.7rem;
-  line-height: 1.882;
-  margin-left: 0;
-}
-
-.item-plan__features li {
-  display: list-item;
-  list-style: none;
-  padding: .2rem 0 .2rem .8rem;
-  position: relative;
-}
-
-.item-plan__features li::before {
-  content: "\f00c";
-  font-family: 'Font Awesome 5 Free';
-  font-size: 1.2rem;
-  font-weight: 900;
-  display: inline-block;
-  color: #4282C8;
-  margin-right: 18px;
-} 
-
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * tabungan
- * ------------------------------------------------------------------- 
-@media only screen and (max-width:1400px) {
-  .s-kredit {
-    padding-bottom: calc((62.4rem/2) + 9.6rem);
-  }
-}
-
-@media only screen and (max-width:1200px) {
-  .s-kredit {
+ * features
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .s-features {
     padding-top: 18.4rem;
   }
+  .features {
+    max-width: 900px;
+  }
+  .features .item-feature:nth-child(2n + 1) {
+    padding-right: 30px;
+  }
+  .features .item-feature:nth-child(2n + 2) {
+    padding-left: 30px;
+  }
 }
 
-@media only screen and (max-width:1000px) {
-  .s-kredit {
+@media only screen and (max-width: 1000px) {
+  .s-features {
     padding-top: 17.2rem;
+    padding-bottom: 17.2rem;
   }
-  .kredit-desc__slide {
-    padding: 0 20px;
+  .features .item-feature:nth-child(2n + 1) {
+    padding-right: 20px;
+  }
+  .features .item-feature:nth-child(2n + 2) {
+    padding-left: 20px;
   }
 }
 
-@media only screen and (max-width:800px) {
-  .s-kredit {
+@media only screen and (max-width: 800px) {
+  .s-features {
     padding-top: 16rem;
+    padding-bottom: 16rem;
+  }
+
+  .features {
+    margin-top: 4.4rem;
+  }
+
+  .features .item-feature:nth-child(n) {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
-@media only screen and (max-width:700px) {
-  .kredit-desc {
-    max-width: 550px;
-  }
-  .kredit-desc__slide {
-    padding: 0 10px;
+@media only screen and (max-width: 700px) {
+  .features {
+    max-width: 500px;
     text-align: center;
   }
+
+  .features .item-feature {
+    width: 100%;
+    clear: both;
+  }
 }
 
-@media only screen and (max-width:600px) {
-  .s-kredit {
+@media only screen and (max-width: 600px) {
+  .s-features {
     padding-top: 14.8rem;
-    padding-bottom: calc((60rem/2) + 9.6rem);
+    padding-bottom: 14.8rem;
   }
-  .kredit-desc {
-    max-width: 500px;
-  }
-  .kredit-desc__slide {
-    padding: 0;
+
+  .features .item-feature:nth-child(n) {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
-@media only screen and (max-width:500px) {
-  .s-kredit {
-    padding-bottom: calc((52rem/2) + 9.6rem);
-  }
-}
-
-@media only screen and (max-width:400px) {
-  .s-kredit {
+@media only screen and (max-width: 400px) {
+  .s-features {
     padding-top: 14rem;
-    padding-bottom: calc((48rem/2) + 9.6rem);
+    padding-bottom: 14rem;
   }
-} */
+
+  .features .item-feature:nth-child(n) {
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
 /* ===================================================================
  * # footer
  * ------------------------------------------------------------------- */
@@ -2938,7 +2824,7 @@ html.no-csstransitions .home-content__main {
 .ss-copyright {
   text-align: center;
   color: #000000;
-  background-color: #ffffffe8;
+  background-color: #ffffff;
 }
 
 .ss-copyright span {
