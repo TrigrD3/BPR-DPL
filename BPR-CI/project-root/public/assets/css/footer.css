@@ -1,0 +1,17 @@
+@media screen and (max-width: 700px) {
+  footer img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  footer svg {
+    float: left;
+  }
+
+  footer img {
+    width: 140%;
+    height: auto;
+  }
+}
