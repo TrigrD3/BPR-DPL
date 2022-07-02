@@ -4,10 +4,9 @@
 
 
 <!-- Container -->
-<section id="pricing" class="s-pricing">
 
-        <main class="row d-flex justify-content-center container-simulasi border">
-            <form class="col-12 col-md-9 pl-5 pr-5" id="simulasiKredit">
+        <main class=" container-simulasi border">
+            <form class="" id="simulasiKredit">
                 <h1 class="display-3 mb-3 text-center">Simulasi Kredit</h1>
                 <div class="form-group">
                     <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
@@ -79,7 +78,7 @@
             
             </div>
             <div class="row d-flex justify-content-center mt-3">
-                <table id="tableAngsuran" class="col-8">
+                <table id="tableAngsuran" class="col-8 table-bordered">
                     <thead class="thead-dark">
                         <tr>
                         <th scope="col">Bulan</th>
@@ -95,8 +94,9 @@
                 </table>
             </div>
         </aside>
-    
-
-    </section>
+        <script src="<?= base_url(); ?>/assets/js/numeral.min.js"></script>
+<script src="<?= base_url(); ?>/assets/js/jquery-3.2.1.min.js"></script>
+<script src="<?= base_url(); ?>/assets/js/calculate.js"></script>
+<script src="<?= base_url(); ?>/assets/js/jquery.validate.min.js"></script>
 
 <?= $this->endSection(); ?>

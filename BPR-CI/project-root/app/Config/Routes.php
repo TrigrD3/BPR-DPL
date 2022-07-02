@@ -37,6 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
+$routes->get('/SimulasiTabungan', 'Pages::SimulasiTabungan');
 
 /*
  * --------------------------------------------------------------------

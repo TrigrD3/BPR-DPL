@@ -30,4 +30,17 @@ class Pages extends BaseController
         echo view('pages/SimulasiKredit', $data);
     }
 
+    public function SimulasiTabungan()
+    {
+        $data = [
+            'title' => 'SimulasiTabungan | Credit Scoring',
+            'css' => 'SimulasiTabungan',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/SimulasiTabungan', $data);
+    }
+
 }
