@@ -43,77 +43,44 @@ body {
   flex: 1;
 }
 
-.card {
-  height: 40vh;
-  width: 18vw;
-  text-align: center;
-  margin: 4vh 0 2vh 0;
-  overflow: hidden;
-  justify-content: center;
-  border-radius: 1vw;
-  font-size: 1vw;
-  box-shadow: 0px 1px 5px 6px rgba(0, 0, 0, 0.05);
-  background-color: rgb(255, 255, 255);
-  display: block;
+footer {
+  font-family: Montserrat;
 }
 
-.card img {
-  height: 9.5vh;
-  width: auto;
+footer p {
+  font-size: 12px;
+  font-weight: normal;
 }
 
-.card-bg-input {
-  background-color: #e7f1ff;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+footer button {
+  color: white;
+  height: 64px;
+  width: 217px;
+  left: 851px;
+  top: 1995px;
+  border-radius: 8px;
+  padding: 20px, 32px, 20px, 32px;
+  background: linear-gradient(253.61deg, #1d80f0 0%, #0d509d 100%);
+  border: none;
 }
 
-.card-bg-akun {
-  background-color: #fff7e3;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+footer h3,
+h5,
+h6 {
+  font-weight: bolder;
 }
 
-.card-bg-skor {
-  background-color: #deffee;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-bg-mngskor {
-  background-color: #f1e5ff;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-option {
-  margin: 25px 0 10px 0;
-  font-size: 20px;
+.bold {
   font-weight: bold;
-  text-align: center;
+  font-size: 18px;
 }
 
-.sub-title {
-  text-align: justify;
-  color: #484848;
-  font-size: 10pt;
+footer tr,
+td {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.zoom {
-  transition: transform 0.2s;
-  /* Animation */
-  cursor: pointer;
-}
-
-.zoom:hover {
-  transform: scale(1.025);
-  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+hr {
+  opacity: none !important;
 }
