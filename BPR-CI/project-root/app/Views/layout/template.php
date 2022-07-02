@@ -27,7 +27,9 @@
 
 <body>
 
+    <?= $this->include('layout/header'); ?>
     <?= $this->include('layout/navbar'); ?>
+
 
     <?= $this->renderSection('content'); ?>
 
