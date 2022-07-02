@@ -13,7 +13,7 @@
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h4 class="mb-4">PT BPR Danapermata Lestari</h4>
                     <span class="bold">Alamat Kantor</span>
-                    <hr size="4px" width="20%" style="color: #0b5ed7;">
+                    <hr>
                     <p>
                         Jl. Belitung Darat No.01 RT.020 RW.00 Kel.Kuin Selatan, Banjarmasin.
                     </p>
@@ -22,7 +22,7 @@
                         Jl. Belitung Darat No.01 RT.020 RW.00 Kel.Kuin Selatan, Banjarmasin.
                     </p>
                     <span class="bold">Sosial Media</span>
-                    <hr size="4px" width="20%" style="color: #0b5ed7;">
+                    <hr>
                     <div class="mt-4">
                         <!-- Facebook -->
                         <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="bi bi-whatsapp"></i></a>
@@ -81,15 +81,9 @@
     </footer>
 
 </div>
-<!-- End of .container -->
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-<!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 
 </html>

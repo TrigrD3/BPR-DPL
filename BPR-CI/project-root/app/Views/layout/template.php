@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $font; ?>.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $navbar; ?>.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $footer; ?>.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $header; ?>.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <!-- Bootstrap Font Icon CSS -->

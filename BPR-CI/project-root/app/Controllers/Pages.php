@@ -12,6 +12,7 @@ class Pages extends BaseController
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
+            'header' => 'header'
         ];
         echo view('pages/index', $data);
     }
