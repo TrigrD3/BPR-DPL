@@ -35,6 +35,10 @@
         </li>
 
         <li class="nav-item">
+          <a class="nav-link" href="KAP">KAP</a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link" href="#">Penghargaan</a>
         </li>
 

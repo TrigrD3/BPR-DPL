@@ -73,7 +73,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'KAP | Credit Scoring',
-            'css' => 'KAP',
+            'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
