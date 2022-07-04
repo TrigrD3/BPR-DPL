@@ -1,0 +1,55 @@
+<div class="container my-4">
+    <img src="images/fotoDeposito.png" class="img-fluid" height="380" width="1200" alt="GambarDeposito">
+    <div class="row justify-content-center">
+        <a href="/produkdeposito">
+            <div class="my-3 mx-2">
+                <div class="card">
+                    <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Deposito Lestari</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/produkdeposito">
+            <div class="my-3 mx-2">
+                <div class="card">
+                    <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Deposito Lestari</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/produkdeposito">
+            <div class="my-3 mx-2">
+                <div class="card">
+                    <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Deposito Lestari</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/produkdeposito">
+            <div class="my-3 mx-2">
+                <div class="card">
+                    <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Deposito Lestari</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/produkdeposito">
+            <div class="my-3 mx-2">
+                <div class="card">
+                    <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Deposito Lestari</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

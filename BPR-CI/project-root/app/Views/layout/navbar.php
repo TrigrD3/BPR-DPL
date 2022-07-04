@@ -7,7 +7,7 @@
             <a class="nav-link text-white" href="#">Kredit</a>
         </li>
         <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="#">Deposito</a>
+            <a class="nav-link text-white" href="/deposito">Deposito</a>
         </li>
         <li class="nav-item mx-3">
             <a class="nav-link text-white" href="#">Tabungan</a>
