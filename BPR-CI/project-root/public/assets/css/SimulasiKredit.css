@@ -1,0 +1,19 @@
+.container-simulasi {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.form-group1 {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.border1 {
+  border: 1px solid #0f54a3;
+}
