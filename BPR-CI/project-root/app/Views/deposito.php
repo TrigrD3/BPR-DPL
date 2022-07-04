@@ -1,12 +1,12 @@
 <div class="container my-4">
-    <img src="images/fotoDeposito.png" class="img-fluid" height="380" width="1200" alt="GambarDeposito">
+    <img src="images/fotoDeposito.png" class="img-fluid" width="1200" alt="GambarDeposito">
     <div class="row justify-content-center">
         <a href="/produkdeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Deposito Lestari</p>
+                        <p class="card-text">Contoh Deposito</p>
                     </div>
                 </div>
             </div>
@@ -16,7 +16,7 @@
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Deposito Lestari</p>
+                        <p class="card-text">Contoh Deposito</p>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Deposito Lestari</p>
+                        <p class="card-text">Contoh Deposito</p>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Deposito Lestari</p>
+                        <p class="card-text">Contoh Deposito</p>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text">Deposito Lestari</p>
+                        <p class="card-text">Contoh Deposito</p>
                     </div>
                 </div>
             </div>

@@ -40,6 +40,8 @@ $routes->get('/deposito', 'Home::deposito');
 $routes->get('/KAP', 'Home::KAP');
 $routes->get('/produkdeposito', 'Home::produkdeposito');
 $routes->get('/penghargaan', 'Home::penghargaan');
+$routes->get('/tabungan', 'Home::tabungan');
+$routes->get('/produktabungan', 'Home::produktabungan');
 
 /*
  * --------------------------------------------------------------------

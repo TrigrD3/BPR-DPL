@@ -24,6 +24,20 @@ class Home extends BaseController
         echo view('produkdeposito');
         echo view('layout/footer');
     }
+    public function tabungan()
+    {
+        echo view('layout/header');
+        echo view('layout/navbar');
+        echo view('tabungan');
+        echo view('layout/footer');
+    }
+    public function produktabungan()
+    {
+        echo view('layout/header');
+        echo view('layout/navbar');
+        echo view('produktabungan');
+        echo view('layout/footer');
+    }
     public function KAP()
     {
         echo view('layout/header');

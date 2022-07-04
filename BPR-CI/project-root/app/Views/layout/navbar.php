@@ -10,7 +10,7 @@
             <a class="nav-link text-white" href="/deposito">Deposito</a>
         </li>
         <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="#">Tabungan</a>
+            <a class="nav-link text-white" href="/tabungan">Tabungan</a>
         </li>
         <li class="nav-item mx-3">
             <a class="nav-link text-white" href="#">Layanan Lainnya</a>
