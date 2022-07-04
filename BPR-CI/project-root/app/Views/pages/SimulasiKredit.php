@@ -5,9 +5,10 @@
 
 <!-- Container -->
 
-        <main class=" container-simulasi border">
+        <main class=" container-simulasi ">
+            <div class="container border1 rounded">
             <form class="" id="simulasiKredit">
-                <h1 class="display-3 mb-3 text-center">Simulasi Kredit</h1>
+                <h1 class="display-4 mb-3 text-center">Simulasi Kredit</h1>
                 <div class="form-group">
                     <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
                     <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit"
@@ -40,15 +41,17 @@
                         
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-3 mt-3">
                     <button id="btnHitung" type="submit" class="btn btn-primary">Hitung</button>
                     <button id="btnUlangi" type="submit" class="btn btn-secondary">Ulangi</button>
                 </div>
             </form>
+            </div>
+            
         </main>
         <aside>
         
-            <h1 class="display-4 mb-3 text-center">Pinjaman Anda</h1>
+            <h1 class="display-5 mb-3 text-center">Pinjaman Anda</h1>
             
             <div class="row d-flex justify-content-center">
                 <div class="col-4">Total Pinjaman</div>
@@ -94,7 +97,8 @@
                 </table>
             </div>
         </aside>
-        <script src="<?= base_url(); ?>/assets/js/numeral.min.js"></script>
+
+<script src="<?= base_url(); ?>/assets/js/numeral.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/jquery-3.2.1.min.js"></script>
 <script src="<?= base_url(); ?>/assets/js/calculate.js"></script>
 <script src="<?= base_url(); ?>/assets/js/jquery.validate.min.js"></script>

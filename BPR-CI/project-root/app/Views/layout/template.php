@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $footer; ?>.css">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/<?= $header; ?>.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- CSS only -->
@@ -24,16 +23,8 @@
 </head>
 <?= $this->include('layout/header'); ?>
 <body>
-
-    
     <?= $this->include('layout/navbar'); ?>
-
-
     <?= $this->renderSection('content'); ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <?= $this->include('layout/footer'); ?>
 </body>
 <!-- JavaScript Bundle with Popper -->

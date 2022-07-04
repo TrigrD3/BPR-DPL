@@ -1,7 +1,7 @@
 <?php
 header("Content-Type:application/json");
 
-include('vendor/autoload.php');
+include('../vendor/autoload.php');
 
 use MathPHP\Finance;
 
