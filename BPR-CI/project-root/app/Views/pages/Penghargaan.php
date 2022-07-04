@@ -1,3 +1,7 @@
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
+
 <div class="container text-center">
     <p class="h1 mt-4" style="font-weight:bold;">PENGHARGAAN YANG TELAH DICAPAI OLEH <br> BPR DANAPERMATA LESTARI</p>
     <div class="row justify-content-center">
@@ -19,3 +23,5 @@
         </div>
     </div>
 </div>
+
+<?= $this->endSection(); ?>

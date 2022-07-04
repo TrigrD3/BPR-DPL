@@ -1,3 +1,7 @@
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
+
 <div class="container">
     <p class="h1 text-center my-4">LAPORAN KAP</p>
     <p class="text-center">LAPORAN AUDIT KANTOR AKUNTAN PUBLIK PT BPR DANAPERMATA LESTARI</p>
@@ -7,3 +11,5 @@
         <li><a href="#">Laporan KAP 2021.pdf</a></li>
     </ul>
 </div>
+
+<?= $this->endSection(); ?>

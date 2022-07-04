@@ -1,3 +1,8 @@
+
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
+
 <div class="container my-4">
     <img src="images/fotoDeposito.png" class="img-fluid" height="380" width="1200" alt="GambarDeposito">
     <div class="row justify-content-center">
@@ -53,3 +58,5 @@
         </a>
     </div>
 </div>
+
+<?= $this->endSection(); ?>

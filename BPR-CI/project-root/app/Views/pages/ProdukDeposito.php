@@ -1,3 +1,7 @@
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
+
 <div class="container">
     <div class="my-3">
         <a href="/Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
@@ -49,3 +53,5 @@
         </ul>
     </div>
 </div>
+
+<?= $this->endSection(); ?>

@@ -47,7 +47,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Deposito | Credit Scoring',
-            'css' => 'Deposito',
+            'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
@@ -60,7 +60,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'ProdukDeposito | Credit Scoring',
-            'css' => 'ProdukDeposito',
+            'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
@@ -86,7 +86,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Penghargaan | Credit Scoring',
-            'css' => 'Penghargaan',
+            'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
