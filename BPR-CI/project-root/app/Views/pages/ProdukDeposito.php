@@ -1,6 +1,6 @@
 <div class="container">
     <div class="my-3">
-        <a href="/deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
+        <a href="/Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
     </div>
     <div>
         <p class="h1">Deposito Lestari</p>

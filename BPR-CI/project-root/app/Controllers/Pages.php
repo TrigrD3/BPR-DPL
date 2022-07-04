@@ -43,4 +43,56 @@ class Pages extends BaseController
         echo view('pages/SimulasiTabungan', $data);
     }
 
+    public function Deposito()
+    {
+        $data = [
+            'title' => 'Deposito | Credit Scoring',
+            'css' => 'Deposito',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Deposito', $data);
+    }
+
+    public function ProdukDeposito()
+    {
+        $data = [
+            'title' => 'ProdukDeposito | Credit Scoring',
+            'css' => 'ProdukDeposito',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/ProdukDeposito', $data);
+    }
+
+    public function KAP()
+    {
+        $data = [
+            'title' => 'KAP | Credit Scoring',
+            'css' => 'KAP',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/KAP', $data);
+    }
+
+    public function Penghargaan()
+    {
+        $data = [
+            'title' => 'Penghargaan | Credit Scoring',
+            'css' => 'Penghargaan',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Penghargaan', $data);
+    }
+
 }

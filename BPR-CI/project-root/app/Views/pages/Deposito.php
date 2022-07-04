@@ -1,7 +1,7 @@
 <div class="container my-4">
     <img src="images/fotoDeposito.png" class="img-fluid" height="380" width="1200" alt="GambarDeposito">
     <div class="row justify-content-center">
-        <a href="/produkdeposito">
+        <a href="/ProdukDeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
@@ -11,7 +11,7 @@
                 </div>
             </div>
         </a>
-        <a href="/produkdeposito">
+        <a href="/ProdukDeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </a>
-        <a href="/produkdeposito">
+        <a href="/ProdukDeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </a>
-        <a href="/produkdeposito">
+        <a href="/ProdukDeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </a>
-        <a href="/produkdeposito">
+        <a href="/ProdukDeposito">
             <div class="my-3 mx-2">
                 <div class="card">
                     <img class="card-img-top" src="images/fotoDeposito.png" alt="Card image cap">
