@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="my-3">
-        <a href="/tabungan">Tabungan</a> / <span style="color: #0d509e; font-weight: bold;">Judul Tabungan</span>
+        <a href="Tabungan">Tabungan</a> / <span style="color: #0d509e; font-weight: bold;">Judul Tabungan</span>
     </div>
     <div>
         <p class="h1">Judul Tabungan</p>
