@@ -12,24 +12,24 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light py-3">
-        <div class="container-fluid">
-            <a class="navbar-brand text-dark" href="#"><img src="<?php echo base_url('images/logoBPR.png'); ?>" width="50" height="auto" alt="Logo BPR">BPR Lestari <br>PT BPR Danapermata Lestari</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navatas" aria-controls="navatas" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navatas">
-                <div class="navbar-nav ml-auto">
-                    <a class="nav-link text-dark px-3" href="#">Simulasi Pinjaman</a>
-                    <a class="nav-link text-dark px-3" href="#">Simulasi Kredit</a>
-                    <a class="nav-link text-dark px-3" href="#">Lelang</a>
-                    <a class="nav-link text-dark px-3" href="#">Publikasi</a>
-                    <a class="nav-link text-dark px-3" href="/KAP">KAP</a>
-                    <a class="nav-link text-dark px-3" href="/penghargaan">Penghargaan</a>
-                    <a class="nav-link text-dark px-3" href="#">Lowongan Kerja</a>
-                </div>
-                <button class="btn navbar-btn text-white px-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand text-dark d-flex" href="#">
+            <img src="<?php echo base_url('images/logoBPR.png'); ?>" width="75" height="auto" alt="Logo BPR">
+            <span class="ml-2">BPR Lestari <br>PT BPR Danapermata Lestari</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-link text-dark px-3" href="#">Simulasi Pinjaman</a>
+                <a class="nav-link text-dark px-3" href="#">Simulasi Kredit</a>
+                <a class="nav-link text-dark px-3" href="#">Lelang</a>
+                <a class="nav-link text-dark px-3" href="#">Publikasi</a>
+                <a class="nav-link text-dark px-3" href="/KAP">KAP</a>
+                <a class="nav-link text-dark px-3" href="/penghargaan">Penghargaan</a>
+                <a class="nav-link text-dark px-3" href="#">Lowongan Kerja</a>
             </div>
+            <button class="btn navbar-btn text-white px-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</button>
         </div>
     </nav>
