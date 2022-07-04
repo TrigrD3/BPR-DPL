@@ -43,7 +43,7 @@
         </li>
 
         <li>
-        <button class="btn navbar-btn text-white px-4" type="button">Login</button>
+        <button class="btn navbar-btn text-white px-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</button>
         </li>
         
         

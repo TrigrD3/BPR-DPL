@@ -38,6 +38,10 @@ $routes->set404Override();
 $routes->get('/', 'Pages::index');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
 $routes->get('/SimulasiTabungan', 'Pages::SimulasiTabungan');
+$routes->get('/Deposito', 'Pages::Deposito');
+$routes->get('/KAP', 'Pages::KAP');
+$routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
+$routes->get('/Penghargaan', 'Pages::Penghargaan');
 
 /*
  * --------------------------------------------------------------------
