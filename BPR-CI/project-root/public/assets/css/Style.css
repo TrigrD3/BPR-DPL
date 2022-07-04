@@ -2,11 +2,32 @@
   border-radius: 4px;
   background: #fff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-    0.3s box-shadow,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   cursor: pointer;
-  width: 21rem;
+  width: 24rem;
+}
+
+@media screen and (max-width: 489px) {
+  .card {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 489px) and (max-width: 700px) {
+  .card {
+    width: 470px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 990px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .card {
+    width: 400px;
+  }
 }
 
 .card:hover {
@@ -16,7 +37,7 @@
 
 .h1 {
   color: #0f54a3;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
 
 a:link {

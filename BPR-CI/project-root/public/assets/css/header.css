@@ -10,6 +10,6 @@ header img {
   }
 }
 
-header button {
+.btn1 {
   background-image: linear-gradient(to right, #0d509d, #1769c6);
 }
