@@ -35,6 +35,13 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
+.img-deposito {
+  width: 98.7%;
+  height: 10%;
+}
+.img-fit {
+  object-fit: cover;
+}
 .h1 {
   color: #0f54a3;
   font-family: 'Montserrat';
