@@ -7,7 +7,7 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Index | Credit Scoring',
+            'title' => 'Home | Credit Scoring',
             'css' => 'index',
             'font' => 'font',
             'navbar' => 'navbar',
