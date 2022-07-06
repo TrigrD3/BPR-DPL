@@ -1,15 +1,30 @@
 .card {
-  border-radius: 4px;
   background: #fff;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-    0.3s box-shadow,
-    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.5s box-shadow,
+    0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   cursor: pointer;
   width: 24rem;
-  display: inline-block;
+  object-fit: cover;
 }
-
+.card .info-box {
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  color: rgb(255, 255, 255);
+}
+.card:hover .info-box {
+  opacity: 1;
+}
+.card:hover .card-image {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.3;
+}
+.card:hover {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.5;
+}
 @media screen and (max-width: 489px) {
   .card {
     width: 330px;

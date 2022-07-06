@@ -1,5 +1,5 @@
 header img {
-  width: 60px;
+  width: 30px;
   height: auto;
 }
 
@@ -9,7 +9,38 @@ header img {
     height: auto;
   }
 }
-
+.nav-link:hover {
+  transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.2s;
+}
 .btn1 {
   background-image: linear-gradient(to right, #0d509d, #1769c6);
+}
+
+@media screen and (max-width: 489px) {
+  .span-nama {
+    font-size: small;
+  }
+  .logo-nav {
+    width: 55px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 489px) and (max-width: 700px) {
+  .span-nama {
+    width: 470px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 990px) {
+  .span-nama {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1200px) {
+  .span-nama {
+    width: 400px;
+  }
 }
