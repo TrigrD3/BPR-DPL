@@ -42,11 +42,9 @@ $routes->get('/Deposito', 'Pages::Deposito');
 $routes->get('/KAP', 'Pages::KAP');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
-<<<<<<< HEAD
-=======
 $routes->get('/Tabungan', 'Pages::Tabungan');
 $routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
+$routes->get('/Lelang', 'Pages::Lelang');
 
 /*
  * --------------------------------------------------------------------

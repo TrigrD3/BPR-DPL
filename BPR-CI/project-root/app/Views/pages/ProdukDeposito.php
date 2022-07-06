@@ -4,11 +4,7 @@
 
 <div class="container">
     <div class="my-3">
-<<<<<<< HEAD:BPR-CI/project-root/app/Views/pages/ProdukDeposito.php
-        <a href="/Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
-=======
         <a href="Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa:BPR-CI/project-root/app/Views/produkdeposito.php
     </div>
     <div>
         <p class="h1">Deposito Lestari</p>

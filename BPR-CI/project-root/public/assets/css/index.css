@@ -52,18 +52,6 @@ footer p {
   font-weight: normal;
 }
 
-footer button {
-  color: white;
-  height: 64px;
-  width: 217px;
-  left: 851px;
-  top: 1995px;
-  border-radius: 8px;
-  padding: 20px, 32px, 20px, 32px;
-  background: linear-gradient(253.61deg, #1d80f0 0%, #0d509d 100%);
-  border: none;
-}
-
 footer h3,
 h5,
 h6 {

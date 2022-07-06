@@ -1,11 +1,17 @@
 .container-simulasi {
-  width: 500px;
+  width: auto;
   margin: auto;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
+}
+
+@media screen and (min-width: 550px) {
+  .container-simulasi {
+    width: 500px;
+  }
 }
 
 .form-group1 {
@@ -16,4 +22,8 @@
 
 .border1 {
   border: 1px solid #0f54a3;
+}
+
+table {
+  text-align: center;
 }

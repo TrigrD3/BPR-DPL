@@ -1,24 +1,9 @@
-header img {
-<<<<<<< HEAD
-  width: 60px;
-=======
-  width: 30px;
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
-  height: auto;
-}
-
 @media screen and (max-width: 700px) {
   header img {
     width: 55px;
     height: auto;
   }
 }
-<<<<<<< HEAD
-
-.btn1 {
-  background-image: linear-gradient(to right, #0d509d, #1769c6);
-}
-=======
 .nav-link:hover {
   transform: scale(1.05);
   -webkit-transition: 0.5s;
@@ -38,12 +23,7 @@ header img {
   }
 }
 
-@media screen and (min-width: 489px) and (max-width: 700px) {
-  .span-nama {
-    width: 470px;
-  }
-}
-@media screen and (min-width: 700px) and (max-width: 990px) {
+@media screen and (min-width: 489px) and (max-width: 990px) {
   .span-nama {
     width: 300px;
   }
@@ -54,4 +34,3 @@ header img {
     width: 400px;
   }
 }
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa

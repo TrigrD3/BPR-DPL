@@ -7,7 +7,7 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Index | Credit Scoring',
+            'title' => 'Home',
             'css' => 'index',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -20,7 +20,7 @@ class Pages extends BaseController
     public function SimulasiKredit()
     {
         $data = [
-            'title' => 'SimulasiKredit | Credit Scoring',
+            'title' => 'SimulasiKredit',
             'css' => 'SimulasiKredit',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -33,7 +33,7 @@ class Pages extends BaseController
     public function SimulasiTabungan()
     {
         $data = [
-            'title' => 'SimulasiTabungan | Credit Scoring',
+            'title' => 'SimulasiTabungan',
             'css' => 'SimulasiTabungan',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -46,7 +46,7 @@ class Pages extends BaseController
     public function Deposito()
     {
         $data = [
-            'title' => 'Deposito | Credit Scoring',
+            'title' => 'Deposito',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -59,7 +59,7 @@ class Pages extends BaseController
     public function ProdukDeposito()
     {
         $data = [
-            'title' => 'ProdukDeposito | Credit Scoring',
+            'title' => 'ProdukDeposito',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -72,7 +72,7 @@ class Pages extends BaseController
     public function KAP()
     {
         $data = [
-            'title' => 'KAP | Credit Scoring',
+            'title' => 'KAP',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -85,7 +85,7 @@ class Pages extends BaseController
     public function Penghargaan()
     {
         $data = [
-            'title' => 'Penghargaan | Credit Scoring',
+            'title' => 'Penghargaan',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -95,12 +95,10 @@ class Pages extends BaseController
         echo view('pages/Penghargaan', $data);
     }
 
-<<<<<<< HEAD
-=======
     public function Tabungan()
     {
         $data = [
-            'title' => 'Tabungan | Credit Scoring',
+            'title' => 'Tabungan',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -113,7 +111,7 @@ class Pages extends BaseController
     public function ProdukTabungan()
     {
         $data = [
-            'title' => 'Tabungan | Credit Scoring',
+            'title' => 'Produk Tabungan',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -122,5 +120,17 @@ class Pages extends BaseController
         ];
         echo view('pages/ProdukTabungan', $data);
     }
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
+
+    public function Lelang()
+    {
+        $data = [
+            'title' => 'Lelang',
+            'css' => 'Lelang',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Lelang', $data);
+    }
 }

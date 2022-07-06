@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>BPR Danapermata Lestari</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/SimulasiKredit.css">
+
+
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="logoBPR.ico" type="image/x-icon">
+    <link rel="icon" href="logoBPR.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header 
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="row">
+            <div class="header-logo">
+                <a class="site-logo" href="#">
+                    <img src="images/logo.svg" alt="Homepage">
+					<img src="images/tulisan.svg" alt="Homepage">
+                </a>
+            </div>
+    
+            <nav class="header-nav-wrap">
+                <div class="header-cta">
+                    <ul class="header-main-nav">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="Kredit.html" title="Kredit">Kredit</a></li>
+                    <li><a href="Deposito.html" title="Deposito">Deposito</a></li>
+                    <li><a href="Tabungan.html" title="Tabungan">Tabungan</a></li>
+                    <li><a href="LayananLain.html" title="LayananLain">Layanan-Lain</a></li>
+                    <li><a href="Tentang.html" title="Tentang">Tentang</a></li>
+                    <li><a href="SimulasiKredit.html" title="SimulasiKredit">Simulasi Kredit</a></li>
+                    <li><a href="SimulasiTabungan.html" title="SimulasiTabungan">Simulasi Tabungan</a></li>
+                </div>
+            </nav> <!-- end header-nav-wrap -->
+    
+            <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+        </div>
+
+    </header> <!-- end header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/bgutama.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+        
+
+
+        <a href="#tabungan" class="home-scroll smoothscroll">
+            <span class="home-scroll__text">Scroll</span>
+            <span class="home-scroll__icon"></span>
+        </a> 
+
+    </section> <!-- end s-home -->
+
+    <!-- kredit
+    ================================================== -->
+    <section id="pricing" class="s-pricing">
+
+        <main class="row d-flex justify-content-center container-simulasi border">
+            <form class="col-12 col-md-9 pl-5 pr-5" id="simulasiKredit">
+                <h1 class="display-3 mb-3 text-center">Simulasi Kredit</h1>
+                <div class="form-group">
+                    <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
+                    <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit"
+                        placeholder="Contoh: 150000000" value="5000000">
+                </div>
+                <div class="form-group">
+                    <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
+                    <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu"
+                        placeholder="Contoh: 120" value="12">
+                </div>
+                <div class="form-group">
+                    <label for="bungaPertahun">Bunga Pertahun <em>(%)</em>: </label>
+                    <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun"
+                        placeholder="Contoh: 10.5" value="1.5">
+                </div>
+                <div class="form-group1 ">
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="Flat">Flat</label>
+                        <input type="radio" class="form-check-input" value="1" name="metode" id="Flat" checked>
+                        
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="Efektif">Efektif</label>
+                        <input type="radio" class="form-check-input" value="2" name="metode" id="Efektif">
+                        
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label" for="Anuitas">Anuitas</label>
+                        <input type="radio" class="form-check-input" value="3" name="metode" id="Anuitas">
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button id="btnHitung" type="submit" class="btn btn-primary">Hitung</button>
+                    <button id="btnUlangi" type="submit" class="btn btn-secondary">Ulangi</button>
+                </div>
+            </form>
+        </main>
+        <aside>
+        
+            <h1 class="display-4 mb-3 text-center">Pinjaman Anda</h1>
+            
+            <div class="row d-flex justify-content-center">
+                <div class="col-4">Total Pinjaman</div>
+                <div class="col-4">: <span id="resultTotalPinjaman"></span></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-4">Lama Pinjaman</div>
+                <div class="col-4">: <span id="resultLamaPinjaman"></span></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-4">Bunga Pertahun</div>
+                <div class="col-4">: <span id="resultBungaPertahun"></span></div>
+            </div>
+            <div class="flatOnly">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4">Angsuran Pokok Perbulan</div>
+                    <div class="col-4">: <span id="resultAngPokokBulan"></span></div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4">Angsuran Bunga Perbulan</div>
+                    <div class="col-4">: <span id="resultAngBungaBulan"></span></div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4">Total angsuran per bulan</div>
+                    <div class="col-4">: <span id="resultAngBulan"></span></div>
+                </div>
+            
+            </div>
+            <div class="row d-flex justify-content-center mt-3">
+                <table id="tableAngsuran" class="col-8">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">Bulan</th>
+                        <th scope="col">Pokok</th>
+                        <th scope="col">Bunga</th>
+                        <th scope="col">Angsuran</th>
+                        <th scope="col">Sisa Pinjaman</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </aside>
+    
+
+    </section> <!-- end s-pricing -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer footer">
+
+        <div class="row footer__bottom">
+
+            <div class="footer__about col-five tab-full left">
+
+                <h4>Tentang BPR DPL.</h4>
+
+                <p>
+                BPR Danapermata Lestari merupakan Bank Perkreditan
+				Rakyat yang berada di Banjarmasin, Kalimantan Selatan.
+				BPR Danapermata Lestari Banjarmasin merupakan cabang utama
+				dari BPR Danapermata Lestari yang ada di Kalimantan Selatan.
+                </p>
+
+                <ul class="footer__social">
+                    <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                    <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-five md-seven tab-full right end">
+                <div class="row">
+
+                    <div class="footer__site-links col-five mob-full">
+						<h4>Hubungi Kami.</h4>
+
+							<p>
+							Alamat:<br>
+							Jl. Belitung Darat No.01 RT.020 RW.00<br>
+							Kel.Kuin Selatan, Banjarmasin.<br>
+							Phone: 0511 3366 264  <br>
+							</p>
+							
+					</div>
+					
+					<div class="footer__contact col-seven mob-full">
+						<h4>Bantuan.</h4>
+						<p>Butuh bantuan atau pertanyaan? Hubungi kami melalui email: <br>
+							<a href="mailto:#0" class="footer__mail-link">bprdpl@yahoo.com</a>
+						</p>
+						<img src="images/OJK.png" alt="OJK">
+                    </div>
+                   
+                </div>
+
+			</div>
+        </div>
+
+            <div class="col-full ss-copyright">
+                <span>Copyright &copy; BPR Dana Permata Lestari 2022</span> 
+            </div>
+
+        </div> <!-- end footer__bottom -->
+
+        <div class="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"></a>
+        </div>
+
+    </footer> <!-- end s-footer -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/numeral.min.js"></script>
+    <script src="js/calculate.js"></script>
+
+</body>

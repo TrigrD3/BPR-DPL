@@ -11,8 +11,4 @@
         <p class="dpl">DANA PERMATA LESTARI</p>
     </div>
 </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
 <?= $this->endSection(); ?>
