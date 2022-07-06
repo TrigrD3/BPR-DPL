@@ -4,7 +4,7 @@
             <a class="nav-link text-white" href="/">Home</a>
         </li>
         <li class="nav-item mx-3">
-            <a class="nav-link text-white" href="#">Kredit</a>
+            <a class="nav-link text-white" href="/Kredit">Kredit</a>
         </li>
         <li class="nav-item mx-3">
             <a class="nav-link text-white" href="/Deposito">Deposito</a>

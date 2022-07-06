@@ -7,7 +7,7 @@ class Pages extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Index | Credit Scoring',
+            'title' => 'Index | BANK LESTARI',
             'css' => 'index',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -20,7 +20,7 @@ class Pages extends BaseController
     public function SimulasiKredit()
     {
         $data = [
-            'title' => 'SimulasiKredit | Credit Scoring',
+            'title' => 'SimulasiKredit | BANK LESTARI',
             'css' => 'SimulasiKredit',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -33,7 +33,7 @@ class Pages extends BaseController
     public function SimulasiTabungan()
     {
         $data = [
-            'title' => 'SimulasiTabungan | Credit Scoring',
+            'title' => 'SimulasiTabungan | BANK LESTARI',
             'css' => 'SimulasiTabungan',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -43,10 +43,23 @@ class Pages extends BaseController
         echo view('pages/SimulasiTabungan', $data);
     }
 
+    public function Kredit()
+    {
+        $data = [
+            'title' => 'Deposito | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Deposito', $data);
+    }
+
     public function Deposito()
     {
         $data = [
-            'title' => 'Deposito | Credit Scoring',
+            'title' => 'Deposito | BANK LESTARI',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -59,7 +72,7 @@ class Pages extends BaseController
     public function ProdukDeposito()
     {
         $data = [
-            'title' => 'ProdukDeposito | Credit Scoring',
+            'title' => 'ProdukDeposito | BANK LESTARI',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -72,7 +85,7 @@ class Pages extends BaseController
     public function KAP()
     {
         $data = [
-            'title' => 'KAP | Credit Scoring',
+            'title' => 'KAP | BANK LESTARI',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -82,10 +95,37 @@ class Pages extends BaseController
         echo view('pages/KAP', $data);
     }
 
+    public function Publikasi()
+    {
+        $data = [
+            'title' => 'Publikasi | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Publikasi', $data);
+    }
+
+    public function Loker()
+    {
+        $data = [
+            'title' => 'Loker | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Loker', $data);
+    }
+
+
     public function Penghargaan()
     {
         $data = [
-            'title' => 'Penghargaan | Credit Scoring',
+            'title' => 'Penghargaan | BANK LESTARI',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
@@ -94,5 +134,4 @@ class Pages extends BaseController
         ];
         echo view('pages/Penghargaan', $data);
     }
-
 }
