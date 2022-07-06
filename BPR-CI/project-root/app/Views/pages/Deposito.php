@@ -1,4 +1,3 @@
-
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
@@ -16,11 +15,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </a>
-            <?php endfor; ?>
-    </div>
-
+            </a>
+        <?php endfor; ?>
     </div>
 </div>
 
