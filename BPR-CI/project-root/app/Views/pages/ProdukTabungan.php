@@ -4,20 +4,16 @@
 
 <div class="container">
     <div class="my-3">
-<<<<<<< HEAD:BPR-CI/project-root/app/Views/pages/ProdukDeposito.php
-        <a href="/Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
-=======
-        <a href="Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
->>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa:BPR-CI/project-root/app/Views/produkdeposito.php
+        <a href="Tabungan">Tabungan</a> / <span style="color: #0d509e; font-weight: bold;">Judul Tabungan</span>
     </div>
     <div>
-        <p class="h1">Deposito Lestari</p>
+        <p class="h1">Judul Tabungan</p>
         <div class="text-center">
-            <img src="images/fotoDeposito.png" class="img-fluid" alt="GambarProdukDeposito">
+            <img src="images/tabungan.jpg" class="img-fluid" alt="GambarProdukDeposito">
         </div>
     </div>
     <div class="my-4">
-        <p class="h1">DEPOSITO</p>
+        <p class="h1">TABUNGAN</p>
         <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
     </div>
     <div class="my-4">

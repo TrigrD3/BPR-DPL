@@ -22,6 +22,10 @@
     <title><?= $title; ?></title>
 </head>
 <?= $this->include('layout/header'); ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
 <body>
     <?= $this->include('layout/navbar'); ?>
     <?= $this->renderSection('content'); ?>

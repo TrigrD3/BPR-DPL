@@ -95,4 +95,32 @@ class Pages extends BaseController
         echo view('pages/Penghargaan', $data);
     }
 
+<<<<<<< HEAD
+=======
+    public function Tabungan()
+    {
+        $data = [
+            'title' => 'Tabungan | Credit Scoring',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Tabungan', $data);
+    }
+
+    public function ProdukTabungan()
+    {
+        $data = [
+            'title' => 'Tabungan | Credit Scoring',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/ProdukTabungan', $data);
+    }
+>>>>>>> 655a3a0ae69059184f496760406d414bf15c88fa
 }
