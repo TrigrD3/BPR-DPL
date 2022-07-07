@@ -2,8 +2,8 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="justify-content-center"><br>
     <div class="text-center p-1" style="background-color:rgba(23, 105, 199, 1);">
-
     </div>
+
     <footer class=" text-center text-lg-start" style="background-color: #ffffff;color:#0F54A3;">
         <!-- Grid container -->
         <div class="container p-4">
