@@ -38,10 +38,16 @@ $routes->set404Override();
 $routes->get('/', 'Pages::index');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
 $routes->get('/SimulasiTabungan', 'Pages::SimulasiTabungan');
+$routes->get('/Kredit', 'Pages::Kredit');
 $routes->get('/Deposito', 'Pages::Deposito');
 $routes->get('/KAP', 'Pages::KAP');
+$routes->get('/Loker', 'Pages::Loker');
+$routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
+$routes->get('/Tabungan', 'Pages::Tabungan');
+$routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
+$routes->get('/Lelang', 'Pages::Lelang');
 
 /*
  * --------------------------------------------------------------------
