@@ -45,7 +45,7 @@ $routes->get('/Loker', 'Pages::Loker');
 $routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
-
+$routes->get('/Admin', 'Pages::admin');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

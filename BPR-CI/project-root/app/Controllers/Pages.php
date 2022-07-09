@@ -134,4 +134,17 @@ class Pages extends BaseController
         ];
         echo view('pages/Penghargaan', $data);
     }
+
+    public function Admin()
+    {
+        $data = [
+            'title' => 'Admin | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/admin', $data);
+    }
 }
