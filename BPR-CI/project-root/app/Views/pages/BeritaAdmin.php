@@ -50,7 +50,7 @@
                         </td>
                         <td>
                             <a>
-                                12 Juli 2022
+                                12 Juli 2023
                             </a>
                         </td>
                         <td class="project_progress">
