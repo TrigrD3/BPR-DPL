@@ -173,4 +173,43 @@ class Pages extends BaseController
         ];
         echo view('pages/Lelang', $data);
     }
+
+    public function VisiMisi()
+    {
+        $data = [
+            'title' => 'VisiMisi',
+            'css' => 'VisiMisi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/VisiMisi', $data);
+    }
+
+    public function StrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'StrukturOrganisasi',
+            'css' => 'StrukturOrganisasi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/StrukturOrganisasi', $data);
+    }
+    
+    public function LayananLainnya()
+    {
+        $data = [
+            'title' => 'LayananLainnya',
+            'css' => 'LayananLainnya',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/LayananLainnya', $data);
+    }
 }
