@@ -52,7 +52,10 @@ $routes->get('/Lelang', 'Pages::Lelang');
 $routes->get('/VisiMisi', 'Pages::VisiMisi');
 $routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
-
+$routes->get('/BeritaAdmin', 'Pages::BeritaAdmin');
+$routes->get('/IklanHome', 'Pages::IklanHome');
+$routes->get('/Edit', 'Pages::Edit');
+$routes->get('/Tambah', 'Pages::Tambah');
 
 /*
  * --------------------------------------------------------------------

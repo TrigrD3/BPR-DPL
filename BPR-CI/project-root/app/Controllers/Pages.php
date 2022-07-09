@@ -212,4 +212,54 @@ class Pages extends BaseController
         ];
         echo view('pages/LayananLainnya', $data);
     }
+    public function Admin()
+    {
+        $data = [
+            'title' => 'Admin',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/admin', $data);
+    }
+    public function BeritaAdmin()
+    {
+        $data = [
+            'title' => 'Berita',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/BeritaAdmin', $data);
+    }
+    public function IklanHome()
+    {
+        $data = [
+            'title' => 'Home Iklan',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/IklanHome', $data);
+    }
+    public function Edit()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/Edit', $data);
+    }
+    public function Tambah()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/Tambah', $data);
+    }
 }
