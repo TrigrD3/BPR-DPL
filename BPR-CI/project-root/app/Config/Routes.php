@@ -46,6 +46,14 @@ $routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
 $routes->get('/Admin', 'Pages::admin');
+$routes->get('/Tabungan', 'Pages::Tabungan');
+$routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
+$routes->get('/Lelang', 'Pages::Lelang');
+$routes->get('/VisiMisi', 'Pages::VisiMisi');
+$routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
+$routes->get('/LayananLainnya', 'Pages::LayananLainnya');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -135,16 +135,81 @@ class Pages extends BaseController
         echo view('pages/Penghargaan', $data);
     }
 
-    public function Admin()
+    public function Tabungan()
     {
         $data = [
-            'title' => 'Admin | BANK LESTARI',
+            'title' => 'Tabungan',
             'css' => 'Style',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
             'header' => 'header'
         ];
-        echo view('pages/admin', $data);
+        echo view('pages/Tabungan', $data);
+    }
+
+    public function ProdukTabungan()
+    {
+        $data = [
+            'title' => 'Produk Tabungan',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/ProdukTabungan', $data);
+    }
+
+    public function Lelang()
+    {
+        $data = [
+            'title' => 'Lelang',
+            'css' => 'Lelang',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Lelang', $data);
+    }
+
+    public function VisiMisi()
+    {
+        $data = [
+            'title' => 'VisiMisi',
+            'css' => 'VisiMisi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/VisiMisi', $data);
+    }
+
+    public function StrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'StrukturOrganisasi',
+            'css' => 'StrukturOrganisasi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/StrukturOrganisasi', $data);
+    }
+
+    public function LayananLainnya()
+    {
+        $data = [
+            'title' => 'LayananLainnya',
+            'css' => 'LayananLainnya',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/LayananLainnya', $data);
     }
 }

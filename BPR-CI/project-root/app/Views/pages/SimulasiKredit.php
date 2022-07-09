@@ -49,45 +49,45 @@
             </div>
             
         </main>
-        <aside>
+        <aside class="tableHasil">
         
             <h1 class="display-5 mb-3 text-center">Pinjaman Anda</h1>
             
             <div class="row d-flex justify-content-center">
-                <div class="col-4">Total Pinjaman</div>
-                <div class="col-4">: <span id="resultTotalPinjaman"></span></div>
+                <div class="col-4 border">Total Pinjaman</div>
+                <div class="col-4 border">: <span id="resultTotalPinjaman"></span></div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col-4">Lama Pinjaman</div>
-                <div class="col-4">: <span id="resultLamaPinjaman"></span></div>
+                <div class="col-4 border">Lama Pinjaman</div>
+                <div class="col-4 border">: <span id="resultLamaPinjaman"></span></div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col-4">Bunga Pertahun</div>
-                <div class="col-4">: <span id="resultBungaPertahun"></span></div>
+                <div class="col-4 border">Bunga Pertahun</div>
+                <div class="col-4 border">: <span id="resultBungaPertahun"></span></div>
             </div>
             <div class="flatOnly">
                 <div class="row d-flex justify-content-center">
-                    <div class="col-4">Angsuran Pokok Perbulan</div>
-                    <div class="col-4">: <span id="resultAngPokokBulan"></span></div>
+                    <div class="col-4 border">Angsuran Pokok Perbulan</div>
+                    <div class="col-4 border">: <span id="resultAngPokokBulan"></span></div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-4">Angsuran Bunga Perbulan</div>
-                    <div class="col-4">: <span id="resultAngBungaBulan"></span></div>
+                    <div class="col-4 border">Angsuran Bunga Perbulan</div>
+                    <div class="col-4 border">: <span id="resultAngBungaBulan"></span></div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-4">Total angsuran per bulan</div>
-                    <div class="col-4">: <span id="resultAngBulan"></span></div>
+                    <div class="col-4 border">Total angsuran per bulan</div>
+                    <div class="col-4 border">: <span id="resultAngBulan"></span></div>
                 </div>
             
             </div>
             <div class="row d-flex justify-content-center mt-3">
-                <table id="tableAngsuran" class="col-8 table-bordered">
+                <table id="tableAngsuran" class="col-8 table-bordered ">
                     <thead class="thead-dark">
                         <tr>
                         <th scope="col">Bulan</th>
-                        <th scope="col">Pokok</th>
-                        <th scope="col">Bunga</th>
-                        <th scope="col">Angsuran</th>
+                        <th scope="col">Angsuran Pokok</th>
+                        <th scope="col">Angsuran Bunga</th>
+                        <th scope="col">Angsuran Total</th>
                         <th scope="col">Sisa Pinjaman</th>
                         </tr>
                     </thead>
