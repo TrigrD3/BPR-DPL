@@ -257,6 +257,16 @@ class Pages extends BaseController
         ];
         echo view('pages/AdminHome', $data);
     }
+    public function AdminKredit()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/AdminKredit', $data);
+    }
     public function Edit()
     {
         $data = [

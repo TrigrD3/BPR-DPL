@@ -53,6 +53,7 @@ $routes->get('/VisiMisi', 'Pages::VisiMisi');
 $routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
 $routes->get('/AdminHome', 'Pages::AdminHome');
+$routes->get('/AdminKredit', 'Pages::AdminKredit');
 $routes->get('/Edit', 'Pages::Edit');
 $routes->get('/Tambah', 'Pages::Tambah');
 $routes->get('/Profil', 'Pages::Profil');
