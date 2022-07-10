@@ -200,6 +200,19 @@ class Pages extends BaseController
         echo view('pages/StrukturOrganisasi', $data);
     }
 
+    public function Profil()
+    {
+        $data = [
+            'title' => 'Profil',
+            'css' => 'Profil',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Profil', $data);
+    }
+
     public function LayananLainnya()
     {
         $data = [
@@ -212,6 +225,18 @@ class Pages extends BaseController
         ];
         echo view('pages/LayananLainnya', $data);
     }
+    public function Sejarah()
+    {
+        $data = [
+            'title' => 'Sejarah',
+            'css' => 'Sejarah',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Sejarah', $data);
+    }
     public function Admin()
     {
         $data = [
@@ -222,25 +247,15 @@ class Pages extends BaseController
         ];
         echo view('pages/admin', $data);
     }
-    public function BeritaAdmin()
+    public function AdminHome()
     {
         $data = [
-            'title' => 'Berita',
+            'title' => 'Admin Home',
             'css' => 'Style',
             'font' => 'font',
 
         ];
-        echo view('pages/BeritaAdmin', $data);
-    }
-    public function IklanHome()
-    {
-        $data = [
-            'title' => 'Home Iklan',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('pages/IklanHome', $data);
+        echo view('pages/AdminHome', $data);
     }
     public function Edit()
     {
