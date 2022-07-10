@@ -267,6 +267,46 @@ class Pages extends BaseController
         ];
         echo view('pages/AdminKredit', $data);
     }
+    public function AdminPublikasi()
+    {
+        $data = [
+            'title' => 'Admin Publikasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/AdminPublikasi', $data);
+    }
+    public function AdminLoker()
+    {
+        $data = [
+            'title' => 'Admin Loker',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/AdminLoker', $data);
+    }
+    public function AdminProfil()
+    {
+        $data = [
+            'title' => 'Admin Profil',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/AdminProfil', $data);
+    }
+    public function AdminSejarah()
+    {
+        $data = [
+            'title' => 'Admin Sejarah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/AdminSejarah', $data);
+    }
     public function Edit()
     {
         $data = [

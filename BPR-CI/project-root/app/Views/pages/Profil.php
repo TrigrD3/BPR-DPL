@@ -4,7 +4,7 @@
 
 <div class="container my-4">
 
-    <h1>PROFIL PERUSHAAN</h1>
+    <h1>PROFIL</h1>
     <section class="pt-5">
         <h4>DASAR PENDIRIAN</h4>
         <p>Akte Notaris Veronica Lily Dharma, SH No. 49 tanggal 26 Juli 1991 dan Akte Perubahan No. 1 tanggal 4 September 1991 dengan Keputusan Menteri Kehakiman Republik Indonesaia No. 2 – 6611 tahun 1991 tanggal 12 September 1991 tentang persetujuan Akte Pendirian Perseroan Terbatas (PT) Bank Perkreditan Rakyat Lukah Lestari.
