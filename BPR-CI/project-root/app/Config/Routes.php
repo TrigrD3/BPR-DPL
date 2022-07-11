@@ -44,6 +44,7 @@ $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
 $routes->get('/Tabungan', 'Pages::Tabungan');
 $routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
+$routes->get('/Berita', 'Pages::Berita');
 
 /*
  * --------------------------------------------------------------------

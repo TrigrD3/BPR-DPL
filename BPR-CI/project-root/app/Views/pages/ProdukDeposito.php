@@ -9,7 +9,7 @@
     <div>
         <p class="h1">Deposito Lestari</p>
         <div class="text-center">
-            <img src="images/fotoDeposito.png" class="img-fluid" alt="GambarProdukDeposito">
+            <img src="https://via.placeholder.com/1920x600.png" class="img-fluid" alt="GambarProdukDeposito">
         </div>
     </div>
     <div class="my-4">

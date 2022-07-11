@@ -51,7 +51,9 @@ class Pages extends BaseController
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
-            'header' => 'header'
+            'header' => 'header',
+            'namaproduk' => 'tes Deposito',
+            'penjelasanproduk' => 'tes Deposito1'
         ];
         echo view('pages/Deposito', $data);
     }
@@ -119,5 +121,18 @@ class Pages extends BaseController
             'header' => 'header'
         ];
         echo view('pages/ProdukTabungan', $data);
+    }
+
+    public function Berita()
+    {
+        $data = [
+            'title' => 'Pusat Berita | Credit Scoring',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Berita', $data);
     }
 }

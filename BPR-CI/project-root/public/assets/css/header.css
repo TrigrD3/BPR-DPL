@@ -30,7 +30,7 @@ header img {
 
 @media screen and (min-width: 489px) and (max-width: 700px) {
   .span-nama {
-    width: 470px;
+    width: 200px;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 990px) {
