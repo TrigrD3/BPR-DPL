@@ -1,6 +1,8 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
+<main>
+
 
 <div class="container justify-content-center">
     <h1 >LELANG</h1>
@@ -78,5 +80,6 @@
     </div>
 
 </div>
+</main>
 <script src="<?= base_url(); ?>/assets/js/lelang.js"></script>
 <?= $this->endSection(); ?>
