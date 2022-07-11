@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
                     <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit"
-                        placeholder="Contoh: 150000000" value="5000000">
+                        placeholder="Contoh: 150000000" value="12000000">
                 </div>
                 <div class="form-group">
                     <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label for="bungaPertahun">Bunga Pertahun <em>(%)</em>: </label>
                     <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun"
-                        placeholder="Contoh: 10.5" value="1.5">
+                        placeholder="Contoh: 10.5" value="10">
                 </div>
                 <div class="form-group1 ">
                     <div class="form-check-inline">

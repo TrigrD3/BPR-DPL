@@ -25,6 +25,10 @@ main p {
   cursor: pointer;
 }
 
+.card iframe {
+  display: none;
+}
+
 .card-image {
   height: 200px;
 }
