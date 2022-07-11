@@ -53,7 +53,7 @@
                     </td>
                     <td class="project_progress">
                         <a>
-                            Pembangunan awal dilaksanakan dengan cara
+                            Pembangunan awal dilaksanakan dengan cara di
                         </a>
                     </td>
                     <td class="project-actions text-right">
