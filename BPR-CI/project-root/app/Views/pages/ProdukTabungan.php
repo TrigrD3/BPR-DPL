@@ -9,7 +9,7 @@
     <div>
         <p class="h1">Judul Tabungan</p>
         <div class="text-center">
-            <img src="assets/img/tabungan.jpg" class="img-fluid" alt="GambarProdukDeposito">
+            <img src="images/tabungan.jpg" class="img-fluid" alt="GambarProdukDeposito">
         </div>
     </div>
     <div class="my-4">

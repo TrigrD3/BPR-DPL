@@ -1,0 +1,18 @@
+h1 {
+  color: #0f54a3 !important;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h3 {
+  color: #0f54a3 !important;
+  font-family: "Montserrat";
+  text-align: left;
+}
+
+section p {
+  color: #646464 !important;
+  font-family: "Montserrat";
+  text-align: center;
+  font-size: 1rem;
+}
