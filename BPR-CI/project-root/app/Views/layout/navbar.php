@@ -35,7 +35,7 @@
                 <li><a class="dropdown-item" href="Profil">Profil Bank</a></li>
                 <li><a class="dropdown-item" href="VisiMisi">Visi Dan Misi</a></li>
                 <li><a class="dropdown-item" href="StrukturOrganisasi">Struktur Organisasi</a></li>
-                <li><a class="dropdown-item" href="#">Alamat Kantor</a></li>
+                <li><a class="dropdown-item" href="AlamatKantor">Alamat Kantor</a></li>
                 <li><a class="dropdown-item" href="PusatBerita">Berita Lestari</a></li>
             </ul>
         </div>
