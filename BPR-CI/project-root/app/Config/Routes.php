@@ -59,10 +59,14 @@ $routes->get('/AdminLoker', 'Pages::AdminLoker');
 $routes->get('/AdminProfil', 'Pages::AdminProfil');
 $routes->get('/AdminSejarah', 'Pages::AdminSejarah');
 $routes->get('/AdminBerita', 'Pages::AdminBerita');
+$routes->get('/AdminAlamat', 'Pages::AdminAlamat');
 $routes->get('/Edit', 'Pages::Edit');
 $routes->get('/Tambah', 'Pages::Tambah');
 $routes->get('/Profil', 'Pages::Profil');
 $routes->get('/Sejarah', 'Pages::Sejarah');
+$routes->get('/PusatBerita', 'Pages::PusatBerita');
+$routes->get('/Berita', 'Pages::Berita');
+$routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 
 /*
  * --------------------------------------------------------------------

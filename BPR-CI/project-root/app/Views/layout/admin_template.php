@@ -124,6 +124,12 @@
                                         <p>Berita</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="AdminAlamat" class="nav-link">
+                                        <i class="far nav-icon"></i>
+                                        <p>Alamat Kantor</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
