@@ -154,6 +154,3 @@ function metode_floating($jumlahPinjaman, $jangkaWaktu, $sukuBunga, $sbFloating,
     }
     return $angsuran;
 }
-
-
-?>
