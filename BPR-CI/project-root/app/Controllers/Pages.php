@@ -245,7 +245,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin', $data);
+        echo view('pages/admin/admin', $data);
     }
     public function AdminHome()
     {
@@ -255,7 +255,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminHome', $data);
+        echo view('pages/admin/AdminHome', $data);
     }
     public function AdminKredit()
     {
@@ -265,7 +265,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminKredit', $data);
+        echo view('pages/admin/AdminKredit', $data);
     }
     public function AdminPublikasi()
     {
@@ -275,7 +275,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminPublikasi', $data);
+        echo view('pages/admin/AdminPublikasi', $data);
     }
     public function AdminLoker()
     {
@@ -285,7 +285,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminLoker', $data);
+        echo view('pages/admin/AdminLoker', $data);
     }
     public function AdminProfil()
     {
@@ -295,7 +295,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminProfil', $data);
+        echo view('pages/admin/AdminProfil', $data);
     }
     public function AdminSejarah()
     {
@@ -305,7 +305,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/AdminSejarah', $data);
+        echo view('pages/admin/AdminSejarah', $data);
     }
     public function Edit()
     {
@@ -315,7 +315,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/Edit', $data);
+        echo view('pages/admin/Edit', $data);
     }
     public function Tambah()
     {
@@ -325,7 +325,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/Tambah', $data);
+        echo view('pages/admin/Tambah', $data);
     }
     public function Login()
     {
