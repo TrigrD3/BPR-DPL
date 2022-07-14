@@ -45,9 +45,29 @@ $routes->get('/Loker', 'Pages::Loker');
 $routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
+$routes->get('/Admin', 'Pages::admin');
 $routes->get('/Tabungan', 'Pages::Tabungan');
 $routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
 $routes->get('/Lelang', 'Pages::Lelang');
+$routes->get('/VisiMisi', 'Pages::VisiMisi');
+$routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
+$routes->get('/LayananLainnya', 'Pages::LayananLainnya');
+$routes->get('/AdminHome', 'Pages::AdminHome');
+$routes->get('/AdminKredit', 'Pages::AdminKredit');
+$routes->get('/AdminPublikasi', 'Pages::AdminPublikasi');
+$routes->get('/AdminLoker', 'Pages::AdminLoker');
+$routes->get('/AdminProfil', 'Pages::AdminProfil');
+$routes->get('/AdminSejarah', 'Pages::AdminSejarah');
+$routes->get('/AdminBerita', 'Pages::AdminBerita');
+$routes->get('/AdminAlamat', 'Pages::AdminAlamat');
+$routes->get('/Edit', 'Pages::Edit');
+$routes->get('/Tambah', 'Pages::Tambah');
+$routes->get('/Profil', 'Pages::Profil');
+$routes->get('/Sejarah', 'Pages::Sejarah');
+$routes->get('/Login', 'Pages::Login');
+$routes->get('/PusatBerita', 'Pages::PusatBerita');
+$routes->get('/Berita', 'Pages::Berita');
+$routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 
 /*
  * --------------------------------------------------------------------

@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand text-dark d-flex text-truncate" href="/">
       <img src="<?php echo base_url('images/logoBPR.png'); ?>" class="logo-nav" width="75" height="auto" alt="Logo BPR">
-      <span class="ms-2 span-nama">Bank Lestari <br>PT BPR Danapermata Lestari</span>
+      <span class="ms-2 span-nama">BANK LESTARI <br>PT BPR Danapermata Lestari</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

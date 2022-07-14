@@ -1,13 +1,12 @@
 @font-face {
-    font-family: "Rubik";
-    src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Sarala";
-    src: url("../fonts/Sarala/Sarala-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Maven Pro";
-    src: url("../fonts/Maven_Pro/static/MavenPro-Regular.ttf");
-  }
-  
+  font-family: "Rubik";
+  src: url("../fonts/Rubik/static/Rubik-Regular.ttf");
+}
+@font-face {
+  font-family: "Sarala";
+  src: url("../fonts/Sarala/Sarala-Regular.ttf");
+}
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../fonts/Maven_Pro/static/MavenPro-Regular.ttf");
+}

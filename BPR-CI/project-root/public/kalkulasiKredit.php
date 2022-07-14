@@ -56,14 +56,14 @@ function response($data, $metode=0){
 
 function metode_flat($jumlahPinjaman, $jangkaWaktu, $sukuBunga) {
     $angsuran = [];
-    $sukuBunga = $sukuBunga / 100;
+    $sukuBunga = ($sukuBunga/12) / 100;
     $pokok = $jumlahPinjaman / $jangkaWaktu;
-    $bunga = $jumlahPinjaman * $sukuBunga / $jangkaWaktu;
-    $sisaPinjaman = $jumlahPinjaman;
+    $bunga = $jumlahPinjaman * $sukuBunga ;
     $jumlahAngsuran = $pokok + $bunga;
+    $sisaPinjaman = $jumlahAngsuran*($jangkaWaktu );
 
     for($i = 0; $i < $jangkaWaktu; $i++) {
-        $sisaPinjaman -= $pokok;
+        $sisaPinjaman -= $jumlahAngsuran;
         array_push($angsuran, [
             "no"                => $i + 1,
             "pokok"             => round($pokok),
@@ -99,7 +99,7 @@ function metode_efektif($jumlahPinjaman, $jangkaWaktu, $sukuBunga) {
 
 function metode_anuitas($jumlahPinjaman, $jangkaWaktu, $sukuBunga) {
     $angsuran = [];
-    $sukuBunga = $sukuBunga / 100;
+    $sukuBunga = ($sukuBunga/12) / 100;
     $jumlahAngsuran = Finance::pmt($sukuBunga, $jangkaWaktu, -$jumlahPinjaman);
     $sisaPinjaman = $jumlahPinjaman;
 
@@ -154,6 +154,3 @@ function metode_floating($jumlahPinjaman, $jangkaWaktu, $sukuBunga, $sbFloating,
     }
     return $angsuran;
 }
-
-
-?>

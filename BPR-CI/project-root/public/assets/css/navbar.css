@@ -4,3 +4,8 @@ nav a {
 .nav-link {
   font-weight: bold !important;
 }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}

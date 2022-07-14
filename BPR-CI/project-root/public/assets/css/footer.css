@@ -16,6 +16,15 @@
   }
 }
 
+footer {
+  font-family: Montserrat;
+}
+
+footer p {
+  font-size: 12px;
+  font-weight: normal;
+}
+
 footer hr {
   color: #0b5ed7;
 }
