@@ -62,6 +62,7 @@ $routes->get('/Edit', 'Pages::Edit');
 $routes->get('/Tambah', 'Pages::Tambah');
 $routes->get('/Profil', 'Pages::Profil');
 $routes->get('/Sejarah', 'Pages::Sejarah');
+$routes->get('/Login', 'Pages::Login');
 
 /*
  * --------------------------------------------------------------------

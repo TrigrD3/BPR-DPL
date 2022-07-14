@@ -327,4 +327,14 @@ class Pages extends BaseController
         ];
         echo view('pages/Tambah', $data);
     }
+    public function Login()
+    {
+        $data = [
+            'title' => 'Login',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/Login', $data);
+    }
 }
