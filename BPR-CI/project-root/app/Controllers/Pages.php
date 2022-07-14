@@ -135,6 +135,45 @@ class Pages extends BaseController
         echo view('pages/Penghargaan', $data);
     }
 
+    public function Berita()
+    {
+        $data = [
+            'title' => 'Berita',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/Berita', $data);
+    }
+
+    public function PusatBerita()
+    {
+        $data = [
+            'title' => 'Pusat Berita',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/PusatBerita', $data);
+    }
+
+    public function AlamatKantor()
+    {
+        $data = [
+            'title' => 'Alamat Kantor',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/AlamatKantor', $data);
+    }
+
     public function Tabungan()
     {
         $data = [
@@ -266,6 +305,26 @@ class Pages extends BaseController
 
         ];
         echo view('pages/admin/AdminKredit', $data);
+    }
+    public function AdminBerita()
+    {
+        $data = [
+            'title' => 'Admin Berita',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminBerita', $data);
+    }
+    public function AdminAlamat()
+    {
+        $data = [
+            'title' => 'Admin Berita',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminAlamat', $data);
     }
     public function AdminPublikasi()
     {
