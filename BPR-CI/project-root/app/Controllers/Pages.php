@@ -306,6 +306,26 @@ class Pages extends BaseController
         ];
         echo view('pages/admin/AdminKredit', $data);
     }
+    public function AdminDeposit()
+    {
+        $data = [
+            'title' => 'Admin Deposit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/admin/AdminDeposit', $data);
+    }
+    public function AdminTabungan()
+    {
+        $data = [
+            'title' => 'Admin Tabungan',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/admin/AdminTabungan', $data);
+    }
     public function AdminBerita()
     {
         $data = [

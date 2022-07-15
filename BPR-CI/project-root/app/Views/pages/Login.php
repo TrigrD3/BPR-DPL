@@ -19,39 +19,38 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html">LOGIN <b>ADMIN</b></a>
+            <a href="Home">LOGIN <b>ADMIN</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
 
-                <form action="../../index3.html" method="post">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="User Name">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-user"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-lock"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
 
-                        <!-- /.col -->
-                        <div class=" d-grid gap-2 col-6 mx-auto">
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="User Name">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-user"></span>
                         </div>
-                        <!-- /.col -->
                     </div>
-                </form>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Password">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <!-- /.col -->
+                    <div class=" d-grid gap-2 col-6 mx-auto">
+                        <a href="Admin" class="btn btn-primary btn-block">Login</a>
+                    </div>
+                    <!-- /.col -->
+                </div>
 
 
             </div>

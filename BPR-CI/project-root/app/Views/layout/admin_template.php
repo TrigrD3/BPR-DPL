@@ -121,6 +121,40 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
+                                    Deposit
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="AdminDeposit" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Deposit</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Tabungan
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="AdminTabungan" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Tabungan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
                                     Publikasi
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
@@ -155,7 +189,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Profil Perushaan
+                                    Tentang Lestari
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -166,31 +200,31 @@
                                         <p>Admin Profil</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="AdminSejarah" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Sejarah</p>
+                                        <i class="far nav-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="AdminAlamat" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Alamat Kantor</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Sejarah Perushaan
+                                    Header
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="AdminSejarah" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Sejarah</p>
-                                        <i class="far nav-icon"></i>
-                                        <p>Home</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminKredit" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Kredit</p>
-                                    </a>
-                                </li>
+
                                 <li class="nav-item">
                                     <a href="AdminPublikasi" class="nav-link">
                                         <i class="far nav-icon"></i>
@@ -221,12 +255,7 @@
                                         <p>Berita</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="AdminAlamat" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Alamat Kantor</p>
-                                    </a>
-                                </li>
+
                             </ul>
                         </li>
                     </ul>
