@@ -72,3 +72,21 @@ a:active {
 .gambar img {
   cursor: pointer;
 }
+.card-image {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.card-image:hover {
+  opacity: 0.5;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+  background-color: rgb(67, 61, 61, 0.5);
+}
