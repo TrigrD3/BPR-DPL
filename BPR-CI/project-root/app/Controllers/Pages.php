@@ -284,7 +284,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/admin', $data);
+        echo view('admin/admin', $data);
     }
     public function AdminHome()
     {
@@ -294,7 +294,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminHome', $data);
+        echo view('admin/AdminHome', $data);
     }
     public function AdminKredit()
     {
@@ -304,7 +304,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminKredit', $data);
+        echo view('admin/AdminKredit', $data);
     }
     public function AdminBerita()
     {
@@ -334,7 +334,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminPublikasi', $data);
+        echo view('admin/AdminPublikasi', $data);
     }
     public function AdminLoker()
     {
@@ -344,7 +344,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminLoker', $data);
+        echo view('admin/AdminLoker', $data);
     }
     public function AdminProfil()
     {
@@ -354,7 +354,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminProfil', $data);
+        echo view('admin/AdminProfil', $data);
     }
     public function AdminSejarah()
     {
@@ -364,7 +364,48 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminSejarah', $data);
+        echo view('admin/AdminSejarah', $data);
+    }
+
+    public function adminLelang()
+    {
+        $data = [
+            'title' => 'Admin Lelang',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLelang', $data);
+    }
+    public function adminLayananLainnya()
+    {
+        $data = [
+            'title' => 'Admin Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLayananLainnya', $data);
+    }
+    public function adminVisiMisi()
+    {
+        $data = [
+            'title' => 'Admin Visi Misi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminVisiMisi', $data);
+    }
+    public function adminStrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'Admin Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminStrukturOrganisasi', $data);
     }
     public function Edit()
     {
@@ -374,7 +415,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/Edit', $data);
+        echo view('admin/Edit', $data);
     }
     public function Tambah()
     {
@@ -384,7 +425,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/Tambah', $data);
+        echo view('admin/Tambah', $data);
     }
     public function Login()
     {
