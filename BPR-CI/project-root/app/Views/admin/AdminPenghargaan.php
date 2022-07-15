@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th style="width: 20%">
-                            judul
+                            FOTO
                         </th>
                         <th style="width: 30%">
                             Deskripsi
@@ -33,7 +33,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            Profil Perushaan
+                            Foto
                         </td>
                         <td>
                             <a>

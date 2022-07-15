@@ -57,6 +57,7 @@ $routes->get('/AdminKredit', 'Pages::AdminKredit');
 $routes->get('/AdminDeposit', 'Pages::AdminDeposit');
 $routes->get('/AdminTabungan', 'Pages::AdminTabungan');
 $routes->get('/AdminPublikasi', 'Pages::AdminPublikasi');
+$routes->get('/adminPenghargaan', 'Pages::adminPenghargaan');
 $routes->get('/AdminPAT', 'Pages::AdminPAT');
 $routes->get('/AdminUser', 'Pages::AdminUser');
 $routes->get('/AdminLoker', 'Pages::AdminLoker');
