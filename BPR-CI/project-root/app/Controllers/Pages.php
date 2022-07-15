@@ -284,7 +284,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/admin', $data);
+        echo view('admin/admin', $data);
     }
     public function AdminHome()
     {
@@ -294,7 +294,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminHome', $data);
+        echo view('admin/AdminHome', $data);
     }
     public function AdminKredit()
     {
@@ -304,7 +304,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminKredit', $data);
+        echo view('admin/AdminKredit', $data);
     }
     public function AdminDeposit()
     {
@@ -314,7 +314,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminDeposit', $data);
+        echo view('admin/AdminDeposit', $data);
     }
     public function AdminTabungan()
     {
@@ -324,7 +324,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminTabungan', $data);
+        echo view('admin/AdminTabungan', $data);
     }
     public function AdminBerita()
     {
@@ -354,7 +354,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminPublikasi', $data);
+        echo view('admin/AdminPublikasi', $data);
     }
     public function AdminPAT()
     {
@@ -364,7 +364,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminPAT', $data);
+        echo view('admin/AdminPAT', $data);
     }
     public function AdminUser()
     {
@@ -374,7 +374,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminUser', $data);
+        echo view('admin/AdminUser', $data);
     }
     public function AdminLoker()
     {
@@ -384,7 +384,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminLoker', $data);
+        echo view('admin/AdminLoker', $data);
     }
     public function AdminProfil()
     {
@@ -394,7 +394,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminProfil', $data);
+        echo view('admin/AdminProfil', $data);
     }
     public function AdminSejarah()
     {
@@ -404,7 +404,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/AdminSejarah', $data);
+        echo view('admin/AdminSejarah', $data);
     }
     public function Edit()
     {
@@ -414,7 +414,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/Edit', $data);
+        echo view('admin/Edit', $data);
     }
     public function Tambah()
     {
@@ -424,7 +424,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('pages/admin/Tambah', $data);
+        echo view('admin/Tambah', $data);
     }
     public function Login()
     {
