@@ -21,7 +21,7 @@
                         eveniet. Eum quas beatae cumque eum quaerat.
                     </p>
                     <div class="d-flex">
-                        <a href="#" class="btn btn-primary">Selengkapnya</a>
+                        <a href="Berita" class="btn btn-primary">Selengkapnya</a>
                     </div>
                 </div>
             </div>

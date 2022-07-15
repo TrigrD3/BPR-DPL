@@ -83,6 +83,24 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Akun Admin
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="AdminUser" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Akun Admin</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
@@ -228,31 +246,19 @@
                                 <li class="nav-item">
                                     <a href="AdminPublikasi" class="nav-link">
                                         <i class="far nav-icon"></i>
-                                        <p>Publikasi</p>
+                                        <p>Admin Publikasi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="AdminPAT" class="nav-link">
+                                        <i class="far nav-icon"></i>
+                                        <p>Admin PAT</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="AdminLoker" class="nav-link">
                                         <i class="far nav-icon"></i>
-                                        <p>Loker</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminProfil" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Profil</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminSejarah" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Sejarah</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminBerita" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Berita</p>
+                                        <p>Admin Loker</p>
                                     </a>
                                 </li>
 

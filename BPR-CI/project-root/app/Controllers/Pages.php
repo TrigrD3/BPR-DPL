@@ -356,6 +356,26 @@ class Pages extends BaseController
         ];
         echo view('pages/admin/AdminPublikasi', $data);
     }
+    public function AdminPAT()
+    {
+        $data = [
+            'title' => 'Admin PAT',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/admin/AdminPAT', $data);
+    }
+    public function AdminUser()
+    {
+        $data = [
+            'title' => 'Admin User',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/admin/AdminUser', $data);
+    }
     public function AdminLoker()
     {
         $data = [
