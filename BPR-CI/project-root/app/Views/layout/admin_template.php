@@ -231,6 +231,18 @@
                                         <p>Alamat Kantor</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="adminVisiMisi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Visi & Misi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="adminStrukturOrganisasi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Struktur Organisasi</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
 
@@ -265,21 +277,21 @@
 
                             </ul>
                         </li>
-                                                <!-- start of lelang -->
-                                                <li class="nav-item">
+                        <!-- start of lelang -->
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Lelang
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Lelang
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
                             </a>
 
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
                                     <a href="adminLelang" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Admin Lelang</p>
                                     </a>
                                 </li>
@@ -289,18 +301,18 @@
                         <!-- start of Layanan Lainnya -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Layanan Lainnya
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Layanan Lainnya
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
                             </a>
 
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
                                     <a href="adminLayananLainnya" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Admin Layanan Lainnya</p>
                                     </a>
                                 </li>
@@ -310,18 +322,18 @@
                         <!-- start of Visi Misi -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                                Visi & Misi
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Visi & Misi
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
                             </a>
 
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
                                     <a href="adminVisiMisi" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Admin Visi & Misi</p>
                                     </a>
                                 </li>
@@ -331,18 +343,18 @@
                         <!-- start of Struktur Organisasi -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
-                            <p>
-                            Struktur Organisasi
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Struktur Organisasi
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
                             </a>
 
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
                                     <a href="adminStrukturOrganisasi" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
+                                        <i class="far fa-circle nav-icon"></i>
                                         <p>Admin Struktur Organisasi</p>
                                     </a>
                                 </li>
