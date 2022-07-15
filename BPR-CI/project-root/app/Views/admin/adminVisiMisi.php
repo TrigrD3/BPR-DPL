@@ -2,11 +2,10 @@
 
 <?= $this->section('content'); ?>
 <section class="content">
-
-    <!-- Default box -->
+    <!-- start of visi -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Produk</h3>
+            <h3 class="card-title">Visi</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -18,22 +17,14 @@
             </div>
         </div>
         <div class="card-body p-0">
-            <table class="table table-striped projects">
+            <table class="table table-striped projects text-center">
                 <thead>
                     <tr>
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 20%">
-                            Nama
-                        </th>
-                        <th style="width: 30%">
+                        <th style="width: 80%">
                             Deskripsi
-                        </th>
-                        <th>
-                            Foto
-                        </th>
-                        <th style="width: 20%">
                         </th>
                     </tr>
                 </thead>
@@ -43,21 +34,10 @@
                             1
                         </td>
                         <td>
-                            <a>
-                                Perkembangan Usaha
-                            </a>
+                            <p>MENJADI BPR YANG KOKOH DAN KOMITMEN TERHADAP USAHA MIKRO</p>
                             <br />
                         </td>
-                        <td>
-                            <a>
-                                Pemerataan pembaguan dalam beberapa tahun sekarang ini terasa terhambat ..........
-                            </a>
-                        </td>
-                        <td class="project_progress">
-                            <a>
-                                FOTO
-                            </a>
-                        </td>
+
                         <td class="project-actions text-right">
                             <a class="btn btn-info btn-sm" href="Edit">
                                 <i class="fas fa-pencil-alt">
@@ -80,10 +60,12 @@
         </div>
         <!-- /.card-body -->
     </div>
-    <!-- /.card -->
+    <!-- end of visi -->
+
+    <!-- start of misi -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Iklan</h3>
+            <h3 class="card-title">Misi</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -95,16 +77,14 @@
             </div>
         </div>
         <div class="card-body p-0">
-            <table class="table table-striped projects">
+            <table class="table table-striped projects text-center">
                 <thead>
                     <tr>
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 30%">
-                            Foto
-                        </th>
-                        <th style="width: 20%">
+                        <th style="width: 80%">
+                            Deskripsi
                         </th>
                     </tr>
                 </thead>
@@ -114,14 +94,12 @@
                             1
                         </td>
                         <td>
-                            <a>
-                                FOTO
-                            </a>
+                            <p>Meningkatkan kinerja dan tetap sebagai BPR yang sehat, profesional dan mampu bersaing serta berkesinambungan. Memberikan pelayanan yang terbaik kepada nasabah, berperan dalam pengembangan usaha Mikro, serta meningkatkan nilai tambah investasi pemegang saham dan kesejahteraan karyawan. </p>
                             <br />
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="Edit">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -134,7 +112,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Edit">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -142,7 +120,6 @@
         </div>
         <!-- /.card-body -->
     </div>
-    <!-- /.card -->
-
+    <!-- end of misi -->
 </section>
 <?= $this->endSection(''); ?>

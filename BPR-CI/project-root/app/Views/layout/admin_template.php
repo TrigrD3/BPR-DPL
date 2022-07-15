@@ -233,6 +233,7 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
@@ -264,6 +265,90 @@
 
                             </ul>
                         </li>
+                                                <!-- start of lelang -->
+                                                <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Lelang
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="adminLelang" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Lelang</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end of lelang -->
+                        <!-- start of Layanan Lainnya -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Layanan Lainnya
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="adminLayananLainnya" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Layanan Lainnya</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end of Layanan Lainnya -->
+                        <!-- start of Visi Misi -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                                Visi & Misi
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="adminVisiMisi" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Visi & Misi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end of Visi Misi -->
+                        <!-- start of Struktur Organisasi -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-book"></i>
+                            <p>
+                            Struktur Organisasi
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="adminStrukturOrganisasi" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Struktur Organisasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end of Struktur Organisasi -->
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

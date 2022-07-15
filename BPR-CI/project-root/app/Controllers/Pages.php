@@ -406,6 +406,47 @@ class Pages extends BaseController
         ];
         echo view('admin/AdminSejarah', $data);
     }
+
+    public function adminLelang()
+    {
+        $data = [
+            'title' => 'Admin Lelang',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLelang', $data);
+    }
+    public function adminLayananLainnya()
+    {
+        $data = [
+            'title' => 'Admin Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLayananLainnya', $data);
+    }
+    public function adminVisiMisi()
+    {
+        $data = [
+            'title' => 'Admin Visi Misi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminVisiMisi', $data);
+    }
+    public function adminStrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'Admin Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminStrukturOrganisasi', $data);
+    }
     public function Edit()
     {
         $data = [
