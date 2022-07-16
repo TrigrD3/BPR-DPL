@@ -475,7 +475,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/Edit', $data);
+        echo view('pages/Edit', $data);
     }
     public function Tambah()
     {
