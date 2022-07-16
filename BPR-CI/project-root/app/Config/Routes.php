@@ -54,12 +54,22 @@ $routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
 $routes->get('/AdminHome', 'Pages::AdminHome');
 $routes->get('/AdminKredit', 'Pages::AdminKredit');
+$routes->get('/AdminDeposit', 'Pages::AdminDeposit');
+$routes->get('/AdminTabungan', 'Pages::AdminTabungan');
 $routes->get('/AdminPublikasi', 'Pages::AdminPublikasi');
+$routes->get('/adminPenghargaan', 'Pages::adminPenghargaan');
+$routes->get('/AdminPAT', 'Pages::AdminPAT');
+$routes->get('/AdminUser', 'Pages::AdminUser');
 $routes->get('/AdminLoker', 'Pages::AdminLoker');
 $routes->get('/AdminProfil', 'Pages::AdminProfil');
 $routes->get('/AdminSejarah', 'Pages::AdminSejarah');
 $routes->get('/AdminBerita', 'Pages::AdminBerita');
 $routes->get('/AdminAlamat', 'Pages::AdminAlamat');
+$routes->get('/adminLelang', 'Pages::adminLelang');
+$routes->get('/adminIdentitas', 'Pages::adminIdentitas');
+$routes->get('/adminLayananLainnya', 'Pages::adminLayananLainnya');
+$routes->get('/adminVisiMisi', 'Pages::adminVisiMisi');
+$routes->get('/adminStrukturOrganisasi', 'Pages::adminStrukturOrganisasi');
 $routes->get('/Edit', 'Pages::Edit');
 $routes->get('/Tambah', 'Pages::Tambah');
 $routes->get('/Profil', 'Pages::Profil');
@@ -68,6 +78,7 @@ $routes->get('/Login', 'Pages::Login');
 $routes->get('/PusatBerita', 'Pages::PusatBerita');
 $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
+
 
 /*
  * --------------------------------------------------------------------

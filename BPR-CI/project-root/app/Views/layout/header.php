@@ -16,7 +16,7 @@
         <a class="nav-link text-dark px-3" href="KAP">KAP</a>
         <a class="nav-link text-dark px-3" href="Penghargaan">Penghargaan</a>
         <a class="nav-link text-dark px-3" href="Loker">Lowongan Kerja</a>
-        <a class="btn navbar-btn text-white px-3" href="#" id="dropdownlogin" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</a>
+        <a class="btn navbar-btn text-white px-3" href="Login" data-bs-toggle=" dropdown" data-bs-display="static" aria-expanded="false" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</a>
       </div>
     </div>
   </div>

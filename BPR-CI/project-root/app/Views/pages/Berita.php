@@ -26,8 +26,8 @@
                         <div class="card col-auto h-100">
                             <img class="card-img-top card-image" src="https://via.placeholder.com/800x600.png" alt="Card image cap">
                             <div class="card-img-overlay">
-                                <h5 class="card-title info-box"><?= $namaproduk; ?></h5>
-                                <p class="info-box"><?= $penjelasanproduk; ?></p>
+                                <h5 class="card-title info-box">TES</h5>
+                                <p class="info-box">TES</p>
                             </div>
                         </div>
                     </a>

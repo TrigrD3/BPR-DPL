@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputDescription">Project Description</label>
-                        <textarea id="inputDescription" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                        <textarea name="editor1" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
                     </div>
                     <div class="form-group">
                         <label for="inputStatus">Status</label>
@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col-12">
             <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="Save Changes" class="btn btn-success float-right">
+            <input type="submit" value="add" class="btn btn-success float-right">
         </div>
     </div>
 </section>

@@ -87,6 +87,23 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
+                                    Identitas Website
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="adminIdentitas" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Identitas Website</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
                                     Home
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
@@ -121,15 +138,15 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Publikasi
+                                    Deposit
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminPublikasi" class="nav-link">
+                                    <a href="AdminDeposit" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Publikasi</p>
+                                        <p>Admin Deposit</p>
                                     </a>
                                 </li>
                             </ul>
@@ -138,15 +155,15 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    lowongan Kerja
+                                    Tabungan
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminLoker" class="nav-link">
+                                    <a href="AdminTabungan" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Loker</p>
+                                        <p>Admin Tabungan</p>
                                     </a>
                                 </li>
                             </ul>
@@ -155,7 +172,24 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Profil Perushaan
+                                    Layanan Lianya
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="adminLayananLainnya" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Layanan Lainya</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Tentang Lestari
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -166,69 +200,96 @@
                                         <p>Admin Profil</p>
                                     </a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="AdminSejarah" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Sejarah</p>
+                                        <i class="far nav-icon"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="AdminAlamat" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Alamat Kantor</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="adminVisiMisi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Visi & Misi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="adminStrukturOrganisasi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Struktur Organisasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Header
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="AdminPublikasi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Publikasi</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="AdminPAT" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin PAT</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="AdminLoker" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Loker</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="adminPenghargaan" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Penghargaan</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="adminLelang" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Lelang</p>
+                                    </a>
+                                </li>
+
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Sejarah Perushaan
+                                    Akun Admin
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminSejarah" class="nav-link">
+                                    <a href="AdminUser" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Sejarah</p>
-                                        <i class="far nav-icon"></i>
-                                        <p>Home</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminKredit" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Kredit</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminPublikasi" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Publikasi</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminLoker" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Loker</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminProfil" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Profil</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminSejarah" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Sejarah</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminBerita" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Berita</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="AdminAlamat" class="nav-link">
-                                        <i class="far nav-icon"></i>
-                                        <p>Alamat Kantor</p>
+                                        <p>Akun Admin</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+
+                        <!-- end of Struktur Organisasi -->
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -285,6 +346,11 @@
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
 </body>
 
 </html>
