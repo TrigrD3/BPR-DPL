@@ -6,7 +6,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Admin</h3>
+            <h3 class="card-title">Lowongan Kerja</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -21,17 +21,17 @@
             <table class="table table-striped projects">
                 <thead>
                     <tr>
-                        <th style="width: 1%">
-                            No
+                        <th style="width: 20%">
+                            Foto
                         </th>
-                        <th style="width: 30%">
-                            Nama
+                        <th style="width: 20%">
+                            Judul
                         </th>
-                        <th style="width: 30%">
-                            Username
+                        <th style="width: 40%">
+                            Deskripsi
                         </th>
                         <th>
-                            Password
+                            Link
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -40,46 +40,38 @@
                 <tbody>
                     <tr>
                         <td>
-                            1
+                            FOTO
                         </td>
                         <td>
                             <a>
-                                Muhamamd Yusuf Hasbullah
+                                lOKER
                             </a>
                             <br />
                         </td>
                         <td>
                             <a>
-                                Myusufh2001
+                                asdasd asdasdasd asdas das das
                             </a>
                         </td>
                         <td class="project_progress">
                             <a>
-                                *************
+                                indoensai.com
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditLoker">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->
     </div>
+    <!-- /.card -->
 
 
 </section>

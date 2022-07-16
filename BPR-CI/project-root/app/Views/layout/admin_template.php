@@ -241,31 +241,31 @@
                                 <li class="nav-item">
                                     <a href="AdminPublikasi" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Publikasi</p>
+                                        <p>Publikasi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="AdminPAT" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin PAT</p>
+                                        <p>PAT</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="AdminLoker" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Loker</p>
+                                        <p>Loker</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="adminPenghargaan" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Penghargaan</p>
+                                        <p>Penghargaan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="adminLelang" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Lelang</p>
+                                        <p>Lelang</p>
                                     </a>
                                 </li>
 
@@ -275,7 +275,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Akun Admin
+                                    Akun
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -283,7 +283,7 @@
                                 <li class="nav-item">
                                     <a href="AdminUser" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Akun Admin</p>
+                                        <p>Akun</p>
                                     </a>
                                 </li>
                             </ul>

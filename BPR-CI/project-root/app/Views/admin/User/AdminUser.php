@@ -6,7 +6,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Laporan Publikasi</h3>
+            <h3 class="card-title">Admin</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -24,14 +24,14 @@
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 20%">
+                        <th style="width: 30%">
                             Nama
                         </th>
                         <th style="width: 30%">
-                            File
+                            Username
                         </th>
                         <th>
-                            Tahun
+                            Password
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -44,22 +44,22 @@
                         </td>
                         <td>
                             <a>
-                                Perkembangan Usaha
+                                Muhamamd Yusuf Hasbullah
                             </a>
                             <br />
                         </td>
                         <td>
                             <a>
-                                Laporan Publikasi tahun 2001.pdf
+                                Myusufh2001
                             </a>
                         </td>
                         <td class="project_progress">
                             <a>
-                                2012
+                                *************
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditUser">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -72,7 +72,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahUser">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -80,7 +80,6 @@
         </div>
         <!-- /.card-body -->
     </div>
-    <!-- /.card -->
 
 
 </section>
