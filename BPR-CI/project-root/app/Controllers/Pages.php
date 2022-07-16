@@ -417,6 +417,16 @@ class Pages extends BaseController
         ];
         echo view('admin/adminLelang', $data);
     }
+    public function adminIdentitas()
+    {
+        $data = [
+            'title' => 'Admin Identitas',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminIdentitas', $data);
+    }
     public function adminPenghargaan()
     {
         $data = [

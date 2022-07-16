@@ -66,6 +66,7 @@ $routes->get('/AdminSejarah', 'Pages::AdminSejarah');
 $routes->get('/AdminBerita', 'Pages::AdminBerita');
 $routes->get('/AdminAlamat', 'Pages::AdminAlamat');
 $routes->get('/adminLelang', 'Pages::adminLelang');
+$routes->get('/adminIdentitas', 'Pages::adminIdentitas');
 $routes->get('/adminLayananLainnya', 'Pages::adminLayananLainnya');
 $routes->get('/adminVisiMisi', 'Pages::adminVisiMisi');
 $routes->get('/adminStrukturOrganisasi', 'Pages::adminStrukturOrganisasi');

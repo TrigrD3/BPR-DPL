@@ -83,20 +83,19 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Akun Admin
+                                    Identitas Website
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminUser" class="nav-link">
+                                    <a href="adminIdentitas" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Akun Admin</p>
+                                        <p>Admin Identitas Website</p>
                                     </a>
                                 </li>
                             </ul>
@@ -165,6 +164,23 @@
                                     <a href="AdminTabungan" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Admin Tabungan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Layanan Lianya
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="adminLayananLainnya" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Admin Layanan Lainya</p>
                                     </a>
                                 </li>
                             </ul>
@@ -255,6 +271,23 @@
 
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Akun Admin
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="AdminUser" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Akun Admin</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
                         <!-- end of Struktur Organisasi -->
                     </ul>
@@ -313,6 +346,10 @@
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('editor1');
+    </script>
 </body>
 
 </html>
