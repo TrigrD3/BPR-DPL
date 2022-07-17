@@ -59,7 +59,7 @@
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditProdukTabungan">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -72,7 +72,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProdukTabungan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -121,7 +121,7 @@
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="EditIklanTabungan">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -134,7 +134,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Edit">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklanTabungan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

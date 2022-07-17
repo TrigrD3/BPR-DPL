@@ -95,7 +95,7 @@
                                 <li class="nav-item">
                                     <a href="adminIdentitas" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Identitas Website</p>
+                                        <p>Identitas Website</p>
                                     </a>
                                 </li>
                             </ul>
@@ -112,7 +112,7 @@
                                 <li class="nav-item">
                                     <a href="AdminHome" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Home</p>
+                                        <p>Home</p>
                                     </a>
                                 </li>
                             </ul>
@@ -129,7 +129,7 @@
                                 <li class="nav-item">
                                     <a href="AdminKredit" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Kredit</p>
+                                        <p>Kredit</p>
                                     </a>
                                 </li>
                             </ul>
@@ -138,15 +138,15 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Deposit
+                                    Deposito
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminDeposit" class="nav-link">
+                                    <a href="AdminDeposito" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Deposit</p>
+                                        <p>Deposito</p>
                                     </a>
                                 </li>
                             </ul>
@@ -163,7 +163,7 @@
                                 <li class="nav-item">
                                     <a href="AdminTabungan" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Tabungan</p>
+                                        <p>Tabungan</p>
                                     </a>
                                 </li>
                             </ul>
@@ -172,7 +172,7 @@
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
-                                    Layanan Lianya
+                                    Layanan Lainnya
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -180,7 +180,7 @@
                                 <li class="nav-item">
                                     <a href="adminLayananLainnya" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Layanan Lainya</p>
+                                        <p>Layanan Lainnya</p>
                                     </a>
                                 </li>
                             </ul>
@@ -197,32 +197,32 @@
                                 <li class="nav-item">
                                     <a href="AdminProfil" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Profil</p>
+                                        <p>Profil</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="AdminSejarah" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Sejarah</p>
+                                        <p>Sejarah</p>
                                         <i class="far nav-icon"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="AdminAlamat" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Alamat Kantor</p>
+                                        <p>Kantor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="adminVisiMisi" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Visi & Misi</p>
+                                        <p>Visi & Misi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="adminStrukturOrganisasi" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Admin Struktur Organisasi</p>
+                                        <p>Struktur Organisasi</p>
                                     </a>
                                 </li>
                             </ul>

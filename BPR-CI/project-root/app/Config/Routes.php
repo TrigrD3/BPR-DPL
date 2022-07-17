@@ -35,6 +35,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+// start of pages
 $routes->get('/', 'Pages::index');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
 $routes->get('/SimulasiTabungan', 'Pages::SimulasiTabungan');
@@ -52,44 +53,59 @@ $routes->get('/Lelang', 'Pages::Lelang');
 $routes->get('/VisiMisi', 'Pages::VisiMisi');
 $routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
-$routes->get('/AdminHome', 'Pages::AdminHome');
-$routes->get('/AdminKredit', 'Pages::AdminKredit');
-$routes->get('/AdminDeposit', 'Pages::AdminDeposit');
-$routes->get('/AdminTabungan', 'Pages::AdminTabungan');
-$routes->get('/AdminPublikasi', 'Pages::AdminPublikasi');
-$routes->get('/adminPenghargaan', 'Pages::adminPenghargaan');
-$routes->get('/AdminPAT', 'Pages::AdminPAT');
-$routes->get('/AdminUser', 'Pages::AdminUser');
-$routes->get('/AdminLoker', 'Pages::AdminLoker');
-$routes->get('/AdminProfil', 'Pages::AdminProfil');
-$routes->get('/AdminSejarah', 'Pages::AdminSejarah');
-$routes->get('/AdminBerita', 'Pages::AdminBerita');
-$routes->get('/AdminAlamat', 'Pages::AdminAlamat');
-$routes->get('/adminLelang', 'Pages::adminLelang');
-$routes->get('/adminIdentitas', 'Pages::adminIdentitas');
-$routes->get('/adminLayananLainnya', 'Pages::adminLayananLainnya');
-$routes->get('/adminVisiMisi', 'Pages::adminVisiMisi');
-$routes->get('/adminStrukturOrganisasi', 'Pages::adminStrukturOrganisasi');
-$routes->get('/Edit', 'Pages::Edit');
-$routes->get('/EditUser', 'Pages::EditUser');
-$routes->get('/EditLelang', 'Pages::EditLelang');
-$routes->get('/EditPAT', 'Pages::EditPAT');
-$routes->get('/EditLoker', 'Pages::EditLoker');
-$routes->get('/EditPublikasi', 'Pages::EditPublikasi');
-$routes->get('/EditPenghargaan', 'Pages::EditPenghargaan');
-$routes->get('/Tambah', 'Pages::Tambah');
-$routes->get('/TambahUser', 'Pages::TambahUser');
-$routes->get('/TambahLelang', 'Pages::TambahLelang');
-$routes->get('/TambahPAT', 'Pages::TambahPAT');
-$routes->get('/TambahPublikasi', 'Pages::TambahPublikasi');
-$routes->get('/TambahPenghargaan', 'Pages::TambahPenghargaan');
 $routes->get('/Profil', 'Pages::Profil');
 $routes->get('/Sejarah', 'Pages::Sejarah');
-$routes->get('/Login', 'Pages::Login');
 $routes->get('/PusatBerita', 'Pages::PusatBerita');
 $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
-
+// end of pages
+// start of admin
+$routes->get('/AdminHome', 'Admin::AdminHome');
+$routes->get('/AdminKredit', 'Admin::AdminKredit');
+$routes->get('/TambahProdukKredit', 'Admin::TambahProdukKredit');
+$routes->get('/TambahIklanKredit', 'Admin::TambahIklanKredit');
+$routes->get('/EditProdukKredit', 'Admin::EditProdukKredit');
+$routes->get('/EditIklanKredit', 'Admin::EditIklanKredit');
+$routes->get('/AdminDeposito', 'Admin::AdminDeposito');
+$routes->get('/TambahIklanDeposito', 'Admin::TambahIklanDeposito');
+$routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
+$routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
+$routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+$routes->get('/AdminTabungan', 'Admin::AdminTabungan');
+$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
+$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
+$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
+$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
+$routes->get('/AdminPublikasi', 'Admin::AdminPublikasi');
+$routes->get('/adminPenghargaan', 'Admin::adminPenghargaan');
+$routes->get('/AdminPAT', 'Admin::AdminPAT');
+$routes->get('/AdminUser', 'Admin::AdminUser');
+$routes->get('/AdminLoker', 'Admin::AdminLoker');
+$routes->get('/AdminProfil', 'Admin::AdminProfil');
+$routes->get('/AdminSejarah', 'Admin::AdminSejarah');
+$routes->get('/AdminBerita', 'Admin::AdminBerita');
+$routes->get('/AdminAlamat', 'Admin::AdminAlamat');
+$routes->get('/adminLelang', 'Admin::adminLelang');
+$routes->get('/adminIdentitas', 'Admin::adminIdentitas');
+$routes->get('/editIdentitas', 'Admin::editIdentitas');
+$routes->get('/adminLayananLainnya', 'Admin::adminLayananLainnya');
+$routes->get('/adminVisiMisi', 'Admin::adminVisiMisi');
+$routes->get('/adminStrukturOrganisasi', 'Admin::adminStrukturOrganisasi');
+$routes->get('/Edit', 'Admin::Edit');
+$routes->get('/EditUser', 'Admin::EditUser');
+$routes->get('/EditLelang', 'Admin::EditLelang');
+$routes->get('/EditPAT', 'Admin::EditPAT');
+$routes->get('/EditLoker', 'Admin::EditLoker');
+$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
+$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+$routes->get('/Tambah', 'Admin::Tambah');
+$routes->get('/TambahUser', 'Admin::TambahUser');
+$routes->get('/TambahLelang', 'Admin::TambahLelang');
+$routes->get('/TambahPAT', 'Admin::TambahPAT');
+$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
+$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
+$routes->get('/Login', 'Admin::Login');
+// end of admin
 
 /*
  * --------------------------------------------------------------------

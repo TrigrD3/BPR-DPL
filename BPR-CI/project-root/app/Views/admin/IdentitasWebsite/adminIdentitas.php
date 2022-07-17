@@ -5,7 +5,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Link Sosial Media WhatsApp</h3>
+            <h3 class="card-title">Link Sosial Media </h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -23,11 +23,10 @@
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 30%">
+                        <th style="width: 40%">
                             Link
                         </th>
-                        <th style="width: 20%">
-                        </th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -41,51 +40,18 @@
                             </a>
                             <br />
                         </td>
-
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                        <td class="project-actions text-right" style="width: 10%">
+                            <a class="btn btn-info btn-sm" href="editIdentitas">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Link Sosial Media Facebook</h3>
 
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <div class="card-body p-0">
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Link
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>
-                            1
+                            2
                         </td>
                         <td>
                             <a>
@@ -93,51 +59,18 @@
                             </a>
                             <br />
                         </td>
-
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                        <td class="project-actions text-right" style="width: 10%">
+                            <a class="btn btn-info btn-sm" href="editIdentitas">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
-    </div>
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Link Sosial Media Instagram</h3>
 
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <div class="card-body p-0">
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Link
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
                     <tr>
                         <td>
-                            1
+                            3
                         </td>
                         <td>
                             <a>
@@ -145,9 +78,8 @@
                             </a>
                             <br />
                         </td>
-
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                        <td class="project-actions text-right" style="width: 10%">
+                            <a class="btn btn-info btn-sm" href="editIdentitas">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -196,11 +128,8 @@
                             </a>
                             <br />
                         </td>
-                        <td>
-                        </td>
-
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="editIdentitas">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
