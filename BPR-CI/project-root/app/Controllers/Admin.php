@@ -46,7 +46,7 @@ class Admin extends BaseController
         ];
         echo view('admin/kredit/TambahProdukKredit', $data);
     }
-    
+
     public function TambahIklanKredit()
     {
         $data = [
@@ -57,7 +57,7 @@ class Admin extends BaseController
         ];
         echo view('admin/kredit/TambahIklanKredit', $data);
     }
-    
+
     public function EditProdukKredit()
     {
         $data = [
@@ -68,7 +68,7 @@ class Admin extends BaseController
         ];
         echo view('admin/kredit/EditProdukKredit', $data);
     }
-    
+
     public function EditIklanKredit()
     {
         $data = [
@@ -90,7 +90,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/AdminDeposito', $data);
     }
-    
+
     public function EditIklanDeposito()
     {
         $data = [
@@ -101,7 +101,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/EditIklanDeposito', $data);
     }
-    
+
     public function EditProdukDeposito()
     {
         $data = [
@@ -112,7 +112,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/EditProdukDeposito', $data);
     }
-    
+
     public function TambahProdukDeposito()
     {
         $data = [
@@ -123,7 +123,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/TambahProdukDeposito', $data);
     }
-    
+
     public function TambahIklanDeposito()
     {
         $data = [
@@ -155,7 +155,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Tabungan/TambahProdukTabungan', $data);
     }
-    
+
     public function TambahIklanTabungan()
     {
         $data = [
@@ -166,7 +166,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Tabungan/TambahIklanTabungan', $data);
     }
-    
+
     public function EditIklanTabungan()
     {
         $data = [
@@ -177,7 +177,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Tabungan/EditIklanTabungan', $data);
     }
-    
+
     public function EditProdukTabungan()
     {
         $data = [
@@ -199,16 +199,29 @@ class Admin extends BaseController
         ];
         echo view('admin/AdminBerita', $data);
     }
+
     public function AdminAlamat()
     {
         $data = [
-            'title' => 'Admin Berita',
+            'title' => 'Admin Alamat Kantor',
             'css' => 'Style',
             'font' => 'font',
 
         ];
-        echo view('admin/AdminAlamat', $data);
+        echo view('admin/Alamat/AdminAlamat', $data);
     }
+
+    public function EditAlamat()
+    {
+        $data = [
+            'title' => 'Edit Alamat Kantor',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Alamat/Edit', $data);
+    }
+
     public function AdminPublikasi()
     {
         $data = [
@@ -302,8 +315,20 @@ class Admin extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminProfil', $data);
+        echo view('admin/Profil/AdminProfil', $data);
     }
+
+    public function EditProfil()
+    {
+        $data = [
+            'title' => 'Edit Isi Profil',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Profil/Edit', $data);
+    }
+
     public function AdminSejarah()
     {
         $data = [
@@ -312,7 +337,18 @@ class Admin extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminSejarah', $data);
+        echo view('admin/Sejarah/AdminSejarah', $data);
+    }
+
+    public function EditSejarah()
+    {
+        $data = [
+            'title' => 'Edit Sejarah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Sejarah/Edit', $data);
     }
 
     public function adminLelang()
@@ -325,7 +361,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Header/Lelang/adminLelang', $data);
     }
-    
+
     public function TambahLelang()
     {
         $data = [
@@ -387,7 +423,47 @@ class Admin extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/adminLayananLainnya', $data);
+        echo view('admin/LayananLain/adminLayananLainnya', $data);
+    }
+    public function EditDeskripsiLL()
+    {
+        $data = [
+            'title' => 'Edit Deskripsi Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/LayananLain/EditDeskripsi', $data);
+    }
+    public function TambahDeskripsiLL()
+    {
+        $data = [
+            'title' => 'Edit Deskripsi Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/LayananLain/TambahDeskripsi', $data);
+    }
+    public function EditFotoLL()
+    {
+        $data = [
+            'title' => 'Edit Foto Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/LayananLain/EditFoto', $data);
+    }
+    public function TambahFotoLL()
+    {
+        $data = [
+            'title' => 'Tambah Foto Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/LayananLain/TambahFoto', $data);
     }
     public function adminVisiMisi()
     {
@@ -397,8 +473,54 @@ class Admin extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/adminVisiMisi', $data);
+        echo view('admin/VisiMisi/adminVisiMisi', $data);
     }
+    public function EditVisi()
+    {
+        $data = [
+            'title' => 'Admin Visi ',
+            'nama' => 'Visi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/VisiMisi/Edit', $data);
+    }
+
+    public function EditMisi()
+    {
+        $data = [
+            'title' => 'Edit Misi ',
+            'nama' => 'Misi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/VisiMisi/Edit', $data);
+    }
+    public function TambahMisi()
+    {
+        $data = [
+            'title' => 'Tambah Misi ',
+            'nama' => 'Misi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/VisiMisi/Tambah', $data);
+    }
+    public function TambahVisi()
+    {
+        $data = [
+            'title' => 'Tambah Visi ',
+            'nama' => 'Visi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/VisiMisi/Tambah', $data);
+    }
+
     public function adminStrukturOrganisasi()
     {
         $data = [
@@ -407,7 +529,27 @@ class Admin extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/adminStrukturOrganisasi', $data);
+        echo view('admin/StrukturOrganisasi/adminStrukturOrganisasi', $data);
+    }
+    public function EditStrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'Edit Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/StrukturOrganisasi/Edit', $data);
+    }
+    public function TambahStrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'Tambah Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/StrukturOrganisasi/Tambah', $data);
     }
     public function Edit()
     {
@@ -439,8 +581,8 @@ class Admin extends BaseController
         ];
         echo view('admin/Tambah', $data);
     }
-    
-    
+
+
     public function TambahPenghargaan()
     {
         $data = [
@@ -479,7 +621,7 @@ class Admin extends BaseController
         ];
         echo view('admin/User/EditUser', $data);
     }
-    
+
     public function Login()
     {
         $data = [

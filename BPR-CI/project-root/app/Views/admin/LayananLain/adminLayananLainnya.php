@@ -35,13 +35,13 @@
                         </td>
                         <td>
                             <a>
-                            <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
+                                <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
                             </a>
                             <br />
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditDeskripsiLL">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -95,7 +95,7 @@
                         </td>
                         <td>
                             <a>
-                            <img src="images/PLN.png" alt="" width="200px">
+                                <img src="images/PLN.png" alt="" width="200px">
                             </a>
                             <br />
                         </td>
@@ -103,7 +103,7 @@
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditFotoLL">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -124,5 +124,6 @@
         </div>
         <!-- /.card-body -->
     </div>
+
 </section>
 <?= $this->endSection(''); ?>

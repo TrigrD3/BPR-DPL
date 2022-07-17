@@ -2,10 +2,9 @@
 
 <?= $this->section('content'); ?>
 <section class="content">
-
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Profil</h3>
+            <h3 class="card-title">Struktur Organisasi</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -20,30 +19,22 @@
             <table class="table table-striped projects">
                 <thead>
                     <tr>
-                        <th style="width: 20%">
-                            judul
-                        </th>
-                        <th style="width: 30%">
-                            Deskripsi
-                        </th>
-                        <th style="width: 20%">
+                        <th style="width: 50%">
+                            Foto
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            Profil Perushaan
-                        </td>
-                        <td>
                             <a>
-                                Perkembangan Usaha asdasd asd asdasd
+                                <img src="images/StrukturOrganisasi.png" alt="" width="400px">
                             </a>
                             <br />
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="EditStrukturOrganisasi">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -51,13 +42,9 @@
                         </td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
         <!-- /.card-body -->
-
     </div>
-
-
 </section>
 <?= $this->endSection(''); ?>

@@ -15,9 +15,9 @@
                 </div>
                 <div class="col-lg-5 order-2 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
                     <img src="https://via.placeholder.com/400x300.png" class="img-fluid">
-                    <span class="mb-2">19 Agustus 2022</span>
+                    <span class="mb-2">Banjarmasin</span>
                     <p>
-                        Jl. A.Yani Km 6,3 No. 6 Kertak Hanyar Kab. Banjar
+                        Jl. A.Yani Km 6,3 No. 6 Kertak Hanyar
                     </p>
                     <span>089501034319</span>
                 </div>

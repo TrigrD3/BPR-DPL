@@ -210,7 +210,7 @@
                                 <li class="nav-item">
                                     <a href="AdminAlamat" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Kantor</p>
+                                        <p>Alamat Kantor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
