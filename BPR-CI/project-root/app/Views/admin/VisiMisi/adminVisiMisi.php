@@ -52,7 +52,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahVisi">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -112,7 +112,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahMisi">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

@@ -222,6 +222,17 @@ class Admin extends BaseController
         echo view('admin/Alamat/Edit', $data);
     }
 
+    public function TambahAlamat()
+    {
+        $data = [
+            'title' => 'Tambah Alamat Kantor',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Alamat/Tambah', $data);
+    }
+
     public function AdminPublikasi()
     {
         $data = [
@@ -329,6 +340,17 @@ class Admin extends BaseController
         echo view('admin/Profil/Edit', $data);
     }
 
+    public function TambahProfil()
+    {
+        $data = [
+            'title' => 'Tambah Isi Profil',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Profil/Tambah', $data);
+    }
+
     public function AdminSejarah()
     {
         $data = [
@@ -349,6 +371,17 @@ class Admin extends BaseController
 
         ];
         echo view('admin/Sejarah/Edit', $data);
+    }
+
+    public function TambahSejarah()
+    {
+        $data = [
+            'title' => 'Edit Sejarah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Sejarah/Tambah', $data);
     }
 
     public function adminLelang()
@@ -541,16 +574,7 @@ class Admin extends BaseController
         ];
         echo view('admin/StrukturOrganisasi/Edit', $data);
     }
-    public function TambahStrukturOrganisasi()
-    {
-        $data = [
-            'title' => 'Tambah Struktur Organisasi',
-            'css' => 'Style',
-            'font' => 'font',
 
-        ];
-        echo view('admin/StrukturOrganisasi/Tambah', $data);
-    }
     public function Edit()
     {
         $data = [

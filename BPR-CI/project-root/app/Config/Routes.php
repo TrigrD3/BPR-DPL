@@ -114,7 +114,6 @@ $routes->get('/TambahVisi', 'Admin::TambahVisi');
 
 $routes->get('/adminStrukturOrganisasi', 'Admin::adminStrukturOrganisasi');
 $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
-$routes->get('/TambahStrukturOrganisasi', 'Admin::TambahStrukturOrganisasi');
 
 $routes->get('/Edit', 'Admin::Edit');
 $routes->get('/EditUser', 'Admin::EditUser');
