@@ -354,7 +354,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminPublikasi', $data);
+        echo view('admin/Publikasi/AdminPublikasi', $data);
     }
     public function AdminPAT()
     {
@@ -364,7 +364,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminPAT', $data);
+        echo view('admin/PAT/AdminPAT', $data);
     }
     public function AdminUser()
     {
@@ -374,7 +374,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminUser', $data);
+        echo view('admin/User/AdminUser', $data);
     }
     public function AdminLoker()
     {
@@ -384,7 +384,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/AdminLoker', $data);
+        echo view('admin/Loker/AdminLoker', $data);
     }
     public function AdminProfil()
     {
@@ -415,7 +415,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/adminLelang', $data);
+        echo view('admin/Lelang/adminLelang', $data);
     }
     public function adminIdentitas()
     {
@@ -435,7 +435,7 @@ class Pages extends BaseController
             'font' => 'font',
 
         ];
-        echo view('admin/adminPenghargaan', $data);
+        echo view('admin/Penghargaan/adminPenghargaan', $data);
     }
     public function adminLayananLainnya()
     {
@@ -477,6 +477,16 @@ class Pages extends BaseController
         ];
         echo view('pages/Edit', $data);
     }
+    public function EditLoker()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Loker/EditLoker', $data);
+    }
     public function Tambah()
     {
         $data = [
@@ -486,6 +496,103 @@ class Pages extends BaseController
 
         ];
         echo view('admin/Tambah', $data);
+    }
+    public function TambahPublikasi()
+    {
+        $data = [
+            'title' => 'Tambah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Publikasi/TambahPublikasi', $data);
+    }
+    public function EditPublikasi()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Publikasi/EditPublikasi', $data);
+    }
+    public function TambahPenghargaan()
+    {
+        $data = [
+            'title' => 'Tambah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Penghargaan/TambahPenghargaan', $data);
+    }
+    public function EditPenghargaan()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        echo view('admin/Penghargaan/EditPenghargaan', $data);
+    }
+    public function TambahUser()
+    {
+        $data = [
+            'title' => 'Tambah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/User/TambahUser', $data);
+    }
+    public function EditUser()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        echo view('admin/User/EditUser', $data);
+    }
+    public function TambahLelang()
+    {
+        $data = [
+            'title' => 'Tambah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Lelang/TambahLelang', $data);
+    }
+    public function EditLelang()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        echo view('admin/Lelang/EditLelang', $data);
+    }
+    public function TambahPAT()
+    {
+        $data = [
+            'title' => 'Tambah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/PAT/TambahPAT', $data);
+    }
+    public function EditPAT()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/PAT/EditPAT', $data);
     }
     public function Login()
     {

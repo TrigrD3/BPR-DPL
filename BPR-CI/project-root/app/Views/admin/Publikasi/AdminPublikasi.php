@@ -21,17 +21,17 @@
             <table class="table table-striped projects">
                 <thead>
                     <tr>
-                        <th style="width: 20%">
-                            Foto
+                        <th style="width: 1%">
+                            No
                         </th>
                         <th style="width: 20%">
-                            Judul
+                            Nama
                         </th>
-                        <th style="width: 40%">
-                            Deskripsi
+                        <th style="width: 30%">
+                            File
                         </th>
                         <th>
-                            Link
+                            Tahun
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -40,33 +40,42 @@
                 <tbody>
                     <tr>
                         <td>
-                            FOTO
+                            1
                         </td>
                         <td>
                             <a>
-                                lOKER
+                                Perkembangan Usaha
                             </a>
                             <br />
                         </td>
                         <td>
                             <a>
-                                asdasd asdasdasd asdas das das
+                                Laporan Publikasi tahun 2001.pdf
                             </a>
                         </td>
                         <td class="project_progress">
                             <a>
-                                indoensai.com
+                                2012
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="Edit">
+                            <a class="btn btn-info btn-sm" href="EditPublikasi">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
                     </tr>
                 </tbody>
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahPublikasi">
+                    <i class="fas fa-plus-circle"></i>
+                    Tambah
+                </a>
             </table>
         </div>
         <!-- /.card-body -->
