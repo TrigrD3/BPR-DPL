@@ -24,14 +24,17 @@
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 30%">
+                        <th style="width: 10%">
                             Foto
+                        </th>
+                        <th style="width: 20%">
+                            Judul
                         </th>
                         <th style="width: 20%">
                             Tanggal
                         </th>
                         <th>
-                            Tentang
+                            Isi Berita
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -41,6 +44,12 @@
                     <tr>
                         <td>
                             1
+                        </td>
+                        <td>
+                            <a>
+                                FOTO
+                            </a>
+                            <br />
                         </td>
                         <td>
                             <a>
@@ -59,7 +68,7 @@
                             </a>
                         </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="EditBerita">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -72,7 +81,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahBerita">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -121,7 +130,7 @@
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="EditIklan">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
@@ -134,7 +143,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Edit">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -183,7 +192,7 @@
                         </td>
 
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="#">
+                            <a class="btn btn-info btn-sm" href="EditDeskripsi">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit

@@ -46,9 +46,6 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="index.php" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
             </ul>
 
 
@@ -56,24 +53,16 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="assets/img/LogoBPR.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Back to page</span>
             </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                    </div>
-                    <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
-                    </div>
-                </div>
+
 
 
 
@@ -85,7 +74,7 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-id-badge"></i>
                                 <p>
                                     Identitas Website
                                     <i class="fas fa-angle-left right"></i>
@@ -102,7 +91,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home
                                     <i class="fas fa-angle-left right"></i>
@@ -119,7 +108,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-credit-card"></i>
                                 <p>
                                     Kredit
                                     <i class="fas fa-angle-left right"></i>
@@ -136,7 +125,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-money-check"></i>
+
                                 <p>
                                     Deposito
                                     <i class="fas fa-angle-left right"></i>
@@ -153,7 +143,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-money-bill"></i>
                                 <p>
                                     Tabungan
                                     <i class="fas fa-angle-left right"></i>
@@ -170,7 +160,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-list"></i>
                                 <p>
                                     Layanan Lainnya
                                     <i class="fas fa-angle-left right"></i>
@@ -187,7 +177,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-book-reader"></i>
                                 <p>
                                     Tentang Lestari
                                     <i class="fas fa-angle-left right"></i>
@@ -230,7 +220,7 @@
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-h-square"></i>
                                 <p>
                                     Header
                                     <i class="fas fa-angle-left right"></i>
@@ -273,7 +263,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-book"></i>
+                                <i class="nav-icon fas fa-users"></i>
                                 <p>
                                     Akun
                                     <i class="fas fa-angle-left right"></i>
@@ -346,10 +336,17 @@
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
-    <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
 
     <script>
-        CKEDITOR.replace('editor1');
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 </body>
 
