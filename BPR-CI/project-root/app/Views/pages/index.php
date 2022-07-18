@@ -94,7 +94,7 @@
             </div>
         </div>
     </div>
-    <main class="container">
+    <main class="container"> 
         <div class="p-4 p-md-5 mb-4 text-black rounded  d-flex" style="background-color:#EFF8FC;">
             <div class="col-md-6 px-0">
                 <h1 class="display-8">Title of a longer featured blog post</h1>
