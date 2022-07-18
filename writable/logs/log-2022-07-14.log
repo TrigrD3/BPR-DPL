@@ -1,0 +1,20 @@
+CRITICAL - 2022-07-14 06:34:10 --> Invalid file: pages/admin/Tambah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/admin/Tambah.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/admin/Tambah', [], true)
+ 3 APPPATH\Controllers\Pages.php(387): view('pages/admin/Tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pages->Tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-14 06:38:33 --> Invalid file: pages/admin/Tambah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pages/admin/Tambah.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/admin/Tambah', [], true)
+ 3 APPPATH\Controllers\Pages.php(387): view('pages/admin/Tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Pages->Tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
