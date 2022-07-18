@@ -90,82 +90,82 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-    <div class="container-scroller">
-        <div class="main-panel">
-            <!-- partial -->
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-black rounded  d-flex" style="background-color:#EFF8FC;">
+            <div class="col-md-6 px-0">
+                <h1 class="display-8">Title of a longer featured blog post</h1>
+                <p class="lead my-3" style="color:#0F54A3;">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+                <p class="lead mb-0"><a href="#" style="color:#0F54A3;" class=" fw-bold">Continue reading...</a></p>
+            </div>
+            <div class="col-md-6 px-0">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?= base_url('/assets/img/bank1.png'); ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            </div>
+        </div>
 
-            <div class="content-wrapper">
-                <div class="container">
-                    <div class="row" data-aos="fade-up">
-                        <div class="col-xl-8 stretch-card grid-margin">
-                            <div class="position-relative">
-                                <img src="<?= base_url('/assets/img/banner.jpg'); ?>" alt="banner" class="img-fluid" />
-                                <div class="banner-content">
-                                    <div class="badge badge-danger fs-12 font-weight-bold mb-3">
-                                        global news
-                                    </div>
-                                    <h1 class="mb-0">GLOBAL PANDEMIC</h1>
-                                    <h1 class="mb-2">
-                                        Coronavirus Outbreak LIVE Updates: ICSE, CBSE Exams
-                                        Postponed, 168 Trains
-                                    </h1>
-                                    <div class="fs-12">
-                                        <span class="mr-2">Photo </span>10 Minutes ago
-                                    </div>
-                                </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                             </div>
-                        </div>
-                        <div class="col-xl-4 stretch-card grid-margin">
-                            <div class="card bg-dark text-white">
-                                <div class="card-body">
-                                    <h2>Latest news</h2>
-
-                                    <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between">
-                                        <div class="pr-3">
-                                            <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-                                            <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
-                                            </div>
-                                        </div>
-                                        <div class="rotate-img">
-                                            <img src="<?= base_url('/assets/img/home_1.jpg'); ?>" alt="thumb" class="img-fluid img-lg" />
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex border-bottom-blue pb-4 pt-4 align-items-center justify-content-between">
-                                        <div class="pr-3">
-                                            <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-                                            <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
-                                            </div>
-                                        </div>
-                                        <div class="rotate-img">
-                                            <img src="<?= base_url('/assets/img/home_2.jpg'); ?>" alt="thumb" class="img-fluid img-lg" />
-                                        </div>
-                                    </div>
-
-                                    <div class="d-flex pt-4 align-items-center justify-content-between">
-                                        <div class="pr-3">
-                                            <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-                                            <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
-                                            </div>
-                                        </div>
-                                        <div class="rotate-img">
-                                            <img src="<?= base_url('/assets/img/home_3.jpg'); ?>" alt="thumb" class="img-fluid img-lg" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <small class="text-muted">9 mins</small>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
 </div>
 </div>
 </main>

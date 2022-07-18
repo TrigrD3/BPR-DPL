@@ -2,10 +2,9 @@
 
 <?= $this->section('content'); ?>
 <section class="content">
-
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Profil</h3>
+            <h3 class="card-title">List Berita</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -24,10 +23,13 @@
                             No
                         </th>
                         <th style="width: 20%">
-                            judul
+                            Nama
                         </th>
                         <th style="width: 30%">
                             Deskripsi
+                        </th>
+                        <th>
+                            Foto
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -39,34 +41,42 @@
                             1
                         </td>
                         <td>
-                            Profil Perushaan
-                        </td>
-                        <td>
                             <a>
-                                Perkembangan Usaha asdasd asd asdasd
+                                Perkembangan Usaha
                             </a>
                             <br />
                         </td>
-
+                        <td>
+                            <a>
+                                Pemerataan pembaguan dalam beberapa tahun sekarang ini terasa terhambat ..........
+                            </a>
+                        </td>
+                        <td class="project_progress">
+                            <a>
+                                FOTO
+                            </a>
+                        </td>
                         <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditProfil">
+                            <a class="btn btn-info btn-sm" href="Edit">
                                 <i class="fas fa-pencil-alt">
                                 </i>
                                 Edit
                             </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
                     </tr>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProfil">
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="Tambah">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
             </table>
         </div>
         <!-- /.card-body -->
-
     </div>
-
-
 </section>
 <?= $this->endSection(''); ?>
