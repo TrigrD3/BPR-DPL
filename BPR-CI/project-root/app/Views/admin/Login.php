@@ -25,6 +25,8 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
+
+
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="User Name">
                     <div class="input-group-append">
@@ -42,6 +44,7 @@
                     </div>
                 </div>
                 <div class="row">
+
                     <!-- /.col -->
                     <div class=" d-grid gap-2 col-6 mx-auto">
                         <a href="Admin" class="btn btn-primary btn-block">Login</a>
