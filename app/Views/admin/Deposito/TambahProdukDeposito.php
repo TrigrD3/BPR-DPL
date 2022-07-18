@@ -25,11 +25,11 @@
                     </div>
                     <div class="form-group">
                         <label for="inputName">Deskripsi</label>
-                        <textarea name="editor1" id="editor" id="editor" class="form-control" rows="4"></textarea>
+                        <input type="text" id="inputName" class="form-control" placeholder="Deskripsi">
                     </div>
                     <div class="form-group">
                         <label for="inputClientCompany">Pilih Foto</label>
-                        <input type="File" id="inputClientCompany" class="form-control">
+                        <input type="File" id="inputClientCompany" class="form-control" >
                     </div>
                 </div>
                 <!-- /.card-body -->

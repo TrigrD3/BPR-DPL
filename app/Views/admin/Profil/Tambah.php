@@ -19,7 +19,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputDescription">Deskripsi Layanan Lainnya</label>
-                        <textarea name="editor1" id="editor" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                        <textarea name="editor1" class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
                     </div>
 
                 </div>

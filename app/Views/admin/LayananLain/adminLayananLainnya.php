@@ -46,10 +46,18 @@
                                 </i>
                                 Edit
                             </a>
+                            <a class="btn btn-danger btn-sm" href="#">
+                                <i class="fas fa-trash">
+                                </i>
+                                Delete
+                            </a>
                         </td>
                     </tr>
                 </tbody>
-
+                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahDeskripsiLL">
+                    <i class="fas fa-plus-circle"></i>
+                    Tambah
+                </a>
             </table>
         </div>
         <!-- /.card-body -->

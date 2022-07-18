@@ -46,6 +46,7 @@ $routes->get('/Loker', 'Pages::Loker');
 $routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
+$routes->get('/Admin', 'Pages::admin');
 $routes->get('/Tabungan', 'Pages::Tabungan');
 $routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
 $routes->get('/Lelang', 'Pages::Lelang');
@@ -59,7 +60,6 @@ $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
-$routes->get('/Admin', 'Admin::admin');
 $routes->get('/AdminHome', 'Admin::AdminHome');
 $routes->get('/AdminKredit', 'Admin::AdminKredit');
 $routes->get('/TambahProdukKredit', 'Admin::TambahProdukKredit');
@@ -115,17 +115,14 @@ $routes->get('/TambahVisi', 'Admin::TambahVisi');
 $routes->get('/adminStrukturOrganisasi', 'Admin::adminStrukturOrganisasi');
 $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
 
-$routes->get('/EditBerita', 'Admin::EditBerita');
-$routes->get('/TambahBerita', 'Admin::TambahBerita');
-$routes->get('/EditIklan', 'Admin::EditIklan');
-$routes->get('/TambahIklan', 'Admin::TambahIklan');
-$routes->get('/EditDeskripsi', 'Admin::EditDeskripsi');
+$routes->get('/Edit', 'Admin::Edit');
 $routes->get('/EditUser', 'Admin::EditUser');
 $routes->get('/EditLelang', 'Admin::EditLelang');
 $routes->get('/EditPAT', 'Admin::EditPAT');
 $routes->get('/EditLoker', 'Admin::EditLoker');
 $routes->get('/EditPublikasi', 'Admin::EditPublikasi');
 $routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+$routes->get('/Tambah', 'Admin::Tambah');
 $routes->get('/TambahUser', 'Admin::TambahUser');
 $routes->get('/TambahLelang', 'Admin::TambahLelang');
 $routes->get('/TambahPAT', 'Admin::TambahPAT');

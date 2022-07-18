@@ -276,4 +276,165 @@ class Pages extends BaseController
         ];
         echo view('pages/Sejarah', $data);
     }
+    public function Admin()
+    {
+        $data = [
+            'title' => 'Admin',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/admin', $data);
+    }
+    public function AdminHome()
+    {
+        $data = [
+            'title' => 'Admin Home',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminHome', $data);
+    }
+    public function AdminKredit()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminKredit', $data);
+    }
+    public function AdminBerita()
+    {
+        $data = [
+            'title' => 'Admin Berita',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminBerita', $data);
+    }
+    public function AdminAlamat()
+    {
+        $data = [
+            'title' => 'Admin Berita',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminAlamat', $data);
+    }
+    public function AdminPublikasi()
+    {
+        $data = [
+            'title' => 'Admin Publikasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminPublikasi', $data);
+    }
+    public function AdminLoker()
+    {
+        $data = [
+            'title' => 'Admin Loker',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminLoker', $data);
+    }
+    public function AdminProfil()
+    {
+        $data = [
+            'title' => 'Admin Profil',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminProfil', $data);
+    }
+    public function AdminSejarah()
+    {
+        $data = [
+            'title' => 'Admin Sejarah',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/AdminSejarah', $data);
+    }
+
+    public function adminLelang()
+    {
+        $data = [
+            'title' => 'Admin Lelang',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLelang', $data);
+    }
+    public function adminLayananLainnya()
+    {
+        $data = [
+            'title' => 'Admin Layanan Lainnya',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminLayananLainnya', $data);
+    }
+    public function adminVisiMisi()
+    {
+        $data = [
+            'title' => 'Admin Visi Misi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminVisiMisi', $data);
+    }
+    public function adminStrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'Admin Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/adminStrukturOrganisasi', $data);
+    }
+    public function Edit()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Edit', $data);
+    }
+    public function Tambah()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Tambah', $data);
+    }
+    public function Login()
+    {
+        $data = [
+            'title' => 'Login',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('pages/Login', $data);
+    }
 }

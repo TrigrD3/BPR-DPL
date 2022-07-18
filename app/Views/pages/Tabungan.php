@@ -2,21 +2,60 @@
 
 <?= $this->section('content'); ?>
 
+
 <div class="container my-4 text-center">
-    <img src="images/fotoDeposito.png" class="img-fit img-deposito" alt="GambarDeposito">
+    <img src="images/tabungan.jpg" class="img-fluid" width="1200" alt="GambarTabungan">
     <div class="row row-cols-md-3 row-cols-sm-1 justify-content-center">
-        <?php for ($x = 1; $x <= 8; $x++) : ?>
-            <a href="ProdukTabungan">
-                <div class="my-3 mx-2 ">
-                    <div class="card col-auto">
-                        <img class="card-img-top card-image img-fit" src="images/tabungan.jpg" height="200" alt="Card image cap">
-                        <div class="card-img-overlay">
-                            <p class="info-box">Tabungan</p>
-                        </div>
+        <a href="ProdukTabungan">
+            <div class="my-3 mx-2">
+                <div class="card col-auto">
+                    <img class="card-img-top" src="images/tabungan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Contoh Tabungan</p>
                     </div>
                 </div>
-            </a>
-        <?php endfor; ?>
+            </div>
+        </a>
+        <a href="ProdukTabungan">
+            <div class=" my-3 mx-2 ">
+                <div class="card col-auto">
+                    <img class="card-img-top" src="images/tabungan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Contoh Tabungan</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="ProdukTabungan">
+            <div class="my-3 mx-2">
+                <div class="card col-auto">
+                    <img class="card-img-top" src="images/tabungan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Contoh Tabungan</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="ProdukTabungan">
+            <div class="my-3 mx-2">
+                <div class="card col-auto">
+                    <img class="card-img-top" src="images/tabungan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Contoh Tabungan</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="ProdukTabungan">
+            <div class="my-3 mx-2">
+                <div class="card col-auto">
+                    <img class="card-img-top" src="images/tabungan.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Contoh Tabungan</p>
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 
