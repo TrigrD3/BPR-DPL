@@ -104,16 +104,14 @@
                             <div class="position-relative">
                                 <img src="<?= base_url('/assets/img/banner.jpg'); ?>" alt="banner" class="img-fluid" />
                                 <div class="banner-content">
-                                    <div class="badge badge-danger fs-12 font-weight-bold mb-3">
-                                        global news
-                                    </div>
+
                                     <h1 class="mb-0">GLOBAL PANDEMIC</h1>
                                     <h1 class="mb-2">
                                         Coronavirus Outbreak LIVE Updates: ICSE, CBSE Exams
                                         Postponed, 168 Trains
                                     </h1>
                                     <div class="fs-12">
-                                        <span class="mr-2">Photo </span>10 Minutes ago
+
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +125,6 @@
                                         <div class="pr-3">
                                             <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
                                             <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
                                             </div>
                                         </div>
                                         <div class="rotate-img">
@@ -139,7 +136,7 @@
                                         <div class="pr-3">
                                             <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
                                             <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
+
                                             </div>
                                         </div>
                                         <div class="rotate-img">
@@ -151,7 +148,7 @@
                                         <div class="pr-3">
                                             <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
                                             <div class="fs-12">
-                                                <span class="mr-2">Photo </span>10 Minutes ago
+
                                             </div>
                                         </div>
                                         <div class="rotate-img">
