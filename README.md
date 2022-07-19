@@ -4,7 +4,6 @@
 **Open Xampp or Database.**
 
 Run `php spark migrate` OR `php spark migrate:refresh`.
-
 Run `php spark db:seed AllData`.
 
 Run `php spark serve`.
