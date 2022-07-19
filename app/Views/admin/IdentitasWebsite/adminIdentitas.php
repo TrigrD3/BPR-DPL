@@ -23,16 +23,22 @@
                         <th style="width: 1%">
                             No
                         </th>
+                        <th>
+                            Sosial Media
+                        </th>
                         <th style="width: 40%">
                             Link
                         </th>
-                    
+
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
                             1
+                        </td>
+                        <td>
+                            
                         </td>
                         <td>
                             <a>

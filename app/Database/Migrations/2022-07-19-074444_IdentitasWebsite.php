@@ -4,49 +4,49 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class User extends Migration
+class IdentitasWebsite extends Migration
 {
     public function up()
     {
-        //Tabel User
+        //
         $this->forge->addField([
-            'id_user'          => [
+            'id_identitas'          => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
-            'nama'       => [
+            'whatsapp'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
-            'username'       => [
+            'facebook'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
-            'password'       => [
+            'instagram'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
-            'level'       => [
+            'logo'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
-            ],
+            ]
             // 'slug VARCHAR(100) UNIQUE',
-            'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
-            'last_login DATETIME DEFAULT NULL'
+            // 'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
+            // 'update_at DATETIME DEFAULT CURRENT_TIMESTAMP'
         ]);
 
         // Membuat primary key
-        $this->forge->addKey('id_user', TRUE);
+        $this->forge->addKey('id_identitas', TRUE);
 
-        // Membuat tabel user
-        $this->forge->createTable('user', TRUE);
+        // Membuat tabel identitas
+        $this->forge->createTable('identitas_website', TRUE);
     }
 
     public function down()
     {
-        //Menghapus table user
-        $this->forge->dropTable('user');
+        //
+        $this->forge->dropTable('identitas_website');
     }
 }
