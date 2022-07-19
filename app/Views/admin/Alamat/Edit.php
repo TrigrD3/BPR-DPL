@@ -27,7 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputDescription">Link Google Maps</label>
-                        <textarea class="form-control" rows="4">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</textarea>
+                        <textarea class="form-control" rows="4">text</textarea>
                     </div>
                     <div class="form-group">
                         <label for="inputClientCompany">Pilih Foto</label>

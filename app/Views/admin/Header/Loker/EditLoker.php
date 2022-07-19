@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputClientCompany">Deskripsi</label>
-                        <textarea name="editor1" class="form-control" rows="4"></textarea>
+                        <textarea name="editor1" id="editor" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="inputProjectLeader">Link Loker</label>
