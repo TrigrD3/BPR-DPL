@@ -334,17 +334,14 @@
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="dist/js/pages/dashboard.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.0/full/ckeditor.js"></script>
 
     <script>
-        ClassicEditor
-            .create(document.querySelector('#editor'))
-            .then(editor => {
-                console.log(editor);
-            })
-            .catch(error => {
-                console.error(error);
-            });
+        CKEDITOR.replace('editor1', {
+            height: 400,
+            baseFloatZIndex: 10005,
+            removeButtons: 'PasteFromWord'
+        });
     </script>
 </body>
 
