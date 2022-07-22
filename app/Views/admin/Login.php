@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Log in</title>
+    <title>Bank Permata Lestari | Log in</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -32,12 +32,12 @@
         <?php //endif 
         ?>
         <!-- /.login-logo -->
-        <form action="" method="post" style="max-width: 600px;">
+        <form action="<?php echo base_url('Login/process') ?>" method="POST" style="max-width: 600px;">
             <div class="card">
                 <div class="card-body login-card-body">
                     <p class="login-box-msg">Sign in to start your session</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="User Name">
+                        <input type="text" name="username" class="form-control" placeholder="User Name">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -55,12 +55,10 @@
                     <div class="row">
                         <!-- /.col -->
                         <div class=" d-grid gap-2 col-6 mx-auto">
-                            <a href="Admin" class="btn btn-primary btn-block">Login</a>
+                            <button class="btn btn-primary btn-block" type="submit" name="submit" value="Login">Login</button>
                         </div>
                         <!-- /.col -->
                     </div>
-
-
                 </div>
                 <!-- /.login-card-body -->
             </div>

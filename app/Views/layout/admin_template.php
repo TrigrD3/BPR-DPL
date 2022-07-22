@@ -28,7 +28,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">Z
+    <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="assets/img/logoBPR.png" alt="AdminLTELogo" height="60" width="60">
@@ -42,7 +42,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index.php" class="nav-link">Home</a>
+                    <a href="Logout" class="nav-link btn btn-danger" style="color: white;">Logout</a>
                 </li>
             </ul>
 

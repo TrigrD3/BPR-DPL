@@ -30,6 +30,17 @@ class HomeController extends BaseController
         return view('Admin/Home/AdminHome', $data);
     }
 
+    public function EditBerita()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Home/EditBerita', $data);
+    }
+
     public function update()
     {
         $data = [

@@ -59,9 +59,6 @@ $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
-$routes->get('/Admin', 'Admin::admin');
-
-
 
 $routes->get('/AdminTabungan', 'Admin::AdminTabungan');
 $routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
@@ -91,33 +88,43 @@ $routes->get('/TambahAlamat', 'Admin::TambahAlamat');
 $routes->get('/adminLelang', 'Admin::adminLelang');
 
 //Login
-$routes->get('/Login', 'AuthController::login');
+$routes->get('/Login', 'AuthController::index');
+$routes->post('/Login/process', 'AuthController::process');
+$routes->get('/Logout', 'AuthController::logout');
 
-//Admin Home
-$routes->get('/AdminHome', 'HomeController::index');
-$routes->get('/EditBerita', 'Admin::EditBerita');
-$routes->get('/TambahBerita', 'Admin::TambahBerita');
-$routes->get('/EditIklan', 'Admin::EditIklan');
-$routes->get('/TambahIklan', 'Admin::TambahIklan');
-$routes->get('/EditDeskripsi', 'Admin::EditDeskripsi');
+$routes->group('', ['filter' => 'auth'], function ($routes) {
+    //Admin Index
+    $routes->get('/Admin', 'Admin::admin', ['filter' => 'auth']);
 
-//Admin Identitas
-$routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');
-$routes->post('/adminIdentitas/update', 'IdentitasWebsiteController::update');
+    //Admin Home
+    $routes->get('/AdminHome', 'HomeController::index');
+    $routes->get('/EditBerita', 'HomeController::EditBerita');
+    $routes->get('/TambahBerita', 'HomeController::TambahBerita');
+    $routes->get('/EditIklan', 'HomeController::EditIklan');
+    $routes->get('/TambahIklan', 'HomeController::TambahIklan');
+    $routes->get('/EditDeskripsi', 'HomeController::EditDeskripsi');
 
-//Admin Kredit
-$routes->get('/AdminKredit', 'KreditController::index');
-$routes->get('/TambahProdukKredit', 'Admin::TambahProdukKredit');
-$routes->get('/TambahIklanKredit', 'Admin::TambahIklanKredit');
-$routes->get('/EditProdukKredit', 'Admin::EditProdukKredit');
-$routes->get('/EditIklanKredit', 'Admin::EditIklanKredit');
+    //Admin Identitas
+    $routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');
+    $routes->post('/adminIdentitas/update', 'IdentitasWebsiteController::update');
 
-//Admin Deposito
-$routes->get('/AdminDeposito', 'DepositoController::index');
-$routes->get('/TambahIklanDeposito', 'Admin::TambahIklanDeposito');
-$routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
-$routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
-$routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+    //Admin Kredit
+    $routes->get('/AdminKredit', 'KreditController::index');
+    $routes->get('/TambahProdukKredit', 'Admin::TambahProdukKredit');
+    $routes->get('/TambahIklanKredit', 'Admin::TambahIklanKredit');
+    $routes->get('/EditProdukKredit', 'Admin::EditProdukKredit');
+    $routes->get('/EditIklanKredit', 'Admin::EditIklanKredit');
+
+    //Admin Deposito
+    $routes->get('/AdminDeposito', 'DepositoController::index');
+    $routes->get('/TambahIklanDeposito', 'Admin::TambahIklanDeposito');
+    $routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
+    $routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
+    $routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+});
+
+
+
 
 
 $routes->get('/adminLayananLainnya', 'Admin::adminLayananLainnya');
