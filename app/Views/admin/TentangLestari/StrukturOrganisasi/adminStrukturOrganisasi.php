@@ -25,22 +25,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            <a>
-                                <img src="images/StrukturOrganisasi.png" alt="" width="400px">
-                            </a>
-                            <br />
-                        </td>
+                    <?php
+                    foreach ($TentangLestariStrukturOrganisasi as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <a>
+                                    <?= $data->foto; ?>
+                                </a>
+                                <br />
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditStrukturOrganisasi">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditStrukturOrganisasi">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

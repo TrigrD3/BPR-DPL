@@ -45,6 +45,7 @@ $routes->get('/KAP', 'Pages::KAP');
 $routes->get('/Loker', 'Pages::Loker');
 $routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
+$routes->get('/ProdukKredit', 'Pages::ProdukKredit');
 $routes->get('/Penghargaan', 'Pages::Penghargaan');
 $routes->get('/Tabungan', 'Pages::Tabungan');
 $routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
@@ -60,30 +61,16 @@ $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
 
-$routes->get('/AdminTabungan', 'Admin::AdminTabungan');
-$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
-$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
-$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
-$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
 $routes->get('/AdminPublikasi', 'Admin::AdminPublikasi');
 $routes->get('/adminPenghargaan', 'Admin::adminPenghargaan');
 $routes->get('/AdminPAT', 'Admin::AdminPAT');
 $routes->get('/AdminUser', 'Admin::AdminUser');
 $routes->get('/AdminLoker', 'Admin::AdminLoker');
 
-$routes->get('/AdminProfil', 'Admin::AdminProfil');
-$routes->get('/EditProfil', 'Admin::EditProfil');
-$routes->get('/TambahProfil', 'Admin::TambahProfil');
-
-$routes->get('/AdminSejarah', 'Admin::AdminSejarah');
-$routes->get('/EditSejarah', 'Admin::EditSejarah');
-$routes->get('/TambahSejarah', 'Admin::TambahSejarah');
-
 $routes->get('/AdminBerita', 'Admin::AdminBerita');
 
-$routes->get('/AdminAlamat', 'Admin::AdminAlamat');
-$routes->get('/EditAlamat', 'Admin::EditAlamat');
-$routes->get('/TambahAlamat', 'Admin::TambahAlamat');
+
+
 
 $routes->get('/adminLelang', 'Admin::adminLelang');
 
@@ -126,21 +113,46 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
 
 
+//Admin Tabungan
+$routes->get('/AdminTabungan', 'TabunganController::index');
+$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
+$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
+$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
+$routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
+$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
 
-$routes->get('/adminLayananLainnya', 'Admin::adminLayananLainnya');
+//Admin Tentang Lestari
+//Profil
+$routes->get('/AdminProfil', 'TentangLestariController::index_profil');
+$routes->get('/EditProfil', 'Admin::EditProfil');
+$routes->get('/TambahProfil', 'Admin::TambahProfil');
+//Sejarah
+$routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
+$routes->get('/EditSejarah', 'Admin::EditSejarah');
+$routes->get('/TambahSejarah', 'Admin::TambahSejarah');
+//Alamat
+$routes->get('/AdminAlamat', 'TentangLestariController::index_alamat');
+$routes->get('/EditAlamat', 'Admin::EditAlamat');
+$routes->get('/TambahAlamat', 'Admin::TambahAlamat');
+//Visi misi
+$routes->get('/adminVisiMisi', 'TentangLestariController::index_visi_misi');
+$routes->get('/EditVisi', 'Admin::EditVisi');
+$routes->get('/EditMisi', 'Admin::EditMisi');
+$routes->get('/TambahMisi', 'Admin::TambahMisi');
+$routes->get('/TambahVisi', 'Admin::TambahVisi');
+//Struktur Organisasi
+$routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
+$routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
+
+
+//Admin LayananLainnya
+$routes->get('/adminLayananLainnya', 'LayananLainController::index');
 $routes->get('/EditDeskripsiLL', 'Admin::EditDeskripsiLL');
 $routes->get('/EditFotoLL', 'Admin::EditFotoLL');
 $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
 $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
 
-$routes->get('/adminVisiMisi', 'Admin::adminVisiMisi');
-$routes->get('/EditVisi', 'Admin::EditVisi');
-$routes->get('/EditMisi', 'Admin::EditMisi');
-$routes->get('/TambahMisi', 'Admin::TambahMisi');
-$routes->get('/TambahVisi', 'Admin::TambahVisi');
 
-$routes->get('/adminStrukturOrganisasi', 'Admin::adminStrukturOrganisasi');
-$routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
 
 
 $routes->get('/EditUser', 'Admin::EditUser');

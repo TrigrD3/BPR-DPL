@@ -4,16 +4,16 @@
 
 <div class="container">
     <div class="my-3">
-        <a href="Deposito">Deposito</a> / <span style="color: #0d509e; font-weight: bold;">Deposito Lestari</span>
+        <a href="Tabungan">Tabungan</a> / <span style="color: #0d509e; font-weight: bold;">Judul Tabungan</span>
     </div>
     <div>
-        <p class="h1">Deposito Lestari</p>
+        <p class="h1">Judul Tabungan</p>
         <div class="text-center">
-            <img src="images/fotoDeposito.png" class="img-fluid" alt="GambarProdukDeposito">
+            <img src="images/tabungan.jpg" class="img-fluid" alt="GambarProdukDeposito">
         </div>
     </div>
     <div class="my-4">
-        <p class="h1">DEPOSITO</p>
+        <p class="h1">TABUNGAN</p>
         <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
     </div>
     <div class="my-4">
@@ -52,6 +52,9 @@
             <li>Penempatan minimal Rp. 8.000.000,-</li>
         </ul>
     </div>
+</div>
+<div class="d-grid gap-2 col-6 mx-auto">
+    <button type="button" class="btn btn-outline-info">PENGAJUAN DEPOSIT</button>
 </div>
 
 <?= $this->endSection(); ?>

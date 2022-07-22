@@ -53,7 +53,7 @@ class Pages extends BaseController
             'footer' => 'footer',
             'header' => 'header'
         ];
-        echo view('pages/Deposito', $data);
+        echo view('pages/Kredit', $data);
     }
 
     public function Deposito()
@@ -198,6 +198,18 @@ class Pages extends BaseController
             'header' => 'header'
         ];
         echo view('pages/ProdukTabungan', $data);
+    }
+    public function ProdukKredit()
+    {
+        $data = [
+            'title' => 'Produk Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/ProdukKredit', $data);
     }
 
     public function Lelang()

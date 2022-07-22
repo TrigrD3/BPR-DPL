@@ -104,6 +104,16 @@ class Admin extends BaseController
         ];
         echo view('admin/kredit/EditIklanKredit', $data);
     }
+    public function EditLinkKredit()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/kredit/EditLinkKredit', $data);
+    }
 
     public function AdminDeposito()
     {
@@ -148,6 +158,16 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/TambahProdukDeposito', $data);
     }
+    public function EditLinkDeposito()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Deposito/EditLinkDeposito', $data);
+    }
 
     public function TambahIklanDeposito()
     {
@@ -190,6 +210,17 @@ class Admin extends BaseController
 
         ];
         echo view('admin/Tabungan/TambahIklanTabungan', $data);
+    }
+
+    public function EditLinkTabungan()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Tabungan/EditLinkTabungan', $data);
     }
 
     public function EditIklanTabungan()
