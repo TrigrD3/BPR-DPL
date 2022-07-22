@@ -18,8 +18,9 @@ class Home extends Seeder
         $all_data = [
             [
                 'foto'  => 'berita.jpg',
+                'judul'  => 'berita.jpg',
                 'tanggal'  => '12 Juli 2022',
-                'tentang' => 'Pemerataan pembangunan dalam beberapa tahun',
+                'isi_berita' => 'Pemerataan pembangunan dalam beberapa tahun',
                 'slug' => 'berita-bank',
             ]
         ];

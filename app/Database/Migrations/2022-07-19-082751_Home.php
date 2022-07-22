@@ -33,11 +33,15 @@ class Home extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
+            'judul'               => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ],
             'tanggal'            => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
-            'tentang'            => [
+            'isi_berita'            => [
                 'type'           => 'MEDIUMTEXT'
             ],
             'slug VARCHAR(100) UNIQUE',

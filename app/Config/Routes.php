@@ -60,7 +60,7 @@ $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
 $routes->get('/Admin', 'Admin::admin');
-$routes->get('/AdminHome', 'Admin::AdminHome');
+
 
 
 $routes->get('/AdminTabungan', 'Admin::AdminTabungan');
@@ -92,6 +92,14 @@ $routes->get('/adminLelang', 'Admin::adminLelang');
 
 //Login
 $routes->get('/Login', 'AuthController::login');
+
+//Admin Home
+$routes->get('/AdminHome', 'HomeController::index');
+$routes->get('/EditBerita', 'Admin::EditBerita');
+$routes->get('/TambahBerita', 'Admin::TambahBerita');
+$routes->get('/EditIklan', 'Admin::EditIklan');
+$routes->get('/TambahIklan', 'Admin::TambahIklan');
+$routes->get('/EditDeskripsi', 'Admin::EditDeskripsi');
 
 //Admin Identitas
 $routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');
@@ -127,11 +135,7 @@ $routes->get('/TambahVisi', 'Admin::TambahVisi');
 $routes->get('/adminStrukturOrganisasi', 'Admin::adminStrukturOrganisasi');
 $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
 
-$routes->get('/EditBerita', 'Admin::EditBerita');
-$routes->get('/TambahBerita', 'Admin::TambahBerita');
-$routes->get('/EditIklan', 'Admin::EditIklan');
-$routes->get('/TambahIklan', 'Admin::TambahIklan');
-$routes->get('/EditDeskripsi', 'Admin::EditDeskripsi');
+
 $routes->get('/EditUser', 'Admin::EditUser');
 $routes->get('/EditLelang', 'Admin::EditLelang');
 $routes->get('/EditPAT', 'Admin::EditPAT');
