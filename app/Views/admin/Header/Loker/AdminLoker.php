@@ -38,34 +38,35 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            FOTO
-                        </td>
-                        <td>
-                            <a>
-                                lOKER
-                            </a>
-                            <br />
-                        </td>
-                        <td>
-                            <a>
-                                asdasd asdasdasd asdas das das
-                            </a>
-                        </td>
-                        <td class="project_progress">
-                            <a>
-                                indoensai.com
-                            </a>
-                        </td>
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditLoker">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
+                    <?php $no = 1;
+                    foreach ($HeaderLoker as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $data->foto; ?>
+                            </td>
+                            <td>
+                                <a>
+                                    <?= $data->judul; ?>
+                                </a>
+                                <br />
+                            </td>
+                            <td>
+                                <?= $data->deskripsi; ?>
+                            </td>
+                            <td class="project_progress">
+                                <?= $data->link; ?>
+                            </td>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditLoker">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

@@ -61,17 +61,8 @@ $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
 
-$routes->get('/AdminPublikasi', 'Admin::AdminPublikasi');
-$routes->get('/adminPenghargaan', 'Admin::adminPenghargaan');
-$routes->get('/AdminPAT', 'Admin::AdminPAT');
-$routes->get('/AdminLoker', 'Admin::AdminLoker');
-
 $routes->get('/AdminBerita', 'Admin::AdminBerita');
 
-
-
-
-$routes->get('/adminLelang', 'Admin::adminLelang');
 
 //Login
 $routes->get('/Login', 'AuthController::index');
@@ -151,20 +142,34 @@ $routes->get('/EditFotoLL', 'Admin::EditFotoLL');
 $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
 $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
 
+
+//Admin Header
+//Publikasi
+$routes->get('/AdminPublikasi', 'HeaderController::index_publikasi');
+$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
+$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
+//Penghargaan
+$routes->get('/adminPenghargaan', 'HeaderController::index_Penghargaan');
+$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
+$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+//PAT
+$routes->get('/AdminPAT', 'HeaderController::index_pat');
+$routes->get('/EditPAT', 'Admin::EditPAT');
+$routes->get('/TambahPAT', 'Admin::TambahPAT');
+//Loker
+$routes->get('/AdminLoker', 'HeaderController::index_loker');
+$routes->get('/EditLoker', 'Admin::EditLoker');
+//Lelang
+$routes->get('/adminLelang', 'HeaderController::index_lelang');
+$routes->get('/EditLelang', 'Admin::EditLelang');
+$routes->get('/TambahLelang', 'Admin::TambahLelang');
+
+
 //AdminUser
 $routes->get('/AdminUser', 'AkunController::Index');
 $routes->get('/EditUser', 'Admin::EditUser');
 $routes->get('/TambahUser', 'Admin::TambahUser');
 
-$routes->get('/EditLelang', 'Admin::EditLelang');
-$routes->get('/EditPAT', 'Admin::EditPAT');
-$routes->get('/EditLoker', 'Admin::EditLoker');
-$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
-$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
-$routes->get('/TambahLelang', 'Admin::TambahLelang');
-$routes->get('/TambahPAT', 'Admin::TambahPAT');
-$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
-$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
 
 // end of admin
 
