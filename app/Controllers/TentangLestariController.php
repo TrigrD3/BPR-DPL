@@ -28,6 +28,46 @@ class TentangLestariController extends BaseController
         return view('Admin/TentangLestari/Profil/AdminProfil', $data);
     }
 
+    public function index_sejarah()
+    {
+        $data = [
+            'title' => 'Admin Sejarah',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
+        return view('Admin/TentangLestari/Sejarah/AdminSejarah', $data);
+    }
+    public function index_alamat()
+    {
+        $data = [
+            'title' => 'Admin Alamat',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
+        return view('Admin/TentangLestari/Alamat/AdminAlamat', $data);
+    }
+    public function index_visi_misi()
+    {
+        $data = [
+            'title' => 'Admin Visi Misi',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
+        return view('Admin/TentangLestari/VisiMisi/adminVisiMisi', $data);
+    }
+    public function index_struktur_organisasi()
+    {
+        $data = [
+            'title' => 'Admin Struktur Organisasi',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
+        return view('Admin/TentangLestari/StrukturOrganisasi/adminStrukturOrganisasi', $data);
+    }
     public function update()
     {
         $data = [

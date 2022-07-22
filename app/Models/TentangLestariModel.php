@@ -12,9 +12,25 @@ class TentangLestariModel extends Model
         return $data['TentangLestariProfil'];
     }
 
-    function get_all_iklan()
+    function get_all_sejarah()
     {
-        $data['KreditIklan'] = $this->db->table('kredit_iklan')->select('*')->get()->getResult();
-        return $data['KreditIklan'];
+        $data['TentangLestariSejarah'] = $this->db->table('tentang_sejarah')->select('*')->get()->getResult();
+        return $data['TentangLestariSejarah'];
+    }
+
+    function get_all_alamat()
+    {
+        $data['TentangLestariAlamat'] = $this->db->table('tentang_alamat_kantor')->select('*')->get()->getResult();
+        return $data['TentangLestariAlamat'];
+    }
+    function get_all_visimisi()
+    {
+        $data['TentangLestariVisiMisi'] = $this->db->table('tentang_visi_misi')->select('*')->get()->getResult();
+        return $data['TentangLestariVisiMisi'];
+    }
+    function get_all_struktur_organisasi()
+    {
+        $data['TentangLestariStrukturOrganisasi'] = $this->db->table('tentang_struktur_organisasi')->select('*')->get()->getResult();
+        return $data['TentangLestariStrukturOrganisasi'];
     }
 }

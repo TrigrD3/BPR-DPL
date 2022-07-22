@@ -29,30 +29,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
-                            </a>
-                            <br />
-                        </td>
+                    <?php $no = 1;
+                    foreach ($LayananLainPembayaran as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->deskripsi; ?>
+                                <br />
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditDeskripsiLL">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditDeskripsiLL">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahDeskripsiLL">
                     <i class="fas fa-plus-circle"></i>
@@ -89,32 +92,35 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                <img src="images/PLN.png" alt="" width="200px">
-                            </a>
-                            <br />
-                        </td>
-                        <td>
-                        </td>
+                    <?php $no = 1;
+                    foreach ($LayananLainProduk as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->foto; ?>
+                                <br />
+                            </td>
+                            <td>
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditFotoLL">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditFotoLL">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahFotoLL">
                     <i class="fas fa-plus-circle"></i>
