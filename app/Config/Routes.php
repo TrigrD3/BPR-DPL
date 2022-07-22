@@ -63,21 +63,14 @@ $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 $routes->get('/Admin', 'Admin::admin');
 $routes->get('/AdminHome', 'Admin::AdminHome');
 
-$routes->get('/AdminTabungan', 'Admin::AdminTabungan');
-$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
-$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
-$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
-$routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
-$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
+
 $routes->get('/AdminPublikasi', 'Admin::AdminPublikasi');
 $routes->get('/adminPenghargaan', 'Admin::adminPenghargaan');
 $routes->get('/AdminPAT', 'Admin::AdminPAT');
 $routes->get('/AdminUser', 'Admin::AdminUser');
 $routes->get('/AdminLoker', 'Admin::AdminLoker');
 
-$routes->get('/AdminProfil', 'Admin::AdminProfil');
-$routes->get('/EditProfil', 'Admin::EditProfil');
-$routes->get('/TambahProfil', 'Admin::TambahProfil');
+
 
 $routes->get('/AdminSejarah', 'Admin::AdminSejarah');
 $routes->get('/EditSejarah', 'Admin::EditSejarah');
@@ -111,6 +104,19 @@ $routes->get('/TambahIklanDeposito', 'Admin::TambahIklanDeposito');
 $routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
 $routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
 $routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+
+//Admin Tabungan
+$routes->get('/AdminTabungan', 'TabunganController::index');
+$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
+$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
+$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
+$routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
+$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
+
+//Admin Tentang Lestari
+$routes->get('/AdminProfil', 'TentangLestariController::index_profil');
+$routes->get('/EditProfil', 'Admin::EditProfil');
+$routes->get('/TambahProfil', 'Admin::TambahProfil');
 
 
 $routes->get('/adminLayananLainnya', 'Admin::adminLayananLainnya');

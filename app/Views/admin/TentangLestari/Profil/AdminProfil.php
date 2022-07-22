@@ -34,28 +34,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            Profil Perushaan
-                        </td>
-                        <td>
-                            <a>
-                                Perkembangan Usaha asdasd asd asdasd
-                            </a>
-                            <br />
-                        </td>
+                    <?php $no = 1;
+                    foreach ($TentangLestariProfil as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->judul; ?>
+                            </td>
+                            <td>
+                                <?= $data->deskripsi; ?>
+                                <br />
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditProfil">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditProfil">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProfil">
                     <i class="fas fa-plus-circle"></i>
