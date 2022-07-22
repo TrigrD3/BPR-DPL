@@ -80,11 +80,11 @@ $routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
 $routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
 $routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
 $routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
-$routes->get('/AdminPublikasi', 'Admin::AdminPublikasi');
-$routes->get('/adminPenghargaan', 'Admin::adminPenghargaan');
-$routes->get('/AdminPAT', 'Admin::AdminPAT');
-$routes->get('/AdminUser', 'Admin::AdminUser');
-$routes->get('/AdminLoker', 'Admin::AdminLoker');
+
+
+
+
+
 
 $routes->get('/AdminProfil', 'Admin::AdminProfil');
 $routes->get('/EditProfil', 'Admin::EditProfil');
@@ -100,7 +100,7 @@ $routes->get('/AdminAlamat', 'Admin::AdminAlamat');
 $routes->get('/EditAlamat', 'Admin::EditAlamat');
 $routes->get('/TambahAlamat', 'Admin::TambahAlamat');
 
-$routes->get('/adminLelang', 'Admin::adminLelang');
+
 
 //Login
 $routes->get('/Login', 'AuthController::login');
@@ -123,6 +123,35 @@ $routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
 $routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
 $routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
 
+// Admin Publikasi
+$routes->get('/AdminPublikasi', 'PublikasiController::index');
+$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
+$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
+
+// Admin PAT
+$routes->get('/AdminPAT', 'PATController::index');
+$routes->get('/EditPAT', 'Admin::EditPAT');
+$routes->get('/TambahPAT', 'Admin::TambahPAT');
+
+// Admin Loker
+$routes->get('/AdminLoker', 'LokerController::index');
+$routes->get('/EditLoker', 'Admin::EditLoker');
+
+// Admin Penghargaan
+$routes->get('/adminPenghargaan', 'PenghargaanController::index');
+$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
+
+// Admin Lelang
+$routes->get('/adminLelang', 'LelangController::index');
+$routes->get('/EditLelang', 'Admin::EditLelang');
+$routes->get('/TambahLelang', 'Admin::TambahLelang');
+
+// Admin Akun
+$routes->get('/AdminUser', 'UserController::index');
+$routes->get('/TambahUser', 'Admin::TambahUser');
+$routes->get('/EditUser', 'Admin::EditUser');
+
 
 $routes->get('/adminLayananLainnya', 'Admin::adminLayananLainnya');
 $routes->get('/EditDeskripsiLL', 'Admin::EditDeskripsiLL');
@@ -144,17 +173,17 @@ $routes->get('/TambahBerita', 'Admin::TambahBerita');
 $routes->get('/EditIklan', 'Admin::EditIklan');
 $routes->get('/TambahIklan', 'Admin::TambahIklan');
 $routes->get('/EditDeskripsi', 'Admin::EditDeskripsi');
-$routes->get('/EditUser', 'Admin::EditUser');
-$routes->get('/EditLelang', 'Admin::EditLelang');
-$routes->get('/EditPAT', 'Admin::EditPAT');
-$routes->get('/EditLoker', 'Admin::EditLoker');
-$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
-$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
-$routes->get('/TambahUser', 'Admin::TambahUser');
-$routes->get('/TambahLelang', 'Admin::TambahLelang');
-$routes->get('/TambahPAT', 'Admin::TambahPAT');
-$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
-$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
+
+
+
+
+
+
+
+
+
+
+
 
 // end of admin
 
