@@ -4,29 +4,29 @@
 
 <div class="container">
     <div class="my-3">
-        <a href="Tabungan">Tabungan</a> / <span style="color: #0d509e; font-weight: bold;">Judul Tabungan</span>
+        <a href="Kredit">Kredit</a> / <span style="color: #0d509e; font-weight: bold;">Judul Kredit</span>
     </div>
     <div>
-        <p class="h1">Judul Tabungan</p>
+        <p class="h1">Judul Kredit</p>
         <div class="text-center">
-            <img src="images/tabungan.jpg" class="img-fluid" alt="GambarProdukDeposito">
+            <img src="images/Tabungan.jpg" class="img-fluid" alt="GambarProdukKredit">
         </div>
     </div>
     <div class="my-4">
-        <p class="h1">TABUNGAN</p>
-        <p>Investasikan uang Anda secara aman. Produk - produk Deposito BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
+        <p class="h1">Kredit</p>
+        <p>Investasikan uang Anda secara aman. Produk - produk Kredit BPR Danapermata Lestari dilindungi oleh Lembaga Pinjaman Simpanan (LPS) dan ditujukan bagi nasabah yang ingin berinvestasi secara pasti dengan suku bunga yang kompetitif.</p>
     </div>
     <div class="my-4">
         <p class="h1">KEUNGGULAN PRODUK</p>
         <ul>
-            <li>Bunga deposito tinggi</li>
-            <li>Bebas memperpanjang deposito secara otomatis (Automatic Roll Over /ARO)</li>
-            <li>Bunga dapat ditempatkan kembali ke pokok deposito atau ditransfer ke rekening Tabungan Jumbo anda yang dapat ditarik kapanpun</li>
+            <li>Bunga Kredit tinggi</li>
+            <li>Bebas memperpanjang Kredit secara otomatis (Automatic Roll Over /ARO)</li>
+            <li>Bunga dapat ditempatkan kembali ke pokok Kredit atau ditransfer ke rekening Kredit Jumbo anda yang dapat ditarik kapanpun</li>
             <li>Personalized services dari Personal Banking Officer yang akan melayani anda dengan sepenuh hati</li>
             <li>Bebas pencairan sewaktu-waktu tanpa penalti</li>
             <li>Nikmati fasilitas The First Lounge di kantor BPR Lestari pada saat menunggu transaksi anda (khusus nasabah Lestari First)</li>
             <li>Mendapatkan kartu Lestari First Ladies, privilege card pada merchant-merchant yang bekerjasama dengan BPR Lestari (khusus nasabah Lestari First)</li>
-            <li>Deposito dapat digunakan sebagai agunan untuk mendapatkan fasilitas kredit</li>
+            <li>Kredit dapat digunakan sebagai agunan untuk mendapatkan fasilitas kredit</li>
         </ul>
     </div>
     <div class="my-4">
@@ -47,14 +47,14 @@
                     <li>Badan Usaha : SIUP, TDP, NPWP</li>
                 </ul>
             </li>
-            <li>Mengisi dan menandatangani formulir aplikasi data pengajuan deposito</li>
-            <li>Mengisi dan menandatangani formulir pembukaan rekening Jumbo apabila bunga ditransfer ke rekening Tabungan Jumbo</li>
+            <li>Mengisi dan menandatangani formulir aplikasi data pengajuan Kredit</li>
+            <li>Mengisi dan menandatangani formulir pembukaan rekening Jumbo apabila bunga ditransfer ke rekening Kredit Jumbo</li>
             <li>Penempatan minimal Rp. 8.000.000,-</li>
         </ul>
     </div>
 </div>
 <div class="d-grid gap-2 col-6 mx-auto">
-    <button type="button" class="btn btn-outline-info">PENGAJUAN TABUNGAN</button>
+    <button type="button" class="btn btn-outline-info">PENGAJUAN KREDIT</button>
 </div>
 
 <?= $this->endSection(); ?>

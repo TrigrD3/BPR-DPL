@@ -175,4 +175,5 @@ hr {
   left: 0px;
   bottom: 0px;
   color: #ffffff;
+  text-overflow: ellipsis;
 }

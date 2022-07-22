@@ -104,7 +104,9 @@
                             <div class="position-relative">
                                 <img src="<?= base_url('/assets/img/banner.jpg'); ?>" alt="banner" class="img-fluid" />
                                 <div class="banner-content">
+                                    <div class="badge badge-danger fs-12 font-weight-bold mb-3">
 
+                                    </div>
                                     <h1 class="mb-0">GLOBAL PANDEMIC</h1>
                                     <h1 class="mb-2">
                                         Coronavirus Outbreak LIVE Updates: ICSE, CBSE Exams
@@ -116,6 +118,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-xl-4 stretch-card grid-margin">
                             <div class="card  text-white" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
                                 <div class="card-body">
