@@ -22,6 +22,7 @@
     <title><?= $title; ?></title>
 </head>
 <?= $this->include('layout/header'); ?>
+
 <body>
     <?= $this->include('layout/navbar'); ?>
     <?= $this->renderSection('content'); ?>
