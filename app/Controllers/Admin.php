@@ -1,9 +1,41 @@
 <?php
 
 namespace App\Controllers;
+// defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends BaseController
 {
+    // protected $table = 'identitas_website';
+    private $db;
+
+    public function __construct()
+    {
+        // parent::__construct();
+        $this->db = \Config\Database::connect();
+        // $this->load->model('IdentitasWebsiteModel');
+        // if(!$this->session->userdata('email')){
+        //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
+        //     redirect('auth/');
+        // }
+
+    }
+
+    public function adminIdentitas()
+    {
+        
+    }
+
+
+    public function editIdentitas()
+    {
+        $data = [
+            'title' => 'Admin Identitas',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/IdentitasWebsite/EditIdentitas', $data);
+    }
 
     public function Admin()
     {
@@ -25,6 +57,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Home/AdminHome', $data);
     }
+
     public function AdminKredit()
     {
         $data = [
@@ -444,29 +477,6 @@ class Admin extends BaseController
             'font' => 'font',
         ];
         echo view('admin/Header/Lelang/EditLelang', $data);
-    }
-
-    public function adminIdentitas()
-    {
-        $data = [
-            'title' => 'Admin Identitas',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/IdentitasWebsite/adminIdentitas', $data);
-    }
-
-
-    public function editIdentitas()
-    {
-        $data = [
-            'title' => 'Admin Identitas',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/IdentitasWebsite/EditIdentitas', $data);
     }
 
     public function adminPenghargaan()
