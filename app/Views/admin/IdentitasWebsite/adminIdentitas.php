@@ -1,158 +1,62 @@
 <?= $this->extend('layout/admin_template'); ?>
 
 <?= $this->section('content'); ?>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
 <section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <?= session()->getFlashdata('message'); ?>
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Edit Identitas</h3>
 
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Link Sosial Media </h3>
-
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+                <form action="<?php echo base_url('adminIdentitas/update') ?>" method="POST" enctype="multipart/form-data">
+                    <div class=" card-body">
+                        <div class="form-group">
+                            <label for="WhatsApp">WhatsApp</label>
+                            <input type="text" id="id_identitas" name="id_identitas" class="form-control" value="<?= $IdentitasWebsite->id_identitas ?>" hidden>
+                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" value="<?= $IdentitasWebsite->whatsapp ?>" placeholder="WhatsApp">
+                        </div>
+                        <div class="form-group">
+                            <label for="Facebook">Facebook</label>
+                            <input type="text" id="facebook" name="facebook" class="form-control" value="<?= $IdentitasWebsite->facebook ?>" placeholder="Facebook">
+                        </div>
+                        <div class="form-group">
+                            <label for="Instagram">Instagram</label>
+                            <input type="text" id="instagram" name="instagram" class="form-control" value="<?= $IdentitasWebsite->instagram ?>" placeholder="Instagram">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Logo</label>
+                            <input type="File" name="logo" id="inputClientCompany" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-12">
+                            <!-- <a href="#" class="btn btn-secondary">Cancel</a> -->
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- /.card-body -->
             </div>
+            <!-- /.card -->
         </div>
-        <div class="card-body p-0">
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th>
-                            Sosial Media
-                        </th>
-                        <th style="width: 40%">
-                            Link
-                        </th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            <a>
-                                https://chat.whatsapp.com/LQx0EwxWRkM9jZE6mGdJeX
-                            </a>
-                            <br />
-                        </td>
-                        <td class="project-actions text-right" style="width: 10%">
-                            <a class="btn btn-info btn-sm" href="editIdentitas">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            2
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            <a>
-                                https://Facebook.com/LQx0EwxWRkM9jZE6mGdJeX
-                            </a>
-                            <br />
-                        </td>
-                        <td class="project-actions text-right" style="width: 10%">
-                            <a class="btn btn-info btn-sm" href="editIdentitas">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            3
-                        </td>
-                        <td>
-
-                        </td>
-                        <td>
-                            <a>
-                                https://Instagram.com/
-                            </a>
-                            <br />
-                        </td>
-                        <td class="project-actions text-right" style="width: 10%">
-                            <a class="btn btn-info btn-sm" href="editIdentitas">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
     </div>
-    <!-- produk yang ditawarkan -->
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Logo Website</h3>
 
-            <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-        <div class="card-body p-0">
-            <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Foto
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                <img src="images/PLN.png" alt="" width="200px">
-                            </a>
-                            <br />
-                        </td>
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="editIdentitas">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- /.card-body -->
-    </div>
 </section>
 <?= $this->endSection(''); ?>

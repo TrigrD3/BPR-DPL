@@ -7,7 +7,12 @@ use CodeIgniter\Model;
 class AuthModel extends Model
 {
     private $_table = "user";
-    const SESSION_KEY = 'user_id';
+    const SESSION_KEY = 'id_user';
+
+    public function __construct()
+    {
+        $this->session = \Config\Services::session();
+    }
 
     public function rules()
     {
@@ -27,9 +32,9 @@ class AuthModel extends Model
 
     public function login($username, $password)
     {
-        $this->db->where('email', $username)->or_where('username', $username);
-        $query = $this->db->get($this->_table);
-        $user = $query->row();
+        // $this->db->where('email', $username)->or_where('username', $username);
+        // $query = $this->db->get($this->_table);
+        $user = $this->db->table('user')->where('username', $username)->get()->getRow(); 
 
         if (!$user) {
             return FALSE;
@@ -40,10 +45,10 @@ class AuthModel extends Model
         }
 
         // bikin session
-        $this->session->set_userdata([self::SESSION_KEY => $user->id]);
-        $this->_update_last_login($user->id);
+        $this->session->set([self::SESSION_KEY => $user->id]);
+        // $this->_update_last_login($user->id);
 
-        return $this->session->has_userdata(self::SESSION_KEY);
+        // return $this->session->has_userdata(self::SESSION_KEY);
     }
 
     public function current_user()
