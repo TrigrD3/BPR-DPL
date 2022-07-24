@@ -74,12 +74,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/Admin', 'Admin::admin', ['filter' => 'auth']);
 
     //Admin Home
+    //Berita
     $routes->get('/AdminHome', 'HomeController::index');
     $routes->get('/TambahBerita', 'HomeController::TambahBerita');
     $routes->add('/TambahBerita', 'HomeController::AddBerita');
     $routes->get('/EditBerita/(:num)', 'HomeController::EditBerita/$1');
     $routes->post('/EditBerita/(:num)', 'HomeController::UpdateBerita/$1');
     $routes->get('/HapusBerita/(:num)', 'HomeController::DeleteBerita/$1');
+
     $routes->get('/EditIklan', 'HomeController::EditIklan');
     $routes->get('/TambahIklan', 'HomeController::TambahIklan');
     $routes->get('/EditDeskripsi', 'HomeController::EditDeskripsi');
@@ -90,9 +92,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     //Admin Kredit
     $routes->get('/AdminKredit', 'KreditController::index');
-    $routes->get('/TambahProdukKredit', 'Admin::TambahProdukKredit');
+    $routes->get('/TambahProdukKredit', 'KreditController::TambahProdukKredit');
+    $routes->add('/TambahProdukKredit', 'KreditController::AddKredit');
+    $routes->get('/EditProdukKredit/(:num)', 'KreditController::EditProdukKredit/$1');
+    $routes->post('/EditProdukKredit/(:num)', 'KreditController::UpdateKredit/$1');
+    $routes->get('/HapusProdukKredit/(:num)', 'KreditController::DeleteKredit/$1');
+
     $routes->get('/TambahIklanKredit', 'Admin::TambahIklanKredit');
-    $routes->get('/EditProdukKredit', 'Admin::EditProdukKredit');
+
     $routes->get('/EditIklanKredit', 'Admin::EditIklanKredit');
 
     //Admin Deposito
@@ -101,77 +108,76 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
     $routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
     $routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+
+    //Admin Tabungan
+    $routes->get('/AdminTabungan', 'TabunganController::index');
+    $routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
+    $routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
+    $routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
+    $routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
+    $routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
+
+    //Admin Tentang Lestari
+    //Profil
+    $routes->get('/AdminProfil', 'TentangLestariController::index_profil');
+    $routes->get('/EditProfil', 'Admin::EditProfil');
+    $routes->get('/TambahProfil', 'Admin::TambahProfil');
+    //Sejarah
+    $routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
+    $routes->get('/EditSejarah', 'Admin::EditSejarah');
+    $routes->get('/TambahSejarah', 'Admin::TambahSejarah');
+    //Alamat
+    $routes->get('/AdminAlamat', 'TentangLestariController::index_alamat');
+    $routes->get('/EditAlamat', 'Admin::EditAlamat');
+    $routes->get('/TambahAlamat', 'Admin::TambahAlamat');
+    //Visi misi
+    $routes->get('/adminVisiMisi', 'TentangLestariController::index_visi_misi');
+    $routes->get('/EditVisi', 'Admin::EditVisi');
+    $routes->get('/EditMisi', 'Admin::EditMisi');
+    $routes->get('/TambahMisi', 'Admin::TambahMisi');
+    $routes->get('/TambahVisi', 'Admin::TambahVisi');
+    //Struktur Organisasi
+    $routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
+    $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
+
+    //Admin LayananLainnya
+    $routes->get('/adminLayananLainnya', 'LayananLainController::index');
+    $routes->get('/EditDeskripsiLL', 'Admin::EditDeskripsiLL');
+    $routes->get('/EditFotoLL', 'Admin::EditFotoLL');
+    $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
+    $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
+
+    //Admin Header
+    //Publikasi
+    $routes->get('/AdminPublikasi', 'HeaderController::index_publikasi');
+    $routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
+    $routes->get('/EditPublikasi', 'Admin::EditPublikasi');
+    //Penghargaan
+    $routes->get('/adminPenghargaan', 'HeaderController::index_Penghargaan');
+    $routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
+    $routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+    //PAT
+    $routes->get('/AdminPAT', 'HeaderController::index_pat');
+    $routes->get('/EditPAT', 'Admin::EditPAT');
+    $routes->get('/TambahPAT', 'Admin::TambahPAT');
+    //Loker
+    $routes->get('/AdminLoker', 'HeaderController::index_loker');
+    $routes->get('/EditLoker', 'Admin::EditLoker');
+    //Lelang
+    $routes->get('/adminLelang', 'HeaderController::index_lelang');
+    $routes->get('/EditLelang', 'Admin::EditLelang');
+    $routes->get('/TambahLelang', 'Admin::TambahLelang');
+
+    //AdminUser
+    $routes->get('/AdminUser', 'AkunController::Index');
+    $routes->get('/EditUser', 'Admin::EditUser');
+    $routes->get('/TambahUser', 'Admin::TambahUser');
 });
 
 
 
 
-//Admin Tabungan
-$routes->get('/AdminTabungan', 'TabunganController::index');
-$routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
-$routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
-$routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
-$routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
-$routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
 
-//Admin Tentang Lestari
-//Profil
-$routes->get('/AdminProfil', 'TentangLestariController::index_profil');
-$routes->get('/EditProfil', 'Admin::EditProfil');
-$routes->get('/TambahProfil', 'Admin::TambahProfil');
-//Sejarah
-$routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
-$routes->get('/EditSejarah', 'Admin::EditSejarah');
-$routes->get('/TambahSejarah', 'Admin::TambahSejarah');
-//Alamat
-$routes->get('/AdminAlamat', 'TentangLestariController::index_alamat');
-$routes->get('/EditAlamat', 'Admin::EditAlamat');
-$routes->get('/TambahAlamat', 'Admin::TambahAlamat');
-//Visi misi
-$routes->get('/adminVisiMisi', 'TentangLestariController::index_visi_misi');
-$routes->get('/EditVisi', 'Admin::EditVisi');
-$routes->get('/EditMisi', 'Admin::EditMisi');
-$routes->get('/TambahMisi', 'Admin::TambahMisi');
-$routes->get('/TambahVisi', 'Admin::TambahVisi');
-//Struktur Organisasi
-$routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
-$routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
-
-
-//Admin LayananLainnya
-$routes->get('/adminLayananLainnya', 'LayananLainController::index');
-$routes->get('/EditDeskripsiLL', 'Admin::EditDeskripsiLL');
-$routes->get('/EditFotoLL', 'Admin::EditFotoLL');
-$routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
-$routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
-
-
-//Admin Header
-//Publikasi
-$routes->get('/AdminPublikasi', 'HeaderController::index_publikasi');
-$routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
-$routes->get('/EditPublikasi', 'Admin::EditPublikasi');
-//Penghargaan
-$routes->get('/adminPenghargaan', 'HeaderController::index_Penghargaan');
-$routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
-$routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
-//PAT
-$routes->get('/AdminPAT', 'HeaderController::index_pat');
-$routes->get('/EditPAT', 'Admin::EditPAT');
-$routes->get('/TambahPAT', 'Admin::TambahPAT');
-//Loker
-$routes->get('/AdminLoker', 'HeaderController::index_loker');
-$routes->get('/EditLoker', 'Admin::EditLoker');
-//Lelang
-$routes->get('/adminLelang', 'HeaderController::index_lelang');
-$routes->get('/EditLelang', 'Admin::EditLelang');
-$routes->get('/TambahLelang', 'Admin::TambahLelang');
-
-
-//AdminUser
-$routes->get('/AdminUser', 'AkunController::Index');
-$routes->get('/EditUser', 'Admin::EditUser');
-$routes->get('/TambahUser', 'Admin::TambahUser');
 
 
 // end of admin

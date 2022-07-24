@@ -61,16 +61,6 @@ class Admin extends BaseController
         echo view('admin/kredit/AdminKredit', $data);
     }
 
-    public function TambahProdukKredit()
-    {
-        $data = [
-            'title' => 'Admin Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/kredit/TambahProdukKredit', $data);
-    }
 
     public function TambahIklanKredit()
     {
@@ -83,16 +73,6 @@ class Admin extends BaseController
         echo view('admin/kredit/TambahIklanKredit', $data);
     }
 
-    public function EditProdukKredit()
-    {
-        $data = [
-            'title' => 'Admin Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/kredit/EditProdukKredit', $data);
-    }
 
     public function EditIklanKredit()
     {
