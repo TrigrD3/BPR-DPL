@@ -61,40 +61,6 @@ class Admin extends BaseController
         echo view('admin/kredit/AdminKredit', $data);
     }
 
-
-    public function TambahIklanKredit()
-    {
-        $data = [
-            'title' => 'Admin Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/kredit/TambahIklanKredit', $data);
-    }
-
-
-    public function EditIklanKredit()
-    {
-        $data = [
-            'title' => 'Admin Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/kredit/EditIklanKredit', $data);
-    }
-    public function EditLinkKredit()
-    {
-        $data = [
-            'title' => 'Admin Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/kredit/EditLinkKredit', $data);
-    }
-
     public function AdminDeposito()
     {
         $data = [
@@ -116,6 +82,18 @@ class Admin extends BaseController
         ];
         echo view('admin/Deposito/EditIklanDeposito', $data);
     }
+
+    public function EditLinkKredit()
+    {
+        $data = [
+            'title' => 'Admin Kredit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/kredit/EditLinkKredit', $data);
+    }
+
 
     public function EditProdukDeposito()
     {
@@ -587,7 +565,7 @@ class Admin extends BaseController
         echo view('admin/StrukturOrganisasi/Edit', $data);
     }
 
-    
+
     public function EditLoker()
     {
         $data = [
@@ -598,7 +576,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Header/Loker/EditLoker', $data);
     }
-    
+
     public function TambahIklan()
     {
         $data = [

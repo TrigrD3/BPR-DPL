@@ -98,9 +98,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/EditProdukKredit/(:num)', 'KreditController::UpdateKredit/$1');
     $routes->get('/HapusProdukKredit/(:num)', 'KreditController::DeleteKredit/$1');
 
-    $routes->get('/TambahIklanKredit', 'Admin::TambahIklanKredit');
-
-    $routes->get('/EditIklanKredit', 'Admin::EditIklanKredit');
+    $routes->get('/TambahIklanKredit', 'KreditController::TambahIklanKredit');
+    $routes->add('/TambahIklanKredit', 'KreditController::AddIklanKredit');
+    $routes->get('/EditIklanKredit/(:num)', 'KreditController::EditIklanKredit/$1');
+    $routes->post('/EditIklanKredit/(:num)', 'KreditController::UpdateIklanKredit/$1');
+    $routes->get('/HapusIklanKredit/(:num)', 'KreditController::DeleteIklanKredit/$1');
 
     //Admin Deposito
     $routes->get('/AdminDeposito', 'DepositoController::index');
