@@ -38,39 +38,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                Perkembangan Usaha
-                            </a>
-                            <br />
-                        </td>
-                        <td>
-                            <a>
-                                Laporan Publikasi tahun 2001.pdf
-                            </a>
-                        </td>
-                        <td class="project_progress">
-                            <a>
-                                2012
-                            </a>
-                        </td>
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditPublikasi">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                    <?php $no = 1;
+                    foreach ($HeaderPublikasi as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->nama; ?>
+                            </td>
+                            <td>
+                                <?= $data->file; ?>
+                            </td>
+                            <td class="project_progress">
+                                <?= $data->tahun; ?>
+                            </td>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditPublikasi">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahPublikasi">
                     <i class="fas fa-plus-circle"></i>
