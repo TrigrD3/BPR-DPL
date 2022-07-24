@@ -38,39 +38,37 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                Muhamamd Yusuf Hasbullah
-                            </a>
-                            <br />
-                        </td>
-                        <td>
-                            <a>
-                                Myusufh2001
-                            </a>
-                        </td>
-                        <td class="project_progress">
-                            <a>
-                                *************
-                            </a>
-                        </td>
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditUser">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                    <?php $no = 1;
+                    foreach ($Akun as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->nama; ?>
+                            </td>
+                            <td>
+                                <?= $data->username; ?>
+                            </td>
+                            <td class="project_progress">
+                                <?= $data->password; ?>
+                            </td>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditUser">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahUser">
                     <i class="fas fa-plus-circle"></i>

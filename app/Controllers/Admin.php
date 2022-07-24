@@ -11,20 +11,14 @@ class Admin extends BaseController
     public function __construct()
     {
         // parent::__construct();
+        $this->session = \Config\Services::session();
         $this->db = \Config\Database::connect();
         // $this->load->model('IdentitasWebsiteModel');
-        // if(!$this->session->userdata('email')){
-        //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
-        //     redirect('auth/');
+        // if (!$this->session->get('username')) {
+        //     $this->session->setFlashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
+        //     return redirect()->to(base_url('Login'));
         // }
-
     }
-
-    public function adminIdentitas()
-    {
-        
-    }
-
 
     public function editIdentitas()
     {
@@ -32,7 +26,6 @@ class Admin extends BaseController
             'title' => 'Admin Identitas',
             'css' => 'Style',
             'font' => 'font',
-
         ];
         echo view('admin/IdentitasWebsite/EditIdentitas', $data);
     }
@@ -43,9 +36,8 @@ class Admin extends BaseController
             'title' => 'Admin',
             'css' => 'Style',
             'font' => 'font',
-
         ];
-        echo view('admin/admin', $data);
+        echo view('Admin/Admin', $data);
     }
     public function AdminHome()
     {
@@ -325,7 +317,6 @@ class Admin extends BaseController
             'title' => 'Edit',
             'css' => 'Style',
             'font' => 'font',
-
         ];
         echo view('admin/Header/Publikasi/EditPublikasi', $data);
     }
@@ -616,16 +607,7 @@ class Admin extends BaseController
         echo view('admin/StrukturOrganisasi/Edit', $data);
     }
 
-    public function EditBerita()
-    {
-        $data = [
-            'title' => 'Edit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/Home/EditBerita', $data);
-    }
+    
     public function EditLoker()
     {
         $data = [
@@ -636,16 +618,7 @@ class Admin extends BaseController
         ];
         echo view('admin/Header/Loker/EditLoker', $data);
     }
-    public function TambahBerita()
-    {
-        $data = [
-            'title' => 'Edit',
-            'css' => 'Style',
-            'font' => 'font',
-
-        ];
-        echo view('admin/Home/TambahBerita', $data);
-    }
+    
     public function TambahIklan()
     {
         $data = [

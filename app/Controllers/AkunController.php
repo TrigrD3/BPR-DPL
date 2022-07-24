@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class KreditController extends BaseController
+class AkunController extends BaseController
 {
     public function __construct()
     {
         $this->session = \Config\Services::session();
-        $this->KreditModel = new \App\Models\KreditModel();
+        $this->AkunModel = new \App\Models\AkunModel();
         // if(!$this->session->userdata('email')){
         //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
         //     redirect('auth/');
@@ -20,13 +20,12 @@ class KreditController extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Admin Kredit',
+            'title' => 'Admin Akun',
             'css' => 'Style',
             'font' => 'font',
         ];
-        $data['KreditProduk'] = $this->KreditModel->get_all_produk();
-        $data['KreditIklan'] = $this->KreditModel->get_all_iklan();
-        return view('Admin/Kredit/AdminKredit', $data);
+        $data['Akun'] = $this->AkunModel->get_all_akun();
+        return view('Admin/User/AdminUser', $data);
     }
 
     public function update()

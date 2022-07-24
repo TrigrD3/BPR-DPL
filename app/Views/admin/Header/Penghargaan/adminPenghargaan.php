@@ -31,25 +31,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            Foto
-                        </td>
-                        <td>
-                            <a>
-                                Perkembangan Usaha asdasd asd asdasd
-                            </a>
-                            <br />
-                        </td>
+                    <?php
+                    foreach ($HeaderPenghargaan as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $data->foto; ?>
+                            </td>
+                            <td>
+                                <?= $data->deskripsi; ?>
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditPenghargaan">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditPenghargaan">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahPenghargaan">
                     <i class="fas fa-plus-circle"></i>
