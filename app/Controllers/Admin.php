@@ -317,7 +317,6 @@ class Admin extends BaseController
             'title' => 'Edit',
             'css' => 'Style',
             'font' => 'font',
-
         ];
         echo view('admin/Header/Publikasi/EditPublikasi', $data);
     }

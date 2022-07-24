@@ -8,30 +8,30 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/fontawesome-free/css/all.min.css') ?>">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') ?>">
     <!-- iCheck -->
-    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/icheck-bootstrap/icheck-bootstrap.min.css') ?>">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/jqvmap/jqvmap.min.css') ?>">
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="<?= base_url('dist/css/adminlte.min.css') ?>">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/overlayScrollbars/css/OverlayScrollbars.min.css') ?>">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/daterangepicker/daterangepicker.css') ?>">
     <!-- summernote -->
-    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="<?= base_url('plugins/summernote/summernote-bs4.min.css') ?>">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="assets/img/logoBPR.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="<?= base_url('assets/img/logoBPR.png') ?>" alt="AdminLTELogo" height="60" width="60">
         </div>
 
         <!-- Navbar -->
@@ -54,7 +54,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="assets/img/LogoBPR.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="<?= base_url('assets/img/LogoBPR.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Back to page</span>
             </a>
 
@@ -80,7 +80,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="adminIdentitas" class="nav-link">
+                                    <a href="<?= base_url('adminIdentitas') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Identitas Website</p>
                                     </a>
@@ -97,7 +97,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminHome" class="nav-link">
+                                    <a href="<?= base_url('AdminHome') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Home</p>
                                     </a>
@@ -114,7 +114,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminKredit" class="nav-link">
+                                    <a href="<?= base_url('AdminKredit') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Kredit</p>
                                     </a>
@@ -132,7 +132,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminDeposito" class="nav-link">
+                                    <a href="<?= base_url('AdminDeposito') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Deposito</p>
                                     </a>
@@ -149,7 +149,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminTabungan" class="nav-link">
+                                    <a href="<?= base_url('AdminTabungan') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Tabungan</p>
                                     </a>
@@ -183,7 +183,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminProfil" class="nav-link">
+                                    <a href="<?= base_url('AdminProfil') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Profil</p>
                                     </a>
@@ -196,13 +196,13 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="AdminAlamat" class="nav-link">
+                                    <a href="<?= base_url('AdminAlamat') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Alamat Kantor</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="adminVisiMisi" class="nav-link">
+                                    <a href="<?= base_url('adminVisiMisi') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Visi & Misi</p>
                                     </a>
@@ -227,31 +227,31 @@
                             <ul class="nav nav-treeview">
 
                                 <li class="nav-item">
-                                    <a href="AdminPublikasi" class="nav-link">
+                                    <a href="<?= base_url('AdminPublikasi') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Publikasi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="AdminPAT" class="nav-link">
+                                    <a href="<?= base_url('AdminPAT') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>PAT</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="AdminLoker" class="nav-link">
+                                    <a href="<?= base_url('AdminLoker') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Loker</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="adminPenghargaan" class="nav-link">
+                                    <a href="<?= base_url('adminPenghargaan') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Penghargaan</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="adminLelang" class="nav-link">
+                                    <a href="<?= base_url('adminLelang') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Lelang</p>
                                     </a>
@@ -269,7 +269,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="AdminUser" class="nav-link">
+                                    <a href="<?= base_url('AdminUser') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Akun</p>
                                     </a>
@@ -302,38 +302,38 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="<?= base_url('plugins/jquery/jquery.min.js') ?>"></script>
     <!-- jQuery UI 1.11.4 -->
-    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="<?= base_url('plugins/jquery-ui/jquery-ui.min.js') ?>"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
     <!-- ChartJS -->
-    <script src="plugins/chart.js/Chart.min.js"></script>
+    <script src="<?= base_url('plugins/chart.js/Chart.min.js') ?>"></script>
     <!-- Sparkline -->
-    <script src="plugins/sparklines/sparkline.js"></script>
+    <script src="<?= base_url('plugins/sparklines/sparkline.js') ?>"></script>
     <!-- JQVMap -->
-    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <script src="<?= base_url('plugins/jqvmap/jquery.vmap.min.js') ?>"></script>
+    <script src="<?= base_url('plugins/jqvmap/maps/jquery.vmap.usa.js') ?>"></script>
     <!-- jQuery Knob Chart -->
-    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <script src="<?= base_url('plugins/jquery-knob/jquery.knob.min.js') ?>"></script>
     <!-- daterangepicker -->
-    <script src="plugins/moment/moment.min.js"></script>
-    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="<?= base_url('plugins/moment/moment.min.js') ?>"></script>
+    <script src="<?= base_url('plugins/daterangepicker/daterangepicker.js') ?>"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="<?= base_url('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') ?>"></script>
     <!-- Summernote -->
-    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="<?= base_url('plugins/summernote/summernote-bs4.min.js') ?>"></script>
     <!-- overlayScrollbars -->
-    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <script src="<?= base_url('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') ?>"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.js"></script>
+    <script src="<?= base_url('dist/js/adminlte.js') ?>"></script>
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard.js"></script>
+    <script src="<?= base_url('dist/js/pages/dashboard.js') ?>"></script>
     <script src="https://cdn.ckeditor.com/4.19.0/full/ckeditor.js"></script>
 
     <script>

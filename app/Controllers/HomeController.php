@@ -58,11 +58,7 @@ class HomeController extends BaseController
 
     public function EditBerita($id)
     {
-        $data = [
-            'title' => 'Edit',
-            'css' => 'Style',
-            'font' => 'font',
-        ];
+
         $dataAll = $this->HomeModel->get_id_berita($id);
         if (empty($dataAll)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Pegawai Tidak ditemukan !');
