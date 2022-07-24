@@ -75,8 +75,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     //Admin Home
     $routes->get('/AdminHome', 'HomeController::index');
-    $routes->get('/EditBerita', 'HomeController::EditBerita');
     $routes->get('/TambahBerita', 'HomeController::TambahBerita');
+    $routes->add('/TambahBerita', 'HomeController::AddBerita');
+    $routes->get('/EditBerita/(:num)', 'HomeController::EditBerita/$1');
+    $routes->post('/EditBerita/(:num)', 'HomeController::UpdateBerita/$1');
+    $routes->get('/HapusBerita/(:num)', 'HomeController::DeleteBerita/$1');
     $routes->get('/EditIklan', 'HomeController::EditIklan');
     $routes->get('/TambahIklan', 'HomeController::TambahIklan');
     $routes->get('/EditDeskripsi', 'HomeController::EditDeskripsi');

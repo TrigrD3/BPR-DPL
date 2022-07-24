@@ -61,12 +61,12 @@
                                 <?= $data->isi_berita; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditBerita">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditBerita/$data->id_berita") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusBerita/$data->id_berita") ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
