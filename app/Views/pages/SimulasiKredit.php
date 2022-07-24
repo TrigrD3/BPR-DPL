@@ -11,6 +11,8 @@
                 <h1 class="display-4 mb-3 text-center">Simulasi Kredit</h1>
                 <div class="form-group">
                     <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
+                    <br>
+                    <span id="format-Rp"></span>
                     <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit"
                         placeholder="Contoh: 150000000" value="12000000">
                 </div>

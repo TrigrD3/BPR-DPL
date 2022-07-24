@@ -16,8 +16,9 @@ if (isset($_POST['jumlahDeposito']) &&
     $_jumlahDeposito = $_POST['jumlahDeposito'];
     $_jangkaWaktu = $_POST['jangkaWaktu'];
     $_bungaPertahun = $_POST['bungaPertahun'];
+    $_pajak = $_POST['pajak'];
 
-    $hasil = hitung_deposito($_jumlahDeposito, $_jangkaWaktu, $_bungaPertahun);
+    $hasil = hitung_deposito($_jumlahDeposito, $_jangkaWaktu, $_bungaPertahun, $_pajak);
     response($hasil);
 
 } else {
@@ -33,15 +34,14 @@ function response($data, $metode=0){
 }
 
 
-function hitung_deposito($jumlahDeposito, $jangkaWaktu, $sukuBunga) {
+function hitung_deposito($jumlahDeposito, $jangkaWaktu, $sukuBunga, $pajak) {
     $angsuran = [];
-    $pajak = 20;
     $sukuBunga = $sukuBunga / 100;
     $jangkaWaktuBulan = $jangkaWaktu*30;
     $keuntunganBunga = ($jumlahDeposito*$sukuBunga*$jangkaWaktuBulan)/365 ;
-    $potonganPajak = $keuntunganBunga*0.2;
+    $potonganPajak = $keuntunganBunga*($pajak/100);
     $totalBunga = $keuntunganBunga-$potonganPajak;
-    $bungaPerbulan = ($keuntunganBunga/$jangkaWaktu)*0.8;
+    $bungaPerbulan = ($keuntunganBunga/$jangkaWaktu)*(1-($pajak/100));
     $depositoAkhir = $jumlahDeposito+$totalBunga;
 
     array_push($angsuran, [

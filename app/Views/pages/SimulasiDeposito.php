@@ -11,6 +11,8 @@
                 <h1 class="display-4 mb-3 text-center">Simulasi Deposito</h1>
                 <div class="form-group">
                     <label for="jumlahDeposito">Jumlah Deposito <em>(rupiah)</em>: </label>
+                    <br>
+                    <span id="format-Rp"></span>
                     <input type="number" class="form-control" id="jumlahDeposito" name="jumlahDeposito"
                         placeholder="Contoh: 150000000" value="10000000">
                 </div>
@@ -23,6 +25,11 @@
                     <label for="bungaPertahun">Bunga<em>(%)</em>: </label>
                     <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun"
                         placeholder="Contoh: 10.5" value="6">
+                </div>
+                <div class="form-group">
+                    <label for="pajak">Pajak<em>(%)</em>: </label>
+                    <input type="number" class="form-control" id="pajak" name="pajak"
+                        placeholder="Contoh: 10.5" value="20">
                 </div>
                 <div class="form-group mb-3 mt-3">
                     <button id="btnHitung" type="submit" class="btn btn-primary">Hitung</button>
