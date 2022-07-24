@@ -38,7 +38,7 @@ $routes->set404Override();
 // start of pages
 $routes->get('/', 'Pages::index');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
-$routes->get('/SimulasiTabungan', 'Pages::SimulasiTabungan');
+$routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
 $routes->get('/Kredit', 'Pages::Kredit');
 $routes->get('/Deposito', 'Pages::Deposito');
 $routes->get('/KAP', 'Pages::KAP');

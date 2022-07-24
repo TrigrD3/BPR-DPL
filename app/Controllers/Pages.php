@@ -30,17 +30,17 @@ class Pages extends BaseController
         echo view('pages/SimulasiKredit', $data);
     }
 
-    public function SimulasiTabungan()
+    public function SimulasiDeposito()
     {
         $data = [
-            'title' => 'SimulasiTabungan | BANK LESTARI',
-            'css' => 'SimulasiTabungan',
+            'title' => 'SimulasiDeposito | BANK LESTARI',
+            'css' => 'SimulasiDeposito',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
             'header' => 'header'
         ];
-        echo view('pages/SimulasiTabungan', $data);
+        echo view('pages/SimulasiDeposito', $data);
     }
 
     public function Kredit()
