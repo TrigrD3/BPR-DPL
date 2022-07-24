@@ -29,28 +29,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <p>MENJADI BPR YANG KOKOH DAN KOMITMEN TERHADAP USAHA MIKRO</p>
-                            <br />
-                        </td>
+                    <?php $no = 1;
+                    foreach ($TentangLestariVisiMisi as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->visi; ?>
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditVisi">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditMisi">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahVisi">
                     <i class="fas fa-plus-circle"></i>
@@ -89,28 +93,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <p>Meningkatkan kinerja dan tetap sebagai BPR yang sehat, profesional dan mampu bersaing serta berkesinambungan. Memberikan pelayanan yang terbaik kepada nasabah, berperan dalam pengembangan usaha Mikro, serta meningkatkan nilai tambah investasi pemegang saham dan kesejahteraan karyawan. </p>
-                            <br />
-                        </td>
+                    <?php $no = 1;
+                    foreach ($TentangLestariVisiMisi as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <?= $data->misi; ?>
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditMisi">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                </i>
-                                Delete
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="EditMisi">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahMisi">
                     <i class="fas fa-plus-circle"></i>

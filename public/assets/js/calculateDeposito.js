@@ -1,21 +1,22 @@
 $(document).ready(function () {
   init();
-  const URL_REQUEST = 'kalkulasiKredit.php';
+  const URL_REQUEST = 'kalkulasiDeposito.php';
 
-  let $jumlahKredit = $('#jumlahKredit');
+  let $jumlahDeposito = $('#jumlahDeposito');
   let $jangkaWaktu = $('#jangkaWaktu');
   let $bungaPertahun = $('#bungaPertahun');
+  let $pajak = $('#pajak');
   let submited = false;
 
-  $('#simulasiKredit').validate({
+  $('#simulasiDeposito').validate({
     rules: {
-      jumlahKredit: 'required',
+      jumlahDeposito: 'required',
       jangkaWaktu: 'required',
       bungaPertahun: 'required',
     },
 
     messages: {
-      jumlahKredit: 'Silahkan masukkan jumlah kredit atau pinjaman.',
+      jumlahDeposito: 'Silahkan masukkan jumlah deposito atau pinjaman.',
       jangkaWaktu: 'Silahkan masukkan jangka waktu.',
       bungaPertahun: 'Silahkan masukkan bunga.',
     },
@@ -43,60 +44,36 @@ $(document).ready(function () {
   function hitung() {
     $('aside').hide();
     $('#tableAngsuran tbody tr').remove();
-    let data = $('#simulasiKredit').serializeArray();
+    let data = $('#simulasiDeposito').serializeArray();
     $.post(URL_REQUEST, data, function (e) {
-      setInfoPinjaman(e.metode, $jumlahKredit.val(), $jangkaWaktu.val(), $bungaPertahun.val(), e.data[0].pokok, e.data[0].bunga, e.data[0].jumlahAngsuran);
-      $.each(e.data, function (key, val) {
-        setInfoTable(val.no, val.pokok, val.bunga, val.jumlahAngsuran, val.sisaPinjaman);
-      });
+      setInfoDeposito($jumlahDeposito.val(), $jangkaWaktu.val(), $bungaPertahun.val(), e.data[0].pajak, e.data[0].bungaBulan, e.data[0].totalBunga, e.data[0].totalDepositoAkhir);
     });
     $('aside').show();
   }
 
   function ulangi() {
     $('aside').hide();
-    $jumlahKredit.val('');
+    $jumlahDeposito.val('');
     $jangkaWaktu.val('');
     $bungaPertahun.val('');
   }
 
-  function setInfoPinjaman(metode, total, lama, bunga, angsuranPokok, angsuranBunga, totalAngsuran) {
-    let $totalPinjaman = $('#resultTotalPinjaman');
-    let $lamaPinjaman = $('#resultLamaPinjaman');
+  function setInfoDeposito(total, lama, bunga, pajak, bungaBulan, akumBunga, depositoAkhir) {
+    let $totalPinjaman = $('#resultNominalDeposito');
+    let $lamaPinjaman = $('#resultJangkaWaktu');
     let $bunga = $('#resultBungaPertahun');
-    let $angPokok = $('#resultAngPokokBulan');
-    let $angBunga = $('#resultAngBungaBulan');
-    let $ang = $('#resultAngBulan');
-    let $flatOnly = $('.flatOnly');
+    let $bungaPerBulan = $('#resultBungaPerbulan');
+    let $pjk = $('#resultPajak');
+    let $akumulasiBunga = $('#resultTotalAkumulasiBunga');
+    let $totalDeposito = $('#resultTotalDepositoAkhir');
 
-    if (metode == 1) {
-      $totalPinjaman.text(rupiah_format(total));
-      $lamaPinjaman.text(lama);
-      $bunga.text(bunga + ' %');
-      $flatOnly.show();
-
-      $angPokok.text(rupiah_format(angsuranPokok));
-      $angBunga.text(rupiah_format(angsuranBunga));
-      $ang.text(rupiah_format(totalAngsuran));
-    } else {
-      $totalPinjaman.text(rupiah_format(total));
-      $lamaPinjaman.text(lama);
-      $bunga.text(bunga + ' %');
-      $flatOnly.hide();
-    }
-  }
-
-  function setInfoTable(bulan, angsuranpokok, angsuranBunga, jumlahAngsuran, sisaPinjaman) {
-    let markup = `
-            <tr>
-                <td>${bulan}</td>
-                <td>${rupiah_format(angsuranpokok)}</td>
-                <td>${rupiah_format(angsuranBunga)}</td>
-                <td>${rupiah_format(jumlahAngsuran)}</td>
-                <td>${rupiah_format(sisaPinjaman)}</td>
-            </tr>
-        `;
-    $('#tableAngsuran > tbody:last-child').append(markup);
+    $totalPinjaman.text(rupiah_format(total));
+    $lamaPinjaman.text(lama);
+    $bunga.text(bunga + ' %');
+    $pjk.text(pajak + ' %');
+    $bungaPerBulan.text(rupiah_format(bungaBulan));
+    $akumulasiBunga.text(rupiah_format(akumBunga));
+    $totalDeposito.text(rupiah_format(depositoAkhir));
   }
 
   function rupiah_format(number) {
@@ -104,7 +81,7 @@ $(document).ready(function () {
   }
 
   var rupiah2 = document.getElementById('format-Rp');
-  var rupiah = document.getElementById('jumlahKredit');
+  var rupiah = document.getElementById('jumlahDeposito');
 
   window.addEventListener('load', function (e) {
     var content = formatRupiah(rupiah.value, 'Rp');

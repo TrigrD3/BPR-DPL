@@ -7,3 +7,7 @@
   align-items: center;
   padding: 15px;
 }
+
+.border1 {
+  border: 1px solid #0f54a3;
+}
