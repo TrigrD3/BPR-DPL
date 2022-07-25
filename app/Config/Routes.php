@@ -86,7 +86,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/HapusIklan/(:num)', 'HomeController::DeleteIklan/$1');
 
     $routes->get('/EditDeskripsiWebsite/(:num)', 'HomeController::EditDeskripsiWebsite/$1');
-    // $routes->post('/EditDeskripsiWebsite/(:num)', 'HomeController::EditDeskripsiWebsite/$1');
+    $routes->post('/EditDeskripsiWebsite/(:num)', 'HomeController::UpdateDeskripsiWebsite/$1');
 
     //Admin Identitas
     $routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');

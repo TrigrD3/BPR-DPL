@@ -172,7 +172,7 @@ class HomeController extends BaseController
     public function UpdateDeskripsiWebsite($id)
     {
         $data = [
-            'deskripsi' => $this->request->getPost('foto'),
+            'deskripsi' => $this->request->getPost('editor1'),
         ];
 
         $this->HomeModel->update_deskripsi_website($id, $data);

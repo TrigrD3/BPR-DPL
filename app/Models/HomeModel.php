@@ -179,7 +179,7 @@ class HomeModel extends Model
     public function update_deskripsi_website($id, $data)
     {
         if (!$this->validate([
-            'foto' => [
+            'editor1' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Harus diisi'
