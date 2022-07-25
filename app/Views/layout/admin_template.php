@@ -166,7 +166,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="adminLayananLainnya" class="nav-link">
+                                    <a href="<?= base_url('adminLayananLainnya') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Layanan Lainnya</p>
                                     </a>

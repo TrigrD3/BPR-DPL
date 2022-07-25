@@ -42,12 +42,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditDeskripsiLL">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditDeskripsiLL/$data->id_pembayaran") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusDeskripsiLL/$data->id_pembayaran") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
@@ -107,12 +107,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditFotoLL">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditFotoLL/$data->id_produk") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusFotoLL/$data->id_produk") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

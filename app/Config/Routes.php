@@ -136,22 +136,26 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     //Admin LayananLainnya
     $routes->get('/adminLayananLainnya', 'LayananLainController::index');
-    $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
-    $routes->add('/TambahDeskripsiLL', 'Admin::AddDeskripsiLL');
-    $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
-    $routes->add('/TambahFotoLL', 'Admin::AddFotoLL');
-    $routes->get('/EditDeskripsiLL/(:num)', 'Admin::EditDeskripsiLL/$1');
-    $routes->post('/EditDeskripsiLL/(:num)', 'Admin::UpdateDeskripsiLL/$1');
-    $routes->get('/EditFotoLL/(:num)', 'Admin::EditFotoLL/$1');
-    $routes->post('/EditFotoLL/(:num)', 'Admin::UpdateFotoLL/$1');
-    $routes->get('/HapusFotoLL/(:num)', 'Admin::DeleteFotoLL/$1');
-    $routes->get('/HapusDeskripsiLL/(:num)', 'Admin::DeleteDeskripsiLL/$1');
+    $routes->get('/TambahDeskripsiLL', 'LayananLainController::TambahPembayaran');
+    $routes->add('/TambahDeskripsiLL', 'LayananLainController::AddPembayaran');
+    $routes->get('/TambahFotoLL', 'LayananLainController::TambahProduk');
+    $routes->add('/TambahFotoLL', 'LayananLainController::AddProduk');
+
+    $routes->get('/EditDeskripsiLL/(:num)', 'LayananLainController::EditPembayaran/$1');
+    $routes->post('/EditDeskripsiLL/(:num)', 'LayananLainController::UpdatePembayaran/$1');
+
+    $routes->get('/EditFotoLL/(:num)', 'LayananLainController::EditProduk/$1');
+    $routes->post('/EditFotoLL/(:num)', 'LayananLainController::UpdateProduk/$1');
+    $routes->get('/HapusFotoLL/(:num)', 'LayananLainController::DeleteProduk/$1');
+    $routes->get('/HapusDeskripsiLL/(:num)', 'LayananLainController::DeletePembayaran/$1');
 
     //Admin Tentang Lestari
     //Profil
     $routes->get('/AdminProfil', 'TentangLestariController::index_profil');
-    $routes->get('/EditProfil', 'Admin::EditProfil');
-    $routes->get('/TambahProfil', 'Admin::TambahProfil');
+    $routes->get('/EditProfil/(:num)', 'TentangLestariController::EditProfil/$1');
+    $routes->post('/EditProfil/(:num)', 'TentangLestariController::UpdateProfil/$1');
+    $routes->get('/TambahProfil', 'TentangLestariController::TambahProfil');
+    $routes->add('/TambahProfil', 'TentangLestariController::AddProfil');
     //Sejarah
     $routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
     $routes->get('/EditSejarah', 'Admin::EditSejarah');
@@ -199,13 +203,6 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/EditUser/(:num)', 'AkunController::UpdateUser/$1');
     $routes->get('/DeleteUser/(:num)', 'AkunController::DeleteUser/$1');
 });
-
-
-
-
-
-
-
 // end of admin
 
 /*
