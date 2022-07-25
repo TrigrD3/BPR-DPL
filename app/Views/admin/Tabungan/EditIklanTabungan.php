@@ -19,10 +19,11 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputClientCompany">Pilih Foto</label>
-                        <input type="File" id="inputClientCompany" class="form-control" >
-                    </div>
+                    <form action="<?= base_url('EditIklanTabungan') . '/' . $iklan_tabungan->id_iklan ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputClientCompany">Pilih Foto</label>
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $produk_tabungan->foto ?>">
+                        </div>
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -33,8 +34,14 @@
     <div class="row">
         <div class="col-12">
             <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="Save" class="btn btn-success float-right">
+            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                <span class="icon text-white-50">
+                    <i class="fas fa-download"></i>
+                </span>
+                <span class="text">Simpan</span>
+            </button>
         </div>
     </div>
+    </form>
 </section>
 <?= $this->endSection(''); ?>

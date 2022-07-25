@@ -60,10 +60,7 @@ $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
-
 $routes->get('/AdminBerita', 'Admin::AdminBerita');
-
-
 //Login
 $routes->get('/Login', 'AuthController::index');
 $routes->post('/Login/process', 'AuthController::process');
@@ -106,18 +103,44 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     //Admin Deposito
     $routes->get('/AdminDeposito', 'DepositoController::index');
-    $routes->get('/TambahIklanDeposito', 'Admin::TambahIklanDeposito');
-    $routes->get('/TambahProdukDeposito', 'Admin::TambahProdukDeposito');
-    $routes->get('/EditProdukDeposito', 'Admin::EditProdukDeposito');
-    $routes->get('/EditIklanDeposito', 'Admin::EditIklanDeposito');
+    $routes->get('/TambahProdukDeposito', 'DepositoController::TambahProdukDeposito');
+    $routes->add('/TambahProdukDeposito', 'DepositoController::AddDeposito');
+    $routes->get('/EditProdukDeposito/(:num)', 'DepositoController::EditProdukDeposito/$1');
+    $routes->post('/EditProdukDeposito/(:num)', 'DepositoController::UpdateDeposito/$1');
+    $routes->get('/HapusProdukDeposito/(:num)', 'DepositoController::DeleteDeposito/$1');
+
+    $routes->get('/TambahIklanDeposito', 'DepositoController::TambahIklanDeposito');
+    $routes->add('/TambahIklanDeposito', 'DepositoController::AddIklanDeposito');
+    $routes->get('/EditIklanDeposito/(:num)', 'DepositoController::EditIklanDeposito/$1');
+    $routes->post('/EditIklanDeposito/(:num)', 'DepositoController::UpdateIklanDeposito/$1');
+    $routes->get('/HapusIklanDeposito/(:num)', 'DepositoController::DeleteIklanDeposito/$1');
 
     //Admin Tabungan
     $routes->get('/AdminTabungan', 'TabunganController::index');
-    $routes->get('/TambahIklanTabungan', 'Admin::TambahIklanTabungan');
-    $routes->get('/TambahProdukTabungan', 'Admin::TambahProdukTabungan');
-    $routes->get('/EditProdukTabungan', 'Admin::EditProdukTabungan');
-    $routes->get('/EditLinkTabungan', 'Admin::EditLinkTabungan');
-    $routes->get('/EditIklanTabungan', 'Admin::EditIklanTabungan');
+    $routes->get('/TambahProdukTabungan', 'TabunganController::TambahProdukTabungan');
+    $routes->add('/TambahProdukTabungan', 'TabunganController::AddTabungan');
+    $routes->get('/EditProdukTabungan/(:num)', 'TabunganController::EditProdukTabungan/$1');
+    $routes->post('/EditProdukTabungan/(:num)', 'TabunganController::UpdateTabungan/$1');
+    $routes->get('/HapusProdukTabungan/(:num)', 'TabunganController::DeleteTabungan/$1');
+
+    $routes->get('/TambahIklanTabungan', 'TabunganController::TambahIklanTabungan');
+    $routes->add('/TambahIklanTabungan', 'TabunganController::AddIklanTabungan');
+    $routes->get('/EditIklanTabungan/(:num)', 'TabunganController::EditIklanTabungan/$1');
+    $routes->post('/EditIklanTabungan/(:num)', 'TabunganController::UpdateIklanTabungan/$1');
+    $routes->get('/HapusIklanTabungan/(:num)', 'TabunganController::DeleteIklanTabungan/$1');
+
+    //Admin LayananLainnya
+    $routes->get('/adminLayananLainnya', 'LayananLainController::index');
+    $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
+    $routes->add('/TambahDeskripsiLL', 'Admin::AddDeskripsiLL');
+    $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
+    $routes->add('/TambahFotoLL', 'Admin::AddFotoLL');
+    $routes->get('/EditDeskripsiLL/(:num)', 'Admin::EditDeskripsiLL/$1');
+    $routes->post('/EditDeskripsiLL/(:num)', 'Admin::UpdateDeskripsiLL/$1');
+    $routes->get('/EditFotoLL/(:num)', 'Admin::EditFotoLL/$1');
+    $routes->post('/EditFotoLL/(:num)', 'Admin::UpdateFotoLL/$1');
+    $routes->get('/HapusFotoLL/(:num)', 'Admin::DeleteFotoLL/$1');
+    $routes->get('/HapusDeskripsiLL/(:num)', 'Admin::DeleteDeskripsiLL/$1');
 
     //Admin Tentang Lestari
     //Profil
@@ -141,13 +164,6 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     //Struktur Organisasi
     $routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
     $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
-
-    //Admin LayananLainnya
-    $routes->get('/adminLayananLainnya', 'LayananLainController::index');
-    $routes->get('/EditDeskripsiLL', 'Admin::EditDeskripsiLL');
-    $routes->get('/EditFotoLL', 'Admin::EditFotoLL');
-    $routes->get('/TambahDeskripsiLL', 'Admin::TambahDeskripsiLL');
-    $routes->get('/TambahFotoLL', 'Admin::TambahFotoLL');
 
     //Admin Header
     //Publikasi

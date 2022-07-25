@@ -22,7 +22,7 @@
                     <form action="<?= base_url('EditIklanKredit') . '/' . $iklan_kredit->id_iklan ?>" method="post">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name='foto' id="inputClientCompany" class="form-control">
+                            <input type="File" name='foto' id="inputClientCompany" class="form-control" value="<?= $iklan_kredit->foto ?>">
                         </div>
                 </div>
                 <!-- /.card-body -->

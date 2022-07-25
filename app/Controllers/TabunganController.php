@@ -29,21 +29,127 @@ class TabunganController extends BaseController
         return view('Admin/Tabungan/AdminTabungan', $data);
     }
 
-    public function update()
+    public function TambahProdukTabungan()
     {
         $data = [
-            'id_identitas' => $this->request->getVar('id_identitas'),
-            'whatsapp' => $this->request->getVar('whatsapp'),
-            'facebook' => $this->request->getVar('facebook'),
-            'instagram' => $this->request->getVar('instagram'),
-            'logo' => $this->request->getVar('logo'),
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
         ];
-        $this->IdentitasWebsiteModel->update_IdentitasWebsite($data);
-        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
+        echo view('admin/Tabungan/TambahProdukTabungan', $data);
+    }
+
+    public function TambahIklanTabungan()
+    {
+        $data = [
+            'title' => 'Admin Tabungan',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        echo view('admin/Tabungan/TambahIklanTabungan', $data);
+    }
+
+    public function AddIklanTabungan()
+    {
+        $data = [
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->TabunganModel->add_iklantabungan($data);
+
+        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        return redirect()->to(base_url('AdminTabungan'))->with('success', 'Data Added Successfully');
+    }
+
+
+    public function AddTabungan()
+    {
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'deskripsi' => $this->request->getPost('editor1'),
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->TabunganModel->add_tabungan($data);
+
+        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        return redirect()->to(base_url('AdminTabungan'))->with('success', 'Data Added Successfully');
+    }
+
+    public function EditProdukTabungan($id)
+    {
+        $dataAll = $this->TabunganModel->get_id_tabungan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Tabungan Tidak ditemukan !');
+        }
+        $data['produk_tabungan'] = $dataAll;
+        echo view('admin/Tabungan/EditProdukTabungan', $data);
+    }
+
+    public function EditIklanTabungan($id)
+    {
+        $dataAll = $this->TabunganModel->get_id_iklan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Tabungan Tidak ditemukan !');
+        }
+        $data['iklan_tabungan'] = $dataAll;
+        echo view('admin/Tabungan/EditIklanTabungan', $data);
+    }
+
+    public function UpdateTabungan($id)
+    {
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'deskripsi' => $this->request->getPost('editor1'),
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->TabunganModel->update_tabungan($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-        return redirect()->to(base_url('adminIdentitas'));
+        return redirect()->to(base_url('AdminTabungan'));
+    }
+
+    public function UpdateIklanTabungan($id)
+    {
+        $data = [
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->TabunganModel->update_iklantabungan($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminTabungan'));
+    }
+
+    public function DeleteTabungan($id)
+    {
+        $data = $this->TabunganModel->get_id_tabungan($id);
+        if (empty($data)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
+        }
+        $this->TabunganModel->delete_tabungan($id);
+        session()->setFlashdata('message', 'Hapus Tabungan Berhasil');
+        return redirect()->to(base_url('AdminTabungan'));
+    }
+
+    public function DeleteIklanTabungan($id)
+    {
+        $data = $this->TabunganModel->get_id_iklan($id);
+        if (empty($data)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
+        }
+        $this->TabunganModel->delete_Iklantabungan($id);
+        session()->setFlashdata('message', 'Hapus Iklan Tabungan Berhasil');
+        return redirect()->to(base_url('AdminTabungan'));
     }
 }
