@@ -4,12 +4,12 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class LayananLainController extends BaseController
+class KreditController extends BaseController
 {
     public function __construct()
     {
         $this->session = \Config\Services::session();
-        $this->LayananLainModel = new \App\Models\LayananLainModel();
+        $this->KreditModel = new \App\Models\KreditModel();
         // if(!$this->session->userdata('email')){
         //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
         //     redirect('auth/');
@@ -20,133 +20,136 @@ class LayananLainController extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Admin Layanan Lainya',
+            'title' => 'Admin Kredit',
             'css' => 'Style',
             'font' => 'font',
         ];
-        $data['LayananLainProduk'] = $this->LayananLainModel->get_all_produk();
-        $data['LayananLainPembayaran'] = $this->LayananLainModel->get_all_pembayaran();
-        return view('Admin/LayananLain/AdminLayananLainnya', $data);
+        $data['KreditProduk'] = $this->KreditModel->get_all_produk();
+        $data['KreditIklan'] = $this->KreditModel->get_all_iklan();
+        return view('Admin/Kredit/AdminKredit', $data);
     }
 
-    public function TambahPembayaran()
+    public function TambahProdukKredit()
     {
         $data = [
             'title' => 'Edit',
             'css' => 'Style',
             'font' => 'font',
+
         ];
-        echo view('admin/LayananLain/TambahDeskripsi', $data);
+        echo view('admin/Kredit/TambahProdukKredit', $data);
     }
 
-    public function TambahProduk()
+    public function TambahIklanKredit()
     {
         $data = [
-            'title' => 'Edit',
+            'title' => 'Admin Kredit',
             'css' => 'Style',
             'font' => 'font',
         ];
-        echo view('admin/LayananLain/TambahFoto', $data);
+        echo view('admin/kredit/TambahIklanKredit', $data);
     }
 
-
-    public function AddProduk()
+    public function AddIklanKredit()
     {
         $data = [
             'foto' => $this->request->getPost('foto'),
         ];
 
-        $this->LayananLainModel->add_Produk($data);
+        $this->KreditModel->add_iklankredit($data);
 
         session()->setFlashdata('message', 'Tambah Kredit Berhasil');
-        return redirect()->to(base_url('adminLayananLainnya'))->with('success', 'Data Added Successfully');
+        return redirect()->to(base_url('AdminKredit'))->with('success', 'Data Added Successfully');
     }
 
 
-    public function AddPembayaran()
+    public function AddKredit()
     {
         $data = [
+            'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
+            'foto' => $this->request->getPost('foto'),
         ];
 
-        $this->LayananLainModel->add_Pembayaran($data);
+        $this->KreditModel->add_kredit($data);
 
         session()->setFlashdata('message', 'Tambah Kredit Berhasil');
-        return redirect()->to(base_url('adminLayananLainnya'))->with('success', 'Data Added Successfully');
+        return redirect()->to(base_url('AdminKredit'))->with('success', 'Data Added Successfully');
     }
 
-    public function EditPembayaran($id)
+    public function EditProdukKredit($id)
     {
-        $dataAll = $this->LayananLainModel->get_id_pembayaran($id);
+        $dataAll = $this->KreditModel->get_id_kredit($id);
         if (empty($dataAll)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Kredit Tidak ditemukan !');
         }
-        $data['layanan_pembayaran'] = $dataAll;
-        echo view('admin/LayananLain/EditDeskripsi', $data);
+        $data['produk_kredit'] = $dataAll;
+        echo view('admin/Kredit/EditProdukKredit', $data);
     }
 
+    public function EditIklanKredit($id)
+    {
+        $dataAll = $this->KreditModel->get_id_iklan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Kredit Tidak ditemukan !');
+        }
+        $data['iklan_kredit'] = $dataAll;
+        echo view('admin/Kredit/EditIklanKredit', $data);
+    }
 
-    public function UpdatePembayaran($id)
+    public function UpdateKredit($id)
     {
         $data = [
+            'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
+            'foto' => $this->request->getPost('foto'),
         ];
 
-        $this->LayananLainModel->update_pembayaran($id, $data);
+        $this->KreditModel->update_kredit($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-        return redirect()->to(base_url('adminLayananLainnya'));
+        return redirect()->to(base_url('AdminKredit'));
     }
 
-    public function EditProduk($id)
-    {
-        $dataAll = $this->LayananLainModel->get_id_produk($id);
-        if (empty($dataAll)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Kredit Tidak ditemukan !');
-        }
-        $data['layanan_produk'] = $dataAll;
-        echo view('admin/LayananLain/EditFoto', $data);
-    }
-
-    public function UpdateProduk($id)
+    public function UpdateIklanKredit($id)
     {
         $data = [
             'foto' => $this->request->getPost('foto'),
         ];
 
-        $this->LayananLainModel->update_produk($id, $data);
+        $this->KreditModel->update_iklankredit($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-        return redirect()->to(base_url('adminLayananLainnya'));
+        return redirect()->to(base_url('AdminKredit'));
     }
 
-    public function DeletePembayaran($id)
+    public function DeleteKredit($id)
     {
-        $data = $this->LayananLainModel->get_id_pembayaran($id);
+        $data = $this->KreditModel->get_id_kredit($id);
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
-        $this->LayananLainModel->delete_pembayaran($id);
+        $this->KreditModel->delete_kredit($id);
         session()->setFlashdata('message', 'Hapus Kredit Berhasil');
-        return redirect()->to(base_url('adminLayananLainnya'));
+        return redirect()->to(base_url('AdminKredit'));
     }
 
-    public function DeleteProduk($id)
+    public function DeleteIklanKredit($id)
     {
-        $data = $this->LayananLainModel->get_id_produk($id);
+        $data = $this->KreditModel->get_id_iklan($id);
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
-        $this->LayananLainModel->delete_produk($id);
+        $this->KreditModel->delete_Iklankredit($id);
         session()->setFlashdata('message', 'Hapus Iklan Kredit Berhasil');
-        return redirect()->to(base_url('adminLayananLainnya'));
+        return redirect()->to(base_url('AdminKredit'));
     }
 }

@@ -42,7 +42,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="Logout" class="nav-link btn btn-danger" style="color: white;">Logout</a>
+                    <a href="<?= base_url('Logout') ?>" class="nav-link btn btn-danger" style="color: white;">Logout</a>
                 </li>
             </ul>
 
@@ -166,7 +166,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="adminLayananLainnya" class="nav-link">
+                                    <a href="<?= base_url('adminLayananLainnya') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Layanan Lainnya</p>
                                     </a>
@@ -259,24 +259,29 @@
 
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    Akun
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminUser') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Akun</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
+                        <?php
+                        if ($_SESSION['level'] == "super_admin") {
+                        ?>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Akun
+                                        <i class="fas fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('AdminUser') ?>" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Akun</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php
+                        }
+                        ?>
                         <!-- end of Struktur Organisasi -->
                     </ul>
                 </nav>

@@ -61,7 +61,7 @@ class HomeController extends BaseController
 
         $dataAll = $this->HomeModel->get_id_berita($id);
         if (empty($dataAll)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Pegawai Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Berita Tidak ditemukan !');
         }
         $data['berita'] = $dataAll;
         echo view('admin/Home/EditBerita', $data);
@@ -94,6 +94,94 @@ class HomeController extends BaseController
         }
         $this->HomeModel->delete_berita($id);
         session()->setFlashdata('message', 'Hapus Berita Berhasil');
+        return redirect()->to(base_url('AdminHome'));
+    }
+
+    public function TambahIklan()
+    {
+        $data = [
+            'title' => 'Edit',
+            'css' => 'Style',
+            'font' => 'font',
+
+        ];
+        echo view('admin/Home/TambahIklan', $data);
+    }
+
+    public function AddIklan()
+    {
+        $data = [
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->HomeModel->add_iklan($data);
+
+        session()->setFlashdata('message', 'Tambah Iklan Berhasil');
+        return redirect()->to(base_url('AdminHome'))->with('success', 'Data Added Successfully');
+    }
+
+    public function EditIklan($id)
+    {
+
+        $dataAll = $this->HomeModel->get_id_iklan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Iklan Tidak ditemukan !');
+        }
+        $data['iklan'] = $dataAll;
+        echo view('admin/Home/EditIklan', $data);
+    }
+
+    public function UpdateIklan($id)
+    {
+        $data = [
+            'foto' => $this->request->getPost('foto'),
+        ];
+
+        $this->HomeModel->update_iklan($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminHome'));
+    }
+
+    public function DeleteIklan($id)
+    {
+        $data = $this->HomeModel->get_id_iklan($id);
+        if (empty($data)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Iklan Tidak ditemukan !');
+        }
+        $this->HomeModel->delete_iklan($id);
+        session()->setFlashdata('message', 'Hapus Iklan Berhasil');
+        return redirect()->to(base_url('AdminHome'));
+    }
+
+
+    public function EditDeskripsiWebsite($id)
+    {
+        $dataAll = $this->HomeModel->get_id_deskripsi_website($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Deskripsi Web Tidak ditemukan !');
+        }
+        $data['deskripsi'] = $dataAll;
+        echo view('admin/Home/EditDeskripsiWebsite', $data);
+    }
+
+    public function UpdateDeskripsiWebsite($id)
+    {
+        $data = [
+            'deskripsi' => $this->request->getPost('editor1'),
+        ];
+
+        $this->HomeModel->update_deskripsi_website($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
         return redirect()->to(base_url('AdminHome'));
     }
 }

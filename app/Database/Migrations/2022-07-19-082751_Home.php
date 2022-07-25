@@ -81,9 +81,8 @@ class Home extends Migration
                 'unsigned'          => true,
                 'auto_increment'    => true
             ],
-            'foto'                  => [
-                'type'              => 'VARCHAR',
-                'constraint'        => '255'
+            'deskripsi'             => [
+                'type'              => 'MEDIUMTEXT'
             ]
         ]);
 

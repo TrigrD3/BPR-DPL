@@ -55,12 +55,12 @@
                                 <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditProdukDeposito">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukDeposito/$data->id_produk") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusProdukDeposito/$data->id_produk") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
@@ -119,12 +119,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditIklanDeposito">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditIklanDeposito/$data->id_iklan") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklanDeposito/$data->id_iklan") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

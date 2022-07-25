@@ -19,18 +19,31 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputClientCompany">Nama Lengkap</label>
-                        <input type="text" id="inputClientCompany" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputClientCompany">Username</label>
-                        <input type="text" id="inputClientCompany" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputClientCompany">Password</label>
-                        <input type="text" id="inputClientCompany" class="form-control">
-                    </div>
+                    <form action="<?= base_url('/TambahUser') ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputClientCompany">Nama Lengkap</label>
+                            <input type="text" id="inputClientCompany" name="nama" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Username</label>
+                            <input type="text" id="inputClientCompany" name="username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Password</label>
+                            <input type="text" id="inputClientCompany" name="password" class="form-control">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-download"></i>
+                                    </span>
+                                    <span class="text">Simpan</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.card-body -->
             </div>

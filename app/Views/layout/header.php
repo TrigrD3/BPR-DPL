@@ -9,7 +9,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link text-dark px-3" href="SimulasiTabungan">Simulasi Pinjaman</a>
+        <a class="nav-link text-dark px-3" href="SimulasiDeposito">Simulasi Deposito</a>
         <a class="nav-link text-dark px-3" href="SimulasiKredit">Simulasi Kredit</a>
         <a class="nav-link text-dark px-3" href="Lelang">Lelang</a>
         <a class="nav-link text-dark px-3" href="Publikasi">Publikasi</a>

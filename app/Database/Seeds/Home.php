@@ -49,7 +49,7 @@ class Home extends Seeder
     {
         $all_data = [
             [
-                'foto'  => 'deskripsi_website.jpg',
+                'deskripsi'  => 'Deskripsi ini saja',
             ]
         ];
 

@@ -56,12 +56,12 @@
                                 <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditProdukTabungan">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukTabungan/$data->id_produk") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusProdukTabungan/$data->id_produk") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
@@ -123,12 +123,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditIklanTabungan">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditIklanTabungan/$data->id_iklan") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklanTabungan/$data->id_iklan") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

@@ -30,7 +30,8 @@ class User extends Migration
             ],
             'level'       => [
                 'type'           => 'VARCHAR',
-                'constraint'     => '255'
+                'constraint'     => '255',
+                'default'    => 'admin',
             ],
             // 'slug VARCHAR(100) UNIQUE',
             'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',

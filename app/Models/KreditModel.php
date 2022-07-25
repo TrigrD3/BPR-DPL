@@ -4,24 +4,24 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class DepositoModel extends Model
+class KreditModel extends Model
 {
     protected $table = "";
     protected $useTimestamps = false;
 
     function get_all_produk()
     {
-        $data['depositoProduk'] = $this->db->table('deposito_produk')->select('*')->get()->getResult();
-        return $data['depositoProduk'];
+        $data['KreditProduk'] = $this->db->table('kredit_produk')->select('*')->get()->getResult();
+        return $data['KreditProduk'];
     }
 
-    public function get_id_deposito($id)
+    public function get_id_kredit($id)
     {
-        $data = $this->db->table('deposito_produk')->select('*')->where('id_produk', $id)->get()->getRow();
+        $data = $this->db->table('kredit_produk')->select('*')->where('id_produk', $id)->get()->getRow();
         return $data;
     }
 
-    public function add_deposito($data)
+    public function add_kredit($data)
     {
         if (!$this->validate([
             'nama' => [
@@ -48,10 +48,10 @@ class DepositoModel extends Model
             return redirect()->back()->withInput();
         }
 
-        $this->db->table('deposito_produk')->insert($data);
+        $this->db->table('kredit_produk')->insert($data);
     }
 
-    public function add_iklandeposito($data)
+    public function add_iklankredit($data)
     {
         if (!$this->validate([
             'foto' => [
@@ -66,10 +66,10 @@ class DepositoModel extends Model
             return redirect()->back()->withInput();
         }
 
-        $this->db->table('deposito_iklan')->insert($data);
+        $this->db->table('kredit_iklan')->insert($data);
     }
 
-    public function update_deposito($id, $data)
+    public function update_kredit($id, $data)
     {
         if (!$this->validate([
             'nama' => [
@@ -96,11 +96,11 @@ class DepositoModel extends Model
             return redirect()->back()->withInput();
         }
 
-        $this->db->table('deposito_produk')->select('*')->where('id_produk', $id)->update($data);
-        session()->setFlashdata('message', 'Edit deposito Berhasil');
+        $this->db->table('kredit_produk')->select('*')->where('id_produk', $id)->update($data);
+        session()->setFlashdata('message', 'Edit kredit Berhasil');
     }
 
-    public function update_iklandeposito($id, $data)
+    public function update_iklankredit($id, $data)
     {
         if (!$this->validate([
 
@@ -116,26 +116,26 @@ class DepositoModel extends Model
             return redirect()->back()->withInput();
         }
 
-        $this->db->table('deposito_iklan')->select('*')->where('id_iklan', $id)->update($data);
-        session()->setFlashdata('message', 'Edit Iklan deposito Berhasil');
+        $this->db->table('kredit_iklan')->select('*')->where('id_iklan', $id)->update($data);
+        session()->setFlashdata('message', 'Edit Iklan kredit Berhasil');
     }
 
-    public function delete_deposito($id)
+    public function delete_kredit($id)
     {
-        $this->db->table('deposito_produk')->select('*')->where('id_produk', $id)->delete();
+        $this->db->table('kredit_produk')->select('*')->where('id_produk', $id)->delete();
     }
-    public function delete_iklandeposito($id)
+    public function delete_iklankredit($id)
     {
-        $this->db->table('deposito_iklan')->select('*')->where('id_iklan', $id)->delete();
+        $this->db->table('kredit_iklan')->select('*')->where('id_iklan', $id)->delete();
     }
     function get_all_iklan()
     {
-        $data['depositoIklan'] = $this->db->table('deposito_iklan')->select('*')->get()->getResult();
-        return $data['depositoIklan'];
+        $data['KreditIklan'] = $this->db->table('kredit_iklan')->select('*')->get()->getResult();
+        return $data['KreditIklan'];
     }
     public function get_id_iklan($id)
     {
-        $data = $this->db->table('deposito_iklan')->select('*')->where('id_iklan', $id)->get()->getRow();
+        $data = $this->db->table('kredit_iklan')->select('*')->where('id_iklan', $id)->get()->getRow();
         return $data;
     }
 }
