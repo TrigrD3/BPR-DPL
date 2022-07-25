@@ -52,12 +52,12 @@ class LayananLainModel extends Model
             return redirect()->back()->withInput();
         }
 
-        $this->db->table('layanan_pembayaran')->select('*')->where('id_layanan', $id)->update($data);
+        $this->db->table('layanan_pembayaran')->select('*')->where('id_pembayaran', $id)->update($data);
         session()->setFlashdata('message', 'Edit Deskripsi Berhasil');
     }
     public function delete_pembayaran($id)
     {
-        $this->db->table('layanan_pembayaran')->select('*')->where('id_layanan', $id)->delete();
+        $this->db->table('layanan_pembayaran')->select('*')->where('id_pembayaran', $id)->delete();
     }
 
 
