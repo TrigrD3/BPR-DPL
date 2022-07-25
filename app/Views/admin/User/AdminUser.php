@@ -55,12 +55,12 @@
                                 <?= $data->password; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditUser">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditUser/$data->id_user") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/DeleteUser/$data->id_user") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

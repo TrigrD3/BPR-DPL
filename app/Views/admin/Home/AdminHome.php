@@ -125,12 +125,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditIklan">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditIklan/$data->id_iklan") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklan/$data->id_iklan") ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus?')">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
@@ -185,11 +185,11 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                                <?= $data->deskripsi; ?>
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditDeskripsi">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditDeskripsiWebsite/$data->id_deskripsi_website") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit

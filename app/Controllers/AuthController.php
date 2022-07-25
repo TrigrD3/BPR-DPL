@@ -39,6 +39,7 @@ class AuthController extends BaseController
                 session()->set([
                     'username' => $dataUser->username,
                     'name' => $dataUser->nama,
+                    'level' => $dataUser->level,
                     'logged_in' => TRUE
                 ]);
                 return redirect()->to(base_url('Admin'));

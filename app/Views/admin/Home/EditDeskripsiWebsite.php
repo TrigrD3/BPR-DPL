@@ -15,22 +15,18 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputDescription">Deskripsi</label>
-                        <textarea name="editor1" id="editor" class="form-control" rows="4"></textarea>
-                    </div>
+                    <form action="<?= base_url('EditDeskripsiWebsite') . '/' . $deskripsi->id_deskripsi_website ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputDescription">Deskripsi</label>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $deskripsi->deskripsi ?></textarea>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.card-body -->
             </div>
             <!-- /.card -->
         </div>
 
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="add" class="btn btn-success float-right">
-        </div>
     </div>
 </section>
 <?= $this->endSection(''); ?>

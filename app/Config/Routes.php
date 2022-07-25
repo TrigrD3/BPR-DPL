@@ -79,9 +79,14 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/EditBerita/(:num)', 'HomeController::UpdateBerita/$1');
     $routes->get('/HapusBerita/(:num)', 'HomeController::DeleteBerita/$1');
 
-    $routes->get('/EditIklan', 'HomeController::EditIklan');
     $routes->get('/TambahIklan', 'HomeController::TambahIklan');
-    $routes->get('/EditDeskripsi', 'HomeController::EditDeskripsi');
+    $routes->add('/TambahIklan', 'HomeController::AddIklan');
+    $routes->get('/EditIklan/(:num)', 'HomeController::EditIklan/$1');
+    $routes->post('/EditIklan/(:num)', 'HomeController::UpdateIklan/$1');
+    $routes->get('/HapusIklan/(:num)', 'HomeController::DeleteIklan/$1');
+
+    $routes->get('/EditDeskripsiWebsite/(:num)', 'HomeController::EditDeskripsiWebsite/$1');
+    // $routes->post('/EditDeskripsiWebsite/(:num)', 'HomeController::EditDeskripsiWebsite/$1');
 
     //Admin Identitas
     $routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');
@@ -188,8 +193,11 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
 
     //AdminUser
     $routes->get('/AdminUser', 'AkunController::Index');
-    $routes->get('/EditUser', 'Admin::EditUser');
-    $routes->get('/TambahUser', 'Admin::TambahUser');
+    $routes->get('/TambahUser', 'AkunController::TambahUser');
+    $routes->add('/TambahUser', 'AkunController::AddUser');
+    $routes->get('/EditUser/(:num)', 'AkunController::EditUser/$1');
+    $routes->post('/EditUser/(:num)', 'AkunController::UpdateUser/$1');
+    $routes->get('/DeleteUser/(:num)', 'AkunController::DeleteUser/$1');
 });
 
 

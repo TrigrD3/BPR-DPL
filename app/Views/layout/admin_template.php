@@ -259,24 +259,29 @@
 
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-users"></i>
-                                <p>
-                                    Akun
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminUser') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Akun</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
+                        <?php
+                        if ($_SESSION['level'] == "super_admin") {
+                        ?>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Akun
+                                        <i class="fas fa-angle-left right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="<?= base_url('AdminUser') ?>" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Akun</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php
+                        }
+                        ?>
                         <!-- end of Struktur Organisasi -->
                     </ul>
                 </nav>

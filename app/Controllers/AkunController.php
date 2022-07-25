@@ -28,21 +28,74 @@ class AkunController extends BaseController
         return view('Admin/User/AdminUser', $data);
     }
 
-    public function update()
+    public function TambahUser()
     {
         $data = [
-            'id_identitas' => $this->request->getVar('id_identitas'),
-            'whatsapp' => $this->request->getVar('whatsapp'),
-            'facebook' => $this->request->getVar('facebook'),
-            'instagram' => $this->request->getVar('instagram'),
-            'logo' => $this->request->getVar('logo'),
+            'title' => 'Admin Tambah Akun',
+            'css' => 'Style',
+            'font' => 'font',
         ];
-        $this->IdentitasWebsiteModel->update_IdentitasWebsite($data);
-        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
+        echo view('admin/User/TambahUser', $data);
+    }
+
+    public function AddUser()
+    {
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'username' => $this->request->getPost('username'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
+        ];
+
+        $this->AkunModel->add_user($data);
+
+        session()->setFlashdata('message', 'Tambah User Berhasil');
+        return redirect()->to(base_url('AdminUser'))->with('success', 'Data Added Successfully');
+    }
+
+    public function EditUser($id)
+    {
+
+        $dataAll = $this->AkunModel->get_id_user($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data User Tidak ditemukan !');
+        }
+        $data['Akun'] = $dataAll;
+        echo view('admin/User/EditUser', $data);
+    }
+
+    public function UpdateUser($id)
+    {
+        $password = $this->AkunModel->get_id_user($id);
+        $pass = "";
+        if ($password->password == $this->request->getPost('password')) {
+            $pass = $password->password;
+        } else {
+            $pass = password_hash($this->request->getPost('password'), PASSWORD_BCRYPT);
+        }
+        $data = [
+            'nama' => $this->request->getPost('nama'),
+            'username' => $this->request->getPost('username'),
+            'password' => $pass,
+        ];
+
+        $this->AkunModel->update_user($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-        return redirect()->to(base_url('adminIdentitas'));
+        return redirect()->to(base_url('AdminUser'));
+    }
+
+    public function DeleteUser($id)
+    {
+        $data = $this->AkunModel->get_id_user($id);
+        if (empty($data)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('User Tidak ditemukan !');
+        }
+        $this->AkunModel->delete_user($id);
+        session()->setFlashdata('message', 'Hapus User Berhasil');
+        return redirect()->to(base_url('AdminUser'));
     }
 }
