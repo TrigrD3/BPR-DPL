@@ -5,6 +5,7 @@
 
     <!-- Default box -->
     <div class="card">
+        <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
             <h3 class="card-title">Lowongan Kerja</h3>
 
@@ -47,7 +48,7 @@
                             </td>
                             <td>
                                 <a>
-                                    <?= $data->judul ; ?>
+                                    <?= $data->judul; ?>
                                 </a>
                                 <br />
                             </td>

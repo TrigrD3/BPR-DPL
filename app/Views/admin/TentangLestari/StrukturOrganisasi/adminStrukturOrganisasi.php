@@ -3,6 +3,7 @@
 <?= $this->section('content'); ?>
 <section class="content">
     <div class="card">
+        <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
             <h3 class="card-title">Struktur Organisasi</h3>
 

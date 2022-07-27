@@ -58,7 +58,11 @@ class KreditController extends BaseController
 
         $this->KreditModel->add_iklankredit($data);
 
-        session()->setFlashdata('message', 'Tambah Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminKredit'))->with('success', 'Data Added Successfully');
     }
 
@@ -73,7 +77,11 @@ class KreditController extends BaseController
 
         $this->KreditModel->add_kredit($data);
 
-        session()->setFlashdata('message', 'Tambah Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminKredit'))->with('success', 'Data Added Successfully');
     }
 
@@ -138,7 +146,11 @@ class KreditController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
         $this->KreditModel->delete_kredit($id);
-        session()->setFlashdata('message', 'Hapus Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminKredit'));
     }
 
@@ -149,7 +161,11 @@ class KreditController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
         $this->KreditModel->delete_Iklankredit($id);
-        session()->setFlashdata('message', 'Hapus Iklan Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminKredit'));
     }
 }

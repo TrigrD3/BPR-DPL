@@ -49,7 +49,11 @@ class TentangLestariController extends BaseController
 
         $this->TentangLestariModel->add_alamat($data);
 
-        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminAlamat'))->with('success', 'Data Added Successfully');
     }
     public function EditAlamat($id)
@@ -236,7 +240,11 @@ class TentangLestariController extends BaseController
 
         $this->TentangLestariModel->add_sejarah($data);
 
-        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminSejarah'))->with('success', 'Data Added Successfully');
     }
     public function EditSejarah($id)
@@ -272,7 +280,11 @@ class TentangLestariController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Sejarah Tidak ditemukan !');
         }
         $this->TentangLestariModel->delete_sejarah($id);
-        session()->setFlashdata('message', 'Hapus Sejarah Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminSejarah'));
     }
 }

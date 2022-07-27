@@ -3,6 +3,7 @@
 <?= $this->section('content'); ?>
 <!-- Default box -->
 <div class="card">
+    <?= session()->getFlashdata('message'); ?>
     <div class="card-header">
         <h3 class="card-title">Sejarah</h3>
 

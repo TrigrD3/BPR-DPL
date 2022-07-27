@@ -4,6 +4,7 @@
 <section class="content">
     <!-- start of visi -->
     <div class="card">
+        <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
             <h3 class="card-title">Visi Misi</h3>
 

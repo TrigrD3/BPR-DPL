@@ -58,7 +58,11 @@ class TabunganController extends BaseController
 
         $this->TabunganModel->add_iklantabungan($data);
 
-        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminTabungan'))->with('success', 'Data Added Successfully');
     }
 
@@ -73,7 +77,11 @@ class TabunganController extends BaseController
 
         $this->TabunganModel->add_tabungan($data);
 
-        session()->setFlashdata('message', 'Tambah Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminTabungan'))->with('success', 'Data Added Successfully');
     }
 
@@ -138,7 +146,11 @@ class TabunganController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
         }
         $this->TabunganModel->delete_tabungan($id);
-        session()->setFlashdata('message', 'Hapus Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminTabungan'));
     }
 
@@ -149,7 +161,11 @@ class TabunganController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
         }
         $this->TabunganModel->delete_Iklantabungan($id);
-        session()->setFlashdata('message', 'Hapus Iklan Tabungan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminTabungan'));
     }
 }

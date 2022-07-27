@@ -4,6 +4,7 @@
 <section class="content">
 
     <div class="card">
+        <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
             <h3 class="card-title">Penghargaan</h3>
 

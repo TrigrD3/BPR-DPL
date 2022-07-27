@@ -5,6 +5,7 @@
 
     <!-- Default box -->
     <div class="card">
+        <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
             <h3 class="card-title">Produk</h3>
 

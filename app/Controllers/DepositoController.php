@@ -57,7 +57,11 @@ class DepositoController extends BaseController
 
         $this->DepositoModel->add_iklandeposito($data);
 
-        session()->setFlashdata('message', 'Tambah Deposito Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminDeposito'))->with('success', 'Data Added Successfully');
     }
 
@@ -72,7 +76,11 @@ class DepositoController extends BaseController
 
         $this->DepositoModel->add_deposito($data);
 
-        session()->setFlashdata('message', 'Tambah Deposito Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminDeposito'))->with('success', 'Data Added Successfully');
     }
 
@@ -137,7 +145,11 @@ class DepositoController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Deposito Tidak ditemukan !');
         }
         $this->DepositoModel->delete_deposito($id);
-        session()->setFlashdata('message', 'Hapus Deposito Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminDeposito'));
     }
 
@@ -148,7 +160,11 @@ class DepositoController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Deposito Tidak ditemukan !');
         }
         $this->DepositoModel->delete_Iklandeposito($id);
-        session()->setFlashdata('message', 'Hapus Iklan Deposito Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminDeposito'));
     }
 }

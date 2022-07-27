@@ -14,7 +14,6 @@ class HomeController extends BaseController
         //     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
         //     redirect('auth/');
         // }
-
     }
 
     public function index()
@@ -52,7 +51,11 @@ class HomeController extends BaseController
 
         $this->HomeModel->add_berita($data);
 
-        session()->setFlashdata('message', 'Tambah Berita Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminHome'))->with('success', 'Data Added Successfully');
     }
 
@@ -93,7 +96,11 @@ class HomeController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Berita Tidak ditemukan !');
         }
         $this->HomeModel->delete_berita($id);
-        session()->setFlashdata('message', 'Hapus Berita Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminHome'));
     }
 
@@ -116,7 +123,11 @@ class HomeController extends BaseController
 
         $this->HomeModel->add_iklan($data);
 
-        session()->setFlashdata('message', 'Tambah Iklan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminHome'))->with('success', 'Data Added Successfully');
     }
 

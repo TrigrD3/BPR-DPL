@@ -44,7 +44,11 @@ class HeaderController extends BaseController
 
         $this->HeaderModel->add_lelang($data);
 
-        session()->setFlashdata('message', 'Tambah Lelang Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLelang'))->with('success', 'Data Added Successfully');
     }
     public function EditLelang($id)
@@ -79,7 +83,11 @@ class HeaderController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Lelang Tidak ditemukan !');
         }
         $this->HeaderModel->delete_lelang($id);
-        session()->setFlashdata('message', 'Hapus Lelang Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLelang'));
     }
 
@@ -154,7 +162,11 @@ class HeaderController extends BaseController
 
         $this->HeaderModel->add_pat($data);
 
-        session()->setFlashdata('message', 'Tambah PAT Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminPAT'))->with('success', 'Data Added Successfully');
     }
     public function EditPAT($id)
@@ -190,7 +202,11 @@ class HeaderController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('PAT Tidak ditemukan !');
         }
         $this->HeaderModel->delete_pat($id);
-        session()->setFlashdata('message', 'Hapus PAT Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminPAT'));
     }
 
@@ -224,7 +240,11 @@ class HeaderController extends BaseController
 
         $this->HeaderModel->add_penghargaan($data);
 
-        session()->setFlashdata('message', 'Tambah Penghargaan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminPenghargaan'))->with('success', 'Data Added Successfully');
     }
     public function EditPenghargaan($id)
@@ -259,7 +279,11 @@ class HeaderController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Penghargaan Tidak ditemukan !');
         }
         $this->HeaderModel->delete_penghargaan($id);
-        session()->setFlashdata('message', 'Hapus Penghargaan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminPenghargaan'));
     }
 
@@ -297,7 +321,11 @@ class HeaderController extends BaseController
 
         $this->HeaderModel->add_publikasi($data);
 
-        session()->setFlashdata('message', 'Tambah Publikasi Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminPublikasi'))->with('success', 'Data Added Successfully');
     }
     public function EditPublikasi($id)
@@ -333,7 +361,11 @@ class HeaderController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Publikasi Tidak ditemukan !');
         }
         $this->HeaderModel->delete_publikasi($id);
-        session()->setFlashdata('message', 'Hapus Publikasi Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminPublikasi'));
     }
 

@@ -58,7 +58,11 @@ class LayananLainController extends BaseController
 
         $this->LayananLainModel->add_Produk($data);
 
-        session()->setFlashdata('message', 'Tambah Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLayananLainnya'))->with('success', 'Data Added Successfully');
     }
 
@@ -71,7 +75,11 @@ class LayananLainController extends BaseController
 
         $this->LayananLainModel->add_Pembayaran($data);
 
-        session()->setFlashdata('message', 'Tambah Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambah.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLayananLainnya'))->with('success', 'Data Added Successfully');
     }
 
@@ -135,7 +143,11 @@ class LayananLainController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
         $this->LayananLainModel->delete_pembayaran($id);
-        session()->setFlashdata('message', 'Hapus Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil dihapus.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLayananLainnya'));
     }
 
@@ -146,7 +158,11 @@ class LayananLainController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
         $this->LayananLainModel->delete_produk($id);
-        session()->setFlashdata('message', 'Hapus Iklan Kredit Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-primary" role="alert">Data berhasil dihapus.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('adminLayananLainnya'));
     }
 }
