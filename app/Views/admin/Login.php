@@ -17,6 +17,8 @@
 </head>
 
 <body class="hold-transition login-page">
+    <?= session()->getFlashdata('message'); ?>
+    <?= session()->getFlashdata('error'); ?>
     <div class="login-box">
         <div class="login-logo">
             <a href="Home">LOGIN <b>ADMIN</b></a>

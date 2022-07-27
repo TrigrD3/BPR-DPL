@@ -31,19 +31,35 @@ class IdentitasWebsiteController extends BaseController
 
     public function update()
     {
-        $data = [
-            'id_identitas' => $this->request->getVar('id_identitas'),
-            'whatsapp' => $this->request->getVar('whatsapp'),
-            'facebook' => $this->request->getVar('facebook'),
-            'instagram' => $this->request->getVar('instagram'),
-            'logo' => $this->request->getVar('logo'),
-        ];
+        $dataBerkas = $this->request->getFile('logo');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            unlink('uploads/IdentitasWebsite' . '/' . $this->request->getVar('namalogo'));
+            $data = [
+                'id_identitas' => $this->request->getVar('id_identitas'),
+                'whatsapp' => $this->request->getVar('whatsapp'),
+                'facebook' => $this->request->getVar('facebook'),
+                'instagram' => $this->request->getVar('instagram'),
+                'logo' => $fileName,
+            ];
+
+            $dataBerkas->move('uploads/IdentitasWebsite/', $fileName);
+        } else {
+            $data = [
+                'id_identitas' => $this->request->getVar('id_identitas'),
+                'whatsapp' => $this->request->getVar('whatsapp'),
+                'facebook' => $this->request->getVar('facebook'),
+                'instagram' => $this->request->getVar('instagram'),
+            ];
+        }
+
         $this->IdentitasWebsiteModel->update_IdentitasWebsite($data);
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
+
         return redirect()->to(base_url('adminIdentitas'));
     }
 }

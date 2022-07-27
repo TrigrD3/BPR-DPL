@@ -30,6 +30,11 @@ class AuthFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         if (!$this->session->get('username')) {
+            session()->setFlashdata('error', '<div class="alert alert-warning" role="alert">Silahkan Login terlebih dahulu!
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
             return redirect()->to(base_url('Login'));
         }
     }

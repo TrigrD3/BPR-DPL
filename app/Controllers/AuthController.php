@@ -44,11 +44,19 @@ class AuthController extends BaseController
                 ]);
                 return redirect()->to(base_url('Admin'));
             } else {
-                session()->setFlashdata('error', 'Username & Password Salah');
+                session()->setFlashdata('error', '<div class="alert alert-warning" role="alert">Silahkan Login terlebih dahulu!
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
                 return redirect()->back();
             }
         } else {
-            session()->setFlashdata('error', 'Username & Password Salah');
+            session()->setFlashdata('error', '<div class="alert alert-warning" role="alert">Silahkan Login terlebih dahulu!
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
             return redirect()->back();
         }
     }
