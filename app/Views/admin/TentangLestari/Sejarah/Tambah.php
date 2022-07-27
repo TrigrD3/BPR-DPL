@@ -13,31 +13,39 @@
                     <h3 class="card-title">Tambah Sejarah</h3>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputName">Keterangan</label>
-                        <input type="text" id="inputName" class="form-control" placeholder="Keterangan">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName">Tanggal</label>
-                        <input type="date" id="inputName" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDescription">Deskripsi</label>
-                        <textarea name="editor1" id="editor" class="form-control" rows="4">text</textarea>
-                    </div>
+                    <form action="<?= base_url('/TambahSejarah') ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputName">Keterangan</label>
+                            <input type="text" name="judul" id="inputName" class="form-control" placeholder="Keterangan">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Tanggal</label>
+                            <input type="date" name="tanggal" id="inputName" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescription">Deskripsi</label>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4">text</textarea>
+                        </div>
 
                 </div>
                 <!-- /.card-body -->
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span class="text">Simpan</span>
+                        </button>
+                    </div>
+                </div>
+                </form>
             </div>
             <!-- /.card -->
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="Save" class="btn btn-success float-right">
-        </div>
-    </div>
+
 </section>
 <?= $this->endSection(''); ?>

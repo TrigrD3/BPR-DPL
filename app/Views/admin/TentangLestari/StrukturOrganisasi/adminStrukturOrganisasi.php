@@ -37,7 +37,7 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditStrukturOrganisasi">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditStrukturOrganisasi/$data->id_struktur_organisasi") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit

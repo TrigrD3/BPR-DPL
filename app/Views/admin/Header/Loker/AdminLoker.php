@@ -58,7 +58,7 @@
                                 <?= $data->link; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditLoker">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditLoker/$data->id_loker") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit

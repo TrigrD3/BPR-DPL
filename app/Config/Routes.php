@@ -154,46 +154,62 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/AdminProfil', 'TentangLestariController::index_profil');
     $routes->get('/EditProfil/(:num)', 'TentangLestariController::EditProfil/$1');
     $routes->post('/EditProfil/(:num)', 'TentangLestariController::UpdateProfil/$1');
-    $routes->get('/TambahProfil', 'TentangLestariController::TambahProfil');
-    $routes->add('/TambahProfil', 'TentangLestariController::AddProfil');
     //Sejarah
     $routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
-    $routes->get('/EditSejarah', 'Admin::EditSejarah');
-    $routes->get('/TambahSejarah', 'Admin::TambahSejarah');
+    $routes->get('/TambahSejarah', 'TentangLestariController::TambahSejarah');
+    $routes->add('/TambahSejarah', 'TentangLestariController::AddSejarah');
+    $routes->get('/EditSejarah/(:num)', 'TentangLestariController::EditSejarah/$1');
+    $routes->post('/EditSejarah/(:num)', 'TentangLestariController::UpdateSejarah/$1');
+    $routes->get('/HapusSejarah/(:num)', 'TentangLestariController::DeleteSejarah/$1');
     //Alamat
-    $routes->get('/AdminAlamat', 'TentangLestariController::index_alamat');
-    $routes->get('/EditAlamat', 'Admin::EditAlamat');
-    $routes->get('/TambahAlamat', 'Admin::TambahAlamat');
+    $routes->get('/AdminAlamat', 'TentangLestariController::index_Alamat');
+    $routes->get('/TambahAlamat', 'TentangLestariController::TambahAlamat');
+    $routes->add('/TambahAlamat', 'TentangLestariController::AddAlamat');
+    $routes->get('/EditAlamat/(:num)', 'TentangLestariController::EditAlamat/$1');
+    $routes->post('/EditAlamat/(:num)', 'TentangLestariController::UpdateAlamat/$1');
+    $routes->get('/HapusAlamat/(:num)', 'TentangLestariController::DeleteAlamat/$1');
     //Visi misi
     $routes->get('/adminVisiMisi', 'TentangLestariController::index_visi_misi');
-    $routes->get('/EditVisi', 'Admin::EditVisi');
-    $routes->get('/EditMisi', 'Admin::EditMisi');
-    $routes->get('/TambahMisi', 'Admin::TambahMisi');
-    $routes->get('/TambahVisi', 'Admin::TambahVisi');
+    $routes->get('/EditVisiMisi/(:num)', 'TentangLestariController::EditVisiMisi/$1');
+    $routes->post('/EditVisiMisi/(:num)', 'TentangLestariController::UpdateVisiMisi/$1');
     //Struktur Organisasi
     $routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
-    $routes->get('/EditStrukturOrganisasi', 'Admin::EditStrukturOrganisasi');
+    $routes->get('/EditStrukturOrganisasi/(:num)', 'TentangLestariController::EditStrukturOrganisasi/$1');
+    $routes->post('/EditStrukturOrganisasi/(:num)', 'TentangLestariController::UpdateStrukturOrganisasi/$1');
 
     //Admin Header
     //Publikasi
     $routes->get('/AdminPublikasi', 'HeaderController::index_publikasi');
-    $routes->get('/TambahPublikasi', 'Admin::TambahPublikasi');
-    $routes->get('/EditPublikasi', 'Admin::EditPublikasi');
+    $routes->get('/TambahPublikasi', 'HeaderController::TambahPublikasi');
+    $routes->add('/TambahPublikasi', 'HeaderController::AddPublikasi');
+    $routes->get('/EditPublikasi/(:num)', 'HeaderController::EditPublikasi/$1');
+    $routes->post('/EditPublikasi/(:num)', 'HeaderController::UpdatePublikasi/$1');
+    $routes->get('/HapusPublikasi/(:num)', 'HeaderController::DeletePublikasi/$1');
     //Penghargaan
-    $routes->get('/adminPenghargaan', 'HeaderController::index_Penghargaan');
-    $routes->get('/TambahPenghargaan', 'Admin::TambahPenghargaan');
-    $routes->get('/EditPenghargaan', 'Admin::EditPenghargaan');
+    $routes->get('/adminPenghargaan', 'HeaderController::index_penghargaan');
+    $routes->get('/TambahPenghargaan', 'HeaderController::TambahPenghargaan');
+    $routes->add('/TambahPenghargaan', 'HeaderController::AddPenghargaan');
+    $routes->get('/EditPenghargaan/(:num)', 'HeaderController::EditPenghargaan/$1');
+    $routes->post('/EditPenghargaan/(:num)', 'HeaderController::UpdatePenghargaan/$1');
+    $routes->get('/HapusPenghargaan/(:num)', 'HeaderController::DeletePenghargaan/$1');
     //PAT
     $routes->get('/AdminPAT', 'HeaderController::index_pat');
-    $routes->get('/EditPAT', 'Admin::EditPAT');
-    $routes->get('/TambahPAT', 'Admin::TambahPAT');
+    $routes->get('/TambahPAT', 'HeaderController::TambahPAT');
+    $routes->add('/TambahPAT', 'HeaderController::AddPAT');
+    $routes->get('/EditPAT/(:num)', 'HeaderController::EditPAT/$1');
+    $routes->post('/EditPAT/(:num)', 'HeaderController::UpdatePAT/$1');
+    $routes->get('/HapusPAT/(:num)', 'HeaderController::DeletePAT/$1');
     //Loker
     $routes->get('/AdminLoker', 'HeaderController::index_loker');
-    $routes->get('/EditLoker', 'Admin::EditLoker');
+    $routes->get('/EditLoker/(:num)', 'HeaderController::EditLoker/$1');
+    $routes->post('/EditLoker/(:num)', 'HeaderController::UpdateLoker/$1');
     //Lelang
     $routes->get('/adminLelang', 'HeaderController::index_lelang');
-    $routes->get('/EditLelang', 'Admin::EditLelang');
-    $routes->get('/TambahLelang', 'Admin::TambahLelang');
+    $routes->get('/TambahLelang', 'HeaderController::TambahLelang');
+    $routes->add('/TambahLelang', 'HeaderController::AddLelang');
+    $routes->get('/EditLelang/(:num)', 'HeaderController::EditLelang/$1');
+    $routes->post('/EditLelang/(:num)', 'HeaderController::UpdateLelang/$1');
+    $routes->get('/HapusLelang/(:num)', 'HeaderController::DeleteLelang/$1');
 
     //AdminUser
     $routes->get('/AdminUser', 'AkunController::Index');

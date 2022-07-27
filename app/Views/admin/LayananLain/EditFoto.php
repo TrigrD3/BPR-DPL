@@ -16,7 +16,7 @@
                     <form action="<?= base_url('EditFotoLL') . '/' . $layanan_produk->id_produk ?>" method="post">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control">
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control value=" <?= $layanan_produk->foto ?>">
                         </div>
                 </div>
                 <!-- /.card-body -->

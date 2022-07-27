@@ -50,7 +50,7 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditProfil">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditProfil/$data->id_profil") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
@@ -60,10 +60,6 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProfil">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->

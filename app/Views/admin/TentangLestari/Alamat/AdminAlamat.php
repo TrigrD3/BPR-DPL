@@ -63,12 +63,12 @@
                                 <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditAlamat">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditAlamat/$data->id_alamat_kantor") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusAlamat/$data->id_alamat_kantor") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

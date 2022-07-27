@@ -10,26 +10,38 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit <?= $nama; ?> </h3>
+                    <h3 class="card-title">Edit Visi Misi </h3>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputDescription">Deskripsi</label>
-                        <textarea name="editor1" id="editor" class="form-control" rows="4">text</textarea>
-                    </div>
+                    <form action="<?= base_url('EditVisiMisi') . '/' . $tentang_visimisi->id_visi_misi ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputDescription">Visi</label>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $tentang_visimisi->visi ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescription">Misi</label>
+                            <textarea name="editor2" id="editor" class="form-control" rows="4"><?= $tentang_visimisi->misi ?></textarea>
+                        </div>
 
                 </div>
                 <!-- /.card-body -->
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span class="text">Simpan</span>
+                        </button>
+                    </div>
+                </div>
+                </form>
             </div>
             <!-- /.card -->
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="Save" class="btn btn-success float-right">
-        </div>
-    </div>
+
 </section>
 <?= $this->endSection(''); ?>

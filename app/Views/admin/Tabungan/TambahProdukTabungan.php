@@ -43,6 +43,7 @@
                                 </button>
                             </div>
                         </div>
+                    </form>
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -50,11 +51,6 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="add" class="btn btn-success float-right">
-        </div>
-    </div>
+
 </section>
 <?= $this->endSection(''); ?>

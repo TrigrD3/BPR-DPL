@@ -19,37 +19,45 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputName">Nama File</label>
-                        <input type="text" id="inputName" class="form-control" value="AdminLTE">
-                    </div>
-                    <label for="inputName">Tahun</label>
-                    <input type="text" class="form-control" name="datepicker" id="datepicker" />
+                    <form action="<?= base_url('/TambahPublikasi') ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputName">Nama File</label>
+                            <input type="text" name="nama" id="inputName" class="form-control">
+                        </div>
+                        <label for="inputName">Tahun</label>
+                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" />
 
-                    <script>
-                        $("#datepicker").datepicker({
-                            format: "yyyy",
-                            viewMode: "years",
-                            minViewMode: "years",
-                            autoclose: true //to close picker once year is selected
-                        });
-                    </script>
-                    <div class="form-group">
-                        <label for="inputClientCompany">Pilih File</label>
-                        <input type="File" id="inputClientCompany" class="form-control" value="Deveint Inc">
-                    </div>
+                        <script>
+                            $("#datepicker").datepicker({
+                                format: "yyyy",
+                                viewMode: "years",
+                                minViewMode: "years",
+                                autoclose: true //to close picker once year is selected
+                            });
+                        </script>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Pilih File</label>
+                            <input type="File" name="file" id="inputClientCompany" class="form-control" value="Deveint Inc">
+                        </div>
                 </div>
                 <!-- /.card-body -->
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span class="text">Simpan</span>
+                        </button>
+                    </div>
+                </div>
+                </form>
             </div>
             <!-- /.card -->
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="add" class="btn btn-success float-right">
-        </div>
-    </div>
+
 </section>
 <?= $this->endSection(''); ?>

@@ -47,12 +47,12 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditLelang">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditLelang/$data->id_lelang") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusLelang/$data->id_lelang") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

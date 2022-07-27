@@ -13,39 +13,47 @@
                     <h3 class="card-title">Edit Alamat Kantor</h3>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputName">Kabupaten/Kota</label>
-                        <input type="text" id="inputName" class="form-control" placeholder="Kabupaten/Kota">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName">Alamat</label>
-                        <input type="text" id="inputName" class="form-control" placeholder="Alamat">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName">Nomor Telepon</label>
-                        <input type="text" id="inputName" class="form-control" placeholder="Nomor Telepon">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDescription">Link Google Maps</label>
-                        <textarea class="form-control" rows="4">text</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputClientCompany">Pilih Foto</label>
-                        <input type="File" id="inputClientCompany" class="form-control">
-                    </div>
+                    <form action="<?= base_url('EditAlamat') . '/' . $tentang_alamat_kantor->id_alamat_kantor ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputName">Kabupaten/Kota</label>
+                            <input type="text" name="kabupaten_kota" id="inputName" class="form-control" placeholder="Kabupaten/Kota" value="<?= $tentang_alamat_kantor->kabupaten_kota ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Alamat</label>
+                            <input type="text" name="alamat" id="inputName" class="form-control" placeholder="Alamat" value="<?= $tentang_alamat_kantor->alamat ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Nomor Telepon</label>
+                            <input type="text" name="nomor_telepon" id="inputName" class="form-control" placeholder="Nomor Telepon" value="<?= $tentang_alamat_kantor->nomor_telepon ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDescription">Link Google Maps</label>
+                            <textarea name="google_maps" class="form-control" rows="4"><?= $tentang_alamat_kantor->google_maps ?></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Pilih Foto</label>
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $tentang_alamat_kantor->foto ?>">
+                        </div>
 
                 </div>
                 <!-- /.card-body -->
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-download"></i>
+                            </span>
+                            <span class="text">Simpan</span>
+                        </button>
+                    </div>
+
+                </div>
+                </form>
             </div>
             <!-- /.card -->
         </div>
 
-    </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="Save" class="btn btn-success float-right">
-        </div>
     </div>
 </section>
 <?= $this->endSection(''); ?>

@@ -43,10 +43,15 @@
                             </td>
 
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditPenghargaan">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditPenghargaan/$data->id_penghargaan") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusPenghargaan/$data->id_penghargaan") ?>">
+                                    <i class="fas fa-trash">
+                                    </i>
+                                    Delete
                                 </a>
                             </td>
                         </tr>

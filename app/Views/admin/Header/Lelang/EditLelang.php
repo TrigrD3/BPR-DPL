@@ -19,14 +19,27 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label for="inputClientCompany">Pilih Foto</label>
-                        <input type="File" id="inputClientCompany" class="form-control" value="Deveint Inc">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputName">Masukan Link Google Maps</label>
-                        <input type="text" id="inputName" class="form-control" value="AdminLTE">
-                    </div>
+                    <form action="<?= base_url('EditLelang') . '/' . $header_lelang->id_lelang ?>" method="post">
+                        <div class="form-group">
+                            <label for="inputClientCompany">Pilih Foto</label>
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $header_lelang->foto ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Masukan Link Google Maps</label>
+                            <input type="text" name="google_maps" id="inputName" class="form-control" value="<?= $header_lelang->google_maps ?>">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#" class="btn btn-secondary">Cancel</a>
+                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-download"></i>
+                                    </span>
+                                    <span class="text">Simpan</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <!-- /.card-body -->
             </div>
@@ -34,11 +47,6 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
-            <input type="submit" value="add" class="btn btn-success float-right">
-        </div>
-    </div>
+
 </section>
 <?= $this->endSection(''); ?>

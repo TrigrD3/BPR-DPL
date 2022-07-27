@@ -347,6 +347,11 @@
             baseFloatZIndex: 10005,
             removeButtons: 'PasteFromWord'
         });
+        CKEDITOR.replace('editor2', {
+            height: 400,
+            baseFloatZIndex: 10005,
+            removeButtons: 'PasteFromWord'
+        });
     </script>
 </body>
 

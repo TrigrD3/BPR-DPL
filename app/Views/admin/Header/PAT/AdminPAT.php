@@ -6,7 +6,7 @@
     <!-- Default box -->
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Laporan Publikasi</h3>
+            <h3 class="card-title">Laporan PAT</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -53,15 +53,14 @@
                             </td>
                             <td class="project_progress">
                                 <?= $data->tahun; ?>
-
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditPAT">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditPAT/$data->id_pat") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusPAT/$data->id_pat") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete

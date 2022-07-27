@@ -55,12 +55,12 @@
                                 <?= $data->tahun; ?>
                             </td>
                             <td class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="EditPublikasi">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditPublikasi/$data->id_publikasi") ?>">
                                     <i class="fas fa-pencil-alt">
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
+                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusPublikasi/$data->id_publikasi") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
