@@ -97,6 +97,7 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/TambahProdukKredit', 'KreditController::TambahProdukKredit');
     $routes->add('/TambahProdukKredit', 'KreditController::AddKredit');
     $routes->get('/EditProdukKredit/(:num)', 'KreditController::EditProdukKredit/$1');
+    $routes->get('/EditLinkKredit/(:num)', 'KreditController::EditLinkKredit/$1');
     $routes->post('/EditProdukKredit/(:num)', 'KreditController::UpdateKredit/$1');
     $routes->get('/HapusProdukKredit/(:num)', 'KreditController::DeleteKredit/$1');
 

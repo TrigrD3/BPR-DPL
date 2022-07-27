@@ -49,7 +49,7 @@
                         <td>
                             <?= $data->tanggal; ?>
                         </td>
-                        <td class="project_progress">
+                        <td class="project_progress deskripsi">
                             <?= $data->deskripsi; ?>
                         </td>
                         <td class="project-actions text-right">

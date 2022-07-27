@@ -38,7 +38,7 @@
                             <td>
                                 <?= $data->foto; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                             </td>
 

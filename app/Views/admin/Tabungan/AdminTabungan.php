@@ -49,7 +49,7 @@
                                 <?= $data->nama; ?>
                                 <br />
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                             </td>
                             <td class="project_progress">

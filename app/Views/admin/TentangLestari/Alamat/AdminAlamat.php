@@ -50,7 +50,7 @@
                             <td>
                                 <?= $data->kabupaten_kota; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->alamat; ?>
                             </td>
                             <td>

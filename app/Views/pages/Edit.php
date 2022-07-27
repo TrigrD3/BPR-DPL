@@ -49,7 +49,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
+            <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
             <input type="submit" value="Save Changes" class="btn btn-success float-right">
         </div>
     </div>

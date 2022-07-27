@@ -34,7 +34,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <a href="#" class="btn btn-secondary">Cancel</a>
+                                <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
                                 <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
                                     <span class="icon text-white-50">
                                         <i class="fas fa-download"></i>
@@ -53,7 +53,7 @@
     </div>
     <div class="row">
         <div class="col-12">
-            <a href="#" class="btn btn-secondary">Cancel</a>
+            <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
             <input type="submit" value="add" class="btn btn-success float-right">
         </div>
     </div>

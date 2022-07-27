@@ -57,7 +57,7 @@
                             <td>
                                 <?= $data->tanggal; ?>
                             </td>
-                            <td class="project_progress">
+                            <td class="project_progress deskripsi">
                                 <?= $data->isi_berita; ?>
                             </td>
                             <td class="project-actions text-right">
@@ -184,7 +184,7 @@
                             <td>
                                 <?= $no; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                             </td>
 

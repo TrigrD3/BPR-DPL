@@ -47,11 +47,11 @@
                             </td>
                             <td>
                                 <a>
-                                    <?= $data->judul; ?>
+                                    <?= $data->judul ; ?>
                                 </a>
                                 <br />
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                             </td>
                             <td class="project_progress">

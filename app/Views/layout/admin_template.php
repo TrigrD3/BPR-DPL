@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="<?= base_url('plugins/daterangepicker/daterangepicker.css') ?>">
     <!-- summernote -->
     <link rel="stylesheet" href="<?= base_url('plugins/summernote/summernote-bs4.min.css') ?>">
+    <!-- Admin.css -->
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/Admin.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -35,13 +37,16 @@
         </div>
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light justify-content-between ">
             <!-- Left navbar links -->
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+                
+            </ul>
+            <ul class="navbar-nav">
+            <li class="nav-item ">
                     <a href="<?= base_url('Logout') ?>" class="nav-link btn btn-danger" style="color: white;">Logout</a>
                 </li>
             </ul>

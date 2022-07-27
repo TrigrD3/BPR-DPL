@@ -36,7 +36,7 @@
                             <td>
                                 <?= $no; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                                 <br />
                             </td>
