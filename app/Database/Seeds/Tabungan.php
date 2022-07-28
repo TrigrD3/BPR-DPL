@@ -10,6 +10,7 @@ class Tabungan extends Seeder
     {
         $this->produk();
         $this->iklan();
+        $this->form();
     }
 
     public function produk()
@@ -40,6 +41,19 @@ class Tabungan extends Seeder
         foreach ($all_data as $data) {
             // insert semua data ke tabel
             $this->db->table('tabungan_iklan')->insert($data);
+        }
+    }
+    public function form()
+    {
+        $all_data = [
+            [
+                'g_form'  => 'g_form.com',
+            ]
+        ];
+
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tabungan_form')->insert($data);
         }
     }
 }

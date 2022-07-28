@@ -10,12 +10,14 @@ class Tabungan extends Migration
     {
         $this->produk();
         $this->iklan();
+        $this->form();
     }
 
     public function down()
     {
         $this->forge->dropTable('tabungan_produk');
         $this->forge->dropTable('tabungan_iklan');
+        $this->forge->dropTable('tabungan_form');
     }
 
     public function produk()
@@ -64,5 +66,25 @@ class Tabungan extends Migration
         $this->forge->addKey('id_iklan', TRUE);
 
         $this->forge->createTable('tabungan_iklan', TRUE);
+    }
+
+    public function form()
+    {
+        $this->forge->addField([
+            'id_form'           => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'g_form'               => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+
+        $this->forge->addKey('id_form', TRUE);
+
+        $this->forge->createTable('tabungan_form', TRUE);
     }
 }
