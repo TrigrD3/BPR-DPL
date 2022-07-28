@@ -26,6 +26,7 @@ class KreditController extends BaseController
         ];
         $data['KreditProduk'] = $this->KreditModel->get_all_produk();
         $data['KreditIklan'] = $this->KreditModel->get_all_iklan();
+        $data['KreditForm'] = $this->KreditModel->get_all_form();
         return view('Admin/Kredit/AdminKredit', $data);
     }
 
@@ -166,6 +167,32 @@ class KreditController extends BaseController
             <span aria-hidden="true">&times;</span>
         </button>
     </div>');
+        return redirect()->to(base_url('AdminKredit'));
+    }
+
+    public function EditFormKredit($id)
+    {
+        $dataAll = $this->KreditModel->get_id_form($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Form Kredit Tidak ditemukan !');
+        }
+        $data['form_kredit'] = $dataAll;
+        echo view('admin/Kredit/EditFormKredit', $data);
+    }
+
+    public function UpdateFormKredit($id)
+    {
+        $data = [
+            'g_form' => $this->request->getPost('g_form'),
+        ];
+
+        $this->KreditModel->update_formkredit($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
         return redirect()->to(base_url('AdminKredit'));
     }
 }

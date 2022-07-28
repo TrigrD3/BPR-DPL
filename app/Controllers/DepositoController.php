@@ -25,6 +25,7 @@ class DepositoController extends BaseController
         ];
         $data['DepositoProduk'] = $this->DepositoModel->get_all_produk();
         $data['DepositoIklan'] = $this->DepositoModel->get_all_iklan();
+        $data['DepositoForm'] = $this->DepositoModel->get_all_form();
         return view('Admin/Deposito/AdminDeposito', $data);
     }
 
@@ -165,6 +166,31 @@ class DepositoController extends BaseController
             <span aria-hidden="true">&times;</span>
         </button>
     </div>');
+        return redirect()->to(base_url('AdminDeposito'));
+    }
+    public function EditFormDeposito($id)
+    {
+        $dataAll = $this->DepositoModel->get_id_form($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Form Deposito Tidak ditemukan !');
+        }
+        $data['form_deposito'] = $dataAll;
+        echo view('admin/Deposito/EditFormDeposito', $data);
+    }
+
+    public function UpdateFormDeposito($id)
+    {
+        $data = [
+            'g_form' => $this->request->getPost('g_form'),
+        ];
+
+        $this->DepositoModel->update_formdeposito($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
         return redirect()->to(base_url('AdminDeposito'));
     }
 }

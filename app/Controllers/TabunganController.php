@@ -26,6 +26,7 @@ class TabunganController extends BaseController
         ];
         $data['TabunganProduk'] = $this->TabunganModel->get_all_produk();
         $data['TabunganIklan'] = $this->TabunganModel->get_all_iklan();
+        $data['TabunganForm'] = $this->TabunganModel->get_all_form();
         return view('Admin/Tabungan/AdminTabungan', $data);
     }
 
@@ -166,6 +167,32 @@ class TabunganController extends BaseController
             <span aria-hidden="true">&times;</span>
         </button>
     </div>');
+        return redirect()->to(base_url('AdminTabungan'));
+    }
+
+    public function EditFormTabungan($id)
+    {
+        $dataAll = $this->TabunganModel->get_id_form($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Form Tabungan Tidak ditemukan !');
+        }
+        $data['form_tabungan'] = $dataAll;
+        echo view('admin/Tabungan/EditFormTabungan', $data);
+    }
+
+    public function UpdateFormTabungan($id)
+    {
+        $data = [
+            'g_form' => $this->request->getPost('g_form'),
+        ];
+
+        $this->TabunganModel->update_formtabungan($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
         return redirect()->to(base_url('AdminTabungan'));
     }
 }

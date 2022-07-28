@@ -138,4 +138,34 @@ class DepositoModel extends Model
         $data = $this->db->table('deposito_iklan')->select('*')->where('id_iklan', $id)->get()->getRow();
         return $data;
     }
+    function get_all_form()
+    {
+        $data['DepositoForm'] = $this->db->table('deposito_form')->select('*')->get()->getResult();
+        return $data['DepositoForm'];
+    }
+
+    public function get_id_form($id)
+    {
+        $data = $this->db->table('deposito_form')->select('*')->where('id_form', $id)->get()->getRow();
+        return $data;
+    }
+    public function update_formdeposito($id, $data)
+    {
+        if (!$this->validate([
+
+            'g_form' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
+        $this->db->table('deposito_form')->select('*')->where('id_form', $id)->update($data);
+        session()->setFlashdata('message', 'Edit Form deposito Berhasil');
+    }
 }

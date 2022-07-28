@@ -106,6 +106,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/EditIklanKredit/(:num)', 'KreditController::UpdateIklanKredit/$1');
     $routes->get('/HapusIklanKredit/(:num)', 'KreditController::DeleteIklanKredit/$1');
 
+    $routes->get('/EditFormKredit/(:num)', 'KreditController::EditFormKredit/$1');
+    $routes->post('/EditFormKredit/(:num)', 'KreditController::UpdateFormKredit/$1');
+
     //Admin Deposito
     $routes->get('/AdminDeposito', 'DepositoController::index');
     $routes->get('/TambahProdukDeposito', 'DepositoController::TambahProdukDeposito');
@@ -120,6 +123,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->post('/EditIklanDeposito/(:num)', 'DepositoController::UpdateIklanDeposito/$1');
     $routes->get('/HapusIklanDeposito/(:num)', 'DepositoController::DeleteIklanDeposito/$1');
 
+    $routes->get('/EditFormDeposito/(:num)', 'DepositoController::EditFormDeposito/$1');
+    $routes->post('/EditFormDeposito/(:num)', 'DepositoController::UpdateFormDeposito/$1');
+
     //Admin Tabungan
     $routes->get('/AdminTabungan', 'TabunganController::index');
     $routes->get('/TambahProdukTabungan', 'TabunganController::TambahProdukTabungan');
@@ -133,6 +139,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/EditIklanTabungan/(:num)', 'TabunganController::EditIklanTabungan/$1');
     $routes->post('/EditIklanTabungan/(:num)', 'TabunganController::UpdateIklanTabungan/$1');
     $routes->get('/HapusIklanTabungan/(:num)', 'TabunganController::DeleteIklanTabungan/$1');
+
+    $routes->get('/EditFormTabungan/(:num)', 'TabunganController::EditFormTabungan/$1');
+    $routes->post('/EditFormTabungan/(:num)', 'TabunganController::UpdateFormTabungan/$1');
 
     //Admin LayananLainnya
     $routes->get('/adminLayananLainnya', 'LayananLainController::index');

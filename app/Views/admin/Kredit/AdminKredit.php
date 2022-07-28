@@ -172,25 +172,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                            <a>
-                                wwww.g-form.com
-                            </a>
-                            <br />
-                        </td>
+                    <?php $no = 1;
+                    foreach ($KreditForm as $data) :
+                    ?>
+                        <tr>
+                            <td>
+                                <?= $no; ?>
+                            </td>
+                            <td>
+                                <a>
+                                    <?= $data->g_form; ?>
+                                </a>
+                                <br />
+                            </td>
 
-                        <td class="project-actions text-right">
-                            <a class="btn btn-info btn-sm" href="EditLinkKredit">
-                                <i class="fas fa-pencil-alt">
-                                </i>
-                                Edit
-                            </a>
-                        </td>
-                    </tr>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm" href="<?= base_url("/EditFormKredit/$data->id_form") ?>">
+                                    <i class="fas fa-pencil-alt">
+                                    </i>
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $no++; ?>
+                    <?php endforeach; ?>
                 </tbody>
 
             </table>
