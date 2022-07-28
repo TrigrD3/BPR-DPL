@@ -1,3 +1,7 @@
+<?php
+$this->IdentitasWebsiteModel = new \App\Models\IdentitasWebsiteModel();
+$data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +37,7 @@
     <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="<?= base_url('assets/img/logoBPR.png') ?>" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="AdminLTELogo" height="60" width="60">
         </div>
 
         <!-- Navbar -->
@@ -43,10 +47,10 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                
+
             </ul>
             <ul class="navbar-nav">
-            <li class="nav-item ">
+                <li class="nav-item ">
                     <a href="<?= base_url('Logout') ?>" class="nav-link btn btn-danger" style="color: white;">Logout</a>
                 </li>
             </ul>
@@ -59,7 +63,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="<?= base_url('assets/img/LogoBPR.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Back to page</span>
             </a>
 

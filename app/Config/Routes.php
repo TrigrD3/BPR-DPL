@@ -60,7 +60,6 @@ $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
 // start of admin
-$routes->get('/AdminBerita', 'Admin::AdminBerita');
 //Login
 $routes->get('/Login', 'AuthController::index');
 $routes->post('/Login/process', 'AuthController::process');
@@ -68,7 +67,7 @@ $routes->get('/Logout', 'AuthController::logout');
 
 $routes->group('', ['filter' => 'auth'], function ($routes) {
     //Admin Index
-    $routes->get('/Admin', 'Admin::admin', ['filter' => 'auth']);
+    $routes->get('/Admin', 'Admin::admin');
 
     //Admin Home
     //Berita
