@@ -348,18 +348,21 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?= base_url('dist/js/pages/dashboard.js') ?>"></script>
-    <script src="https://cdn.ckeditor.com/4.19.0/full/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+
 
     <script>
         CKEDITOR.replace('editor1', {
             height: 400,
             baseFloatZIndex: 10005,
-            removeButtons: 'PasteFromWord'
+            removeButtons: 'PasteFromWord',
+            removePlugins: ['image', 'uploadimage']
         });
         CKEDITOR.replace('editor2', {
             height: 400,
             baseFloatZIndex: 10005,
-            removeButtons: 'PasteFromWord'
+            removeButtons: 'PasteFromWord',
+            removePlugins: ['image', 'uploadimage']
         });
     </script>
 </body>
