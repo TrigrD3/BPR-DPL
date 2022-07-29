@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditProdukKredit') . '/' . $produk_kredit->id_produk ?>" method="post">
+                    <form action="<?= base_url('EditProdukKredit') . '/' . $produk_kredit->id_produk ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
                             <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_kredit->nama ?>">
@@ -30,7 +30,10 @@
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $produk_kredit->foto ?>">
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $produk_kredit->foto ?>">
+                            <img src="<?= base_url('uploads/ProdukKredit') . '/' . $produk_kredit->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

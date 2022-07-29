@@ -34,7 +34,6 @@ class IdentitasWebsiteController extends BaseController
         $dataBerkas = $this->request->getFile('logo');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            // unlink('uploads/IdentitasWebsite' . '/' . $this->request->getVar('namalogo'));
             $data = [
                 'id_identitas' => $this->request->getVar('id_identitas'),
                 'whatsapp' => $this->request->getVar('whatsapp'),

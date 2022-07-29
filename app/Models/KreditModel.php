@@ -37,9 +37,11 @@ class KreditModel extends Model
                 ]
             ],
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
 
@@ -55,9 +57,11 @@ class KreditModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
 
@@ -85,9 +89,11 @@ class KreditModel extends Model
                 ]
             ],
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
 
@@ -105,9 +111,11 @@ class KreditModel extends Model
         if (!$this->validate([
 
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
 

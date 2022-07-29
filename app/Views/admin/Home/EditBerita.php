@@ -12,15 +12,15 @@
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
                         </button>
-                    </div>
+                    </div> 
                 </div>
                 <div class="card-body">
                     <form action="<?= base_url('EditBerita') . '/' . $berita->id_berita ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">foto</label>
+                            <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $berita->foto ?>">
-                            <img src="<?= base_url('uploads/EditBerita') . '/' . $berita->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/BeritaHome') . '/' . $berita->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">

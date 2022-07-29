@@ -108,11 +108,24 @@ class KreditController extends BaseController
 
     public function UpdateKredit($id)
     {
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'deskripsi' => $this->request->getPost('editor1'),
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+
+        if(!empty($fileName)){
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'deskripsi' => $this->request->getPost('editor1'),
+                'foto' => $fileName,
+            ];
+            $dataBerkas->move('uploads/ProdukKredit/', $fileName);
+        }else{
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'deskripsi' => $this->request->getPost('editor1'),
+            ];
+        }
+            
+        
 
         $this->KreditModel->update_kredit($id, $data);
 
@@ -126,9 +139,12 @@ class KreditController extends BaseController
 
     public function UpdateIklanKredit($id)
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
+        $dataBerkas->move('uploads/IklanKredit/', $fileName);
 
         $this->KreditModel->update_iklankredit($id, $data);
 

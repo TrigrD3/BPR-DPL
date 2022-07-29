@@ -19,10 +19,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditIklanKredit') . '/' . $iklan_kredit->id_iklan ?>" method="post">
+                    <form action="<?= base_url('EditIklanKredit') . '/' . $iklan_kredit->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name='foto' id="inputClientCompany" class="form-control" value="<?= $iklan_kredit->foto ?>">
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $iklan_kredit->foto ?>">
+                            <img src="<?= base_url('uploads/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
 
                         <div class="row">

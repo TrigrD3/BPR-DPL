@@ -37,7 +37,7 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]|max_size[logo,2048]',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
                     'uploaded' => 'Harus Ada File yang diupload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
@@ -75,7 +75,7 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]|max_size[logo,2048]',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
                     'uploaded' => 'Harus Ada File yang diupload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
@@ -131,7 +131,7 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]|max_size[logo,2048]',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
                     'uploaded' => 'Harus Ada File yang diupload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
@@ -150,7 +150,7 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'uploaded[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]|max_size[logo,2048]',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
                     'uploaded' => 'Harus Ada File yang diupload',
                     'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',

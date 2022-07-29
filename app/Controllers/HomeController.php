@@ -75,13 +75,21 @@ class HomeController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         
-        $data = [
-            'foto' => $fileName,
-            'judul' => $this->request->getPost('judul'),
-            'tanggal' => $this->request->getPost('tanggal'),
-            'isi_berita' => $this->request->getPost('editor1'),
-        ];
-        $dataBerkas->move('uploads/EditBerita/', $fileName);
+        if(!empty($fileName)){
+            $data = [
+                'foto' => $fileName,
+                'judul' => $this->request->getPost('judul'),
+                'tanggal' => $this->request->getPost('tanggal'),
+                'isi_berita' => $this->request->getPost('editor1'),
+            ];
+            $dataBerkas->move('uploads/BeritaHome/', $fileName);
+        }else{
+            $data = [
+                'judul' => $this->request->getPost('judul'),
+                'tanggal' => $this->request->getPost('tanggal'),
+                'isi_berita' => $this->request->getPost('editor1'),
+            ];
+        }
 
         $this->HomeModel->update_berita($id, $data);
 
@@ -150,10 +158,11 @@ class HomeController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
+        
         $data = [
             'foto' => $fileName,
         ];
-        $dataBerkas->move('uploads/EditIklan/', $fileName);
+        $dataBerkas->move('uploads/IklanHome/', $fileName);
         $this->HomeModel->update_iklan($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.

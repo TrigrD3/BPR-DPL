@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit Berita</h3>
+                    <h3 class="card-title">Edit Iklan</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -17,10 +17,10 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                        <label for="inputClientCompany">foto</label>
+                        <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>">
-                            <img src="<?= base_url('uploads/EditIklan') . '/' . $iklan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/IklanHome') . '/' . $iklan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
