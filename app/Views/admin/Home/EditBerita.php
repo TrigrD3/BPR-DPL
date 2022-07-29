@@ -15,10 +15,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditBerita') . '/' . $berita->id_berita ?>" method="post">
+                    <form action="<?= base_url('EditBerita') . '/' . $berita->id_berita ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputName">Foto</label>
-                            <input type="file" name="foto" id="inputName" class="form-control" value="<?= $berita->foto ?>">
+                            <label for="inputClientCompany">foto</label>
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $berita->foto ?>">
+                            <img src="<?= base_url('uploads/EditBerita') . '/' . $berita->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="inputDescription">Judul</label>

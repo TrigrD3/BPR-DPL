@@ -72,12 +72,16 @@ class HomeController extends BaseController
 
     public function UpdateBerita($id)
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
             'judul' => $this->request->getPost('judul'),
             'tanggal' => $this->request->getPost('tanggal'),
             'isi_berita' => $this->request->getPost('editor1'),
         ];
+        $dataBerkas->move('uploads/EditBerita/', $fileName);
 
         $this->HomeModel->update_berita($id, $data);
 
@@ -144,10 +148,12 @@ class HomeController extends BaseController
 
     public function UpdateIklan($id)
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
-
+        $dataBerkas->move('uploads/EditIklan/', $fileName);
         $this->HomeModel->update_iklan($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.

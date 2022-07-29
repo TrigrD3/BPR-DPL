@@ -15,7 +15,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('/TambahBerita') ?>" method="post">
+                    <form action="<?= base_url('/TambahBerita') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Foto</label>
                             <input type="file" name="foto" id="inputName" class="form-control" value="AdminLTE">

@@ -15,11 +15,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post">
+                    <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputName">Foto Iklan</label>
-                            <br><?= $iklan->foto ?>
-                            <input type="file" id="inputName" name="foto" class="form-control">
+                        <label for="inputClientCompany">foto</label>
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>">
+                            <img src="<?= base_url('uploads/EditIklan') . '/' . $iklan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                         <div class="col-1">

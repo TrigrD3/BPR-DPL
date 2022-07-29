@@ -50,7 +50,7 @@
                                 <?= $no ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                            <img src="<?= base_url('uploads/EditBerita') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td>
                                 <?= $data->judul; ?>
@@ -122,7 +122,7 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                                <img src="<?= base_url('uploads/EditIklan') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             </td>
 
                             <td class="project-actions text-right">
