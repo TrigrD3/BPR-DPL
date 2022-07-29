@@ -43,8 +43,8 @@
                                 <?= $data->foto; ?>
                                 <br />
                             </td>
-                            <td>
-                                <?= $data->google_maps; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->google_maps; ?></p>
                             </td>
 
                             <td class="project-actions text-right">
