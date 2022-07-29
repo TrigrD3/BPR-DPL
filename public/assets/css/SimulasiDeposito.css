@@ -1,0 +1,13 @@
+.container-simulasi {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.border1 {
+  border: 1px solid #0f54a3;
+}
