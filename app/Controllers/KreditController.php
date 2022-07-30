@@ -110,7 +110,6 @@ class KreditController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            // unlink('uploads/IdentitasWebsite' . '/' . $this->request->getVar('namalogo'));
             $data = [
                 'nama' => $this->request->getVar('nama'),
                 'deskripsi' => $this->request->getVar('editor1'),

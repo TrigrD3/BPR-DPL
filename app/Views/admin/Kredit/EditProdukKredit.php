@@ -30,7 +30,6 @@
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <label for="inputClientCompany">Gambar</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $produk_kredit->foto ?>">
                             <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $produk_kredit->foto ?>" width="200px" height="200px" alt="produk-kredit" class="img-thumbnail">

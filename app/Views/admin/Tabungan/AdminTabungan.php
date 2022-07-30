@@ -54,6 +54,7 @@
                                 <?= $data->deskripsi; ?>
                             </td>
                             <td class="project_progress">
+                                <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
                                 <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
@@ -97,27 +98,15 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Foto
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
                 </thead>
                 <tbody>
-                    <?php $no = 1;
+                    <?php
                     foreach ($TabunganIklan as $data) :
                     ?>
                         <tr>
                             <td>
-                                <?= $no; ?>
-                            </td>
-                            <td>
                                 <a>
+                                    <img src="<?= base_url('uploads/Tabungan/IklanTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-tabungan" class="img-thumbnail">
                                     <?= $data->foto; ?>
                                 </a>
                                 <br />
@@ -129,20 +118,10 @@
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklanTabungan/$data->id_iklan") ?>">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Delete
-                                </a>
                             </td>
                         </tr>
-                        <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklanTabungan">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->
@@ -164,25 +143,12 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Link
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
                 </thead>
                 <tbody>
-                    <?php $no = 1;
+                    <?php
                     foreach ($TabunganForm as $data) :
                     ?>
                         <tr>
-                            <td>
-                                <?= $no; ?>
-                            </td>
                             <td>
                                 <a>
                                     <?= $data->g_form; ?>
@@ -198,7 +164,6 @@
                                 </a>
                             </td>
                         </tr>
-                        <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
 

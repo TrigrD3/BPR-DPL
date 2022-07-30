@@ -53,6 +53,7 @@
                                 <?= $data->deskripsi; ?>
                             </td>
                             <td class="project_progress">
+                                <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-deposito" class="img-thumbnail">
                                 <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
@@ -95,27 +96,13 @@
         </div>
         <div class="card-body p-0">
             <table class="table table-striped projects">
-                <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Foto
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
-                </thead>
                 <tbody>
-                    <?php $no = 1;
+                    <?php
                     foreach ($DepositoIklan as $data) :
                     ?>
                         <tr>
                             <td>
-                                <?= $no; ?>
-                            </td>
-                            <td>
+                                <img src="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-deposito" class="img-thumbnail">
                                 <?= $data->foto; ?>
                             </td>
 
@@ -125,20 +112,10 @@
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklanDeposito/$data->id_iklan") ?>">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Delete
-                                </a>
                             </td>
                         </tr>
-                        <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklanDeposito">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->
@@ -162,25 +139,12 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
-                    <tr>
-                        <th style="width: 1%">
-                            No
-                        </th>
-                        <th style="width: 30%">
-                            Link
-                        </th>
-                        <th style="width: 20%">
-                        </th>
-                    </tr>
                 </thead>
                 <tbody>
-                    <?php $no = 1;
+                    <?php
                     foreach ($DepositoForm as $data) :
                     ?>
                         <tr>
-                            <td>
-                                <?= $no; ?>
-                            </td>
                             <td>
                                 <a>
                                     <?= $data->g_form; ?>
@@ -196,7 +160,6 @@
                                 </a>
                             </td>
                         </tr>
-                        <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
 

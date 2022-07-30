@@ -30,26 +30,30 @@
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $produk_tabungan->foto ?>">
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $produk_tabungan->foto ?>">
+                            <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
+                            <a href="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" target="_blank"><?= $produk_tabungan->foto ?></a>
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 
