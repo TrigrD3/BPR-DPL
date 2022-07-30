@@ -13,7 +13,7 @@
                     <h3 class="card-title">Edit Produk Tabungan</h3>
 
                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" enctype="multipart/form-data">
                             <i class="fas fa-minus"></i>
                         </button>
                     </div>

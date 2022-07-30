@@ -61,28 +61,6 @@ class LayananLainModel extends Model
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     function get_all_produk()
     {
         $data['LayananLainProduk'] = $this->db->table('layanan_produk')->select('*')->get()->getResult();
@@ -98,9 +76,11 @@ class LayananLainModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,10240]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 10 MB'
                 ]
             ],
 

@@ -122,9 +122,18 @@ class LayananLainController extends BaseController
 
     public function UpdateProduk($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'foto' => $fileName,
+            ];
+            $dataBerkas->move('uploads/LayananLain/ProdukLL', $fileName);
+        } else {
+            $data = [
+                'foto' => $fileName,
+            ];
+        }
 
         $this->LayananLainModel->update_produk($id, $data);
 
