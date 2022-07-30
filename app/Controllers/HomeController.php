@@ -82,7 +82,7 @@ class HomeController extends BaseController
                 'tanggal' => $this->request->getPost('tanggal'),
                 'isi_berita' => $this->request->getPost('editor1'),
             ];
-            $dataBerkas->move('uploads/BeritaHome/', $fileName);
+            $dataBerkas->move('uploads/Home/Berita', $fileName);
         }else{
             $data = [
                 'judul' => $this->request->getPost('judul'),
@@ -162,7 +162,7 @@ class HomeController extends BaseController
         $data = [
             'foto' => $fileName,
         ];
-        $dataBerkas->move('uploads/IklanHome/', $fileName);
+        $dataBerkas->move('uploads/Home/Iklan/', $fileName);
         $this->HomeModel->update_iklan($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
