@@ -21,33 +21,34 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditIklanKredit') . '/' . $iklan_kredit->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Gambar</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan_kredit->foto ?>">
-                            <img src="<?= base_url('uploads/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+                            <a href="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" target="_blank"><?= $iklan_kredit->foto ?></a>
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
 
                         <div class="row">
                             <div class="col-1">
-                            <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
+                                <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
                             </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
-                            </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
                 </div>
-                <!-- /.card-body -->
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
-    
+
     </form>
 </section>
 <?= $this->endSection(''); ?>

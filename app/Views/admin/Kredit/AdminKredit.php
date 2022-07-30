@@ -53,7 +53,8 @@
                                 <?= $data->deskripsi; ?>
                             </td>
                             <td class="project_progress">
-                            <img src="<?= base_url('uploads/ProdukKredit') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukKredit/$data->id_produk") ?>">
@@ -82,7 +83,11 @@
     <!-- /.card -->
     <div class="card">
         <div class="card-header">
+<<<<<<< HEAD
             <h3 class="card-title">Iklan</h3>
+=======
+            <h3 class="card-title">Iklan Halaman Utama</h3>
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -96,7 +101,11 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
+<<<<<<< HEAD
                     <tr>
+=======
+                    <!-- <tr>
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                         <th style="width: 1%">
                             No
                         </th>
@@ -105,7 +114,11 @@
                         </th>
                         <th style="width: 20%">
                         </th>
+<<<<<<< HEAD
                     </tr>
+=======
+                    </tr> -->
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                 </thead>
                 <tbody>
                     <?php $no = 1;
@@ -113,10 +126,15 @@
                     ?>
                         <tr>
                             <td>
+<<<<<<< HEAD
                                 <?= $no; ?>
                             </td>
                             <td>
                             <img src="<?= base_url('uploads/IklanKredit') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+=======
+                                <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditIklanKredit/$data->id_iklan") ?>">
@@ -124,20 +142,26 @@
                                     </i>
                                     Edit
                                 </a>
+<<<<<<< HEAD
                                 <a class="btn btn-danger btn-sm" href="<?= base_url("/HapusIklanKredit/$data->id_iklan") ?>">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
                                 </a>
+=======
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                             </td>
                         </tr>
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
+<<<<<<< HEAD
                 <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklanKredit">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
+=======
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
             </table>
         </div>
         <!-- /.card-body -->
@@ -160,16 +184,24 @@
         <div class="card-body p-0">
             <table class="table table-striped projects">
                 <thead>
+<<<<<<< HEAD
                     <tr>
                         <th style="width: 1%">
                             No
                         </th>
+=======
+                    <!-- <tr>
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                         <th style="width: 30%">
                             Link
                         </th>
                         <th style="width: 20%">
                         </th>
+<<<<<<< HEAD
                     </tr>
+=======
+                    </tr> -->
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                 </thead>
                 <tbody>
                     <?php $no = 1;
@@ -177,9 +209,12 @@
                     ?>
                         <tr>
                             <td>
+<<<<<<< HEAD
                                 <?= $no; ?>
                             </td>
                             <td>
+=======
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                                 <a>
                                     <?= $data->g_form; ?>
                                 </a>

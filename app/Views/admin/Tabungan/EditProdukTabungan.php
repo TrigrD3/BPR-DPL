@@ -13,7 +13,11 @@
                     <h3 class="card-title">Edit Produk Tabungan</h3>
 
                     <div class="card-tools">
+<<<<<<< HEAD
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+=======
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" enctype="multipart/form-data">
+>>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                             <i class="fas fa-minus"></i>
                         </button>
                     </div>
@@ -30,26 +34,30 @@
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $produk_tabungan->foto ?>">
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $produk_tabungan->foto ?>">
+                            <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
+                            <a href="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" target="_blank"><?= $produk_tabungan->foto ?></a>
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 

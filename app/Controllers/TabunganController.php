@@ -126,17 +126,21 @@ class TabunganController extends BaseController
 
     public function UpdateIklanTabungan($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'foto' => $fileName,
+            ];
 
-        $this->TabunganModel->update_iklantabungan($id, $data);
-
-        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            $dataBerkas->move('uploads/Tabungan/IklanTabungan', $fileName);
+            $this->TabunganModel->update_iklantabungan($id, $data);
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div>');
+            </div>');
+        }
         return redirect()->to(base_url('AdminTabungan'));
     }
 

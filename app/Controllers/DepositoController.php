@@ -107,11 +107,22 @@ class DepositoController extends BaseController
 
     public function UpdateDeposito($id)
     {
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'deskripsi' => $this->request->getPost('editor1'),
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'deskripsi' => $this->request->getVar('editor1'),
+                'foto' => $fileName,
+            ];
+
+            $dataBerkas->move('uploads/Deposito/ProdukDeposito', $fileName);
+        } else {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'deskripsi' => $this->request->getVar('editor1'),
+            ];
+        }
 
         $this->DepositoModel->update_deposito($id, $data);
 
@@ -125,17 +136,21 @@ class DepositoController extends BaseController
 
     public function UpdateIklanDeposito($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'foto' => $fileName,
+            ];
 
-        $this->DepositoModel->update_iklandeposito($id, $data);
-
-        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            $dataBerkas->move('uploads/Deposito/IklanDeposito', $fileName);
+            $this->DepositoModel->update_iklandeposito($id, $data);
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-        </div>');
+            </div>');
+        }
         return redirect()->to(base_url('AdminDeposito'));
     }
 
