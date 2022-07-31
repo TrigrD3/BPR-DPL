@@ -47,7 +47,7 @@ class Tabungan extends Seeder
     {
         $all_data = [
             [
-                'g_form'  => 'g_form.com',
+                'g_form'  => 'https://forms.gle/V7PLodHwzT35Fdnp9',
             ]
         ];
 
