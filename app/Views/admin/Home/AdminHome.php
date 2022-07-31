@@ -20,25 +20,25 @@
         </div>
         <div class="card-body p-0">
             <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahBerita">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
+                <i class="fas fa-plus-circle"></i>
+                Tambah
+            </a>
             <table class="table table-striped projects">
                 <thead>
                     <tr>
-                        <th  style="width: 1%">
+                        <th style="width: 1%">
                             No
                         </th>
-                        <th  style="width: 10%">
+                        <th style="width: 10%">
                             Foto
                         </th>
-                        <th  style="width: 20%">
+                        <th style="width: 20%">
                             Judul
                         </th>
-                        <th  style="width: 20%">
+                        <th style="width: 20%">
                             Tanggal
                         </th>
-                        <th >
+                        <th>
                             Isi Berita
                         </th>
                         <th style="width: 20%">
@@ -54,7 +54,7 @@
                                 <?= $no ?>
                             </td>
                             <td>
-                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td>
                                 <?= $data->judul; ?>
@@ -63,7 +63,7 @@
                                 <?= $data->tanggal; ?>
                             </td>
                             <td class="project_progress deskripsi">
-                                <?= $data->isi_berita; ?>
+                                <p><?= $data->isi_berita; ?></p>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditBerita/$data->id_berita") ?>">

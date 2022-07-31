@@ -18,10 +18,9 @@
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
 
-                            <input type="text" name="namafoto" hidden value="<?= $layanan_produk->foto ?>">
+                            <input type="text" name="namafoto" hidden value="<?= $layanan_produk->foto ?>" required>
                             <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $layanan_produk->foto ?>" width="200px" height="200px" alt="produk-kredit" class="img-thumbnail">
-                            <a href="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $layanan_produk->foto ?>" target="_blank"><?= $layanan_produk->foto ?></a>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

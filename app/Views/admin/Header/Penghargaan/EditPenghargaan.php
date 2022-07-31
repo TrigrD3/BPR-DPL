@@ -27,9 +27,9 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
-                            <input type="text" name="namafoto" hidden value="<?= $header_penghargaan->foto ?>">
+                            <input type="text" name="namafoto" hidden value="<?= $header_penghargaan->foto ?>" required>
                             <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $header_penghargaan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
-                            <input type="File" name="foto" id="foto" class="form-control" required>
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

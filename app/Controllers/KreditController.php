@@ -107,6 +107,7 @@ class KreditController extends BaseController
 
     public function UpdateKredit($id)
     {
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {

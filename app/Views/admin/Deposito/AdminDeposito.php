@@ -50,7 +50,7 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p><?= $data->deskripsi; ?></p>
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-deposito" class="img-thumbnail">

@@ -19,7 +19,7 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
-                            <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>">
+                            <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>" required>
                             <img src="<?= base_url('uploads/Home/Iklan') . '/' . $iklan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>

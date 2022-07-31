@@ -40,10 +40,10 @@
                             <td>
                                 <?= $no; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->visi; ?>
                             </td>
-                            <td>
+                            <td class="deskripsi">
                                 <?= $data->misi; ?>
                             </td>
 
