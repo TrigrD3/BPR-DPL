@@ -31,7 +31,7 @@
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $produk_deposito->foto ?>" required>
-                            <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $produk_deposito->foto ?>" width="200px" height="200px" alt="produk-deposito" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $produk_deposito->foto ?>" width="20%" height="20%" alt="produk-deposito" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">

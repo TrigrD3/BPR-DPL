@@ -52,7 +52,7 @@
                                 <?= $data->kabupaten_kota; ?>
                             </td>
                             <td class="deskripsi">
-                               <p><?= $data->alamat; ?></p> 
+                                <p><?= $data->alamat; ?></p>
                             </td>
                             <td>
                                 <?= $data->nomor_telepon; ?>
@@ -61,7 +61,7 @@
                                 <p><?= $data->google_maps; ?></p>
                             </td>
                             <td>
-                            <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditAlamat/$data->id_alamat_kantor") ?>">

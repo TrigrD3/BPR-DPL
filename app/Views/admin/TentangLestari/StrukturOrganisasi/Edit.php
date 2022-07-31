@@ -17,7 +17,7 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_strukturorganisasi->foto ?>">
-                            <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi') . '/' . $tentang_strukturorganisasi->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi') . '/' . $tentang_strukturorganisasi->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
