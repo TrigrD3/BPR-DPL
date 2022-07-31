@@ -26,7 +26,7 @@
                             <input type="text" name="namafoto" hidden value="<?= $iklan_deposito->foto ?>">
                             <img src="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $iklan_deposito->foto ?>" width="200px" height="200px" alt="iklan-deposito" class="img-thumbnail">
                             <a href="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $iklan_deposito->foto ?>" target="_blank"><?= $iklan_deposito->foto ?></a>
-                            <input type="File" name="foto" id="foto" class="form-control">
+                            <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-1">

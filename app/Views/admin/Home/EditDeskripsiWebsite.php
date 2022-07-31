@@ -18,26 +18,26 @@
                     <form action="<?= base_url('EditDeskripsiWebsite') . '/' . $deskripsi->id_deskripsi_website ?>" method="post">
                         <div class="form-group">
                             <label for="inputDescription">Deskripsi</label>
-                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $deskripsi->deskripsi ?></textarea>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4" required><?= $deskripsi->deskripsi ?></textarea>
                         </div>
                         <div class="row">
-                        <div class="col-1">
+                            <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
+                            </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                        </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 </section>

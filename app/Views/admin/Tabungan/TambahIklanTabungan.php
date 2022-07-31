@@ -22,26 +22,26 @@
                     <form action="<?= base_url('/TambahIklanTabungan') ?>" method="post">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control">
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
 </section>
 <?= $this->endSection(''); ?>

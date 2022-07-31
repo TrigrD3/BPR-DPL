@@ -13,11 +13,7 @@
                     <h3 class="card-title">Edit Produk Tabungan</h3>
 
                     <div class="card-tools">
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-=======
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" enctype="multipart/form-data">
->>>>>>> 50e6530e018f74e8e4b8f4ed519875c89284a7fb
                             <i class="fas fa-minus"></i>
                         </button>
                     </div>
@@ -26,11 +22,11 @@
                     <form action="<?= base_url('EditProdukTabungan') . '/' . $produk_tabungan->id_produk ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
-                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_tabungan->nama ?>">
+                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_tabungan->nama ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="inputName">Deskripsi</label>
-                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $produk_tabungan->deskripsi ?></textarea>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4" required><?= $produk_tabungan->deskripsi ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
@@ -38,7 +34,7 @@
                             <input type="text" name="namafoto" hidden value="<?= $produk_tabungan->foto ?>">
                             <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
                             <a href="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" target="_blank"><?= $produk_tabungan->foto ?></a>
-                            <input type="File" name="foto" id="foto" class="form-control">
+                            <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-1">

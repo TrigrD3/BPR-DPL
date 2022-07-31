@@ -16,34 +16,34 @@
                     <form action="<?= base_url('EditSejarah') . '/' . $tentang_sejarah->id_sejarah ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Keterangan</label>
-                            <input type="text" id="inputName" name="judul" class="form-control" placeholder="Keterangan" value="<?= $tentang_sejarah->judul ?>">
+                            <input type="text" id="inputName" name="judul" class="form-control" placeholder="Keterangan" value="<?= $tentang_sejarah->judul ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="inputName">Tanggal</label>
-                            <input type="date" id="inputName" name="tanggal" class="form-control" value="<?= $tentang_sejarah->tanggal ?>">
+                            <input type="date" id="inputName" name="tanggal" class="form-control" value="<?= $tentang_sejarah->tanggal ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="inputDescription">Deskripsi</label>
-                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $tentang_sejarah->deskripsi ?></textarea>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4" required><?= $tentang_sejarah->deskripsi ?></textarea>
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 </section>

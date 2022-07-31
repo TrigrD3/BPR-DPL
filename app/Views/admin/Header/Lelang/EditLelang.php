@@ -25,30 +25,30 @@
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $header_lelang->foto ?>">
                             <img src="<?= base_url('uploads/Header/Lelang') . '/' . $header_lelang->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
-                            <input type="File" name="foto" id="foto" class="form-control">
+                            <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="inputName">Masukan Link Google Maps</label>
-                            <textarea name="google_maps" class="form-control" rows="4"><?= $header_lelang->google_maps ?></textarea>
+                            <textarea name="google_maps" class="form-control" rows="4" required><?= $header_lelang->google_maps ?></textarea>
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 

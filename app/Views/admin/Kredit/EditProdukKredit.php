@@ -22,11 +22,11 @@
                     <form action="<?= base_url('EditProdukKredit') . '/' . $produk_kredit->id_produk ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
-                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_kredit->nama ?>">
+                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_kredit->nama ?>" required>
                         </div>
                         <div class="form-group">
                             <label for="inputName">Deskripsi</label>
-                            <textarea name="editor1" id="editor" class="form-control" rows="4"><?= $produk_kredit->deskripsi ?></textarea>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4" required><?= $produk_kredit->deskripsi ?></textarea>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
@@ -34,7 +34,7 @@
                             <input type="text" name="namafoto" hidden value="<?= $produk_kredit->foto ?>">
                             <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $produk_kredit->foto ?>" width="200px" height="200px" alt="produk-kredit" class="img-thumbnail">
                             <a href="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $produk_kredit->foto ?>" target="_blank"><?= $produk_kredit->foto ?></a>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control">
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-1">

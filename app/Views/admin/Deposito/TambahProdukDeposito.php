@@ -22,35 +22,35 @@
                     <form action="<?= base_url('/TambahProdukDeposito') ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
-                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama">
+                            <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" required>
                         </div>
                         <div class="form-group">
                             <label for="inputName">Deskripsi</label>
-                            <textarea name="editor1" id="editor" class="form-control" rows="4"></textarea>
+                            <textarea name="editor1" id="editor" class="form-control" rows="4" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control">
+                            <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-
-                    </form>
                 </div>
-                <!-- /.card-body -->
+
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 

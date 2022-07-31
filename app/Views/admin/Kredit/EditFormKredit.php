@@ -22,7 +22,7 @@
                     <form action="<?= base_url('EditFormKredit') . '/' . $form_kredit->id_form ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Link G-Form</label>
-                            <input type="text" name="g_form" id="inputName" class="form-control" placeholder="Nama" value="<?= $form_kredit->g_form ?>">
+                            <input type="text" name="g_form" id="inputName" class="form-control" placeholder="Nama" value="<?= $form_kredit->g_form ?>" required>
                         </div>
                         <div class="row">
                             <div class="col-1">

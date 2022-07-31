@@ -31,6 +31,7 @@ class IdentitasWebsiteController extends BaseController
 
     public function update()
     {
+
         $dataBerkas = $this->request->getFile('logo');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {

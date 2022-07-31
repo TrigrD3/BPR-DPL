@@ -22,10 +22,10 @@
                     <form action="<?= base_url('/TambahPAT') ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
-                            <input type="text" name="nama" id="inputName" class="form-control">
+                            <input type="text" name="nama" id="inputName" class="form-control" require_once>
                         </div>
                         <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" />
+                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" required />
 
                         <script>
                             $("#datepicker").datepicker({
@@ -37,26 +37,26 @@
                         </script>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih File</label>
-                            <input type="File" name="file" id="inputClientCompany" class="form-control" value="Deveint Inc">
+                            <input type="File" name="file" id="inputClientCompany" class="form-control" value="Deveint Inc" required>
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 
