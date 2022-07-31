@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <label for="inputName">Masukan Link Google Maps</label>
-                            <input type="text" name="google_maps" id="inputName" class="form-control">
+                            <textarea class="form-control" name="google_maps" rows="4"></textarea>
                         </div>
                         <div class="row">
                             <div class="col-1">

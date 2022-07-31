@@ -62,10 +62,20 @@ class HeaderController extends BaseController
     }
     public function UpdateLelang($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-            'google_maps' => $this->request->getPost('google_maps'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        
+        if(!empty($fileName)){
+            $data = [
+                'foto' => $fileName,
+                'google_maps' => $this->request->getPost('google_maps'),
+            ];
+            $dataBerkas->move('uploads/Header/Lelang', $fileName);
+        }else{
+            $data = [
+                'google_maps' => $this->request->getPost('google_maps'),
+            ];
+        }
 
         $this->HeaderModel->update_lelang($id, $data);
 
@@ -83,7 +93,7 @@ class HeaderController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Lelang Tidak ditemukan !');
         }
         $this->HeaderModel->delete_lelang($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -114,12 +124,24 @@ class HeaderController extends BaseController
 
     public function UpdateLoker($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('deskripsi'),
-            'judul' => $this->request->getPost('judul'),
-            'link' => $this->request->getPost('link'),
-            'deskripsi' => $this->request->getPost('editor1'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        
+        if(!empty($fileName)){
+            $data = [
+                'foto' => $fileName,
+                'judul' => $this->request->getPost('judul'),
+                'link' => $this->request->getPost('link'),
+                'deskripsi' => $this->request->getPost('editor1'),
+            ];
+            $dataBerkas->move('uploads/Header/Loker', $fileName);
+        }else{
+            $data = [
+                'judul' => $this->request->getPost('judul'),
+                'link' => $this->request->getPost('link'),
+                'deskripsi' => $this->request->getPost('editor1'),
+            ];
+        }
 
         $this->HeaderModel->update_loker($id, $data);
 
@@ -258,10 +280,20 @@ class HeaderController extends BaseController
     }
     public function UpdatePenghargaan($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-            'deskripsi' => $this->request->getPost('deskripsi'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+
+        if(!empty($fileName)){
+            $data = [
+                'foto' => $fileName,
+                'deskripsi' => $this->request->getPost('deskripsi'),
+            ];
+            $dataBerkas->move('uploads/Header/Penghargaan', $fileName);
+        }else{
+            $data = [
+                'deskripsi' => $this->request->getPost('deskripsi'),
+            ];
+        }
 
         $this->HeaderModel->update_penghargaan($id, $data);
 

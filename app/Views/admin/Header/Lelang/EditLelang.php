@@ -19,14 +19,17 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditLelang') . '/' . $header_lelang->id_lelang ?>" method="post">
+                    <form action="<?= base_url('EditLelang') . '/' . $header_lelang->id_lelang ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $header_lelang->foto ?>">
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $header_lelang->foto ?>">
+                            <img src="<?= base_url('uploads/Header/Lelang') . '/' . $header_lelang->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="inputName">Masukan Link Google Maps</label>
-                            <input type="text" name="google_maps" id="inputName" class="form-control" value="<?= $header_lelang->google_maps ?>">
+                            <textarea name="google_maps" class="form-control" rows="4"><?= $header_lelang->google_maps ?></textarea>
                         </div>
                         <div class="row">
                             <div class="col-1">

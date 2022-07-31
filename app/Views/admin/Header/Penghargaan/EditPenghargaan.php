@@ -19,14 +19,17 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditPenghargaan') . '/' . $header_penghargaan->id_penghargaan ?>" method="post">
+                    <form action="<?= base_url('EditPenghargaan') . '/' . $header_penghargaan->id_penghargaan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Keterangan Penghargaan</label>
                             <input type="text" name="deskripsi" id="inputName" class="form-control" value="<?= $header_penghargaan->deskripsi ?>">
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih File</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $header_penghargaan->foto ?>">
+                            <label for="inputClientCompany">Pilih Foto</label>
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $header_penghargaan->foto ?>">
+                            <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $header_penghargaan->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

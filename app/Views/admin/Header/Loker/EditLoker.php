@@ -15,10 +15,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditLoker') . '/' . $header_loker->id_loker ?>" method="post">
+                    <form action="<?= base_url('EditLoker') . '/' . $header_loker->id_loker ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputName">Foto</label>
-                            <input type="file" name="foto" id="inputName" class="form-control" value="<?= $header_loker->foto ?>">
+                        <label for="inputClientCompany">Pilih Foto</label>
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $header_loker->foto ?>">
+                            <img src="<?= base_url('uploads/Header/Loker') . '/' . $header_loker->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="inputDescription">Judul</label>

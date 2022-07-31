@@ -44,7 +44,7 @@
                     ?>
                         <tr>
                             <td>
-                                <?= $data->foto; ?>
+                            <img src="<?= base_url('uploads/Header/Loker') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td>
                                 <a>
@@ -55,8 +55,8 @@
                             <td class="deskripsi">
                                 <?= $data->deskripsi; ?>
                             </td>
-                            <td class="project_progress">
-                                <?= $data->link; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->link; ?></p>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditLoker/$data->id_loker") ?>">

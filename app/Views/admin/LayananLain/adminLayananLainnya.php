@@ -58,7 +58,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahDeskripsiLL">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahDeskripsiLL">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -123,7 +123,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahFotoLL">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahFotoLL">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

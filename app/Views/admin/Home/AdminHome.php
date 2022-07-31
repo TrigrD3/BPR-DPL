@@ -19,22 +19,26 @@
             </div>
         </div>
         <div class="card-body p-0">
+            <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahBerita">
+                    <i class="fas fa-plus-circle"></i>
+                    Tambah
+                </a>
             <table class="table table-striped projects">
                 <thead>
                     <tr>
-                        <th style="width: 1%">
+                        <th  style="width: 1%">
                             No
                         </th>
-                        <th style="width: 10%">
+                        <th  style="width: 10%">
                             Foto
                         </th>
-                        <th style="width: 20%">
+                        <th  style="width: 20%">
                             Judul
                         </th>
-                        <th style="width: 20%">
+                        <th  style="width: 20%">
                             Tanggal
                         </th>
-                        <th>
+                        <th >
                             Isi Berita
                         </th>
                         <th style="width: 20%">
@@ -77,14 +81,11 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahBerita">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->
     </div>
+
     <!-- /.card -->
     <div class="card">
         <div class="card-header">
@@ -141,7 +142,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklan">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahIklan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -206,5 +207,7 @@
         <!-- /.card-body -->
 
     </div>
+
+
 </section>
 <?= $this->endSection(''); ?>

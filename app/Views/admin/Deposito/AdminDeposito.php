@@ -54,7 +54,6 @@
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-deposito" class="img-thumbnail">
-                                <?= $data->foto; ?>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukDeposito/$data->id_produk") ?>">
@@ -72,7 +71,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProdukDeposito">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahProdukDeposito">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -103,7 +102,6 @@
                         <tr>
                             <td>
                                 <img src="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-deposito" class="img-thumbnail">
-                                <?= $data->foto; ?>
                             </td>
 
                             <td class="project-actions text-right">

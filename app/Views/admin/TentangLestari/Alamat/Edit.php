@@ -13,7 +13,7 @@
                     <h3 class="card-title">Edit Alamat Kantor</h3>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditAlamat') . '/' . $tentang_alamat_kantor->id_alamat_kantor ?>" method="post">
+                    <form action="<?= base_url('EditAlamat') . '/' . $tentang_alamat_kantor->id_alamat_kantor ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Kabupaten/Kota</label>
                             <input type="text" name="kabupaten_kota" id="inputName" class="form-control" placeholder="Kabupaten/Kota" value="<?= $tentang_alamat_kantor->kabupaten_kota ?>">
