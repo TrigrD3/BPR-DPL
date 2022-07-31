@@ -31,8 +31,8 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
-                            <input type="text" name="namafoto" hidden value="<?= $produk_kredit->foto ?>">
-                            <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $produk_kredit->foto ?>" width="200px" height="200px" alt="produk-kredit" class="img-thumbnail">
+                            <input type="text" name="namafoto" hidden value="<?= $produk_kredit->foto ?>" required>
+                            <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $produk_kredit->foto ?>" width="20%" height="20%" alt="produk-kredit" class="img-thumbnail">
                             <input type="File" name="foto" id="inputClientCompany" class="form-control">
                         </div>
                         <div class="row">

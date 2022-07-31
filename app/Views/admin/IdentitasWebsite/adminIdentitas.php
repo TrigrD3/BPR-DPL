@@ -37,7 +37,7 @@
                             <label for="inputClientCompany">Logo</label>
                             <br>
                             <input type="text" name="namalogo" hidden value="<?= $IdentitasWebsite->logo ?>">
-                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="200px" height="200px" alt="logo-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="20%" height="20%" alt="logo-bank" class="img-thumbnail">
                             <a href="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" target="_blank"><?= $IdentitasWebsite->logo ?></a>
                             <input type="File" name="logo" id="logo" class="form-control" required>
                         </div>

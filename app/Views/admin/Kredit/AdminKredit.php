@@ -53,7 +53,7 @@
                                 <p><?= $data->deskripsi; ?></p>
                             </td>
                             <td class="project_progress">
-                                <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
 
                             </td>
                             <td class="project-actions text-right">
@@ -114,7 +114,7 @@
                     ?>
                         <tr>
                             <td>
-                                <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $data->foto; ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
 
                             </td>
                             <td class="project-actions text-right">

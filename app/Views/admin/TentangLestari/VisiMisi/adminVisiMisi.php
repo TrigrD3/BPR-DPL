@@ -41,10 +41,10 @@
                                 <?= $no; ?>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->visi; ?>
+                                <p><?= $data->visi; ?></p>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->misi; ?>
+                                <p><?= $data->misi; ?></p>
                             </td>
 
                             <td class="project-actions text-right">

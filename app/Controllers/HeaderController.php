@@ -64,14 +64,14 @@ class HeaderController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-        
-        if(!empty($fileName)){
+
+        if (!empty($fileName)) {
             $data = [
                 'foto' => $fileName,
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
             $dataBerkas->move('uploads/Header/Lelang', $fileName);
-        }else{
+        } else {
             $data = [
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
@@ -126,8 +126,8 @@ class HeaderController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-        
-        if(!empty($fileName)){
+
+        if (!empty($fileName)) {
             $data = [
                 'foto' => $fileName,
                 'judul' => $this->request->getPost('judul'),
@@ -135,7 +135,7 @@ class HeaderController extends BaseController
                 'deskripsi' => $this->request->getPost('editor1'),
             ];
             $dataBerkas->move('uploads/Header/Loker', $fileName);
-        }else{
+        } else {
             $data = [
                 'judul' => $this->request->getPost('judul'),
                 'link' => $this->request->getPost('link'),
@@ -202,12 +202,22 @@ class HeaderController extends BaseController
     }
     public function UpdatePAT($id)
     {
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'file' => $this->request->getPost('file'),
-            'tahun' => $this->request->getPost('tahun'),
-        ];
 
+        $dataBerkas = $this->request->getFile('file');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'tahun' => $this->request->getPost('tahun'),
+                'file' => $fileName,
+            ];
+            $dataBerkas->move('uploads/Header/PAT', $fileName);
+        } else {
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'tahun' => $this->request->getPost('tahun'),
+            ];
+        }
         $this->HeaderModel->update_pat($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
@@ -283,13 +293,13 @@ class HeaderController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
 
-        if(!empty($fileName)){
+        if (!empty($fileName)) {
             $data = [
                 'foto' => $fileName,
                 'deskripsi' => $this->request->getPost('deskripsi'),
             ];
             $dataBerkas->move('uploads/Header/Penghargaan', $fileName);
-        }else{
+        } else {
             $data = [
                 'deskripsi' => $this->request->getPost('deskripsi'),
             ];
@@ -371,11 +381,22 @@ class HeaderController extends BaseController
     }
     public function UpdatePublikasi($id)
     {
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'file' => $this->request->getPost('file'),
-            'tahun' => $this->request->getPost('tahun'),
-        ];
+
+        $dataBerkas = $this->request->getFile('file');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'tahun' => $this->request->getPost('tahun'),
+                'file' => $fileName,
+            ];
+            $dataBerkas->move('uploads/Header/Publikasi', $fileName);
+        } else {
+            $data = [
+                'nama' => $this->request->getPost('nama'),
+                'tahun' => $this->request->getPost('tahun'),
+            ];
+        }
 
         $this->HeaderModel->update_publikasi($id, $data);
 

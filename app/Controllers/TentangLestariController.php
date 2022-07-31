@@ -69,16 +69,16 @@ class TentangLestariController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-        if(!empty($fileName)){
-        $data = [
-            'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
-            'alamat' => $this->request->getPost('alamat'),
-            'nomor_telepon' => $this->request->getPost('nomor_telepon'),
-            'google_maps' => $this->request->getPost('google_maps'),
-            'foto' => $fileName,
-        ];
-        $dataBerkas->move('uploads/TentangLestari/Alamat', $fileName);
-        }else{
+        if (!empty($fileName)) {
+            $data = [
+                'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
+                'alamat' => $this->request->getPost('alamat'),
+                'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+                'google_maps' => $this->request->getPost('google_maps'),
+                'foto' => $fileName,
+            ];
+            $dataBerkas->move('uploads/TentangLestari/Alamat', $fileName);
+        } else {
             $data = [
                 'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
                 'alamat' => $this->request->getPost('alamat'),
@@ -86,7 +86,7 @@ class TentangLestariController extends BaseController
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
         }
-        
+
         $this->TentangLestariModel->update_alamat($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
@@ -172,9 +172,13 @@ class TentangLestariController extends BaseController
 
     public function UpdateStrukturOrganisasi($id)
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
+        $dataBerkas->move('uploads/TentangLestari/StrukturOrganisasi', $fileName);
 
         $this->TentangLestariModel->update_strukturorganisasi($id, $data);
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.

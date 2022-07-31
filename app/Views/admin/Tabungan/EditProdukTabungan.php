@@ -13,13 +13,13 @@
                     <h3 class="card-title">Edit Produk Tabungan</h3>
 
                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" enctype="multipart/form-data">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
                         </button>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditProdukTabungan') . '/' . $produk_tabungan->id_produk ?>" method="post">
+                    <form action="<?= base_url('EditProdukTabungan') . '/' . $produk_tabungan->id_produk ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
                             <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_tabungan->nama ?>" required>
@@ -32,7 +32,7 @@
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $produk_tabungan->foto ?>">
-                            <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" width="20%" height="20%" alt="produk-tabungan" class="img-thumbnail">
                             <a href="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $produk_tabungan->foto ?>" target="_blank"><?= $produk_tabungan->foto ?></a>
                             <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
