@@ -51,7 +51,7 @@
                                 <br />
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p> <?= $data->deskripsi; ?></p>
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">

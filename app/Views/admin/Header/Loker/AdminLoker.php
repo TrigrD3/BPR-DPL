@@ -44,7 +44,7 @@
                     ?>
                         <tr>
                             <td>
-                            <img src="<?= base_url('uploads/Header/Loker') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Header/Loker') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td>
                                 <a>
@@ -53,7 +53,7 @@
                                 <br />
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p><?= $data->deskripsi; ?></p>
                             </td>
                             <td class="deskripsi">
                                 <p><?= $data->link; ?></p>
