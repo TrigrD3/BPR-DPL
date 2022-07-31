@@ -22,7 +22,7 @@
                     <form action="<?= base_url('EditPublikasi') . '/' . $header_publikasi->id_publikasi ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
-                            <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_publikasi->file ?>" required>
+                            <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_publikasi->nama ?>" required>
                         </div>
                         <label for="inputName">Tahun</label>
                         <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" value="<?= $header_publikasi->tahun ?>" required>

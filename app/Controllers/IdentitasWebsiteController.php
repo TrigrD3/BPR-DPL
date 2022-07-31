@@ -31,18 +31,27 @@ class IdentitasWebsiteController extends BaseController
 
     public function update()
     {
-
         $dataBerkas = $this->request->getFile('logo');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'id_identitas' => $this->request->getVar('id_identitas'),
-                'whatsapp' => $this->request->getVar('whatsapp'),
-                'facebook' => $this->request->getVar('facebook'),
-                'instagram' => $this->request->getVar('instagram'),
-                'logo' => $fileName,
-            ];
-
+            if (is_file('uploads/IdentitasWebsite' . '/' . $this->request->getVar('namalogo'))) {
+                unlink('uploads/IdentitasWebsite' . '/' . $this->request->getVar('namalogo'));
+                $data = [
+                    'id_identitas' => $this->request->getVar('id_identitas'),
+                    'whatsapp' => $this->request->getVar('whatsapp'),
+                    'facebook' => $this->request->getVar('facebook'),
+                    'instagram' => $this->request->getVar('instagram'),
+                    'logo' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'id_identitas' => $this->request->getVar('id_identitas'),
+                    'whatsapp' => $this->request->getVar('whatsapp'),
+                    'facebook' => $this->request->getVar('facebook'),
+                    'instagram' => $this->request->getVar('instagram'),
+                    'logo' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/IdentitasWebsite/', $fileName);
         } else {
             $data = [
