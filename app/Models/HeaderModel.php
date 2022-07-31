@@ -28,9 +28,11 @@ class HeaderModel extends Model
                 ]
             ],
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
         ])) {
@@ -175,10 +177,12 @@ class HeaderModel extends Model
                     'required' => '{field} Harus diisi'
                 ]
             ],
-            'editor1' => [
-                'rules' => 'required',
+            'file' => [
+                'rules' => 'uploaded[file]|mime_in[file,docx/pdf]|max_size[foto,10000]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa docx/pdf',
+                    'max_size' => 'Ukuran File Maksimal 10 MB'
                 ]
             ],
         ])) {
@@ -292,10 +296,12 @@ class HeaderModel extends Model
                     'required' => '{field} Harus diisi'
                 ]
             ],
-            'editor1' => [
-                'rules' => 'required',
+            'file' => [
+                'rules' => 'uploaded[file]|mime_in[file,docx/pdf]|max_size[foto,10000]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa docx/pdf',
+                    'max_size' => 'Ukuran File Maksimal 10 MB'
                 ]
             ],
 
@@ -321,7 +327,7 @@ class HeaderModel extends Model
                     'required' => '{field} Harus diisi'
                 ]
             ],
-            'editor1' => [
+            'file' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Harus diisi'

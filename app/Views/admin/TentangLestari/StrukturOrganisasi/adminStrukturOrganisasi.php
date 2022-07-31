@@ -32,7 +32,7 @@
                         <tr>
                             <td>
                                 <a>
-                                    <?= $data->foto; ?>
+                                    <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi') . '/' . $data->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
                                 </a>
                                 <br />
                             </td>

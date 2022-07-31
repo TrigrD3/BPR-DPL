@@ -13,10 +13,12 @@
                     <h3 class="card-title">Edit Struktur Organisasi</h3>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditStrukturOrganisasi') . '/' . $tentang_strukturorganisasi->id_struktur_organisasi ?>" method="post">
+                    <form action="<?= base_url('EditStrukturOrganisasi') . '/' . $tentang_strukturorganisasi->id_struktur_organisasi ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $tentang_strukturorganisasi->foto ?>" required>
+                            <input type="text" name="namafoto" hidden value="<?= $tentang_strukturorganisasi->foto ?>">
+                            <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi') . '/' . $tentang_strukturorganisasi->foto ?>" width="200px" height="200px" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

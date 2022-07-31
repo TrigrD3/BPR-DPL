@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditPublikasi') . '/' . $header_publikasi->id_publikasi ?>" method="post">
+                    <form action="<?= base_url('EditPublikasi') . '/' . $header_publikasi->id_publikasi ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
                             <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_publikasi->file ?>" required>
@@ -37,7 +37,10 @@
                         </script>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih File</label>
-                            <input type="File" id="inputClientCompany" name="file" class="form-control" value="Deveint Inc" value="<?= $header_publikasi->file ?>">
+                            <br>
+                            <input type="text" name="namafile" hidden value="<?= $header_publikasi->file ?>">
+                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $header_publikasi->file ?>" target="_blank"><?= $header_publikasi->file ?></a>
+                            <input type="File" name="file" id="file" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

@@ -50,7 +50,7 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td>
-                                <?= $data->file; ?>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->file ?></a>
                             </td>
                             <td class="project_progress">
                                 <?= $data->tahun; ?>

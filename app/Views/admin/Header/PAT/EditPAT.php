@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post">
+                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
                             <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_pat->file ?>" required>
@@ -37,7 +37,10 @@
                         </script>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih File</label>
-                            <input type="File" id="inputClientCompany" name="file" class="form-control" value="Deveint Inc" value="<?= $header_pat->file ?>" required>
+                            <br>
+                            <input type="text" name="namafile" hidden value="<?= $header_pat->file ?>">
+                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $header_pat->file ?>" target="_blank"><?= $header_pat->file ?></a>
+                            <input type="File" name="file" id="file" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">
