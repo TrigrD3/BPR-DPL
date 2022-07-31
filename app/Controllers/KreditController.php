@@ -70,12 +70,17 @@ class KreditController extends BaseController
 
     public function AddKredit()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Kredit/ProdukKredit' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
             'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
-
+        $dataBerkas->move('uploads/Kredit/ProdukKredit', $fileName);
         $this->KreditModel->add_kredit($data);
 
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -107,16 +112,23 @@ class KreditController extends BaseController
 
     public function UpdateKredit($id)
     {
-
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-                'deskripsi' => $this->request->getVar('editor1'),
-                'foto' => $fileName,
-            ];
-
+            if (is_file('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'nama' => $this->request->getVar('nama'),
+                    'deskripsi' => $this->request->getVar('editor1'),
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'nama' => $this->request->getVar('nama'),
+                    'deskripsi' => $this->request->getVar('editor1'),
+                    'foto' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/Kredit/ProdukKredit', $fileName);
         } else {
             $data = [
@@ -161,6 +173,9 @@ class KreditController extends BaseController
         $data = $this->KreditModel->get_id_kredit($id);
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+        }
+        if (is_file('uploads/Kredit/ProdukKredit' . '/' . $data->foto)) {
+            unlink('uploads/Kredit/ProdukKredit' . '/' . $data->foto);
         }
         $this->KreditModel->delete_kredit($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
