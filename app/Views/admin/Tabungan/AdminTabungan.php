@@ -54,7 +54,7 @@
                                 <p> <?= $data->deskripsi; ?></p>
                             </td>
                             <td class="project_progress">
-                                <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukTabungan/$data->id_produk") ?>">

@@ -13,13 +13,13 @@
                     <h3 class="card-title">Edit Produk Tabungan</h3>
 
                     <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse" enctype="multipart/form-data">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
                         </button>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditProdukTabungan') . '/' . $produk_tabungan->id_produk ?>" method="post">
+                    <form action="<?= base_url('EditProdukTabungan') . '/' . $produk_tabungan->id_produk ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Nama</label>
                             <input type="text" name="nama" id="inputName" class="form-control" placeholder="Nama" value="<?= $produk_tabungan->nama ?>" required>

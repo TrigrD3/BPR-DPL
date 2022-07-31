@@ -108,11 +108,22 @@ class TabunganController extends BaseController
 
     public function UpdateTabungan($id)
     {
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'deskripsi' => $this->request->getPost('editor1'),
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'deskripsi' => $this->request->getVar('editor1'),
+                'foto' => $fileName,
+            ];
+
+            $dataBerkas->move('uploads/Tabungan/Produk', $fileName);
+        } else {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'deskripsi' => $this->request->getVar('editor1'),
+            ];
+        }
 
         $this->TabunganModel->update_tabungan($id, $data);
 
