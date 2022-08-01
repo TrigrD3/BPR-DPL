@@ -37,7 +37,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
     <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="BPR" height="60" width="60">
         </div>
 
         <!-- Navbar -->
@@ -63,7 +63,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
         <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
-                <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="Logo BPR" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Back to page</span>
             </a>
 

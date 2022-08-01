@@ -33,6 +33,24 @@ class HomeModel extends Model
         return $data;
     }
 
+    function get_rand_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(3, 0)->orderBy("RAND ()")->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
+    function get_news_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(4, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
+    function get_newes_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(1, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
     public function add_berita($data)
     {
         if (!$this->validate([

@@ -42,12 +42,19 @@ class HomeController extends BaseController
 
     public function AddBerita()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Home/Berita' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
             'judul' => $this->request->getPost('judul'),
             'tanggal' => $this->request->getPost('tanggal'),
             'isi_berita' => $this->request->getPost('editor1'),
         ];
+
+        $dataBerkas->move('uploads/Home/Berita', $fileName);
 
         $this->HomeModel->add_berita($data);
 
@@ -61,7 +68,6 @@ class HomeController extends BaseController
 
     public function EditBerita($id)
     {
-
         $dataAll = $this->HomeModel->get_id_berita($id);
         if (empty($dataAll)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Berita Tidak ditemukan !');
@@ -74,16 +80,25 @@ class HomeController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-        
-        if(!empty($fileName)){
-            $data = [
-                'foto' => $fileName,
-                'judul' => $this->request->getPost('judul'),
-                'tanggal' => $this->request->getPost('tanggal'),
-                'isi_berita' => $this->request->getPost('editor1'),
-            ];
+        if (!empty($fileName)) {
+            if (is_file('uploads/Home/Berita' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Home/Berita' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                    'judul' => $this->request->getPost('judul'),
+                    'tanggal' => $this->request->getPost('tanggal'),
+                    'isi_berita' => $this->request->getPost('editor1'),
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                    'judul' => $this->request->getPost('judul'),
+                    'tanggal' => $this->request->getPost('tanggal'),
+                    'isi_berita' => $this->request->getPost('editor1'),
+                ];
+            }
             $dataBerkas->move('uploads/Home/Berita', $fileName);
-        }else{
+        } else {
             $data = [
                 'judul' => $this->request->getPost('judul'),
                 'tanggal' => $this->request->getPost('tanggal'),
@@ -129,6 +144,15 @@ class HomeController extends BaseController
 
     public function AddIklan()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Home/Iklan/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
+        $data = [
+            'foto' => $fileName,
+        ];
+        $dataBerkas->move('uploads/Home/Iklan/', $fileName);
         $data = [
             'foto' => $this->request->getPost('foto'),
         ];
@@ -158,11 +182,20 @@ class HomeController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-        
-        $data = [
-            'foto' => $fileName,
-        ];
-        $dataBerkas->move('uploads/Home/Iklan/', $fileName);
+        if (!empty($fileName)) {
+            if (is_file('uploads/Home/Iklan/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Home/Iklan/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/Home/Iklan/', $fileName);
+        }
+
         $this->HomeModel->update_iklan($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
@@ -176,6 +209,9 @@ class HomeController extends BaseController
     public function DeleteIklan($id)
     {
         $data = $this->HomeModel->get_id_iklan($id);
+        if (is_file('uploads/Home/Iklan/' . $data->foto)) {
+            unlink('uploads/Home/Iklan/' . $data->foto);
+        }
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Iklan Tidak ditemukan !');
         }
@@ -209,5 +245,42 @@ class HomeController extends BaseController
             </button>
         </div>');
         return redirect()->to(base_url('AdminHome'));
+    }
+
+    // User
+    public function indexUser()
+    {
+        $data = [
+            'title' => 'Index | BANK LESTARI',
+            'css' => 'index',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['NewsBerita'] = $this->HomeModel->get_news_berita();
+        $data['NewesBerita'] = $this->HomeModel->get_newes_berita();
+        $data['HomeIklan'] = $this->HomeModel->get_all_iklan();
+        $data['HomeDeskripsiWebsite'] = $this->HomeModel->get_all_deskripsi_website();
+        echo view('pages/index', $data);
+    }
+
+    public function LihatBerita($id)
+    {
+        $data = [
+            'title' => 'Berita | BANK LESTARI',
+            'css' => 'index',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $dataAll = $this->HomeModel->get_id_berita($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Berita Tidak ditemukan !');
+        }
+        $data['berita'] = $dataAll;
+        $data['RandomBerita'] = $this->HomeModel->get_rand_berita();
+        echo view('pages/Berita', $data);
     }
 }

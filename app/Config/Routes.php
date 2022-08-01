@@ -36,7 +36,10 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // start of pages
-$routes->get('/', 'Pages::index');
+// Home
+$routes->get('/', 'HomeController::indexUser');
+$routes->get('/LihatBerita/(:num)', 'HomeController::LihatBerita/$1');
+
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
 $routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
 $routes->get('/Kredit', 'Pages::Kredit');
