@@ -41,6 +41,8 @@ class IdentitasWebsiteController extends BaseController
                     'whatsapp' => $this->request->getVar('whatsapp'),
                     'facebook' => $this->request->getVar('facebook'),
                     'instagram' => $this->request->getVar('instagram'),
+                    'whistleblowing' => $this->request->getVar('whistleblowing'),
+                    'pengaduan' => $this->request->getVar('pengaduan'),
                     'logo' => $fileName,
                 ];
             } else {
@@ -49,6 +51,8 @@ class IdentitasWebsiteController extends BaseController
                     'whatsapp' => $this->request->getVar('whatsapp'),
                     'facebook' => $this->request->getVar('facebook'),
                     'instagram' => $this->request->getVar('instagram'),
+                    'whistleblowing' => $this->request->getVar('whistleblowing'),
+                    'pengaduan' => $this->request->getVar('pengaduan'),
                     'logo' => $fileName,
                 ];
             }
@@ -59,6 +63,8 @@ class IdentitasWebsiteController extends BaseController
                 'whatsapp' => $this->request->getVar('whatsapp'),
                 'facebook' => $this->request->getVar('facebook'),
                 'instagram' => $this->request->getVar('instagram'),
+                'whistleblowing' => $this->request->getVar('whistleblowing'),
+                'pengaduan' => $this->request->getVar('pengaduan'),
             ];
         }
 

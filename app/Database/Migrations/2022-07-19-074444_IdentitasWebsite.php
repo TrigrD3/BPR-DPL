@@ -31,6 +31,14 @@ class IdentitasWebsite extends Migration
             'logo'       => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
+            ],
+            'whistleblowing'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ],
+            'pengaduan'       => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
             ]
             // 'slug VARCHAR(100) UNIQUE',
             // 'created_at DATETIME DEFAULT CURRENT_TIMESTAMP',
