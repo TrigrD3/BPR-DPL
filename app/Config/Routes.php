@@ -39,6 +39,7 @@ $routes->set404Override();
 // Home
 $routes->get('/', 'HomeController::indexUser');
 $routes->get('/LihatBerita/(:num)', 'HomeController::LihatBerita/$1');
+$routes->get('/PusatBerita', 'HomeController::PusatBerita');
 
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
 $routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
@@ -58,7 +59,6 @@ $routes->get('/StrukturOrganisasi', 'Pages::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
 $routes->get('/Profil', 'Pages::Profil');
 $routes->get('/Sejarah', 'Pages::Sejarah');
-$routes->get('/PusatBerita', 'Pages::PusatBerita');
 $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages
