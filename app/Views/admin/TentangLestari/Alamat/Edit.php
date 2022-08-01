@@ -32,7 +32,9 @@
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
-                            <input type="File" name="foto" id="inputClientCompany" class="form-control" value="<?= $tentang_alamat_kantor->foto ?>" required>
+                            <input type="text" name="namafoto" hidden value="<?= $tentang_alamat_kantor->foto ?>">
+                            <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $tentang_alamat_kantor->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

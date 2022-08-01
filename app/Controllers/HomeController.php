@@ -119,6 +119,9 @@ class HomeController extends BaseController
     public function DeleteBerita($id)
     {
         $data = $this->HomeModel->get_id_berita($id);
+        if (is_file('uploads/Home/Berita/' . $data->foto)) {
+            unlink('uploads/Home/Berita/' . $data->foto);
+        }
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Berita Tidak ditemukan !');
         }
@@ -153,9 +156,7 @@ class HomeController extends BaseController
             'foto' => $fileName,
         ];
         $dataBerkas->move('uploads/Home/Iklan/', $fileName);
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-        ];
+
 
         $this->HomeModel->add_iklan($data);
 

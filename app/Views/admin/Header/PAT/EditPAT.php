@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post" enctype="multipart/form-data" >
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
                             <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_pat->file ?>" required>

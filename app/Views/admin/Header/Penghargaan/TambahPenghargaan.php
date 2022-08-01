@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('/TambahPenghargaan') ?>" method="post">
+                    <form action="<?= base_url('/TambahPenghargaan') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Keterangan Penghargaan</label>
                             <input type="text" name="deskripsi" id="inputName" class="form-control" required>

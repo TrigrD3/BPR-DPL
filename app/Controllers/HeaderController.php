@@ -37,10 +37,16 @@ class HeaderController extends BaseController
     }
     public function AddLelang()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Header/Lelang' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
-            'foto' => $this->request->getPost('foto'),
             'google_maps' => $this->request->getPost('google_maps'),
+            'foto' => $fileName,
         ];
+        $dataBerkas->move('uploads/Header/Lelang', $fileName);
 
         $this->HeaderModel->add_lelang($data);
 
@@ -64,18 +70,29 @@ class HeaderController extends BaseController
     {
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-
         if (!empty($fileName)) {
+            if (is_file('uploads/Header/Lelang' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Header/Lelang' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                    'google_maps' => $this->request->getPost('google_maps'),
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                    'google_maps' => $this->request->getPost('google_maps'),
+                ];
+            }
+            $dataBerkas->move('uploads/Header/Lelang', $fileName);
+        } else {
             $data = [
                 'foto' => $fileName,
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
-            $dataBerkas->move('uploads/Header/Lelang', $fileName);
-        } else {
-            $data = [
-                'google_maps' => $this->request->getPost('google_maps'),
-            ];
         }
+
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
 
         $this->HeaderModel->update_lelang($id, $data);
 
@@ -90,7 +107,10 @@ class HeaderController extends BaseController
     {
         $data = $this->HeaderModel->get_id_lelang($id);
         if (empty($data)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Lelang Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+        }
+        if (is_file('uploads/Header/Lelang' . '/' . $data->foto)) {
+            unlink('uploads/Header/Lelang' . '/' . $data->foto);
         }
         $this->HeaderModel->delete_lelang($id);
         session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
@@ -100,7 +120,6 @@ class HeaderController extends BaseController
     </div>');
         return redirect()->to(base_url('adminLelang'));
     }
-
 
     public function index_loker()
     {
@@ -124,16 +143,26 @@ class HeaderController extends BaseController
 
     public function UpdateLoker($id)
     {
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-
         if (!empty($fileName)) {
-            $data = [
-                'foto' => $fileName,
-                'judul' => $this->request->getPost('judul'),
-                'link' => $this->request->getPost('link'),
-                'deskripsi' => $this->request->getPost('editor1'),
-            ];
+            if (is_file('uploads/Header/Loker' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Header/Loker' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                    'judul' => $this->request->getPost('judul'),
+                    'link' => $this->request->getPost('link'),
+                    'deskripsi' => $this->request->getPost('editor1'),
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                    'judul' => $this->request->getPost('judul'),
+                    'link' => $this->request->getPost('link'),
+                    'deskripsi' => $this->request->getPost('editor1'),
+                ];
+            }
             $dataBerkas->move('uploads/Header/Loker', $fileName);
         } else {
             $data = [
@@ -142,6 +171,7 @@ class HeaderController extends BaseController
                 'deskripsi' => $this->request->getPost('editor1'),
             ];
         }
+
 
         $this->HeaderModel->update_loker($id, $data);
 
@@ -176,11 +206,17 @@ class HeaderController extends BaseController
     }
     public function AddPAT()
     {
+        $dataBerkas = $this->request->getFile('file');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Header/PAT' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
             'nama' => $this->request->getPost('nama'),
             'tahun' => $this->request->getPost('tahun'),
-            'file' => $this->request->getPost('file'),
+            'file' => $fileName,
         ];
+        $dataBerkas->move('uploads/Header/PAT', $fileName);
 
         $this->HeaderModel->add_pat($data);
 
@@ -202,15 +238,23 @@ class HeaderController extends BaseController
     }
     public function UpdatePAT($id)
     {
-
         $dataBerkas = $this->request->getFile('file');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'nama' => $this->request->getPost('nama'),
-                'tahun' => $this->request->getPost('tahun'),
-                'file' => $fileName,
-            ];
+            if (is_file('uploads/Header/PAT' . '/' . $this->request->getVar('namafile'))) {
+                unlink('uploads/Header/PAT' . '/' . $this->request->getVar('namafile'));
+                $data = [
+                    'nama' => $this->request->getPost('nama'),
+                    'tahun' => $this->request->getPost('tahun'),
+                    'file' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'nama' => $this->request->getPost('nama'),
+                    'tahun' => $this->request->getPost('tahun'),
+                    'file' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/Header/PAT', $fileName);
         } else {
             $data = [
@@ -218,6 +262,7 @@ class HeaderController extends BaseController
                 'tahun' => $this->request->getPost('tahun'),
             ];
         }
+
         $this->HeaderModel->update_pat($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
@@ -233,8 +278,11 @@ class HeaderController extends BaseController
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('PAT Tidak ditemukan !');
         }
+        if (is_file('uploads/Header/PAT' . '/' . $data->file)) {
+            unlink('uploads/Header/PAT' . '/' . $data->file);
+        }
         $this->HeaderModel->delete_pat($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -265,10 +313,16 @@ class HeaderController extends BaseController
     }
     public function AddPenghargaan()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Header/Penghargaan' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
             'deskripsi' => $this->request->getPost('deskripsi'),
         ];
+        $dataBerkas->move('uploads/Header/Penghargaan', $fileName);
 
         $this->HeaderModel->add_penghargaan($data);
 
@@ -290,18 +344,26 @@ class HeaderController extends BaseController
     }
     public function UpdatePenghargaan($id)
     {
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
-
         if (!empty($fileName)) {
-            $data = [
-                'foto' => $fileName,
-                'deskripsi' => $this->request->getPost('deskripsi'),
-            ];
+            if (is_file('uploads/Header/Penghargaan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Header/Penghargaan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                    'deskripsi' => $this->request->getPost('deskripsi'),
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                    'deskripsi' => $this->request->getPost('deskripsi'),
+                ];
+            }
             $dataBerkas->move('uploads/Header/Penghargaan', $fileName);
         } else {
             $data = [
-                'deskripsi' => $this->request->getPost('deskripsi'),
+                'deskripsi' => $this->request->getVar('deskripsi'),
             ];
         }
 
@@ -319,6 +381,9 @@ class HeaderController extends BaseController
         $data = $this->HeaderModel->get_id_penghargaan($id);
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Penghargaan Tidak ditemukan !');
+        }
+        if (is_file('uploads/Header/Penghargaan' . '/' . $data->foto)) {
+            unlink('uploads/Header/Penghargaan' . '/' . $data->foto);
         }
         $this->HeaderModel->delete_penghargaan($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -355,11 +420,17 @@ class HeaderController extends BaseController
     }
     public function AddPublikasi()
     {
+        $dataBerkas = $this->request->getFile('file');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Header/Publikasi' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
             'nama' => $this->request->getPost('nama'),
             'tahun' => $this->request->getPost('tahun'),
-            'file' => $this->request->getPost('file'),
+            'file' => $fileName,
         ];
+        $dataBerkas->move('uploads/Header/Publikasi', $fileName);
 
         $this->HeaderModel->add_publikasi($data);
 
@@ -381,15 +452,23 @@ class HeaderController extends BaseController
     }
     public function UpdatePublikasi($id)
     {
-
         $dataBerkas = $this->request->getFile('file');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'nama' => $this->request->getPost('nama'),
-                'tahun' => $this->request->getPost('tahun'),
-                'file' => $fileName,
-            ];
+            if (is_file('uploads/Header/Publikasi' . '/' . $this->request->getVar('namafile'))) {
+                unlink('uploads/Header/Publikasi' . '/' . $this->request->getVar('namafile'));
+                $data = [
+                    'nama' => $this->request->getPost('nama'),
+                    'tahun' => $this->request->getPost('tahun'),
+                    'file' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'nama' => $this->request->getPost('nama'),
+                    'tahun' => $this->request->getPost('tahun'),
+                    'file' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/Header/Publikasi', $fileName);
         } else {
             $data = [
@@ -413,6 +492,9 @@ class HeaderController extends BaseController
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Publikasi Tidak ditemukan !');
         }
+        if (is_file('uploads/Header/Publikasi' . '/' . $data->file)) {
+            unlink('uploads/Header/Publikasi' . '/' . $data->file);
+        }
         $this->HeaderModel->delete_publikasi($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
@@ -420,29 +502,5 @@ class HeaderController extends BaseController
         </button>
     </div>');
         return redirect()->to(base_url('AdminPublikasi'));
-    }
-
-
-
-
-
-
-
-    public function update()
-    {
-        $data = [
-            'id_identitas' => $this->request->getVar('id_identitas'),
-            'whatsapp' => $this->request->getVar('whatsapp'),
-            'facebook' => $this->request->getVar('facebook'),
-            'instagram' => $this->request->getVar('instagram'),
-            'logo' => $this->request->getVar('logo'),
-        ];
-        $this->IdentitasWebsiteModel->update_IdentitasWebsite($data);
-        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
-            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>');
-        return redirect()->to(base_url('adminIdentitas'));
     }
 }

@@ -151,19 +151,26 @@ class KreditController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            // unlink('uploads/Kredit/IklanKredit' . '/' . $this->request->getVar('namafoto'));
-            $data = [
-                'foto' => $fileName,
-            ];
-
+            if (is_file('uploads/Kredit/IklanKredit' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Kredit/IklanKredit' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/Kredit/IklanKredit', $fileName);
-            $this->KreditModel->update_iklankredit($id, $data);
-            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
+        }
+
+        $this->KreditModel->update_iklankredit($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-        }
+
 
         return redirect()->to(base_url('AdminKredit'));
     }
