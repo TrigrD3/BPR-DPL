@@ -5,6 +5,15 @@ body {
   background-color: #f2f2f2;
 }
 
+.deskripsi p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show dasd*/
+  -webkit-box-orient: vertical;
+}
+
 .flex-container {
   display: flex;
   height: 87vh;
@@ -148,6 +157,7 @@ hr {
   padding-right: 18px;
   padding-left: 18px;
 }
+
 .stretch-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,16 +169,20 @@ hr {
   -ms-flex-pack: stretch;
   justify-content: stretch;
 }
+
 .grid-margin {
   margin-bottom: 2rem;
 }
+
 .position-relative {
   position: relative !important;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
+
 .content-wrapper .banner-content {
   position: absolute;
   padding: 40px 60px;

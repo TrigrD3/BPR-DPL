@@ -1,13 +1,13 @@
 <nav class="navbar-bottom sticky-top py-2" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">
     <div class="nav justify-content-center ">
-        <a class="nav-link text-white mx-3" href="/">Home</a>
+        <a class="nav-link text-white mx-3" href="<?= base_url('/') ?>">Home</a>
 
         <div class="dropdown">
             <a class="nav-link text-white mx-3 " href="Kredit" id="dropdownMenuLink" aria-expanded="false">Kredit</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="kreditModalKerja">Kredit Modal Kerja</a></li>
-                <li><a class="dropdown-item" href="kreditInvestasi">Kredit Investasi</a></li>
-                <li><a class="dropdown-item" href="KreditKonsumtif">Kredit Konsumtif</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('kreditModalKerja') ?>">Kredit Modal Kerja</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('kreditInvestasi') ?>">Kredit Investasi</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('KreditKonsumtif') ?>">Kredit Konsumtif</a></li>
             </ul>
         </div>
 
