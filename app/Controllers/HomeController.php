@@ -298,4 +298,5 @@ class HomeController extends BaseController
         $data['HomeBerita'] = $this->HomeModel->get_all_pusatberita();
         echo view('pages/PusatBerita', $data);
     }
+
 }

@@ -24,7 +24,7 @@
                             <label for="inputClientCompany">Gambar</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan_kredit->foto ?>" required>
-                            <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="50%" height="50%" alt="iklan-kredit" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
 

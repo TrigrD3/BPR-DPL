@@ -334,4 +334,47 @@ class TentangLestariController extends BaseController
     </div>');
         return redirect()->to(base_url('AdminSejarah'));
     }
+
+    //USER
+    public function Profil()
+    {
+        $data = [
+            'title' => 'Profil',
+            'css' => 'Profil',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
+        return view('pages/Profil', $data);
+    }
+
+    public function VisiMisi()
+    {
+        $data = [
+            'title' => 'VisiMisi',
+            'css' => 'VisiMisi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+
+        $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
+        return view('pages/VisiMisi', $data);
+    }
+    public function StrukturOrganisasi()
+    {
+        $data = [
+            'title' => 'StrukturOrganisasi',
+            'css' => 'StrukturOrganisasi',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
+        return view('pages/StrukturOrganisasi', $data);
+    }
 }

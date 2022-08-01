@@ -108,19 +108,6 @@ class Pages extends BaseController
         echo view('pages/Publikasi', $data);
     }
 
-    public function Loker()
-    {
-        $data = [
-            'title' => 'Loker | BANK LESTARI',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Loker', $data);
-    }
-
 
     public function Penghargaan()
     {
