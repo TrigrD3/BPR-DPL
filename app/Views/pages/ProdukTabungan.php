@@ -53,8 +53,14 @@
         </ul>
     </div>
 </div>
-<div class="d-grid gap-2 col-6 mx-auto">
-    <button type="button" class="btn btn-outline-info">PENGAJUAN TABUNGAN</button>
+<div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
+
+    <a href="">
+        <button type="button" class=" ">
+            <img src="images/b1.png" alt=""> Pengajuan Tabungan
+        </button>
+    </a>
+
 </div>
 
 <?= $this->endSection(); ?>
