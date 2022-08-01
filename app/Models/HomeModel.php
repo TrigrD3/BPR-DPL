@@ -27,6 +27,12 @@ class HomeModel extends Model
         return $data['HomeBerita'];
     }
 
+    function get_all_pusatberita()
+    {
+        $data['HomeBerita'] = $this->db->table('home_berita')->select('*')->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['HomeBerita'];
+    }
+
     public function get_id_berita($id)
     {
         $data = $this->db->table('home_berita')->select('*')->where('id_berita', $id)->get()->getRow();

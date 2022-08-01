@@ -283,4 +283,18 @@ class HomeController extends BaseController
         $data['RandomBerita'] = $this->HomeModel->get_rand_berita();
         echo view('pages/Berita', $data);
     }
+
+    public function PusatBerita()
+    {
+        $data = [
+            'title' => 'Pusat Berita | BANK LESTARI',
+            'css' => 'index',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['HomeBerita'] = $this->HomeModel->get_all_pusatberita();
+        echo view('pages/PusatBerita', $data);
+    }
 }
