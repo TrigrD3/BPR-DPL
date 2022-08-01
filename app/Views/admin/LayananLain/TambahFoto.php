@@ -13,7 +13,7 @@
                     <h3 class="card-title">Tambah Foto Layanan Lain</h3>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('/TambahFotoLL') ?>" method="post">
+                    <form action="<?= base_url('/TambahFotoLL') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>

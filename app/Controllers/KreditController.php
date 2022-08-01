@@ -192,6 +192,9 @@ class KreditController extends BaseController
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
+        if (is_file('uploads/Kredit/IklanKredit' . '/' . $data->foto)) {
+            unlink('uploads/Kredit/IklanKredit' . '/' . $data->foto);
+        }
         $this->KreditModel->delete_Iklankredit($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">

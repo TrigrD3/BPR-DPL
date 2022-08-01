@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('/TambahIklanTabungan') ?>" method="post">
+                    <form action="<?= base_url('/TambahIklanTabungan') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>

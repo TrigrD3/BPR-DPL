@@ -53,9 +53,16 @@ class TabunganController extends BaseController
 
     public function AddIklanTabungan()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Tabungan/Iklan' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
+
+        $dataBerkas->move('uploads/Tabungan/Iklan', $fileName);
 
         $this->TabunganModel->add_iklantabungan($data);
 
@@ -70,12 +77,18 @@ class TabunganController extends BaseController
 
     public function AddTabungan()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/Tabungan/Produk' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
             'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
 
+        $dataBerkas->move('uploads/Tabungan/Produk', $fileName);
         $this->TabunganModel->add_tabungan($data);
 
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -111,12 +124,20 @@ class TabunganController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-                'deskripsi' => $this->request->getVar('editor1'),
-                'foto' => $fileName,
-            ];
-
+            if (is_file('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'nama' => $this->request->getVar('nama'),
+                    'deskripsi' => $this->request->getVar('editor1'),
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'nama' => $this->request->getVar('nama'),
+                    'deskripsi' => $this->request->getVar('editor1'),
+                    'foto' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/Tabungan/Produk', $fileName);
         } else {
             $data = [
@@ -140,18 +161,25 @@ class TabunganController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'foto' => $fileName,
-            ];
+            if (is_file('uploads/Tabungan/Iklan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/Tabungan/Iklan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/Tabungan/Iklan', $fileName);
+        }
 
-            $dataBerkas->move('uploads/Tabungan/IklanTabungan', $fileName);
-            $this->TabunganModel->update_iklantabungan($id, $data);
-            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
+        $this->TabunganModel->update_iklantabungan($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
             <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-        }
         return redirect()->to(base_url('AdminTabungan'));
     }
 
@@ -159,7 +187,10 @@ class TabunganController extends BaseController
     {
         $data = $this->TabunganModel->get_id_tabungan($id);
         if (empty($data)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+        }
+        if (is_file('uploads/Tabungan/Produk' . '/' . $data->foto)) {
+            unlink('uploads/Tabungan/Produk' . '/' . $data->foto);
         }
         $this->TabunganModel->delete_tabungan($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -176,6 +207,9 @@ class TabunganController extends BaseController
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
         }
+        if (is_file('uploads/Tabungan/Produk' . '/' . $data->foto)) {
+            unlink('uploads/Tabungan/Produk' . '/' . $data->foto);
+        }
         $this->TabunganModel->delete_Iklantabungan($id);
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
@@ -188,8 +222,11 @@ class TabunganController extends BaseController
     public function EditFormTabungan($id)
     {
         $dataAll = $this->TabunganModel->get_id_form($id);
-        if (empty($dataAll)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Form Tabungan Tidak ditemukan !');
+        if (empty($data)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Tabungan Tidak ditemukan !');
+        }
+        if (is_file('uploads/Tabungan/Iklan' . '/' . $data->foto)) {
+            unlink('uploads/Tabungan/Iklan' . '/' . $data->foto);
         }
         $data['form_tabungan'] = $dataAll;
         echo view('admin/Tabungan/EditFormTabungan', $data);

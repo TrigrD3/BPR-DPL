@@ -13,9 +13,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -89,9 +87,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -105,7 +101,7 @@
                         <tr>
                             <td>
                                 <a>
-                                    <img src="<?= base_url('uploads/Tabungan/IklanTabungan') . '/' . $data->foto; ?>" width="10%" height="10%" alt="iklan-tabungan" class="img-thumbnail">
+                                    <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $data->foto; ?>" width="10%" height="10%" alt="iklan-tabungan" class="img-thumbnail">
                                 </a>
                                 <br />
                             </td>
@@ -128,13 +124,9 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Link Google Form</h3>
-
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
                 </button>
             </div>
         </div>

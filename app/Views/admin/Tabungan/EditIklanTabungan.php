@@ -24,8 +24,7 @@
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan_tabungan->foto ?>">
-                            <img src="<?= base_url('uploads/Tabungan/IklanTabungan') . '/' . $iklan_tabungan->foto ?>" width="20%" height="20%" alt="iklan-tabungan" class="img-thumbnail">
-                            <a href="<?= base_url('uploads/Tabungan/IklanTabungan') . '/' . $iklan_tabungan->foto ?>" target="_blank"><?= $iklan_tabungan->foto ?></a>
+                            <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $iklan_tabungan->foto ?>" width="20%" height="20%" alt="iklan-tabungan" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
                         <div class="row">
