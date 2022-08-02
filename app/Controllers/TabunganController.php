@@ -247,4 +247,40 @@ class TabunganController extends BaseController
         </div>');
         return redirect()->to(base_url('AdminTabungan'));
     }
+
+    //User
+    public function Tabungan()
+    {
+        $data = [
+            'title' => 'Tabungan',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TabunganProduk'] = $this->TabunganModel->get_all_produk();
+        $data['TabunganIklan'] = $this->TabunganModel->get_all_iklan();
+        $data['TabunganForm'] = $this->TabunganModel->get_all_form();
+        echo view('pages/Tabungan', $data);
+    }
+
+    public function LihatIklanTabungan($id)
+    {
+        $data = [
+            'title' => 'Tabungan',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $dataAll = $this->TabunganModel->get_id_tabungan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Tabungan Tidak ditemukan !');
+        }
+        $data['produk_tabungan'] = $dataAll;
+        $data['TabunganForm'] = $this->TabunganModel->get_all_form();
+        echo view('pages/ProdukTabungan', $data);
+    }
 }

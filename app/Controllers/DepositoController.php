@@ -247,4 +247,39 @@ class DepositoController extends BaseController
         </div>');
         return redirect()->to(base_url('AdminDeposito'));
     }
+
+    //User
+    public function Deposito()
+    {
+        $data = [
+            'title' => 'Deposito | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['DepositoProduk'] = $this->DepositoModel->get_all_produk();
+        $data['DepositoIklan'] = $this->DepositoModel->get_all_iklan();
+        echo view('pages/Deposito', $data);
+    }
+
+    public function LihatIklanDeposito($id)
+    {
+        $data = [
+            'title' => 'Deposito | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $dataAll = $this->DepositoModel->get_id_deposito($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Deposito Tidak ditemukan !');
+        }
+        $data['produk_deposito'] = $dataAll;
+        $data['DepositoForm'] = $this->DepositoModel->get_all_form();
+        echo view('pages/ProdukDeposito', $data);
+    }
 }

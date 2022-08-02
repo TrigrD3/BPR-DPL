@@ -236,4 +236,39 @@ class KreditController extends BaseController
         </div>');
         return redirect()->to(base_url('AdminKredit'));
     }
+
+    // User
+    public function Kredit()
+    {
+        $data = [
+            'title' => 'Kredit | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['KreditProduk'] = $this->KreditModel->get_all_produk();
+        $data['KreditIklan'] = $this->KreditModel->get_all_iklan();
+        echo view('pages/Kredit', $data);
+    }
+
+    public function LihatIklanKredit($id)
+    {
+        $data = [
+            'title' => 'Produk Kredit | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $dataAll = $this->KreditModel->get_id_kredit($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Kredit Tidak ditemukan !');
+        }
+        $data['KreditForm'] = $this->KreditModel->get_all_form();
+        $data['iklan_kredit'] = $dataAll;
+        echo view('pages/ProdukKredit', $data);
+    }
 }

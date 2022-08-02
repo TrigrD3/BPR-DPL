@@ -41,24 +41,33 @@ $routes->get('/', 'HomeController::indexUser');
 $routes->get('/LihatBerita/(:num)', 'HomeController::LihatBerita/$1');
 $routes->get('/PusatBerita', 'HomeController::PusatBerita');
 
+$routes->get('/Kredit', 'KreditController::Kredit');
+$routes->get('/LihatIklanKredit/(:num)', 'KreditController::LihatIklanKredit/$1');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
+
 $routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
-$routes->get('/Kredit', 'Pages::Kredit');
-$routes->get('/Deposito', 'Pages::Deposito');
+$routes->get('/Deposito', 'DepositoController::Deposito');
+$routes->get('/LihatIklanDeposito/(:num)', 'DepositoController::LihatIklanDeposito/$1');
+
+$routes->get('/Tabungan', 'TabunganController::Tabungan');
+$routes->get('/ProdukTabungan', 'TabunganController::ProdukTabungan');
+$routes->get('/LihatIklanTabungan/(:num)', 'TabunganController::LihatIklanTabungan/$1');
+
+$routes->get('/Sejarah', 'TentangLestariController::Sejarah');
+$routes->get('/Publikasi', 'HeaderController::Publikasi');
+$routes->get('/Publikasi/(:num)', 'HeaderController::TahunPublikasi/$1');
+
+$routes->get('/Lelang', 'HeaderController::Lelang');
+
 $routes->get('/KAP', 'HeaderController::KAP');
 $routes->get('/Loker', 'HeaderController::Loker');
-$routes->get('/Publikasi', 'Pages::Publikasi');
 $routes->get('/ProdukDeposito', 'Pages::ProdukDeposito');
 $routes->get('/ProdukKredit', 'Pages::ProdukKredit');
 $routes->get('/Penghargaan', 'HeaderController::Penghargaan');
-$routes->get('/Tabungan', 'Pages::Tabungan');
-$routes->get('/ProdukTabungan', 'Pages::ProdukTabungan');
-$routes->get('/Lelang', 'Pages::Lelang');
 $routes->get('/VisiMisi', 'TentangLestariController::VisiMisi');
 $routes->get('/StrukturOrganisasi', 'TentangLestariController::StrukturOrganisasi');
 $routes->get('/LayananLainnya', 'Pages::LayananLainnya');
 $routes->get('/Profil', 'TentangLestariController::Profil');
-$routes->get('/Sejarah', 'TentangLestariController::Sejarah');
 $routes->get('/Berita', 'Pages::Berita');
 $routes->get('/AlamatKantor', 'Pages::AlamatKantor');
 // end of pages

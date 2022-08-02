@@ -11,6 +11,11 @@ class HeaderModel extends Model
         $data['HeaderLelang'] = $this->db->table('header_lelang')->select('*')->get()->getResult();
         return $data['HeaderLelang'];
     }
+    function get_row_lelang()
+    {
+        $data['HeaderLelang'] = $this->db->table('header_lelang')->select('*')->get()->getRow();
+        return $data['HeaderLelang'];
+    }
     public function get_id_lelang($id)
     {
         $data = $this->db->table('header_lelang')->select('*')->where('id_lelang', $id)->get()->getRow();
@@ -126,6 +131,13 @@ class HeaderModel extends Model
         $data['HeaderPAT'] = $this->db->table('header_pat')->select('*')->get()->getResult();
         return $data['HeaderPAT'];
     }
+
+    function get_all_pat_tahun()
+    {
+        $data['HeaderPAT'] = $this->db->table('header_pat')->select('*')->orderBy('tahun', 'ASC')->get()->getResult();
+        return $data['HeaderPAT'];
+    }
+
     public function get_id_pat($id)
     {
         $data = $this->db->table('header_pat')->select('*')->where('id_pat', $id)->get()->getRow();
@@ -262,13 +274,6 @@ class HeaderModel extends Model
         $this->db->table('header_penghargaan')->select('*')->where('id_penghargaan', $id)->delete();
     }
 
-
-
-
-
-
-
-
     function get_all_publikasi()
     {
         $data['HeaderPublikasi'] = $this->db->table('header_publikasi')->select('*')->get()->getResult();
@@ -279,7 +284,21 @@ class HeaderModel extends Model
         $data = $this->db->table('header_publikasi')->select('*')->where('id_publikasi', $id)->get()->getRow();
         return $data;
     }
-
+    function get_all_tahun()
+    {
+        $data['tahun'] = $this->db->table('header_publikasi')->select('tahun')->distinct()->orderBy('tahun', 'DESC')->get()->getResult();
+        return $data['tahun'];
+    }
+    public function get_all_tahun_publikasi($id)
+    {
+        $data = $this->db->table('header_publikasi')->select('*')->where('tahun', $id)->get()->getResult();
+        return $data;
+    }
+    public function get_all_tahun_publikasi_jumlah($id)
+    {
+        $data = $this->db->table('header_publikasi')->selectCount('file', 'jumlah')->where('tahun', $id)->get()->getResult();
+        return $data;
+    }
     public function add_publikasi($data)
     {
         if (!$this->validate([

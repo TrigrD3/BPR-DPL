@@ -43,31 +43,9 @@ class Pages extends BaseController
         echo view('pages/SimulasiDeposito', $data);
     }
 
-    public function Kredit()
-    {
-        $data = [
-            'title' => 'Deposito | BANK LESTARI',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Kredit', $data);
-    }
 
-    public function Deposito()
-    {
-        $data = [
-            'title' => 'Deposito | BANK LESTARI',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Deposito', $data);
-    }
+
+    
 
     public function ProdukDeposito()
     {
@@ -94,20 +72,6 @@ class Pages extends BaseController
         ];
         echo view('pages/KAP', $data);
     }
-
-    public function Publikasi()
-    {
-        $data = [
-            'title' => 'Publikasi | BANK LESTARI',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Publikasi', $data);
-    }
-
 
     public function Penghargaan()
     {
@@ -186,31 +150,8 @@ class Pages extends BaseController
         ];
         echo view('pages/ProdukTabungan', $data);
     }
-    public function ProdukKredit()
-    {
-        $data = [
-            'title' => 'Produk Kredit',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/ProdukKredit', $data);
-    }
 
-    public function Lelang()
-    {
-        $data = [
-            'title' => 'Lelang',
-            'css' => 'Lelang',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Lelang', $data);
-    }
+    
 
     public function VisiMisi()
     {
@@ -263,18 +204,7 @@ class Pages extends BaseController
         ];
         echo view('pages/LayananLainnya', $data);
     }
-    public function Sejarah()
-    {
-        $data = [
-            'title' => 'Sejarah',
-            'css' => 'Sejarah',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/Sejarah', $data);
-    }
+    
     public function Admin()
     {
         $data = [

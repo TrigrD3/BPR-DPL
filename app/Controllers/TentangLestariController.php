@@ -377,4 +377,20 @@ class TentangLestariController extends BaseController
         $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
         return view('pages/StrukturOrganisasi', $data);
     }
+
+    // User
+    public function Sejarah()
+    {
+        $data = [
+            'title' => 'Sejarah',
+            'css' => 'Sejarah',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
+
+        echo view('pages/Sejarah', $data);
+    }
 }

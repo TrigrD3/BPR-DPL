@@ -9,36 +9,33 @@
             Pilih Tahun
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 48%;">
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
-            <li><a class="dropdown-item" href="#">Menu item</a></li>
+            <?php foreach ($tahun as $data) : ?>
+                <li><a class="dropdown-item" href="<?= base_url('Publikasi') . '/' . $data->tahun ?>"><?= $data->tahun ?></a></li>
+            <?php endforeach; ?>
         </ul>
     </div>
 
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5 pb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3" style="background: linear-gradient(253.61deg, #1D80F0 0%, #0D509D 100%);">Cari</button>
-    </div>
-
-    <div class="container p-5 pt-5 mw-48" style="background-color: #EFF8FC;">
-        <table class="table table-borderless">
-            <tr class="text-color">
-                <td rowspan="5">Report:</td>
-                <td>Publikasi November dan Desember 2022.pdf</td>
-            </tr>
-            <tr class="text-color">
-                <td>Publikasi November dan Desember 2022.pdf</td>
-            </tr>
-            <tr class="text-color">
-                <td>Publikasi November dan Desember 2022.pdf</td>
-            </tr>
-            <tr class="text-color">
-                <td>Publikasi November dan Desember 2022.pdf</td>
-            </tr>
-            <tr class="text-color">
-                <td>Publikasi November dan Desember 2022.pdf</td>
-            </tr>
-        </table>
-    </div>
+    <?php
+    if (!empty($file)) {
+    ?>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5 pb-5"></div>
+        <div class="container p-5 pt-5 mw-48" style="background-color: #EFF8FC;">
+            <table class="table table-borderless">
+                <tr class="text-color">
+                    <td rowspan="<?= $jumlah[0]->jumlah + 1; ?>">Report:</td>
+                    <td></td>
+                </tr>
+                <?php foreach ($file as $data) : ?>
+                    <tr class="text-color">
+                        <td>
+                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    <?php
+    } ?>
 </div>
 </div>
 <?= $this->endSection(); ?>
