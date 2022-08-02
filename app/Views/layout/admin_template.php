@@ -100,7 +100,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
-                                    Home
+                                    Home & Berita
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -108,7 +108,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminHome') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Home</p>
+                                        <p>Home & Berita</p>
                                     </a>
                                 </li>
                             </ul>
