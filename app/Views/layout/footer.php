@@ -6,6 +6,7 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
 ?>
 <!-- Optional JavaScript; choose one of the two! -->
 <!-- Remove the container if you want to extend the Footer to full width. -->
+
 <div class="justify-content-center"><br>
     <div class="text-center p-1" style="background-color:rgba(23, 105, 199, 1);">
     </div>
@@ -84,6 +85,8 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
             <a style="color:#ffffff;">&copy;2022 PT Bank Danapermata Lestari</a>
         </div>
         <!-- Copyright -->
+        
     </footer>
+    
 
 </div>

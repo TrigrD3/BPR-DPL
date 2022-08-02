@@ -19,7 +19,7 @@
                     </h2>
                     <p><?= $data->deskripsi ?></p>
 
-                    <a href="<?= $data->link ?>"><img src="<?= base_url('/assets/img/form-loker.png'); ?>" class="img-fluid"></a>
+                    <a href="<?= $data->link ?>"><img src="<?= base_url('/assets/img/form-loker.png'); ?>" class="img-fluid form-transition"></a>
                 </div>
             </div>
         </div>

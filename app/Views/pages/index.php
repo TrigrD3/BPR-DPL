@@ -52,7 +52,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <a href="<?= base_url("/Kredit") ?>">
-                        <div class="card card-layanan bg-dark text-dark">
+                        <div class="card card-layanan bg-dark text-dark border-0">
                         <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
                         <div class="card-img-overlay card-heading">
                             <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
@@ -66,7 +66,7 @@
 
                 <div class="col">
                     <a href="<?= base_url("/Deposito") ?>">
-                    <div class="card card-layanan bg-dark text-dark">
+                    <div class="card card-layanan bg-dark text-dark border-0">
                         <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
                         <div class="card-img-overlay card-heading">
                             <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col">
                     <a href="<?= base_url("/Tabungan") ?>">
-                    <div class="card card-layanan bg-dark text-dark">
+                    <div class="card card-layanan bg-dark text-dark border-0">
                         <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
                         <div class="card-img-overlay card-heading">
                             <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>

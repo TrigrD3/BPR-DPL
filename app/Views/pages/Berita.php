@@ -13,9 +13,9 @@
     <div>
         <span><?= $berita->tanggal ?></span>
         <p class="h1"><?= $berita->judul ?></p>
-        <div class="text-center">
-            <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" class="img-fluid" alt="GambarBerita">
-        </div>
+
+            <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="1116px" class="img-fluid" alt="GambarBerita">
+
         <p class="text-wrap my-3" style="text-align: justify;">
             <?= $berita->isi_berita ?>
         </p>
@@ -27,17 +27,17 @@
             foreach ($RandomBerita as $data) :
             ?>
 
-                <div class="my-3">
-                    <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
-                        <div class="card col-auto">
-                            <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="200" alt="Card image cap">
-                            <div class="card-img-overlay deskripsi">
-                                <h5 class="card-title info-box"><?= $data->judul; ?></h5>
-                                <p class="info-box"><?= $data->isi_berita; ?></p>
+                <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
+                        <div class="card card-layanan bg-dark border-0 mb-1">
+                        <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="200" alt="Card image cap">
+                        <div class="card-img-overlay card-heading">
+                            <h5 class="card-title "><?= $data->judul; ?></h5>
+                            <div class="card-img-detail">
+                                <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->judul; ?></p>
                             </div>
                         </div>
+                        </div>
                     </a>
-                </div>
             <?php endforeach; ?>
         </div>
     </div>

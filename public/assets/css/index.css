@@ -5,15 +5,6 @@ body {
   background-color: #f2f2f2;
 }
 
-.deskripsi p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  /* number of lines to show dasd*/
-  -webkit-box-orient: vertical;
-}
-
 .title {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -170,49 +161,6 @@ hr {
   padding-right: 18px;
   padding-left: 18px;
 } */
-
-.card-layanan {
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-  cursor: pointer;
-}
-
-.card-layanan:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-}
-
-.card-heading h5 {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.card-heading:hover h5 {
-  opacity: 0;
-}
-
-.card-img-overlay p {
-  opacity: 0;
-  transition: 0.5s;
-  text-align: center;
-}
-
-.card-img-overlay:hover p {
-  opacity: 1;
-  text-align: center;
-  color: white;
-}
-
-.card-layanan img {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.card-layanan:hover img {
-  opacity: 0.25;
-}
 
 .img-fit {
   object-fit: cover;
