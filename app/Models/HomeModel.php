@@ -29,7 +29,7 @@ class HomeModel extends Model
 
     function get_all_pusatberita()
     {
-        $data['HomeBerita'] = $this->db->table('home_berita')->select('*')->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        $data['HomeBerita'] = $this->db->table('home_berita')->select('*')->where('DATE(`tanggal`) <=', 'DATE(NOW())', false)->orderBy('tanggal', 'desc')->get()->getResult();
         return $data['HomeBerita'];
     }
 
@@ -47,13 +47,13 @@ class HomeModel extends Model
 
     function get_news_berita()
     {
-        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(4, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(4, 0)->where('DATE(`tanggal`) <=', 'DATE(NOW())', false)->orderBy('tanggal', 'desc')->get()->getResult();
         return $data['RandomBerita'];
     }
 
     function get_newes_berita()
     {
-        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(1, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(1, 0)->where('DATE(`tanggal`) <=', 'DATE(NOW())', false)->orderBy('tanggal', 'desc')->get()->getResult();
         return $data['RandomBerita'];
     }
 

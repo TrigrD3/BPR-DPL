@@ -14,6 +14,19 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show dasd*/
+  -webkit-box-orient: vertical;
+}
+
+.bg-gradient-bpr {
+  background-image: linear-gradient(to right, #0d509d, #1769c6);
+}
+
 .flex-container {
   display: flex;
   height: 87vh;
@@ -174,20 +187,40 @@ hr {
   margin-bottom: 2rem;
 }
 
-.position-relative {
-  position: relative !important;
-}
-
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
 
+.card-title {
+  -webkit-text-stroke: 0.2px black;
+}
+
+a {
+  text-decoration: none;
+  color: white !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
 .content-wrapper .banner-content {
   position: absolute;
-  padding: 40px 60px;
+  padding: 40px 20px;
   left: 0px;
   bottom: 0px;
   color: #ffffff;
-  text-overflow: ellipsis;
 }

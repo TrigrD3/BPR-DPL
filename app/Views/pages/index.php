@@ -17,11 +17,11 @@
                 if ($no == 0) {
             ?>
                     <div class="carousel-item active">
-                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" class="d-block w-100" alt="...">
+                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" height="450px" class="d-block w-100" alt="...">
                     </div>
                 <?php } else { ?>
                     <div class="carousel-item">
-                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" class="d-block w-100" alt="...">
+                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" height="450px"class="d-block w-100" alt="...">
                     </div>
             <?php }
                 $no++;
@@ -52,59 +52,41 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <a href="<?= base_url("/Kredit") ?>">
-                        <div class="card shadow-sm">
-
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?= base_url('uploads/Home/Berita') ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Kredit</title>
-
-                            </img>
-
-                            <div class="card-body">
-                                <p class="card-text deskripsi">Kredit</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                </div>
-                            </div>
+                        <div class="card bg-dark text-dark">
+                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title position-absolute bottom-0 start-50 translate-middle-x">Kredit</h5>
+                        </div>
                         </div>
                     </a>
                 </div>
 
                 <div class="col">
                     <a href="<?= base_url("/Deposito") ?>">
-                        <div class="card shadow-sm">
-
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?= base_url('uploads/Home/Berita') ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Deposito</title>
-
-                            </img>
-
-                            <div class="card-body">
-                                <p class="card-text deskripsi">Deposito</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                </div>
-                            </div>
+                    <div class="card bg-dark text-dark">
+                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title position-absolute bottom-0 start-50 translate-middle-x">Kredit</h5>
+                        </div>
                         </div>
                     </a>
                 </div>
                 <div class="col">
                     <a href="<?= base_url("/Tabungan") ?>">
-                        <div class="card shadow-sm">
-
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="<?= base_url('uploads/Home/Berita') ?>" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Tabungan</title>
-
-                            </img>
-
-                            <div class="card-body">
-                                <p class="card-text deskripsi">Tabungan</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                </div>
-                            </div>
+                    <div class="card bg-dark text-dark">
+                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title position-absolute bottom-0 start-50 translate-middle-x">Kredit</h5>
+                        </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    
+    <section class="berita-home">
     <div class="container-scroller">
         <div class="main-panel">
             <!-- partial -->
@@ -112,71 +94,73 @@
             <div class="content-wrapper">
                 <div class="container">
                     <div class="row" data-aos="fade-up">
-                        <div class="col-xl-8 stretch-card grid-margin">
+                        <div class="col-xl-8 grid-margin">
                             <?php
                             foreach ($NewesBerita as $data) :
                             ?>
-                                <div class="position-relative">
-                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" alt="banner" class="img-fluid" />
-                                    <div class="banner-content">
-                                        <div class="badge badge-danger fs-12 font-weight-bold mb-3">
-
-                                        </div>
-                                        <h1 class="mb-0"><?= $data->judul ?></h1>
-                                        <h1 class="mb-2">
-                                            <!-- <= $data->isi_berita ?> -->
-                                        </h1>
-                                        <div class="fs-12">
-
-                                        </div>
-                                    </div>
+                                <div class="card bg-dark text-white">
+                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="card-img" alt="...">
+                                <div class="card-img-overlay">
+                                    <a href="">
+                                    <h5 class="card-title fs-3"><?= $data->judul ?></h5>
+                                    </a>
+                                </div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
 
                         <div class="col-xl-4 stretch-card grid-margin">
-                            <div class="card  text-white" style="background-image: linear-gradient(to right, #0d509d, #1769c6); color: white;">
-                                <div class="card-body">
+                            <div class="card  text-white bg-gradient-bpr">
+                                <div class="card-body ">
                                     <h2>Latest news</h2>
-                                    <a href="<?= base_url('PusatBerita') ?>">Lainnya</a>
+                                    <a href="<?= base_url('PusatBerita') ?>" class="end-0">Berita Lainnya</a>
                                     <?php $no = 1;
                                     foreach ($NewsBerita as $data) :
                                         if ($no == 2) {
                                     ?>
-                                            <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between">
-                                                <div class="pr-3">
-                                                    <h5><?= $data->judul ?></h5>
-                                                    <div class="fs-12">
-                                                    </div>
-                                                </div>
-                                                <div class="rotate-img">
-                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" alt="thumb" class="img-fluid img-lg" />
-                                                </div>
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
                                             </div>
+                                            <div class="col-md-8">
+                                            <div class="card-body">
+                                                <a href="">
+                                                    <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                </a>
+                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
+                                            </div>
+                                            </div>
+                                        </div>
                                         <?php
                                         } elseif ($no == 3) { ?>
-                                            <div class="d-flex border-bottom-blue pb-4 pt-4 align-items-center justify-content-between">
-                                                <div class="pr-3">
-                                                    <h5><?= $data->judul ?></h5>
-                                                    <div class="fs-12">
-                                                    </div>
-                                                </div>
-                                                <div class="rotate-img">
-                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" alt="thumb" class="img-fluid img-lg" />
-                                                </div>
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
                                             </div>
+                                            <div class="col-md-8">
+                                            <div class="card-body">
+                                                <a href="">
+                                                    <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                </a>
+                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
+                                            </div>
+                                            </div>
+                                        </div>
                                         <?php
                                         } elseif ($no == 4) { ?>
-                                            <div class="d-flex pt-4 align-items-center justify-content-between">
-                                                <div class="pr-3">
-                                                    <h5><?= $data->judul ?></h5>
-                                                    <div class="fs-12">
-                                                    </div>
-                                                </div>
-                                                <div class="rotate-img">
-                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" alt="thumb" class="img-fluid img-lg" />
-                                                </div>
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
                                             </div>
+                                            <div class="col-md-8">
+                                            <div class="card-body">
+                                                <a href="">
+                                                    <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                </a>
+                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
+                                            </div>
+                                            </div>
+                                        </div>
                                     <?php }
                                         $no++;
                                     endforeach; ?>
@@ -188,7 +172,8 @@
             </div>
         </div>
     </div>
-</div>
+    </section>
+
 
 
 
