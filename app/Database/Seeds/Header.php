@@ -54,7 +54,7 @@ class Header extends Seeder
                 'foto'  => 'loker.jpg',
                 'judul'  => 'Loker',
                 'deskripsi' => 'dibuka lowongan kerja',
-                'link' => 'https://www.google.com'
+                'link' => 'https://forms.gle/H6CZQ2Zxen1ZfXaHA'
             ]
         ];
 

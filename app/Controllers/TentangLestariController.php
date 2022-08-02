@@ -39,13 +39,19 @@ class TentangLestariController extends BaseController
     }
     public function AddAlamat()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/TentangLestari/Alamat' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
             'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
             'alamat' => $this->request->getPost('alamat'),
             'nomor_telepon' => $this->request->getPost('nomor_telepon'),
             'google_maps' => $this->request->getPost('google_maps'),
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
+        $dataBerkas->move('uploads/TentangLestari/Alamat', $fileName);
 
         $this->TentangLestariModel->add_alamat($data);
 
@@ -67,13 +73,38 @@ class TentangLestariController extends BaseController
     }
     public function UpdateAlamat($id)
     {
-        $data = [
-            'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
-            'alamat' => $this->request->getPost('alamat'),
-            'nomor_telepon' => $this->request->getPost('nomor_telepon'),
-            'google_maps' => $this->request->getPost('google_maps'),
-            'foto' => $this->request->getPost('foto'),
-        ];
+
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/Alamat' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/Alamat' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
+                    'alamat' => $this->request->getPost('alamat'),
+                    'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+                    'google_maps' => $this->request->getPost('google_maps'),
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
+                    'alamat' => $this->request->getPost('alamat'),
+                    'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+                    'google_maps' => $this->request->getPost('google_maps'),
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/Alamat', $fileName);
+        } else {
+            $data = [
+                'kabupaten_kota' => $this->request->getPost('kabupaten_kota'),
+                'alamat' => $this->request->getPost('alamat'),
+                'nomor_telepon' => $this->request->getPost('nomor_telepon'),
+                'google_maps' => $this->request->getPost('google_maps'),
+            ];
+        }
+
 
         $this->TentangLestariModel->update_alamat($id, $data);
 
@@ -90,13 +121,17 @@ class TentangLestariController extends BaseController
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Alamat Tidak ditemukan !');
         }
+        if (is_file('uploads/TentangLestari/Alamat' . '/' . $data->foto)) {
+            unlink('uploads/TentangLestari/Alamat' . '/' . $data->foto);
+        }
         $this->TentangLestariModel->delete_alamat($id);
-        session()->setFlashdata('message', 'Hapus Alamat Berhasil');
+        $this->session->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminAlamat'));
     }
-
-
-
 
     public function index_visi_misi()
     {
@@ -160,9 +195,21 @@ class TentangLestariController extends BaseController
 
     public function UpdateStrukturOrganisasi($id)
     {
-        $data = [
-            'foto' => $this->request->getPost('foto'),
-        ];
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/StrukturOrganisasi' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/StrukturOrganisasi' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/StrukturOrganisasi', $fileName);
+        }
 
         $this->TentangLestariModel->update_strukturorganisasi($id, $data);
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.

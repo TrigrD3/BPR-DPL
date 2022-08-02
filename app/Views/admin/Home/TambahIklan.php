@@ -15,23 +15,23 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('/TambahIklan') ?>" method="post">
+                    <form action="<?= base_url('/TambahIklan') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="inputName">Foto Iklan</label>
-                            <input type="file" id="inputName" name="foto" class="form-control" value="AdminLTE">
+                            <input type="file" id="inputName" name="foto" class="form-control" required>
                         </div>
                         <div class="row">
-                        <div class="col-1">
+                            <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
+                            </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                            
+
                     </form>
                 </div>
                 <!-- /.card-body -->

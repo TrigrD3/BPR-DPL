@@ -38,7 +38,7 @@ $(document).ready(function () {
   });
 
   function init() {
-    $('aside').hide();
+    $('.tableHasil').hide();
   }
 
   function hitung() {

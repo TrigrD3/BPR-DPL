@@ -38,7 +38,7 @@
                                 <?= $no; ?>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p><?= $data->deskripsi; ?></p>
                                 <br />
                             </td>
 
@@ -58,7 +58,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahDeskripsiLL">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahDeskripsiLL">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -101,7 +101,7 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
                                 <br />
                             </td>
                             <td>
@@ -123,7 +123,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahFotoLL">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahFotoLL">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

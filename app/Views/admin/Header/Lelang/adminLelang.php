@@ -40,11 +40,10 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
-                                <br />
+                                <img src="<?= base_url('uploads/Header/Lelang') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             </td>
-                            <td>
-                                <?= $data->google_maps; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->google_maps; ?></p>
                             </td>
 
                             <td class="project-actions text-right">
@@ -63,7 +62,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahLelang">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahLelang">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

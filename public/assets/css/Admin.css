@@ -1,6 +1,7 @@
 .deskripsi p {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 400px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show dasd*/
+  -webkit-box-orient: vertical;
 }

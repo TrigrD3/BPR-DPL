@@ -19,6 +19,10 @@
             </div>
         </div>
         <div class="card-body p-0">
+            <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahBerita">
+                <i class="fas fa-plus-circle"></i>
+                Tambah
+            </a>
             <table class="table table-striped projects">
                 <thead>
                     <tr>
@@ -50,7 +54,7 @@
                                 <?= $no ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td>
                                 <?= $data->judul; ?>
@@ -59,7 +63,7 @@
                                 <?= $data->tanggal; ?>
                             </td>
                             <td class="project_progress deskripsi">
-                                <?= $data->isi_berita; ?>
+                                <p><?= $data->isi_berita; ?></p>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditBerita/$data->id_berita") ?>">
@@ -77,14 +81,11 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahBerita">
-                    <i class="fas fa-plus-circle"></i>
-                    Tambah
-                </a>
             </table>
         </div>
         <!-- /.card-body -->
     </div>
+
     <!-- /.card -->
     <div class="card">
         <div class="card-header">
@@ -122,7 +123,7 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                                <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             </td>
 
                             <td class="project-actions text-right">
@@ -141,7 +142,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahIklan">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahIklan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -206,5 +207,7 @@
         <!-- /.card-body -->
 
     </div>
+
+
 </section>
 <?= $this->endSection(''); ?>

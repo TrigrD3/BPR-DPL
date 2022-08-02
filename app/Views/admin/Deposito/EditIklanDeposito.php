@@ -23,9 +23,8 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
-                            <input type="text" name="namafoto" hidden value="<?= $iklan_deposito->foto ?>">
-                            <img src="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $iklan_deposito->foto ?>" width="200px" height="200px" alt="iklan-deposito" class="img-thumbnail">
-                            <a href="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $iklan_deposito->foto ?>" target="_blank"><?= $iklan_deposito->foto ?></a>
+                            <input type="text" name="namafoto" hidden value="<?= $iklan_deposito->foto ?>" required>
+                            <img src="<?= base_url('uploads/Deposito/IklanDeposito') . '/' . $iklan_deposito->foto ?>" width="20%" height="20%" alt="iklan-deposito" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">

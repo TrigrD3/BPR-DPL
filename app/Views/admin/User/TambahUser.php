@@ -22,15 +22,15 @@
                     <form action="<?= base_url('/TambahUser') ?>" method="post">
                         <div class="form-group">
                             <label for="inputClientCompany">Nama Lengkap</label>
-                            <input type="text" id="inputClientCompany" name="nama" class="form-control">
+                            <input type="text" id="inputClientCompany" name="nama" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Username</label>
-                            <input type="text" id="inputClientCompany" name="username" class="form-control">
+                            <input type="text" id="inputClientCompany" name="username" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Password</label>
-                            <input type="text" id="inputClientCompany" name="password" class="form-control">
+                            <input type="text" id="inputClientCompany" name="password" class="form-control" required>
                         </div>
                         <div class="row">
                             <div class="col-12">

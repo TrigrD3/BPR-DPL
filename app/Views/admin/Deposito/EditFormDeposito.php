@@ -22,7 +22,7 @@
                     <form action="<?= base_url('EditFormDeposito') . '/' . $form_deposito->id_form ?>" method="post">
                         <div class="form-group">
                             <label for="inputName">Link G-Form</label>
-                            <input type="text" name="g_form" id="inputName" class="form-control" placeholder="Nama" value="<?= $form_deposito->g_form ?>">
+                            <input type="text" name="g_form" id="inputName" class="form-control" placeholder="Nama" value="<?= $form_deposito->g_form ?>" required>
                         </div>
                         <div class="row">
                             <div class="col-1">

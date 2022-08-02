@@ -40,11 +40,11 @@
                             <td>
                                 <?= $no; ?>
                             </td>
-                            <td>
-                                <?= $data->visi; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->visi; ?></p>
                             </td>
-                            <td>
-                                <?= $data->misi; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->misi; ?></p>
                             </td>
 
                             <td class="project-actions text-right">

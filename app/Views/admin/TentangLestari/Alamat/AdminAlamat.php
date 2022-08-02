@@ -11,9 +11,6 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
             </div>
         </div>
         <div class="card-body p-0">
@@ -52,16 +49,16 @@
                                 <?= $data->kabupaten_kota; ?>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->alamat; ?>
+                                <p><?= $data->alamat; ?></p>
                             </td>
                             <td>
                                 <?= $data->nomor_telepon; ?>
                             </td>
-                            <td>
-                                <?= $data->google_maps; ?>
+                            <td class="deskripsi">
+                                <p><?= $data->google_maps; ?></p>
                             </td>
                             <td>
-                                <?= $data->foto; ?>
+                                <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditAlamat/$data->id_alamat_kantor") ?>">
@@ -79,7 +76,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahAlamat">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahAlamat">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

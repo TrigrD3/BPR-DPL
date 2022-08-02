@@ -27,19 +27,45 @@ class HomeModel extends Model
         return $data['HomeBerita'];
     }
 
+    function get_all_pusatberita()
+    {
+        $data['HomeBerita'] = $this->db->table('home_berita')->select('*')->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['HomeBerita'];
+    }
+
     public function get_id_berita($id)
     {
         $data = $this->db->table('home_berita')->select('*')->where('id_berita', $id)->get()->getRow();
         return $data;
     }
 
+    function get_rand_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(3, 0)->orderBy("RAND ()")->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
+    function get_news_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(4, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
+    function get_newes_berita()
+    {
+        $data['RandomBerita'] = $this->db->table('home_berita')->select('*')->limit(1, 0)->where('DATE(`tanggal`) >=', 'DATE(NOW())', false)->orderBy('tanggal', 'asc')->get()->getResult();
+        return $data['RandomBerita'];
+    }
+
     public function add_berita($data)
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
             'judul' => [
@@ -73,9 +99,11 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
             'judul' => [
@@ -127,9 +155,11 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
         ])) {
@@ -144,9 +174,11 @@ class HomeModel extends Model
     {
         if (!$this->validate([
             'foto' => [
-                'rules' => 'required',
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
-                    'required' => '{field} Harus diisi'
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
 

@@ -19,13 +19,13 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post">
+                    <form action="<?= base_url('EditPAT') . '/' . $header_pat->id_pat ?>" method="post" enctype="multipart/form-data" >
                         <div class="form-group">
                             <label for="inputName">Nama File</label>
-                            <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_pat->file ?>">
+                            <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_pat->file ?>" required>
                         </div>
                         <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" value="<?= $header_pat->tahun ?>">
+                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" value="<?= $header_pat->tahun ?>" required>
 
                         <script>
                             $("#datepicker").datepicker({
@@ -37,24 +37,27 @@
                         </script>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih File</label>
-                            <input type="File" id="inputClientCompany" name="file" class="form-control" value="Deveint Inc" value="<?= $header_pat->file ?>">
+                            <br>
+                            <input type="text" name="namafile" hidden value="<?= $header_pat->file ?>">
+                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $header_pat->file ?>" target="_blank"><?= $header_pat->file ?></a>
+                            <input type="File" name="file" id="file" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
                             </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
-                <div class="row">
+                </form>
+            </div>
+            <!-- /.card-body -->
+            <div class="row">
             </div>
             <!-- /.card -->
         </div>

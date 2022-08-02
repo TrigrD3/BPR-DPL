@@ -6,7 +6,7 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit Berita</h3>
+                    <h3 class="card-title">Edit Iklan</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -15,30 +15,32 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post">
+                    <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputName">Foto Iklan</label>
-                            <br><?= $iklan->foto ?>
-                            <input type="file" id="inputName" name="foto" class="form-control">
+                            <label for="inputClientCompany">Pilih Foto</label>
+                            <br>
+                            <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>" required>
+                            <img src="<?= base_url('uploads/Home/Iklan') . '/' . $iklan->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
                         <div class="row">
-                        <div class="col-1">
+                            <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>
-                                </div>
-                                <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                    <span class="text">Simpan</span>
-                                </button>
+                            </div>
+                            <button type="submit" name="submit" value="Submit" class="btn btn-primary mb-3 btn-icon-split">
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-download"></i>
+                                </span>
+                                <span class="text">Simpan</span>
+                            </button>
                         </div>
-                        </div>
-                    </form>
                 </div>
-                <!-- /.card-body -->
+                </form>
             </div>
-            <!-- /.card -->
+            <!-- /.card-body -->
         </div>
+        <!-- /.card -->
+    </div>
 
     </div>
 </section>

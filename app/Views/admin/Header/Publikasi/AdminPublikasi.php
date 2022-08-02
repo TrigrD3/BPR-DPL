@@ -50,7 +50,7 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td>
-                                <?= $data->file; ?>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->file ?></a>
                             </td>
                             <td class="project_progress">
                                 <?= $data->tahun; ?>
@@ -71,7 +71,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahPublikasi">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahPublikasi">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

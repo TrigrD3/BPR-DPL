@@ -52,10 +52,15 @@ class LayananLainController extends BaseController
 
     public function AddProduk()
     {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (is_file('uploads/LayananLain/ProdukLL' . '/' . $fileName)) {
+            $fileName = date('YmdHis') . '-' . $fileName;
+        }
         $data = [
-            'foto' => $this->request->getPost('foto'),
+            'foto' => $fileName,
         ];
-
+        $dataBerkas->move('uploads/LayananLain/ProdukLL', $fileName);
         $this->LayananLainModel->add_Produk($data);
 
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -125,14 +130,17 @@ class LayananLainController extends BaseController
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
-            $data = [
-                'foto' => $fileName,
-            ];
+            if (is_file('uploads/LayananLain/ProdukLL' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/LayananLain/ProdukLL' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
             $dataBerkas->move('uploads/LayananLain/ProdukLL', $fileName);
-        } else {
-            $data = [
-                'foto' => $fileName,
-            ];
         }
 
         $this->LayananLainModel->update_produk($id, $data);
@@ -165,6 +173,10 @@ class LayananLainController extends BaseController
         $data = $this->LayananLainModel->get_id_produk($id);
         if (empty($data)) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+        }
+
+        if (is_file('uploads/LayananLain/ProdukLL' . '/' . $data->foto)) {
+            unlink('uploads/LayananLain/ProdukLL' . '/' . $data->foto);
         }
         $this->LayananLainModel->delete_produk($id);
         session()->setFlashdata('message', '<div class="alert alert-primary" role="alert">Data berhasil dihapus.

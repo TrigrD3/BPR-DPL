@@ -51,7 +51,7 @@
                             <?= $data->tanggal; ?>
                         </td>
                         <td class="project_progress deskripsi">
-                            <?= $data->deskripsi; ?>
+                            <p><?= $data->deskripsi; ?></p>
                         </td>
                         <td class="project-actions text-right">
                             <a class="btn btn-info btn-sm" href="<?= base_url("/EditSejarah/$data->id_sejarah") ?>">
@@ -69,7 +69,7 @@
                     <?php $no++; ?>
                 <?php endforeach; ?>
             </tbody>
-            <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahSejarah">
+            <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahSejarah">
                 <i class="fas fa-plus-circle"></i>
                 Tambah
             </a>

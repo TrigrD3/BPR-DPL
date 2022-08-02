@@ -1,3 +1,7 @@
+<?php
+$this->IdentitasWebsiteModel = new \App\Models\IdentitasWebsiteModel();
+$data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
+?>
 <!-- Optional JavaScript; choose one of the two! -->
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="justify-content-center"><br>
@@ -24,12 +28,12 @@
                     <span class="bold">Sosial Media</span>
                     <hr>
                     <div class="mt-4">
+                        <!-- Whatsapp -->
+                        <a href="<?= $data['IdentitasWebsite']->whatsapp ?>" type="button" class="btn btn-floating btn-primary btn-lg" target="_blank"><i class="bi bi-whatsapp"></i></a>
                         <!-- Facebook -->
-                        <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="bi bi-whatsapp"></i></a>
-                        <!-- Dribbble -->
-                        <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="bi bi-facebook"></i></a>
-                        <!-- Twitter -->
-                        <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="bi bi-instagram"></i></a>
+                        <a href="<?= $data['IdentitasWebsite']->facebook ?>" type="button" class="btn btn-floating btn-primary btn-lg" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <!-- Instagram -->
+                        <a href="<?= $data['IdentitasWebsite']->instagram ?>" type="button" class="btn btn-floating btn-primary btn-lg" target="_blank"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
                 <!--Grid column-->

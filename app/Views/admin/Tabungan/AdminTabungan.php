@@ -13,9 +13,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -51,11 +49,10 @@
                                 <br />
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p> <?= $data->deskripsi; ?></p>
                             </td>
                             <td class="project_progress">
-                                <img src="<?= base_url('uploads/Tabungan/ProdukTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="produk-tabungan" class="img-thumbnail">
-                                <?= $data->foto; ?>
+                                <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" width="20%" height="20%" alt="produk-tabungan" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukTabungan/$data->id_produk") ?>">
@@ -73,7 +70,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahProdukTabungan">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahProdukTabungan">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>
@@ -90,9 +87,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -106,8 +101,7 @@
                         <tr>
                             <td>
                                 <a>
-                                    <img src="<?= base_url('uploads/Tabungan/IklanTabungan') . '/' . $data->foto; ?>" width="200px" height="200px" alt="iklan-tabungan" class="img-thumbnail">
-                                    <?= $data->foto; ?>
+                                    <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $data->foto; ?>" width="10%" height="10%" alt="iklan-tabungan" class="img-thumbnail">
                                 </a>
                                 <br />
                             </td>
@@ -130,13 +124,9 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Link Google Form</h3>
-
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
                 </button>
             </div>
         </div>

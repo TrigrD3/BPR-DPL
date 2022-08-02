@@ -12,7 +12,6 @@
             <div class="card card-primary">
                 <div class="card-header">
                     <h3 class="card-title">Edit Identitas</h3>
-
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                             <i class="fas fa-minus"></i>
@@ -24,23 +23,23 @@
                         <div class="form-group">
                             <label for="WhatsApp">WhatsApp</label>
                             <input type="text" id="id_identitas" name="id_identitas" class="form-control" value="<?= $IdentitasWebsite->id_identitas ?>" hidden>
-                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" value="<?= $IdentitasWebsite->whatsapp ?>" placeholder="WhatsApp">
+                            <input type="text" id="whatsapp" name="whatsapp" class="form-control" value="<?= $IdentitasWebsite->whatsapp ?>" placeholder="WhatsApp" required>
                         </div>
                         <div class="form-group">
                             <label for="Facebook">Facebook</label>
-                            <input type="text" id="facebook" name="facebook" class="form-control" value="<?= $IdentitasWebsite->facebook ?>" placeholder="Facebook">
+                            <input type="text" id="facebook" name="facebook" class="form-control" value="<?= $IdentitasWebsite->facebook ?>" placeholder="Facebook" required>
                         </div>
                         <div class="form-group">
                             <label for="Instagram">Instagram</label>
-                            <input type="text" id="instagram" name="instagram" class="form-control" value="<?= $IdentitasWebsite->instagram ?>" placeholder="Instagram">
+                            <input type="text" id="instagram" name="instagram" class="form-control" value="<?= $IdentitasWebsite->instagram ?>" placeholder="Instagram" required>
                         </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Logo</label>
                             <br>
                             <input type="text" name="namalogo" hidden value="<?= $IdentitasWebsite->logo ?>">
-                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="200px" height="200px" alt="logo-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="20%" height="20%" alt="logo-bank" class="img-thumbnail">
                             <a href="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" target="_blank"><?= $IdentitasWebsite->logo ?></a>
-                            <input type="File" name="logo" id="logo" class="form-control">
+                            <input type="File" name="logo" id="logo" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group">

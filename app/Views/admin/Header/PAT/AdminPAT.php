@@ -13,9 +13,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -50,7 +48,7 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td>
-                                <?= $data->file; ?>
+                                <a href="<?= base_url('uploads/Header/PAT') . '/' . $data->file ?>" target="_blank"><?= $data->file ?></a>
                             </td>
                             <td class="project_progress">
                                 <?= $data->tahun; ?>
@@ -71,7 +69,7 @@
                         <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                <a class="btn ml-2 mt-2 btn-info btn-sm" href="TambahPAT">
+                <a class="btn ml-2 mt-2 btn-success btn-sm" href="TambahPAT">
                     <i class="fas fa-plus-circle"></i>
                     Tambah
                 </a>

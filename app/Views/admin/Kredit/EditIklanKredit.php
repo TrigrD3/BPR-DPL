@@ -23,10 +23,9 @@
                         <div class="form-group">
                             <label for="inputClientCompany">Gambar</label>
                             <br>
-                            <input type="text" name="namafoto" hidden value="<?= $iklan_kredit->foto ?>">
-                            <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="200px" height="200px" alt="iklan-kredit" class="img-thumbnail">
-                            <a href="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" target="_blank"><?= $iklan_kredit->foto ?></a>
-                            <input type="File" name="foto" id="foto" class="form-control">
+                            <input type="text" name="namafoto" hidden value="<?= $iklan_kredit->foto ?>" required>
+                            <img src="<?= base_url('uploads/Kredit/IklanKredit') . '/' . $iklan_kredit->foto ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
+                            <input type="File" name="foto" id="foto" class="form-control" required>
                         </div>
 
                         <div class="row">
