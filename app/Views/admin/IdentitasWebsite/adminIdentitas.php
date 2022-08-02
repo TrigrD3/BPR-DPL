@@ -34,13 +34,22 @@
                             <input type="text" id="instagram" name="instagram" class="form-control" value="<?= $IdentitasWebsite->instagram ?>" placeholder="Instagram" required>
                         </div>
                         <div class="form-group">
+                            <label for="whistleblowing">G-form Whistleblowing</label>
+                            <input type="text" id="whistleblowing" name="whistleblowing" class="form-control" value="<?= $IdentitasWebsite->whistleblowing ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pengaduan">G-form Pengaduan Nasabah</label>
+                            <input type="text" id="pengaduan" name="pengaduan" class="form-control" value="<?= $IdentitasWebsite->pengaduan ?>" required>
+                        </div>
+                        <div class="form-group">
                             <label for="inputClientCompany">Logo</label>
                             <br>
                             <input type="text" name="namalogo" hidden value="<?= $IdentitasWebsite->logo ?>">
-                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="20%" height="20%" alt="logo-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="50%" height="50%" alt="logo-bank" class="img-thumbnail">
                             <a href="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" target="_blank"><?= $IdentitasWebsite->logo ?></a>
                             <input type="File" name="logo" id="logo" class="form-control" required>
                         </div>
+
                     </div>
                     <div class="form-group">
                         <div class="col-12">

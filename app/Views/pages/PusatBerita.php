@@ -4,7 +4,9 @@
 
 <div class="container">
     <div class="my-3">
-        <p class="h1">Berita Lestari</p>
+        <center>
+            <p class="h1">Berita Lestari</p>
+        </center>
     </div>
     <?php
     foreach ($HomeBerita as $data) :
@@ -15,7 +17,7 @@
                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid">
                 </div>
                 <div class="col-lg-7 order-2 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start deskripsi">
-                    <h3><b><?= $data->judul; ?></b></h3>
+                    <b><?= $data->judul; ?></b>
                     <span class="mb-2"><?= $data->tanggal; ?></span>
                     <p>
                         <?= $data->isi_berita; ?>

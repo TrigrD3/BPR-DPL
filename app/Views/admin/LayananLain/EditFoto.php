@@ -19,7 +19,7 @@
                             <br>
 
                             <input type="text" name="namafoto" hidden value="<?= $layanan_produk->foto ?>" required>
-                            <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $layanan_produk->foto ?>" width="20%" height="20%" alt="produk-kredit" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $layanan_produk->foto ?>" width="50%" height="50%" alt="produk-kredit" class="img-thumbnail">
                             <input type="File" name="foto" id="inputClientCompany" class="form-control">
                         </div>
                         <div class="row">

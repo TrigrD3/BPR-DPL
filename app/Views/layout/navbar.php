@@ -3,40 +3,28 @@
         <a class="nav-link text-white mx-3" href="<?= base_url('/') ?>">Home</a>
 
         <div class="dropdown">
-            <a class="nav-link text-white mx-3 " href="Kredit" id="dropdownMenuLink" aria-expanded="false">Kredit</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="<?= base_url('kreditModalKerja') ?>">Kredit Modal Kerja</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('kreditInvestasi') ?>">Kredit Investasi</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('KreditKonsumtif') ?>">Kredit Konsumtif</a></li>
-            </ul>
+            <a class="nav-link text-white mx-3 " href="<?= base_url('Kredit') ?>" id="dropdownMenuLink" aria-expanded="false">Kredit</a>
         </div>
 
         <div class="dropdown">
-            <a class="nav-link text-white mx-3 " href="Deposito" id="dropdownMenuLink" aria-expanded="false">Deposito</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#Depotari">Depotari</a></li>
-            </ul>
+            <a class="nav-link text-white mx-3 " href="<?= base_url('Deposito') ?>" id="dropdownMenuLink" aria-expanded="false">Deposito</a>
         </div>
 
         <div class="dropdown">
-            <a class="nav-link text-white mx-3 " href="Tabungan" id="dropdownMenuLink" aria-expanded="false">Tabungan</a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="TabunganSITARI">Tabungan SITARI</a></li>
-                <li><a class="dropdown-item" href="TabunganHariTua">Tabungan Hari Tua</a></li>
-            </ul>
+            <a class="nav-link text-white mx-3 " href="<?= base_url('Tabungan') ?>" id="dropdownMenuLink" aria-expanded="false">Tabungan</a>
         </div>
 
-        <a class="nav-link text-white mx-3" href="LayananLainnya">Layanan Lainnya</a>
+        <a class="nav-link text-white mx-3" href="<?= base_url('LayananLainnya') ?>">Layanan Lainnya</a>
 
         <div class="dropdown">
             <a class="nav-link text-white mx-3 " href="#" id="dropdownMenuLink" aria-expanded="false">Tentang Lestari</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="Sejarah">Sejarah BPR</a></li>
-                <li><a class="dropdown-item" href="Profil">Profil Bank</a></li>
-                <li><a class="dropdown-item" href="VisiMisi">Visi Dan Misi</a></li>
-                <li><a class="dropdown-item" href="StrukturOrganisasi">Struktur Organisasi</a></li>
-                <li><a class="dropdown-item" href="AlamatKantor">Alamat Kantor</a></li>
-                <li><a class="dropdown-item" href="PusatBerita">Berita Lestari</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('Sejarah') ?>">Sejarah BPR</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('Profil') ?>">Profil Bank</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('VisiMisi') ?>">Visi Dan Misi</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('StrukturOrganisasi') ?>">Struktur Organisasi</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('AlamatKantor') ?>">Alamat Kantor</a></li>
+                <li><a class="dropdown-item" href="<?= base_url('PusatBerita') ?>">Berita Lestari</a></li>
             </ul>
         </div>
     </div>

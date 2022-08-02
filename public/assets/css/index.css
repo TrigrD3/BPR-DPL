@@ -82,7 +82,7 @@ hr {
   opacity: none !important;
 }
 
-.col-1,
+/* .col-1,
 .col-2,
 .col-3,
 .col-4,
@@ -156,6 +156,62 @@ hr {
   width: 100%;
   padding-right: 18px;
   padding-left: 18px;
+} */
+
+.card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+  width: 22rem;
+}
+
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card-image {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.card-image:hover {
+  opacity: 0.5;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+  background-color: rgb(67, 61, 61, 0.5);
+}
+
+.img-fit {
+  object-fit: cover;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 .stretch-card {
@@ -192,7 +248,7 @@ hr {
   text-overflow: ellipsis;
 }
 
-.deskripsi {
+.deskripsi p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

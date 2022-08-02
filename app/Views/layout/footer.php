@@ -1,6 +1,8 @@
 <?php
 $this->IdentitasWebsiteModel = new \App\Models\IdentitasWebsiteModel();
+$this->TentangLestariModel = new \App\Models\TentangLestariModel();
 $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
+$alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
 ?>
 <!-- Optional JavaScript; choose one of the two! -->
 <!-- Remove the container if you want to extend the Footer to full width. -->
@@ -18,13 +20,13 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                     <h4 class="mb-4">PT BPR Danapermata Lestari</h4>
                     <span class="bold">Alamat Kantor</span>
                     <hr>
-                    <p>
-                        Jl. Belitung Darat No.01 RT.020 RW.00 Kel.Kuin Selatan, Banjarmasin.
-                    </p>
-
-                    <p>
-                        Jl. Belitung Darat No.01 RT.020 RW.00 Kel.Kuin Selatan, Banjarmasin.
-                    </p>
+                    <?php
+                    foreach ($alamat['TentangLestariAlamat'] as $alamat) :
+                    ?>
+                        <p>
+                            <?= $alamat->alamat; ?>
+                        </p>
+                    <?php endforeach; ?>
                     <span class="bold">Sosial Media</span>
                     <hr>
                     <div class="mt-4">

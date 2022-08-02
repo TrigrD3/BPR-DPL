@@ -186,4 +186,7 @@ class LayananLainController extends BaseController
     </div>');
         return redirect()->to(base_url('adminLayananLainnya'));
     }
+
+    //User
+    
 }

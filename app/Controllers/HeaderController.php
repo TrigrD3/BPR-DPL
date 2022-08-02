@@ -503,4 +503,94 @@ class HeaderController extends BaseController
     </div>');
         return redirect()->to(base_url('AdminPublikasi'));
     }
+
+    //user
+
+    public function Loker()
+    {
+        $data = [
+            'title' => 'Loker | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['HeaderLoker'] = $this->HeaderModel->get_all_loker();
+        return view('pages/Loker', $data);
+    }
+
+    public function Penghargaan()
+    {
+        $data = [
+            'title' => 'Penghargaan | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['HeaderPenghargaan'] = $this->HeaderModel->get_all_penghargaan();
+        return view('pages/Penghargaan', $data);
+    }
+
+    public function KAP()
+    {
+        $data = [
+            'title' => 'KAP | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['HeaderPAT'] = $this->HeaderModel->get_all_pat_tahun();
+        return view('pages/KAP', $data);
+    }
+
+    public function Publikasi()
+    {
+        $data = [
+            'title' => 'Publikasi | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['tahun'] = $this->HeaderModel->get_all_tahun();
+        echo view('pages/Publikasi', $data);
+    }
+
+    public function TahunPublikasi($id)
+    {
+        $data = [
+            'title' => 'Publikasi | BANK LESTARI',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['tahun'] = $this->HeaderModel->get_all_tahun();
+        $data['jumlah'] = $this->HeaderModel->get_all_tahun_publikasi_jumlah($id);
+        $data['file'] = $this->HeaderModel->get_all_tahun_publikasi($id);
+        // print_r($data['file']);
+        echo view('pages/Publikasi', $data);
+    }
+
+    public function Lelang()
+    {
+        $data = [
+            'title' => 'Lelang | BANK LESTARI',
+            'css' => 'Lelang',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['HeaderLelang'] = $this->HeaderModel->get_all_lelang();
+        $data['RowLelang'] = $this->HeaderModel->get_row_lelang();
+        echo view('pages/Lelang', $data);
+    }
 }

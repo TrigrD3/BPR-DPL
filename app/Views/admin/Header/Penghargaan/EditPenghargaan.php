@@ -28,7 +28,7 @@
                             <label for="inputClientCompany">Pilih Foto</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $header_penghargaan->foto ?>" required>
-                            <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $header_penghargaan->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $header_penghargaan->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="row">

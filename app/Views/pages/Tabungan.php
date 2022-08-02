@@ -3,20 +3,26 @@
 <?= $this->section('content'); ?>
 
 <div class="container my-4 text-center">
-    <img src="images/fotoDeposito.png" class="img-fit img-deposito" alt="GambarDeposito">
+    <?php
+    foreach ($TabunganIklan as $data) :
+    ?>
+        <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $data->foto; ?>" class="img-fit img-deposito" alt="GambarDeposito">
+    <?php endforeach; ?>
     <div class="row row-cols-md-3 row-cols-sm-1 justify-content-center">
-        <?php for ($x = 1; $x <= 8; $x++) : ?>
-            <a href="ProdukTabungan">
+        <?php
+        foreach ($TabunganProduk as $data) :
+        ?>
+            <a href="<?= base_url("/LihatIklanTabungan/$data->id_produk") ?>">
                 <div class="my-3 mx-2 ">
                     <div class="card col-auto">
-                        <img class="card-img-top card-image img-fit" src="images/tabungan.jpg" height="200" alt="Card image cap">
+                        <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" height="200" alt="Card image cap">
                         <div class="card-img-overlay">
-                            <p class="info-box">Tabungan</p>
+                            <p class="info-box"><?= $data->nama; ?></p>
                         </div>
                     </div>
                 </div>
             </a>
-        <?php endfor; ?>
+        <?php endforeach; ?>
     </div>
 </div>
 

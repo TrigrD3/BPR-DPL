@@ -58,7 +58,7 @@
                                 <p><?= $data->google_maps; ?></p>
                             </td>
                             <td>
-                                <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $data->foto ?>" width="20%" height="20%" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $data->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditAlamat/$data->id_alamat_kantor") ?>">

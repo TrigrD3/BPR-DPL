@@ -293,9 +293,10 @@ class HomeController extends BaseController
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
-            'header' => 'header',
-            'HomeBerita' => $this->HomeModel->get_all_berita(),
+            'header' => 'header'
         ];
+        $data['HomeBerita'] = $this->HomeModel->get_all_pusatberita();
         echo view('pages/PusatBerita', $data);
     }
+
 }

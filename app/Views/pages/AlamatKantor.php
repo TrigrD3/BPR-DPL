@@ -3,10 +3,7 @@
 <?= $this->section('content'); ?>
 
 <div class="container">
-    <div class="my-3">
-        <a href="TentangLestari">Tentang Lestari</a> / <span style="color: #0d509e; font-weight: bold;">Berita Lestari</span>
-        <p class="h1">Berita Lestari</p>
-    </div>
+
     <?php for ($x = 1; $x <= 5; $x++) : ?>
         <div class="d-flex align-items-center justify-content-center my-3">
             <div class="row">

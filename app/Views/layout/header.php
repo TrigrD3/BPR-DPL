@@ -13,14 +13,14 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
-        <a class="nav-link text-dark px-3" href="SimulasiDeposito">Simulasi Deposito</a>
-        <a class="nav-link text-dark px-3" href="SimulasiKredit">Simulasi Kredit</a>
-        <a class="nav-link text-dark px-3" href="Lelang">Lelang</a>
-        <a class="nav-link text-dark px-3" href="Publikasi">Publikasi</a>
-        <a class="nav-link text-dark px-3" href="KAP">KAP</a>
-        <a class="nav-link text-dark px-3" href="Penghargaan">Penghargaan</a>
-        <a class="nav-link text-dark px-3" href="Loker">Lowongan Kerja</a>
-        <a class="btn navbar-btn text-white px-3" href="Login" data-bs-toggle=" dropdown" data-bs-display="static" aria-expanded="false" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('SimulasiDeposito') ?>">Simulasi Deposito</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('SimulasiKredit') ?>">Simulasi Kredit</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('Lelang') ?>">Lelang</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('Publikasi') ?>">Publikasi</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('KAP') ?>">KAP</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('Penghargaan') ?>">Penghargaan</a>
+        <a class="nav-link text-dark px-3" href="<?= base_url('Loker') ?>">Lowongan Kerja</a>
+        <a class="btn navbar-btn text-white px-3" href="<?= base_url('Login') ?>" data-bs-toggle=" dropdown" data-bs-display="static" aria-expanded="false" style="background-image: linear-gradient(to right, #0d509d, #1769c6);">Login</a>
       </div>
     </div>
   </div>

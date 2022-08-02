@@ -101,7 +101,7 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" width="20%" height="20%" alt="iklan-kredit" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" width="50%" height="50%" alt="iklan-kredit" class="img-thumbnail">
                                 <br />
                             </td>
                             <td>
