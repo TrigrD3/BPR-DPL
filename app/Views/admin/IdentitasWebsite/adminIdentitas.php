@@ -47,7 +47,7 @@
                             <input type="text" name="namalogo" hidden value="<?= $IdentitasWebsite->logo ?>">
                             <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="50%" height="50%" alt="logo-bank" class="img-thumbnail">
                             <a href="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" target="_blank"><?= $IdentitasWebsite->logo ?></a>
-                            <input type="File" name="logo" id="logo" class="form-control">
+                            <input type="File" name="logo" id="logo" class="form-control" required>
                         </div>
 
                     </div>
