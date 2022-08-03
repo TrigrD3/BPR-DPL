@@ -193,7 +193,7 @@ class TabunganController extends BaseController
             unlink('uploads/Tabungan/Produk' . '/' . $data->foto);
         }
         $this->TabunganModel->delete_tabungan($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -211,7 +211,7 @@ class TabunganController extends BaseController
             unlink('uploads/Tabungan/Produk' . '/' . $data->foto);
         }
         $this->TabunganModel->delete_Iklantabungan($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

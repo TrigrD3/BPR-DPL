@@ -95,7 +95,11 @@ class AkunController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('User Tidak ditemukan !');
         }
         $this->AkunModel->delete_user($id);
-        session()->setFlashdata('message', 'Hapus User Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminUser'));
     }
 }
