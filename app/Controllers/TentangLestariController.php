@@ -378,7 +378,7 @@ class TentangLestariController extends BaseController
         return view('pages/StrukturOrganisasi', $data);
     }
 
-    // User
+
     public function Sejarah()
     {
         $data = [
@@ -390,7 +390,6 @@ class TentangLestariController extends BaseController
             'header' => 'header'
         ];
         $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
-
         echo view('pages/Sejarah', $data);
     }
 }
