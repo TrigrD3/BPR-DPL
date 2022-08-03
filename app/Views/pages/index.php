@@ -101,14 +101,14 @@
             <!-- partial -->
 
             <div class="content-wrapper">
-                <div class="container">
+                <div class="container berita">
                     <div class="row" data-aos="fade-up">
                         <div class="col-xl-8 grid-margin">
                             <?php
                             foreach ($NewesBerita as $data) :
                             ?>
-                                <div class="card bg-dark text-white">
-                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="card-img" alt="...">
+                                <div class="card bg-dark text-white main-berita">
+                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="450px" class="card-img" alt="...">
                                 <div class="card-img-overlay">
                                     <a href="">
                                     <h5 class="card-title fs-3"><?= $data->judul ?></h5>

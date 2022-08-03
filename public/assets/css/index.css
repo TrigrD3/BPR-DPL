@@ -238,24 +238,28 @@ hr {
   -webkit-text-stroke: 0.2px black;
 }
 
-a {
+.main-berita img {
+  opacity: 0.8;
+}
+
+.berita a {
   text-decoration: none;
   color: white !important;
 }
 
-a:link {
+.berita a:link {
   text-decoration: none;
 }
 
-a:visited {
+.berita a:visited {
   text-decoration: none;
 }
 
-a:hover {
+.berita a:hover {
   text-decoration: underline;
 }
 
-a:active {
+.berita a:active {
   text-decoration: underline;
 }
 
@@ -267,7 +271,7 @@ a:active {
   color: #ffffff;
 }
 
-.deskripsi p {
+.deskripsi aside {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

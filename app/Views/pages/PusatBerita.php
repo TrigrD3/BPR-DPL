@@ -19,9 +19,11 @@
                 <div class="col-lg-7 order-2 order-lg-2 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start deskripsi">
                     <b><?= $data->judul; ?></b>
                     <span class="mb-2"><?= $data->tanggal; ?></span>
-                    <p>
+                        <aside>
                         <?= $data->isi_berita; ?>
-                    </p>
+                        </aside>
+                        
+                    
                     <div class="d-flex">
                         <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>" class="btn btn-primary">Selengkapnya</a>
                     </div>

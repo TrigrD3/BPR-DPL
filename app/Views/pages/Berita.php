@@ -22,7 +22,7 @@
     </div>
     <hr>
     <div class="my-4 text-center">
-        <div class="row row-cols-md-3 row-cols-sm-1 justify-content-center">
+        <div class="row row-cols-md-3 row-cols-sm-1 justify-content-center berita">
             <?php
             foreach ($RandomBerita as $data) :
             ?>
