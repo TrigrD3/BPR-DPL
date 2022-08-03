@@ -86,7 +86,6 @@ class HeaderController extends BaseController
             $dataBerkas->move('uploads/Header/Lelang', $fileName);
         } else {
             $data = [
-                'foto' => $fileName,
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
         }
