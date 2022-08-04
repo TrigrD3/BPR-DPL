@@ -14,7 +14,7 @@
         <span><?= $berita->tanggal ?></span>
         <p class="h1"><?= $berita->judul ?></p>
 
-            <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="1116px" class="img-fluid" alt="GambarBerita">
+        <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="1116px" class="img-fluid" alt="GambarBerita">
 
         <p class="text-wrap my-3" style="text-align: justify;">
             <?= $berita->isi_berita ?>
@@ -28,7 +28,7 @@
             ?>
 
                 <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
-                        <div class="card card-layanan bg-dark border-0 mb-1">
+                    <div class="card card-layanan bg-dark border-0 mb-1">
                         <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="200" alt="Card image cap">
                         <div class="card-img-overlay card-heading">
                             <h5 class="card-title "><?= $data->judul; ?></h5>
@@ -36,10 +36,17 @@
                                 <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->judul; ?></p>
                             </div>
                         </div>
-                        </div>
-                    </a>
+                    </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </div>
 </div>
 <?= $this->endSection(); ?>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable({
+            pagingType: 'full_numbers',
+        });
+    });
+</script>

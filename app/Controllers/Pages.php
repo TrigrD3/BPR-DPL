@@ -112,18 +112,7 @@ class Pages extends BaseController
         echo view('pages/PusatBerita', $data);
     }
 
-    public function AlamatKantor()
-    {
-        $data = [
-            'title' => 'Alamat Kantor',
-            'css' => 'Style',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/AlamatKantor', $data);
-    }
+    
 
     public function Tabungan()
     {
@@ -192,18 +181,7 @@ class Pages extends BaseController
         echo view('pages/Profil', $data);
     }
 
-    public function LayananLainnya()
-    {
-        $data = [
-            'title' => 'LayananLainnya',
-            'css' => 'LayananLainnya',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/LayananLainnya', $data);
-    }
+    
     
     public function Admin()
     {

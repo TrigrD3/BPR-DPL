@@ -392,4 +392,18 @@ class TentangLestariController extends BaseController
         $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
         echo view('pages/Sejarah', $data);
     }
+
+    public function AlamatKantor()
+    {
+        $data = [
+            'title' => 'Alamat Kantor',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
+        echo view('pages/AlamatKantor', $data);
+    }
 }
