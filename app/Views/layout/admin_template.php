@@ -64,7 +64,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
                 <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="Logo BPR" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Back to page</span>
+                <span class="brand-text font-weight-light">Back to Website</span>
             </a>
 
             <!-- Sidebar -->
