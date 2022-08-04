@@ -63,7 +63,7 @@
                                 <?= $data->tanggal; ?>
                             </td>
                             <td class="project_progress deskripsi">
-                                <p><?= $data->isi_berita; ?></p>
+                                <aside><?= $data->isi_berita; ?></aside>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditBerita/$data->id_berita") ?>">

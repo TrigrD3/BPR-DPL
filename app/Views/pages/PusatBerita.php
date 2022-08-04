@@ -5,10 +5,10 @@
 <div class="container">
     <div class="my-3">
         <center>
-            <p class="h1">Berita Lestari</p>
+            <p class="h1 judul">Berita Lestari</p>
         </center>
     </div>
-    <table id="data" class="table table-striped table-bordered">
+    <table id="data" class="table ">
         <thead>
             <tr>
                 <th class="h1"><br></th>

@@ -54,7 +54,7 @@
                             <td>
                                 <?= $data->nomor_telepon; ?>
                             </td>
-                            <td class="deskripsi">
+                            <td class="link">
                                 <p><?= $data->google_maps; ?></p>
                             </td>
                             <td>

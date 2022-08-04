@@ -327,7 +327,7 @@ class TentangLestariController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Sejarah Tidak ditemukan !');
         }
         $this->TentangLestariModel->delete_sejarah($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

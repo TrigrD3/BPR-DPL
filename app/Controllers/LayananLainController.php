@@ -160,7 +160,7 @@ class LayananLainController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
         }
         $this->LayananLainModel->delete_pembayaran($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil dihapus.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -179,7 +179,7 @@ class LayananLainController extends BaseController
             unlink('uploads/LayananLain/ProdukLL' . '/' . $data->foto);
         }
         $this->LayananLainModel->delete_produk($id);
-        session()->setFlashdata('message', '<div class="alert alert-primary" role="alert">Data berhasil dihapus.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

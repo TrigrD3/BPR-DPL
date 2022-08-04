@@ -3,10 +3,10 @@
 <?= $this->section('content'); ?>
 
 <div class="container">
+    <div class="my-3">
+    </div>
     <div>
-        <center>
-            <p class="h1"><?= $iklan_kredit->nama; ?></p>
-        </center>
+        <p class="h1 judul"><?= $iklan_kredit->nama; ?></p>
         <div class="text-center">
             <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $iklan_kredit->foto; ?>" class="img-fluid" alt="GambarProdukKredit">
         </div>
@@ -22,7 +22,7 @@
         <a href="<?= $data->g_form; ?>" target="_blank">
         <?php endforeach; ?>
         <button type="button" class=" ">
-            <img src="images/b1.png" alt=""> Pengajuan Kredit
+            <img src="images/b1.png" alt=""> <b>PENGAJUAN KREDIT</b>
         </button>
         </a>
 

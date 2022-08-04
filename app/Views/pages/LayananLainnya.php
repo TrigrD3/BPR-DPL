@@ -4,7 +4,7 @@
 <main>
     <div class="container my-4">
         <Section class="my-4">
-            <h1>Layanan Lainnya</h1>
+            <h1>LAYANAN LAINNYA</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
