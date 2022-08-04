@@ -5,3 +5,12 @@
   -webkit-line-clamp: 3; /* number of lines to show dasd*/
   -webkit-box-orient: vertical;
 }
+
+.link-google p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show dasd*/
+  -webkit-box-orient: vertical;
+  width: 400px;
+}
