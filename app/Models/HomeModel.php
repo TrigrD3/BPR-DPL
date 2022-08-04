@@ -14,11 +14,6 @@ class HomeModel extends Model
         // parent::__construct();
         $this->session = \Config\Services::session();
         $this->db = \Config\Database::connect();
-        // $this->load->model('IdentitasWebsiteModel');
-        // if (!$this->session->get('username')) {
-        //     $this->session->setFlashdata('message', '<div class="alert alert-success" role="alert">Silahkan Login terlebih dahulu!</div>');
-        //     return redirect()->to(base_url('Login'));
-        // }
     }
 
     function get_all_berita()
@@ -224,6 +219,49 @@ class HomeModel extends Model
         }
 
         $this->db->table('home_deskripsi_website')->select('*')->where('id_deskripsi_website', $id)->update($data);
+        session()->setFlashdata('message', 'Edit Deskripsi Website Berhasil');
+    }
+
+    function get_all_foto_logo()
+    {
+        $data['HomeFotoLogo'] = $this->db->table('home_foto_logo')->select('*')->get()->getResult();
+        return $data['HomeFotoLogo'];
+    }
+
+    public function get_id_foto_logo($id)
+    {
+        $data = $this->db->table('home_foto_logo')->select('*')->where('id_foto_logo', $id)->get()->getRow();
+        return $data;
+    }
+
+    public function update_foto_logo($id, $data)
+    {
+        if (!$this->validate([
+            'foto_kredit' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'foto_deposito' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'foto_tabungan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
+        $this->db->table('home_foto_logo')->select('*')->where('id_foto_logo', $id)->update($data);
         session()->setFlashdata('message', 'Edit Deskripsi Website Berhasil');
     }
 }

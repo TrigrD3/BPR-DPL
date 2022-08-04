@@ -26,6 +26,7 @@ class HomeController extends BaseController
         $data['HomeBerita'] = $this->HomeModel->get_all_berita();
         $data['HomeIklan'] = $this->HomeModel->get_all_iklan();
         $data['HomeDeskripsiWebsite'] = $this->HomeModel->get_all_deskripsi_website();
+        $data['HomeFotoLogo'] = $this->HomeModel->get_all_foto_logo();
         return view('Admin/Home/AdminHome', $data);
     }
 
@@ -225,7 +226,6 @@ class HomeController extends BaseController
         return redirect()->to(base_url('AdminHome'));
     }
 
-
     public function EditDeskripsiWebsite($id)
     {
         $dataAll = $this->HomeModel->get_id_deskripsi_website($id);
@@ -252,6 +252,64 @@ class HomeController extends BaseController
         return redirect()->to(base_url('AdminHome'));
     }
 
+    public function EditFotoLogo($id)
+    {
+        $dataAll = $this->HomeModel->get_id_foto_logo($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Foto Logo Web Tidak ditemukan !');
+        }
+        $data['foto_logo'] = $dataAll;
+        echo view('admin/Home/EditFotoLogo', $data);
+    }
+
+    public function UpdateFotoLogo($id)
+    {
+        $dataBerkasKredit = $this->request->getFile('foto_kredit');
+        $fileNameKredit = $dataBerkasKredit->getName();
+        if (!empty($fileNameKredit)) {
+            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafotokredit'))) {
+                unlink('uploads/Home/Logo/' . $this->request->getVar('namafotokredit'));
+                $data['foto_kredit'] = $fileNameKredit;
+            } else {
+                $data['foto_kredit'] = $fileNameKredit;
+            }
+            $dataBerkasKredit->move('uploads/Home/Logo/', $fileNameKredit);
+        }
+
+        $dataBerkasDeposito = $this->request->getFile('foto_deposito');
+        $fileNameDeposito = $dataBerkasDeposito->getName();
+        if (!empty($fileNameDeposito)) {
+            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafotodeposito'))) {
+                unlink('uploads/Home/Logo/' . $this->request->getVar('namafotodeposito'));
+                $data['foto_deposito'] = $fileNameDeposito;
+            } else {
+                $data['foto_deposito'] = $fileNameDeposito;
+            }
+            $dataBerkasDeposito->move('uploads/Home/Logo/', $fileNameDeposito);
+        }
+
+        $dataBerkasTabungan = $this->request->getFile('foto_tabungan');
+        $fileNameTabungan = $dataBerkasTabungan->getName();
+        if (!empty($fileNameTabungan)) {
+            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafototabungan'))) {
+                unlink('uploads/Home/Logo/' . $this->request->getVar('namafototabungan'));
+                $data['foto_tabungan'] = $fileNameTabungan;
+            } else {
+                $data['foto_tabungan'] = $fileNameTabungan;
+            }
+            $dataBerkasTabungan->move('uploads/Home/Logo/', $fileNameTabungan);
+        }
+
+        $this->HomeModel->update_foto_logo($id, $data);
+
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminHome'));
+    }
+
     // User
     public function indexUser()
     {
@@ -267,6 +325,7 @@ class HomeController extends BaseController
         $data['NewesBerita'] = $this->HomeModel->get_newes_berita();
         $data['HomeIklan'] = $this->HomeModel->get_all_iklan();
         $data['HomeDeskripsiWebsite'] = $this->HomeModel->get_all_deskripsi_website();
+        $data['HomeFotoLogo'] = $this->HomeModel->get_all_foto_logo();
         echo view('pages/index', $data);
     }
 

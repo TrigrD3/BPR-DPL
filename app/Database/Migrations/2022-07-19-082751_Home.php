@@ -11,9 +11,7 @@ class Home extends Migration
         $this->berita();
         $this->iklan();
         $this->deskripsi_website();
-        $this->foto_kredit();
-        $this->foto_deposito();
-        $this->foto_tabungan();
+        $this->foto_logo();
     }
 
     public function down()
@@ -21,9 +19,7 @@ class Home extends Migration
         $this->forge->dropTable('home_berita');
         $this->forge->dropTable('home_iklan');
         $this->forge->dropTable('home_deskripsi_website');
-        $this->forge->dropTable('foto_kredit');
-        $this->forge->dropTable('foto_tabungan');
-        $this->forge->dropTable('foto_deposito');
+        $this->forge->dropTable('home_foto_logo');
     }
 
     public function berita()
@@ -96,59 +92,32 @@ class Home extends Migration
 
         $this->forge->createTable('home_deskripsi_website', TRUE);
     }
-    public function foto_kredit()
+
+    public function foto_logo()
     {
         $this->forge->addField([
-            'id_foto'           => [
+            'id_foto_logo'           => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
-            'foto'               => [
+            'foto_kredit'               => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
-            ]
-        ]);
-
-        $this->forge->addKey('id_foto', TRUE);
-
-        $this->forge->createTable('foto_kredit', TRUE);
-    }
-    public function foto_tabungan()
-    {
-        $this->forge->addField([
-            'id_foto'           => [
-                'type'           => 'INT',
-                'constraint'     => 5,
-                'unsigned'       => true,
-                'auto_increment' => true
             ],
-            'foto'               => [
+            'foto_deposito'               => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
-            ]
-        ]);
-
-        $this->forge->addKey('id_foto', TRUE);
-
-        $this->forge->createTable('foto_tabungan', TRUE);
-    }
-    public function foto_deposito()
-    {
-        $this->forge->addField([
-            'id_foto'           => [
-                'type'           => 'INT',
-                'constraint'     => 5,
-                'unsigned'       => true,
-                'auto_increment' => true
             ],
-            'foto'               => [
+            'foto_tabungan'               => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
-            ]
+            ],
         ]);
-        $this->forge->addKey('id_foto', TRUE);
-        $this->forge->createTable('foto_deposito', TRUE);
+
+        $this->forge->addKey('id_foto_logo', TRUE);
+
+        $this->forge->createTable('home_foto_logo', TRUE);
     }
 }

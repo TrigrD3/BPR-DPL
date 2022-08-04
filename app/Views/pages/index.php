@@ -48,49 +48,52 @@
 
     <div class="album py-5 pt-3">
         <div class="container">
+            <?php
+            foreach ($HomeFotoLogo as $data) :
+            ?>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <a href="<?= base_url("/Kredit") ?>">
+                            <div class="card card-layanan bg-dark text-dark border-0">
+                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
+                                <div class="card-img-overlay card-heading">
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
+                                    <!-- <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </a>
+                    </div>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                    <a href="<?= base_url("/Kredit") ?>">
-                        <div class="card card-layanan bg-dark text-dark border-0">
-                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                            <div class="card-img-overlay card-heading">
-                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
-                                <div class="card-img-detail">
-                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="col">
+                        <a href="<?= base_url("/Deposito") ?>">
+                            <div class="card card-layanan bg-dark text-dark border-0">
+                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
+                                <div class="card-img-overlay card-heading">
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
+                                    <!-- <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> -->
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col">
-                    <a href="<?= base_url("/Deposito") ?>">
-                        <div class="card card-layanan bg-dark text-dark border-0">
-                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                            <div class="card-img-overlay card-heading">
-                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
-                                <div class="card-img-detail">
-                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="<?= base_url("/Tabungan") ?>">
+                            <div class="card card-layanan bg-dark text-dark border-0">
+                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
+                                <div class="card-img-overlay card-heading">
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
+                                    <!-- <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div> -->
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-                <div class="col">
-                    <a href="<?= base_url("/Tabungan") ?>">
-                        <div class="card card-layanan bg-dark text-dark border-0">
-                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                            <div class="card-img-overlay card-heading">
-                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
-                                <div class="card-img-detail">
-                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>

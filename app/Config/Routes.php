@@ -99,6 +99,9 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/EditDeskripsiWebsite/(:num)', 'HomeController::EditDeskripsiWebsite/$1');
     $routes->post('/EditDeskripsiWebsite/(:num)', 'HomeController::UpdateDeskripsiWebsite/$1');
 
+    $routes->get('/EditFotoLogo/(:num)', 'HomeController::EditFotoLogo/$1');
+    $routes->post('/EditFotoLogo/(:num)', 'HomeController::UpdateFotoLogo/$1');
+
     //Admin Identitas
     $routes->get('/adminIdentitas', 'IdentitasWebsiteController::index');
     $routes->post('/adminIdentitas/update', 'IdentitasWebsiteController::update');

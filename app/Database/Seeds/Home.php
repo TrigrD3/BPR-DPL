@@ -11,9 +11,7 @@ class Home extends Seeder
         $this->berita();
         $this->iklan();
         $this->deskripsi_website();
-        $this->foto_kredit();
-        $this->foto_deposito();
-        $this->foto_tabungan();
+        $this->foto_logo();
     }
 
     public function berita()
@@ -62,42 +60,19 @@ class Home extends Seeder
         }
     }
 
-    public function foto_kredit()
+    public function foto_logo()
     {
         $all_data = [
             [
-                'foto'  => 'foto_kredit.jpg',
+                'foto_kredit' => 'foto_kredit.jpg',
+                'foto_deposito'  => 'foto_deposito.jpg',
+                'foto_tabungan' => 'foto_tabungan.jpg'
             ]
         ];
 
         foreach ($all_data as $data) {
             // insert semua data ke tabel
-            $this->db->table('foto_kredit')->insert($data);
-        }
-    }
-    public function foto_deposito()
-    {
-        $all_data = [
-            [
-                'foto'  => 'foto_deposito.jpg',
-            ]
-        ];
-
-        foreach ($all_data as $data) {
-            // insert semua data ke tabel
-            $this->db->table('foto_deposito')->insert($data);
-        }
-    }
-    public function foto_tabungan()
-    {
-        $all_data = [
-            [
-                'foto'  => 'foto_tabungan.jpg',
-            ]
-        ];
-        foreach ($all_data as $data) {
-            // insert semua data ke tabel
-            $this->db->table('foto_tabungan')->insert($data);
+            $this->db->table('home_foto_logo')->insert($data);
         }
     }
 }
