@@ -42,7 +42,7 @@
                             <td>
                                 <img src="<?= base_url('uploads/Header/Lelang') . '/' . $data->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
-                            <td class="link-google">
+                            <td class="link">
                                 <p><?= $data->google_maps; ?></p>
                             </td>
 
