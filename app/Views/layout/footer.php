@@ -25,7 +25,7 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
                     foreach ($alamat['TentangLestariAlamat'] as $alamat) :
                     ?>
                         <p>
-                            <?= $alamat->alamat; ?>
+                            <?= $alamat->alamat; ?> - <?= $alamat->kabupaten_kota; ?>
                         </p>
                     <?php endforeach; ?>
                     <span class="bold">Sosial Media</span>
