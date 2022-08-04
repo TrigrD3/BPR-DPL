@@ -25,7 +25,7 @@
                             <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_publikasi->nama ?>" required>
                         </div>
                         <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" value="<?= $header_publikasi->tahun ?>" required>
+                        <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" value="<?= $header_publikasi->tahun ?>" required>
 
                         <script>
                             $("#datepicker").datepicker({

@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">Tambah PAT</h3>
+                    <h3 class="card-title">Tambah KAP</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -25,7 +25,7 @@
                             <input type="text" name="nama" id="inputName" class="form-control" require_once>
                         </div>
                         <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" required />
+                        <input type="text" name="tahun" autocomplete="off" autocomplete="off" class="form-control" name="datepicker" id="datepicker" required />
 
                         <script>
                             $("#datepicker").datepicker({

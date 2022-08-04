@@ -7,7 +7,7 @@
     <div class="card">
         <?= session()->getFlashdata('message'); ?>
         <div class="card-header">
-            <h3 class="card-title">Laporan PAT</h3>
+            <h3 class="card-title">Laporan KAP</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">

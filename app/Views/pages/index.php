@@ -152,7 +152,7 @@
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
-                                                            <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                            <h6 class="card-title title"><?= $data->judul ?></h6>
                                                         </a>
                                                         <p class="card-text"><small class=""><?= $data->tanggal ?></small></p>
                                                     </div>

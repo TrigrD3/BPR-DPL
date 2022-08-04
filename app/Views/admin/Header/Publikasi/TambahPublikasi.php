@@ -25,7 +25,7 @@
                             <input type="text" name="nama" id="inputName" class="form-control" required>
                         </div>
                         <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" class="form-control" name="datepicker" id="datepicker" required />
+                        <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" required />
 
                         <script>
                             $("#datepicker").datepicker({

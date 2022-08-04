@@ -244,7 +244,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminPAT') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>PAT</p>
+                                        <p>KAP</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
