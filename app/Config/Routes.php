@@ -170,6 +170,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/HapusFotoLL/(:num)', 'LayananLainController::DeleteProduk/$1');
     $routes->get('/HapusDeskripsiLL/(:num)', 'LayananLainController::DeletePembayaran/$1');
 
+    $routes->get('/EditIklanLayananLain/(:num)', 'LayananLainController::EditIklanLayananLain/$1');
+    $routes->post('/EditIklanLayananLain/(:num)', 'LayananLainController::UpdateIklanLayananLain/$1');
     //Admin Tentang Lestari
     //Profil
     $routes->get('/AdminProfil', 'TentangLestariController::index_profil');

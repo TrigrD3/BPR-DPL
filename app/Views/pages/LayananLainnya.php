@@ -6,12 +6,15 @@
         <Section class="my-4">
             <h1>LAYANAN LAINNYA</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                </div>
+
                 <div class="carousel-inner">
                     <div class="carousel-item active img-fit">
-                        <img src="images/fotoDeposito.png" class="d-block w-100" alt="...">
+                        <?php
+                        foreach ($LayananLainIklan as $data) :
+                        ?>
+
+                            <img src="<?= base_url('uploads/LayananLain/Iklan') . '/' . $data->foto; ?>" class="d-block w-100" alt="...">
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

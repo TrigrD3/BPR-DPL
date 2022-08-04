@@ -111,7 +111,7 @@
                                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="450px" class="card-img" alt="...">
                                     <div class="card-img-overlay">
                                         <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
-                                            <h5 class="card-title fs-3"><?= $data->judul ?></h5>
+                                            <h6 class="card-title fs-3"><?= $data->judul ?></h6>
                                         </a>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@
                                                 <div class="col-md-8">
                                                     <div class="card-body">
                                                         <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
-                                                            <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                            <h6 class="card-title title"><?= $data->judul ?></h6>
                                                         </a>
                                                         <p class="card-text"><small class=""><?= $data->tanggal ?></small></p>
                                                     </div>

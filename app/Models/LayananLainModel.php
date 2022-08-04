@@ -114,4 +114,35 @@ class LayananLainModel extends Model
     {
         $this->db->table('layanan_produk')->select('*')->where('id_produk', $id)->delete();
     }
+    public function update_iklanlayananlain($id, $data)
+    {
+        if (!$this->validate([
+
+            'foto' => [
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
+                'errors' => [
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
+        $this->db->table('layananlain_iklan')->select('*')->where('id_iklan', $id)->update($data);
+        session()->setFlashdata('message', 'Edit Iklan layananlain Berhasil');
+    }
+    function get_all_iklan()
+    {
+        $data['LayananLainIklan'] = $this->db->table('layananlain_iklan')->select('*')->get()->getResult();
+        return $data['LayananLainIklan'];
+    }
+    public function get_id_iklan($id)
+    {
+        $data = $this->db->table('layananlain_iklan')->select('*')->where('id_iklan', $id)->get()->getRow();
+        return $data;
+    }
 }

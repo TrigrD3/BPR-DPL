@@ -335,6 +335,16 @@ class TentangLestariController extends BaseController
         return redirect()->to(base_url('AdminSejarah'));
     }
 
+    public function EditIklanKredit($id)
+    {
+        $dataAll = $this->KreditModel->get_id_iklan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Kredit Tidak ditemukan !');
+        }
+        $data['iklan_kredit'] = $dataAll;
+        echo view('admin/Kredit/EditIklanKredit', $data);
+    }
+
     //USER
     public function Profil()
     {

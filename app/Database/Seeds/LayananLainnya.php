@@ -10,6 +10,7 @@ class LayananLainnya extends Seeder
     {
         $this->pembayaran();
         $this->produk();
+        $this->iklan();
     }
 
     public function pembayaran()
@@ -37,6 +38,19 @@ class LayananLainnya extends Seeder
         foreach ($all_data as $data) {
             // insert semua data ke tabel
             $this->db->table('layanan_produk')->insert($data);
+        }
+    }
+    public function iklan()
+    {
+        $all_data = [
+            [
+                'foto'  => 'iklan.jpg',
+            ]
+        ];
+
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('layananlain_iklan')->insert($data);
         }
     }
 }

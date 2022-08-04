@@ -10,12 +10,14 @@ class LayananLainnya extends Migration
     {
         $this->pembayaran();
         $this->produk();
+        $this->iklan();
     }
 
     public function down()
     {
         $this->forge->dropTable('layanan_pembayaran');
         $this->forge->dropTable('layanan_produk');
+        $this->forge->dropTable('layananlain_iklan');
     }
 
     public function pembayaran()
@@ -56,5 +58,24 @@ class LayananLainnya extends Migration
         $this->forge->addKey('id_produk', TRUE);
 
         $this->forge->createTable('layanan_produk', TRUE);
+    }
+    public function iklan()
+    {
+        $this->forge->addField([
+            'id_iklan'           => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'               => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+
+        $this->forge->addKey('id_iklan', TRUE);
+
+        $this->forge->createTable('layananlain_iklan', TRUE);
     }
 }

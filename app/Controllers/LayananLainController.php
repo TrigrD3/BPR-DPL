@@ -26,7 +26,8 @@ class LayananLainController extends BaseController
         ];
         $data['LayananLainProduk'] = $this->LayananLainModel->get_all_produk();
         $data['LayananLainPembayaran'] = $this->LayananLainModel->get_all_pembayaran();
-        return view('Admin/LayananLain/AdminLayananLainnya', $data);
+        $data['LayananLainIklan'] = $this->LayananLainModel->get_all_iklan();
+        return view('Admin/LayananLain/adminLayananLainnya', $data);
     }
 
     public function TambahPembayaran()
@@ -92,7 +93,7 @@ class LayananLainController extends BaseController
     {
         $dataAll = $this->LayananLainModel->get_id_pembayaran($id);
         if (empty($dataAll)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Kredit Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk LayananLain Tidak ditemukan !');
         }
         $data['layanan_pembayaran'] = $dataAll;
         echo view('admin/LayananLain/EditDeskripsi', $data);
@@ -119,7 +120,7 @@ class LayananLainController extends BaseController
     {
         $dataAll = $this->LayananLainModel->get_id_produk($id);
         if (empty($dataAll)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan Kredit Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan LayananLain Tidak ditemukan !');
         }
         $data['layanan_produk'] = $dataAll;
         echo view('admin/LayananLain/EditFoto', $data);
@@ -157,7 +158,7 @@ class LayananLainController extends BaseController
     {
         $data = $this->LayananLainModel->get_id_pembayaran($id);
         if (empty($data)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('LayananLain Tidak ditemukan !');
         }
         $this->LayananLainModel->delete_pembayaran($id);
         session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
@@ -172,7 +173,7 @@ class LayananLainController extends BaseController
     {
         $data = $this->LayananLainModel->get_id_produk($id);
         if (empty($data)) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException('Kredit Tidak ditemukan !');
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('LayananLain Tidak ditemukan !');
         }
 
         if (is_file('uploads/LayananLain/ProdukLL' . '/' . $data->foto)) {
@@ -186,7 +187,43 @@ class LayananLainController extends BaseController
     </div>');
         return redirect()->to(base_url('adminLayananLainnya'));
     }
+    public function EditIklanLayananLain($id)
+    {
+        $dataAll = $this->LayananLainModel->get_id_iklan($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Produk Iklan LayananLain Tidak ditemukan !');
+        }
+        $data['iklan_layananlain'] = $dataAll;
+        echo view('admin/LayananLain/EditIklan', $data);
+    }
+    public function UpdateIklanLayananLain($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/LayananLain/Iklan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/LayananLain/Iklan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/LayananLain/Iklan', $fileName);
+        }
 
+        $this->LayananLainModel->update_iklanlayananlain($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diupdate.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>');
+
+
+        return redirect()->to(base_url('adminLayananLainnya'));
+    }
     //User
     public function LayananLainnya()
     {
@@ -202,6 +239,7 @@ class LayananLainController extends BaseController
         $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
         $data['LayananLainProduk'] = $this->LayananLainModel->get_all_produk();
         $data['LayananLainPembayaran'] = $this->LayananLainModel->get_all_pembayaran();
+        $data['LayananLainIklan'] = $this->LayananLainModel->get_all_iklan();
         echo view('pages/LayananLainnya', $data);
     }
 }
