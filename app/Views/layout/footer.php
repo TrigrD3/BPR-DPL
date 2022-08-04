@@ -48,10 +48,10 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
 
                     <div class="form-outline form-primary mb-4">
 
-                        <a href="<?= $data['IdentitasWebsite']->whistleblowing ?>" target="_blank"><button class="">Whistleblowing</button></a>
+                        <a href="<?= $data['IdentitasWebsite']->whistleblowing ?>" target="_blank"><button class="form-transition">Whistleblowing</button></a>
                     </div>
                     <div class="form-outline form-primary mb-4">
-                        <a href="<?= $data['IdentitasWebsite']->pengaduan ?>" target="_blank"><button class="">Pengaduan Nasabah</button></a>
+                        <a href="<?= $data['IdentitasWebsite']->pengaduan ?>" target="_blank"><button class="form-transition">Pengaduan Nasabah</button></a>
                     </div>
 
                     <div class="mb-4">
