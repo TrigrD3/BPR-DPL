@@ -20,7 +20,8 @@
             ?>
                 <tr>
                     <td>
-                        <div class="d-flex align-items-center section-bg my-3"> <!-- dirubah jadi bootstrap 5 -->
+                        <div class="d-flex align-items-center section-bg my-3">
+                            <!-- dirubah jadi bootstrap 5 -->
                             <div class="row">
                                 <div class="col-lg-5 order-1 order-lg-1 text-center text-lg-start">
                                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" width="1050" class="img-fluid">

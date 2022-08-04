@@ -188,5 +188,20 @@ class LayananLainController extends BaseController
     }
 
     //User
-    
+    public function LayananLainnya()
+    {
+        $data = [
+            'title' => 'LayananLainnya',
+            'css' => 'LayananLainnya',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $this->IdentitasWebsiteModel = new \App\Models\IdentitasWebsiteModel();
+        $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
+        $data['LayananLainProduk'] = $this->LayananLainModel->get_all_produk();
+        $data['LayananLainPembayaran'] = $this->LayananLainModel->get_all_pembayaran();
+        echo view('pages/LayananLainnya', $data);
+    }
 }
