@@ -54,7 +54,11 @@
                             <td>
                                 <?= $data->nomor_telepon; ?>
                             </td>
+<<<<<<< HEAD
                             <td class="link-google">
+=======
+                            <td class="link">
+>>>>>>> 8247e415025145dcd9d0d09e70060c15a6f94fb8
                                 <p><?= $data->google_maps; ?></p>
                             </td>
                             <td>

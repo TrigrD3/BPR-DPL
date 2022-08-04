@@ -185,7 +185,7 @@ class KreditController extends BaseController
             unlink('uploads/Kredit/ProdukKredit' . '/' . $data->foto);
         }
         $this->KreditModel->delete_kredit($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -203,7 +203,7 @@ class KreditController extends BaseController
             unlink('uploads/Kredit/IklanKredit' . '/' . $data->foto);
         }
         $this->KreditModel->delete_Iklankredit($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapuskan.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

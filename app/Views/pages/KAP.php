@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 <div class="container">
-    <p class="h1 text-center my-4">LAPORAN KAP</p>
+    <p class="h1 text-center my-4 judul">LAPORAN KAP</p>
     <p class="text-center">LAPORAN AUDIT KANTOR AKUNTAN PUBLIK PT BPR DANAPERMATA LESTARI</p>
     <?php
     foreach ($HeaderPAT as $data) :

@@ -46,7 +46,7 @@
                                 <?= $data->judul; ?>
                             </td>
                             <td class="deskripsi">
-                                <p><?= $data->deskripsi; ?></p>
+                                <aside><?= $data->deskripsi; ?></aside>
                                 <br />
                             </td>
 

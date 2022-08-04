@@ -6,21 +6,25 @@
     <?php
     foreach ($TabunganIklan as $data) :
     ?>
-        <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $data->foto; ?>" class="img-fit img-deposito" alt="GambarDeposito">
+        <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $data->foto; ?>" class="img-fit img-deposito" alt="GambarTabungan">
     <?php endforeach; ?>
     <div class="row row-cols-md-3 row-cols-sm-1 justify-content-center">
         <?php
         foreach ($TabunganProduk as $data) :
         ?>
             <a href="<?= base_url("/LihatIklanTabungan/$data->id_produk") ?>">
-                <div class="my-3 mx-2 ">
-                    <div class="card col-auto">
-                        <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" height="200" alt="Card image cap">
-                        <div class="card-img-overlay">
-                            <p class="info-box"><?= $data->nama; ?></p>
+                <div class="card col-auto card-layanan bg-dark text-light border-0 my-4">
+                    <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" width="100%" height="225" class="card-img" alt="...">
+                    <div class="card-img-overlay card-heading">
+
+                        <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan"><?= $data->nama ?></h5>
+
+                        <div class="card-img-detail deskripsi">
+                            <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->nama ?></p>
                         </div>
                     </div>
                 </div>
+
             </a>
         <?php endforeach; ?>
     </div>

@@ -6,7 +6,7 @@
     <div class="my-3">
     </div>
     <div>
-        <p class="h1"><?= $produk_tabungan->nama ?></p>
+        <p class="h1 judul"><?= $produk_tabungan->nama ?></p>
         <div class="text-center">
             <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $produk_tabungan->foto ?>" class="img-fluid" alt="GambarProdukDeposito">
         </div>
@@ -21,7 +21,7 @@
     ?>
         <a href="<?= $data->g_form; ?>" target="_blank">
             <button type="button" class=" ">
-                <img src="images/b1.png" alt=""> Pengajuan Tabungan
+                <img src="images/b1.png" alt=""><b>PENGAJUAN TABUNGAN</b>
             </button>
         </a>
     <?php endforeach; ?>

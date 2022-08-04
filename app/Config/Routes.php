@@ -66,10 +66,10 @@ $routes->get('/ProdukKredit', 'Pages::ProdukKredit');
 $routes->get('/Penghargaan', 'HeaderController::Penghargaan');
 $routes->get('/VisiMisi', 'TentangLestariController::VisiMisi');
 $routes->get('/StrukturOrganisasi', 'TentangLestariController::StrukturOrganisasi');
-$routes->get('/LayananLainnya', 'Pages::LayananLainnya');
+$routes->get('/LayananLainnya', 'LayananLainController::LayananLainnya');
 $routes->get('/Profil', 'TentangLestariController::Profil');
 $routes->get('/Berita', 'Pages::Berita');
-$routes->get('/AlamatKantor', 'Pages::AlamatKantor');
+$routes->get('/AlamatKantor', 'TentangLestariController::AlamatKantor');
 // end of pages
 // start of admin
 //Login

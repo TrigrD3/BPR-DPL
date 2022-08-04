@@ -14,7 +14,7 @@
             </div>
             <div class="gambar col-md-6">
                 <div class="h-100 p-5 ">
-                    <h2 class="text-color">
+                    <h2 class="text-color judul1">
                         <?= $data->judul ?>
                     </h2>
                     <p><?= $data->deskripsi ?></p>

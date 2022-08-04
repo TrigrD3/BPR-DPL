@@ -86,7 +86,6 @@ class HeaderController extends BaseController
             $dataBerkas->move('uploads/Header/Lelang', $fileName);
         } else {
             $data = [
-                'foto' => $fileName,
                 'google_maps' => $this->request->getPost('google_maps'),
             ];
         }
@@ -386,7 +385,7 @@ class HeaderController extends BaseController
             unlink('uploads/Header/Penghargaan' . '/' . $data->foto);
         }
         $this->HeaderModel->delete_penghargaan($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapuskan.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -496,7 +495,7 @@ class HeaderController extends BaseController
             unlink('uploads/Header/Publikasi' . '/' . $data->file);
         }
         $this->HeaderModel->delete_publikasi($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

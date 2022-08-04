@@ -327,7 +327,7 @@ class TentangLestariController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Sejarah Tidak ditemukan !');
         }
         $this->TentangLestariModel->delete_sejarah($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -378,7 +378,7 @@ class TentangLestariController extends BaseController
         return view('pages/StrukturOrganisasi', $data);
     }
 
-    // User
+
     public function Sejarah()
     {
         $data = [
@@ -390,7 +390,20 @@ class TentangLestariController extends BaseController
             'header' => 'header'
         ];
         $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
-
         echo view('pages/Sejarah', $data);
+    }
+
+    public function AlamatKantor()
+    {
+        $data = [
+            'title' => 'Alamat Kantor',
+            'css' => 'Style',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
+        echo view('pages/AlamatKantor', $data);
     }
 }

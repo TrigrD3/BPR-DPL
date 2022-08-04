@@ -14,15 +14,15 @@
         ?>
             <a href="<?= base_url("/LihatIklanDeposito/$data->id_produk") ?>">
                 <div class="card col-auto card-layanan bg-dark text-light border-0 my-4">
-                <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="100%" height="225" class="card-img" alt="...">
-                <div class="card-img-overlay card-heading">
+                    <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="100%" height="225" class="card-img" alt="...">
+                    <div class="card-img-overlay card-heading">
 
-                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan"><?= $data->nama ?></h5>
+                        <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan"><?= $data->nama ?></h5>
 
-                    <div class="card-img-detail deskripsi">
-                        <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->deskripsi ?></p>
+                        <div class="card-img-detail deskripsi">
+                            <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->nama ?></p>
+                        </div>
                     </div>
-                </div>
                 </div>
             </a>
         <?php endforeach; ?>

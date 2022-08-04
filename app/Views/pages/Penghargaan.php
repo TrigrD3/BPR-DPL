@@ -4,7 +4,7 @@
 
 <div class="container text-center">
 
-    <p class="h1 mt-4" style="font-weight:bold;">PENGHARGAAN YANG TELAH DICAPAI OLEH <br> BPR DANAPERMATA LESTARI</p>
+    <p class="h1 mt-4 judul" style="font-weight:bold; ">PENGHARGAAN YANG TELAH DICAPAI OLEH <br> BPR DANAPERMATA LESTARI</p>
     <div class="row justify-content-center">
         <?php
         foreach ($HeaderPenghargaan as $data) :

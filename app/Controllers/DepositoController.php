@@ -196,7 +196,7 @@ class DepositoController extends BaseController
             unlink('uploads/Deposito/ProdukDeposito' . '/' . $data->foto);
         }
         $this->DepositoModel->delete_deposito($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -215,7 +215,7 @@ class DepositoController extends BaseController
             unlink('uploads/Deposito/IklanDeposito' . '/' . $data->foto);
         }
         $this->DepositoModel->delete_Iklandeposito($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

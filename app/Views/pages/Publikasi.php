@@ -1,8 +1,8 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-<div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold">LAPORAN PUBLIKASI</h1>
+<div class="px-4 py-5 my-1 text-center">
+    <h1 class="display-5 fw-bold judul">LAPORAN PUBLIKASI</h1>
     <div class="col-lg-6 mx-auto text-center">
         <label for="country" class="form-label">Pilih Tahun Laporan Publikasi</label>
         <button type="button" class="form-select col-md-7" data-bs-toggle="dropdown" aria-expanded="false">

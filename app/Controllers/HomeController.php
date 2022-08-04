@@ -126,7 +126,7 @@ class HomeController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Berita Tidak ditemukan !');
         }
         $this->HomeModel->delete_berita($id);
-        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -217,7 +217,11 @@ class HomeController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Iklan Tidak ditemukan !');
         }
         $this->HomeModel->delete_iklan($id);
-        session()->setFlashdata('message', 'Hapus Iklan Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
+        <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>');
         return redirect()->to(base_url('AdminHome'));
     }
 
@@ -298,5 +302,4 @@ class HomeController extends BaseController
         $data['HomeBerita'] = $this->HomeModel->get_all_pusatberita();
         echo view('pages/PusatBerita', $data);
     }
-
 }

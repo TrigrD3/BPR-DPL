@@ -21,7 +21,7 @@
                     </div>
                 <?php } else { ?>
                     <div class="carousel-item">
-                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" height="450px"class="d-block w-100" alt="...">
+                        <img src="<?= base_url('uploads/Home/Iklan') . '/' . $data->foto ?>" height="450px" class="d-block w-100" alt="...">
                     </div>
             <?php }
                 $no++;
@@ -53,49 +53,49 @@
                 <div class="col">
                     <a href="<?= base_url("/Kredit") ?>">
                         <div class="card card-layanan bg-dark text-dark border-0">
-                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                        <div class="card-img-overlay card-heading">
-                            <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
-                            <div class="card-img-detail">
-                                <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
+                                <div class="card-img-detail">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </a>
                 </div>
 
                 <div class="col">
                     <a href="<?= base_url("/Deposito") ?>">
-                    <div class="card card-layanan bg-dark text-dark border-0">
-                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                        <div class="card-img-overlay card-heading">
-                            <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
-                            <div class="card-img-detail">
-                                <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card card-layanan bg-dark text-dark border-0">
+                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
+                                <div class="card-img-detail">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </a>
                 </div>
                 <div class="col">
                     <a href="<?= base_url("/Tabungan") ?>">
-                    <div class="card card-layanan bg-dark text-dark border-0">
-                        <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
-                        <div class="card-img-overlay card-heading">
-                            <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
-                            <div class="card-img-detail">
-                                <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="card card-layanan bg-dark text-dark border-0">
+                            <img src="<?= base_url('uploads/Home/Berita/Kredit.jpg') ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
+                                <div class="card-img-detail">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    
-    <section class="berita-home">
+</div>
+
+<section class="berita-home">
     <div class="container-scroller">
         <div class="main-panel">
             <!-- partial -->
@@ -108,12 +108,12 @@
                             foreach ($NewesBerita as $data) :
                             ?>
                                 <div class="card bg-dark text-white main-berita">
-                                <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="450px" class="card-img" alt="...">
-                                <div class="card-img-overlay">
-                                    <a href="">
-                                    <h5 class="card-title fs-3"><?= $data->judul ?></h5>
-                                    </a>
-                                </div>
+                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="450px" class="card-img" alt="...">
+                                    <div class="card-img-overlay">
+                                        <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
+                                            <h5 class="card-title fs-3"><?= $data->judul ?></h5>
+                                        </a>
+                                    </div>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -127,49 +127,49 @@
                                     foreach ($NewsBerita as $data) :
                                         if ($no == 2) {
                                     ?>
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                            <div class="row g-0 pt-4">
+                                                <div class="col-md-4">
+                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
+                                                            <h6 class="card-title title"><?= $data->judul ?></h6>
+                                                        </a>
+                                                        <p class="card-text"><small class=""><?= $data->tanggal ?></small></p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                            <div class="card-body">
-                                                <a href="">
-                                                    <h6 class="card-title title"><?= $data->judul ?></h6>
-                                                </a>
-                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
-                                            </div>
-                                            </div>
-                                        </div>
                                         <?php
                                         } elseif ($no == 3) { ?>
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                            <div class="row g-0">
+                                                <div class="col-md-4">
+                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
+                                                            <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                        </a>
+                                                        <p class="card-text"><small class=""><?= $data->tanggal ?></small></p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                            <div class="card-body">
-                                                <a href="">
-                                                    <h5 class="card-title title"><?= $data->judul ?></h5>
-                                                </a>
-                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
-                                            </div>
-                                            </div>
-                                        </div>
                                         <?php
                                         } elseif ($no == 4) { ?>
-                                        <div class="row g-0">
-                                            <div class="col-md-4">
-                                            <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                            <div class="row g-0">
+                                                <div class="col-md-4">
+                                                    <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">
+                                                            <h5 class="card-title title"><?= $data->judul ?></h5>
+                                                        </a>
+                                                        <p class="card-text"><small class=""><?= $data->tanggal ?></small></p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-8">
-                                            <div class="card-body">
-                                                <a href="">
-                                                    <h5 class="card-title title"><?= $data->judul ?></h5>
-                                                </a>
-                                                <p class="card-text"><small class="text-muted"><?= $data->tanggal ?></small></p>
-                                            </div>
-                                            </div>
-                                        </div>
                                     <?php }
                                         $no++;
                                     endforeach; ?>
@@ -181,7 +181,7 @@
             </div>
         </div>
     </div>
-    </section>
+</section>
 
 
 
