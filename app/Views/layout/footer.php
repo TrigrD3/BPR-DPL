@@ -48,10 +48,10 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
 
                     <div class="form-outline form-primary mb-4">
 
-                        <button class="">Whistleblowing</button>
+                        <a href="<?= $data['IdentitasWebsite']->whistleblowing ?>" target="_blank"><button class="">Whistleblowing</button></a>
                     </div>
                     <div class="form-outline form-primary mb-4">
-                        <button class="">Pengaduan Nasabah</button>
+                        <a href="<?= $data['IdentitasWebsite']->pengaduan ?>" target="_blank"><button class="">Pengaduan Nasabah</button></a>
                     </div>
 
                     <div class="mb-4">
@@ -85,8 +85,8 @@ $alamat['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
             <a style="color:#ffffff;">&copy;2022 PT Bank Danapermata Lestari</a>
         </div>
         <!-- Copyright -->
-        
+
     </footer>
-    
+
 
 </div>

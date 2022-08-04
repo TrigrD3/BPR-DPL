@@ -15,8 +15,8 @@ class IdentitasWebsite extends Seeder
                 'facebook'  => 'https://Facebook.com/LQx0EwxWRkM9jZE6mGdJeX',
                 'instagram' => 'https://Instagram.com/',
                 'logo' => 'logo.jpg',
-                'whistleblowing' => 'https://Form.com/',
-                'pengaduan' => 'https://Form.com/'
+                'whistleblowing' => 'https://forms.gle/KRCnPSxefXSdBxGM8',
+                'pengaduan' => 'https://forms.gle/5pqEJMh2FCB9cn5y9'
             ]
         ];
 
