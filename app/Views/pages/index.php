@@ -57,9 +57,9 @@
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">KREDIT</h5>
                                     <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Kredit</p>
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">KREDIT</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,9 +71,9 @@
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">DEPOSITO</h5>
                                     <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Deposito</p>
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">DEPOSTIO</p>
                                     </div>
                                 </div>
                             </div>
@@ -84,9 +84,9 @@
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
+                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">TABUNGAN</h5>
                                     <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Tabungan</p>
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">TABUNGAN</p>
                                     </div>
                                 </div>
                             </div>

@@ -64,7 +64,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
                 <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="Logo BPR" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Back to Website</span>
+                <span class="brand-text font-weight-light">Back to page</span>
             </a>
 
             <!-- Sidebar -->
@@ -100,7 +100,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
-                                    Home & Berita
+                                    Home
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -108,7 +108,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminHome') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Home & Berita</p>
+                                        <p>Home</p>
                                     </a>
                                 </li>
                             </ul>
@@ -244,7 +244,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminPAT') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>KAP</p>
+                                        <p>PAT</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -348,13 +348,22 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
     <!-- AdminLTE for demo purposes -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="<?= base_url('dist/js/pages/dashboard.js') ?>"></script>
-    <script src="<?= base_url('dist/js/pages/dashboard.js') ?>"></script>
-    <script src="<?php echo base_url("plugins/ckeditor/ckeditor.js"); ?>"></script>
+    <script src="https://cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
 
 
     <script>
-        CKEDITOR.replace('editor1');
-        CKEDITOR.replace('editor2');
+        CKEDITOR.replace('editor1', {
+            height: 400,
+            baseFloatZIndex: 10005,
+            removeButtons: 'PasteFromWord',
+            removePlugins: ['image', 'uploadimage']
+        });
+        CKEDITOR.replace('editor2', {
+            height: 400,
+            baseFloatZIndex: 10005,
+            removeButtons: 'PasteFromWord',
+            removePlugins: ['image', 'uploadimage']
+        });
     </script>
 </body>
 
