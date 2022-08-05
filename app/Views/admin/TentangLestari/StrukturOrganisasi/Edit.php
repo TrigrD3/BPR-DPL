@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditStrukturOrganisasi') . '/' . $tentang_strukturorganisasi->id_struktur_organisasi ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (2500x1900)</label>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_strukturorganisasi->foto ?>">
                             <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi') . '/' . $tentang_strukturorganisasi->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">

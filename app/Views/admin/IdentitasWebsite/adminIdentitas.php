@@ -42,7 +42,7 @@
                             <input type="text" id="pengaduan" name="pengaduan" class="form-control" value="<?= $IdentitasWebsite->pengaduan ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Logo</label>
+                            <label for="inputClientCompany">Logo (512x512)</label>
                             <br>
                             <input type="text" name="namalogo" hidden value="<?= $IdentitasWebsite->logo ?>">
                             <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $IdentitasWebsite->logo ?>" width="50%" height="50%" alt="logo-bank" class="img-thumbnail">

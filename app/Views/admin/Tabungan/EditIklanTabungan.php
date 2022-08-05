@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditIklanTabungan') . '/' . $iklan_tabungan->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan_tabungan->foto ?>">
                             <img src="<?= base_url('uploads/Tabungan/Iklan') . '/' . $iklan_tabungan->foto ?>" width="50%" height="50%" alt="iklan-tabungan" class="img-thumbnail">

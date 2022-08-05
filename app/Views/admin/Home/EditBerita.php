@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditBerita') . '/' . $berita->id_berita ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (800X600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $berita->foto ?>" required>
                             <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

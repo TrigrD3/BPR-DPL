@@ -64,7 +64,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
             <!-- Brand Logo -->
             <a href="/" class="brand-link">
                 <img src="<?= base_url('uploads/IdentitasWebsite') . '/' . $data['IdentitasWebsite']->logo ?>" alt="Logo BPR" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Back to page</span>
+                <span class="brand-text font-weight-light">Back to Website</span>
             </a>
 
             <!-- Sidebar -->
@@ -100,7 +100,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
-                                    Home
+                                    Home & Berita
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
@@ -244,7 +244,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminPAT') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>PAT</p>
+                                        <p>KAP</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

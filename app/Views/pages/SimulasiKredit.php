@@ -29,7 +29,7 @@
                     <input type="radio" class="form-check-input" value="1" name="metode" id="Flat" checked>
 
                 </div>
-                <div class="form-check-inline">
+                <!-- <div class="form-check-inline">
                     <label class="form-check-label" for="Efektif">Efektif</label>
                     <input type="radio" class="form-check-input" value="2" name="metode" id="Efektif">
 
@@ -38,7 +38,7 @@
                     <label class="form-check-label" for="Anuitas">Anuitas</label>
                     <input type="radio" class="form-check-input" value="3" name="metode" id="Anuitas">
 
-                </div>
+                </div> -->
             </div>
             <div class="form-group mb-3 mt-3">
                 <button id="btnHitung" type="submit" class="btn btn-primary mt-1">Hitung</button>

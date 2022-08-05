@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('/TambahIklan') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputName">Foto Iklan</label>
+                            <label for="inputName">Foto Iklan (1920x600)</label>
                             <input type="file" id="inputName" name="foto" class="form-control" required>
                         </div>
                         <div class="row">

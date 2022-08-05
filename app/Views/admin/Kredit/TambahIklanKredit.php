@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('/TambahIklanKredit') ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">

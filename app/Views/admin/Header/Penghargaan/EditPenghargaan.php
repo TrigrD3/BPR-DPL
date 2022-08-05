@@ -25,7 +25,7 @@
                             <input type="text" name="deskripsi" id="inputName" class="form-control" value="<?= $header_penghargaan->deskripsi ?>" required>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1800x1200)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $header_penghargaan->foto ?>" required>
                             <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $header_penghargaan->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

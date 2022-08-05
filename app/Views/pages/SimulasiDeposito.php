@@ -64,10 +64,10 @@
             <div class="col-4 border">Total Akumulasi Bunga</div>
             <div class="col-4 border">: <span id="resultTotalAkumulasiBunga"></span></div>
         </div>
-        <div class="row d-flex justify-content-center">
+        <!-- <div class="row d-flex justify-content-center">
             <div class="col-4 border">Total Deposito Akhir</div>
             <div class="col-4 border">: <span id="resultTotalDepositoAkhir"></span></div>
-        </div>
+        </div> -->
     </aside>
 </div>
 <script src="<?= base_url(); ?>/assets/js/numeral.min.js"></script>

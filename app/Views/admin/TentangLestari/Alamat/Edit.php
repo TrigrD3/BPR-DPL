@@ -31,7 +31,7 @@
                             <textarea name="google_maps" class="form-control" rows="4" required><?= $tentang_alamat_kantor->google_maps ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (800x600)</label>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_alamat_kantor->foto ?>">
                             <img src="<?= base_url('uploads/TentangLestari/Alamat') . '/' . $tentang_alamat_kantor->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto" id="foto" class="form-control">

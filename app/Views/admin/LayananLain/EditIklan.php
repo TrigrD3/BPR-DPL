@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditIklanLayananLain') . '/' . $iklan_layananlain->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Gambar</label>
+                            <label for="inputClientCompany">Gambar (1920x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan_layananlain->foto ?>" required>
                             <img src="<?= base_url('uploads/LayananLain/Iklan') . '/' . $iklan_layananlain->foto ?>" width="50%" height="50%" alt="iklan-layananlain" class="img-thumbnail">

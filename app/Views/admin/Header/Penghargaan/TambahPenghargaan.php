@@ -25,7 +25,7 @@
                             <input type="text" name="deskripsi" id="inputName" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih File</label>
+                            <label for="inputClientCompany">Pilih Foto (1800x1200)</label>
                             <input type="file" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">

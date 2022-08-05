@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditIklan') . '/' . $iklan->id_iklan ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1920x600) </label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $iklan->foto ?>" required>
                             <img src="<?= base_url('uploads/Home/Iklan') . '/' . $iklan->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

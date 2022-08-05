@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditLelang') . '/' . $header_lelang->id_lelang ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1600x1800)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $header_lelang->foto ?>" required>
                             <img src="<?= base_url('uploads/Header/Lelang') . '/' . $header_lelang->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

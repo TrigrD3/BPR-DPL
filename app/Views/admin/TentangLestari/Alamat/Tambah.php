@@ -31,7 +31,7 @@
                             <textarea class="form-control" name="google_maps" rows="4" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (800x600)</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">

@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditFotoLL') . '/' . $layanan_produk->id_produk ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (800x600)</label>
                             <br>
 
                             <input type="text" name="namafoto" hidden value="<?= $layanan_produk->foto ?>" required>

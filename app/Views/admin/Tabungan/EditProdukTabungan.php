@@ -29,7 +29,7 @@
                             <textarea name="editor1" id="editor" class="form-control" rows="4" required><?= $produk_tabungan->deskripsi ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (800x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $produk_tabungan->foto ?>">
                             <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $produk_tabungan->foto ?>" width="50%" height="50%" alt="produk-tabungan" class="img-thumbnail">
