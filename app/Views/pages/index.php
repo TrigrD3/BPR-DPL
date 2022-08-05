@@ -58,9 +58,9 @@
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Kredit</h5>
-                                    <!-- <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div> -->
+                                    <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Kredit</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -72,9 +72,9 @@
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Deposito</h5>
-                                    <!-- <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div> -->
+                                    <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Deposito</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -85,9 +85,9 @@
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x">Tabungan</h5>
-                                    <!-- <div class="card-img-detail">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div> -->
+                                    <div class="card-img-detail">
+                                        <p class="card-text position-absolute top-50 start-50 translate-middle">Tabungan</p>
+                                    </div>
                                 </div>
                             </div>
                         </a>
