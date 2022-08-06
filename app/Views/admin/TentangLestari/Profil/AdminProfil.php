@@ -46,8 +46,9 @@
                                 <?= $data->judul; ?>
                             </td>
                             <td class="deskripsi">
-                                <aside><?= $data->deskripsi; ?></aside>
-                                <br />
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
 
                             <td class="project-actions text-right">

@@ -35,12 +35,15 @@
                     <?php
                     foreach ($HeaderPenghargaan as $data) :
                     ?>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eos velit vitae delectus, tempora, voluptate ex modi saepe consectetur dolorem sint aspernatur blanditiis itaque, voluptatem quae odio minima dolore perspiciatis?
                         <tr>
                             <td>
                                 <img src="<?= base_url('uploads/Header/Penghargaan') . '/' . $data->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
                             <td class="deskripsi">
-                                <p><?= $data->deskripsi; ?></p>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
 
                             <td class="project-actions text-right">

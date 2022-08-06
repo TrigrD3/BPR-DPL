@@ -49,7 +49,9 @@
                                 <?= $data->kabupaten_kota; ?>
                             </td>
                             <td class="deskripsi">
-                                <p><?= $data->alamat; ?></p>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
                             <td>
                                 <?= $data->nomor_telepon; ?>

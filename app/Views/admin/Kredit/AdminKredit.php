@@ -50,7 +50,9 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td class="deskripsi">
-                                <aside><?= $data->deskripsi; ?></aside>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="50%" height="50%" alt="iklan-kredit" class="img-thumbnail">

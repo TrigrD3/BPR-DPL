@@ -63,7 +63,9 @@
                                 <?= $data->tanggal; ?>
                             </td>
                             <td class="project_progress deskripsi">
-                                <aside><?= $data->isi_berita; ?></aside>
+                                <p><?= 
+                                $new = htmlspecialchars($data->isi_berita, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditBerita/$data->id_berita") ?>">
@@ -187,7 +189,9 @@
                                 <?= $no; ?>
                             </td>
                             <td class="deskripsi">
-                                <?= $data->deskripsi; ?>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
 
                             <td class="project-actions text-right">

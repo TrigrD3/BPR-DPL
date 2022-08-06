@@ -1,16 +1,8 @@
 .deskripsi p {
   overflow: hidden;
-  text-overflow: clip;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show dasd*/
-  -webkit-box-orient: vertical;
-}
-
-.deskripsi aside {
-  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show dasd*/
+  -webkit-line-clamp: 3; /* number of lines to show dasd*/
   -webkit-box-orient: vertical;
 }
 

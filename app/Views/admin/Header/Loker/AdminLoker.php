@@ -53,7 +53,9 @@
                                 <br />
                             </td>
                             <td class="deskripsi">
-                                <p><?= $data->deskripsi; ?></p>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
                             <td class="deskripsi">
                                 <p><?= $data->link; ?></p>

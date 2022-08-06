@@ -49,7 +49,9 @@
                                 <br />
                             </td>
                             <td class="deskripsi">
-                                <aside> <?= $data->deskripsi; ?></aside>
+                                <p><?= 
+                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                echo $new;?></p>
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $data->foto; ?>" width="50%" height="50%" alt="produk-tabungan" class="img-thumbnail">
