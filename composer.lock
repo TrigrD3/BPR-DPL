@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "codeigniter4/framework",
-            "version": "v4.2.1",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/framework.git",
-                "reference": "f65a2cff3a572c58c8ab9c8f61bdba904362b549"
+                "reference": "676805e456a2ed807e134b3cff8c5137acb485f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/f65a2cff3a572c58c8ab9c8f61bdba904362b549",
-                "reference": "f65a2cff3a572c58c8ab9c8f61bdba904362b549",
+                "url": "https://api.github.com/repos/codeigniter4/framework/zipball/676805e456a2ed807e134b3cff8c5137acb485f0",
+                "reference": "676805e456a2ed807e134b3cff8c5137acb485f0",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "source": "https://github.com/codeigniter4/CodeIgniter4"
             },
-            "time": "2022-06-16T13:53:25+00:00"
+            "time": "2022-08-05T14:57:01+00:00"
         },
         {
             "name": "kint-php/kint",

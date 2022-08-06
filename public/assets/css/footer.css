@@ -41,7 +41,7 @@ footer button {
   border: none;
 }
 
-button {
+/* button {
   color: white;
   height: 64px;
   width: 300px;
@@ -53,7 +53,7 @@ button {
   border: none;
   font-weight: normal;
   font-family: Montserrat;
-}
+} */
 
 button:hover {
   transform: scale(1.05);
