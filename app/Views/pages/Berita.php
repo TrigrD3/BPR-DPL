@@ -15,7 +15,7 @@
         <p class="h1 judul1"><?= $berita->judul ?></p>
 
         <div class="text-center">
-            <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="1116px" class="img-fluid" alt="GambarBerita">
+            <img src="<?= base_url('uploads/Home/Berita') . '/' . $berita->foto ?>" width="800px" class="img-fluid" alt="GambarBerita">
         </div>
 
 

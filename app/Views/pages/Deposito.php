@@ -17,7 +17,9 @@
                     <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $data->foto; ?>" width="100%" height="225" class="card-img" alt="...">
                     <div class="card-img-overlay card-heading">
 
-                        <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan"><?= $data->nama ?></h5>
+                        <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
+                            <div class="mt-1"><?= $data->nama ?></div>
+                        </h5>
 
                         <div class="card-img-detail deskripsi">
                             <p class="card-text position-absolute top-50 start-50 translate-middle"><?= $data->nama ?></p>

@@ -20,7 +20,7 @@
     foreach ($DepositoForm as $data) :
     ?>
         <a href="<?= $data->g_form; ?>" target="_blank">
-            <button type="button" class=" ">
+            <button type="button" class="pengajuan">
                 <img src="images/b1.png" alt=""> <b> PENGAJUAN DEPOSIT </b>
             </button>
         </a>

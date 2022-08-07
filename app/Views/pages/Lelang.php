@@ -5,12 +5,12 @@
     <div class="container justify-content-center">
         <h1>LELANG</h1>
         <div class="row mt-3 mx-2 flex-column ">
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex justify-content-center mb-3">
                 <img src="<?= base_url('uploads/Header/Lelang') . '/' . $RowLelang->foto ?>" class="img-fluid pro-img img-lelang" alt="">
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt-2">
             <iframe class="gmap" src="<?= $RowLelang->google_maps; ?>" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- start list lelang -->

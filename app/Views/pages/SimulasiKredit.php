@@ -13,15 +13,15 @@
                 <label for="jumlahKredit">Jumlah Kredit <em>(rupiah)</em>: </label>
                 <br>
                 <span id="format-Rp"></span>
-                <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit" placeholder="Contoh: 150000000" value="12000000">
+                <input type="number" class="form-control" id="jumlahKredit" name="jumlahKredit" placeholder="Contoh: 150000000" value="">
             </div>
             <div class="form-group">
                 <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
-                <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="12">
+                <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="">
             </div>
             <div class="form-group">
                 <label for="bungaPertahun">Bunga Pertahun <em>(%)</em>: </label>
-                <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun" placeholder="Contoh: 10.5" value="10">
+                <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun" placeholder="Contoh: 10.5" value="">
             </div>
             <div class="form-group1 ">
                 <div class="form-check-inline">

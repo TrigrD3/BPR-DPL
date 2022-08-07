@@ -21,7 +21,7 @@
     ?>
         <a href="<?= $data->g_form; ?>" target="_blank">
         <?php endforeach; ?>
-        <button type="button" class=" ">
+        <button type="button" class="pengajuan">
             <img src="images/b1.png" alt=""> <b>PENGAJUAN KREDIT</b>
         </button>
         </a>
