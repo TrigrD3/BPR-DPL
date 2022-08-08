@@ -24,6 +24,10 @@
                             <label for="inputName">Nama File</label>
                             <input type="text" name="nama" id="inputName" class="form-control" value="<?= $header_publikasi->nama ?>" required>
                         </div>
+                        <div class="form-group">
+                            <label for="inputName">Triwulan</label>
+                            <input type="drobdown" name="nama" id="inputName" class="form-control" required>
+                        </div>
                         <label for="inputName">Tahun</label>
                         <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" value="<?= $header_publikasi->tahun ?>" required>
 

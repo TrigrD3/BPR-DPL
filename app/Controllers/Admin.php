@@ -13,6 +13,7 @@ class Admin extends BaseController
         // parent::__construct();
         $this->session = \Config\Services::session();
         $this->db = \Config\Database::connect();
+        $this->IdentitasWebsiteModel = new \App\Models\IdentitasWebsiteModel();
     }
 
     public function Admin()
@@ -22,6 +23,7 @@ class Admin extends BaseController
             'css' => 'Style',
             'font' => 'font',
         ];
+        $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
         echo view('Admin/Admin', $data);
     }
 }

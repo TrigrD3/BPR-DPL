@@ -163,7 +163,7 @@
                             <?php
                             foreach ($NewesBerita as $data) :
                             ?>
-                                <div class="card bg-dark text-white main-berita" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
+                                <div class="card bg-dark text-white main-berita border-0" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
                                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" height="450px" class="card-img" alt="...">
                                     <div class="card-img-overlay">
                                         <a href="<?= base_url("/LihatBerita/$data->id_berita") ?>">

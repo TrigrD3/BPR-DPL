@@ -173,6 +173,10 @@ a:active {
   -webkit-box-orient: vertical;
 }
 
+.trawal {
+  text-transform: uppercase !important;
+}
+
 .background-transparan {
   background: rgba(0, 0, 0, 0.5);
 }

@@ -80,107 +80,58 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                with font-awesome or any other icon font library -->
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('adminIdentitas') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-id-badge"></i>
                                 <p>
                                     Identitas Website
-                                    <i class="fas fa-angle-left right"></i>
+
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('adminIdentitas') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Identitas Website</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('AdminHome') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Home & Berita
-                                    <i class="fas fa-angle-left right"></i>
+
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminHome') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Home</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('AdminKredit') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-credit-card"></i>
                                 <p>
                                     Kredit
-                                    <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminKredit') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Kredit</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('AdminDeposito') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-money-check"></i>
 
                                 <p>
                                     Deposito
-                                    <i class="fas fa-angle-left right"></i>
+
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminDeposito') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Deposito</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('AdminTabungan') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-money-bill"></i>
                                 <p>
                                     Tabungan
-                                    <i class="fas fa-angle-left right"></i>
+
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('AdminTabungan') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Tabungan</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="<?= base_url('adminLayananLainnya') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-list"></i>
                                 <p>
                                     Layanan Lainnya
-                                    <i class="fas fa-angle-left right"></i>
+
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="<?= base_url('adminLayananLainnya') ?>" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Layanan Lainnya</p>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -272,21 +223,13 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                         if ($_SESSION['level'] == "super_admin") {
                         ?>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="<?= base_url('AdminUser') ?>" class="nav-link">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
                                         Akun
                                         <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="<?= base_url('AdminUser') ?>" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>Akun</p>
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         <?php
                         }

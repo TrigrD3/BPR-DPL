@@ -20,13 +20,13 @@
     ?>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-5 pb-5"></div>
         <div class="container p-5 pt-5 mw-48" style="background-color: #EFF8FC;">
-            <table class="table table-borderless">
-                <tr class="text-color">
-                    <td rowspan="<?= $jumlah[0]->jumlah + 1; ?>">Report:</td>
-                    <td></td>
+            <table class="table table-borderless report d-flex justify-content-center">
+                <tr class="text-color trawal">
+                    <td rowspan="<?= $jumlah[0]->jumlah + 1; ?>"></td>
+                    <td>REPORT : </td>
                 </tr>
                 <?php foreach ($file as $data) : ?>
-                    <tr class="text-color">
+                    <tr class="text-color text-left">
                         <td>
                             <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
                         </td>

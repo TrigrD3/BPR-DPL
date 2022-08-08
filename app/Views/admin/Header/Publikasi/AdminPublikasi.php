@@ -32,6 +32,9 @@
                             File
                         </th>
                         <th>
+                            Triwulan
+                        </th>
+                        <th>
                             Tahun
                         </th>
                         <th style="width: 20%">
@@ -51,6 +54,9 @@
                             </td>
                             <td>
                                 <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->file ?></a>
+                            </td>
+                            <td class="project_progress">
+
                             </td>
                             <td class="project_progress">
                                 <?= $data->tahun; ?>
