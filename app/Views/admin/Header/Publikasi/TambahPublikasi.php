@@ -26,19 +26,28 @@
                         </div>
                         <div class="form-group">
                             <label for="inputName">Triwulan</label>
-                            <input type="date" name="nama" id="inputName" class="form-control" required>
+                            <select name="triwulan" id="inputName" class="form-control" required>
+                                <option value="" selected disabled>-- Pilih Triwulan --</option>
+                                <option value="1">Triwulan 1</option>
+                                <option value="2">Triwulan 2</option>
+                                <option value="3">Triwulan 3</option>
+                                <option value="4">Triwulan 4</option>
+                            </select>
                         </div>
-                        <label for="inputName">Tahun</label>
-                        <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" required />
+                        <div class="form-group">
 
-                        <script>
-                            $("#datepicker").datepicker({
-                                format: "yyyy",
-                                viewMode: "years",
-                                minViewMode: "years",
-                                autoclose: true //to close picker once year is selected
-                            });
-                        </script>
+                            <label for="inputName">Tahun</label>
+                            <input type="text" name="tahun" autocomplete="off" class="form-control" name="datepicker" id="datepicker" required />
+
+                            <script>
+                                $("#datepicker").datepicker({
+                                    format: "yyyy",
+                                    viewMode: "years",
+                                    minViewMode: "years",
+                                    autoclose: true //to close picker once year is selected
+                                });
+                            </script>
+                        </div>
                         <div class="form-group">
                             <label for="inputClientCompany">Pilih File</label>
                             <input type="File" name="file" id="inputClientCompany" class="form-control" value="Deveint Inc" required>
