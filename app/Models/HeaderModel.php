@@ -276,7 +276,7 @@ class HeaderModel extends Model
 
     function get_all_publikasi()
     {
-        $data['HeaderPublikasi'] = $this->db->table('header_publikasi')->select('*')->get()->getResult();
+        $data['HeaderPublikasi'] = $this->db->table('header_publikasi')->select('*')->orderBy('tahun', 'ASC')->orderBy('triwulan', 'ASC')->get()->getResult();
         return $data['HeaderPublikasi'];
     }
     public function get_id_publikasi($id)
@@ -291,7 +291,7 @@ class HeaderModel extends Model
     }
     public function get_all_tahun_publikasi($id)
     {
-        $data = $this->db->table('header_publikasi')->select('*')->where('tahun', $id)->get()->getResult();
+        $data = $this->db->table('header_publikasi')->select('*')->where('tahun', $id)->orderBy('triwulan', 'ASC')->get()->getResult();
         return $data;
     }
     public function get_all_tahun_publikasi_jumlah($id)
@@ -323,6 +323,12 @@ class HeaderModel extends Model
                     'max_size' => 'Ukuran File Maksimal 10 MB'
                 ]
             ],
+            'triwulan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
 
         ])) {
             session()->setFlashdata('error', $this->validator->listErrors());
@@ -347,6 +353,12 @@ class HeaderModel extends Model
                 ]
             ],
             'file' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'triwulan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Harus diisi'

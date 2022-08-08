@@ -44,6 +44,10 @@ class Header extends Migration
             'tahun'            => [
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
+            ],
+            'triwulan'            => [
+                'type'           => 'INT',
+                'constraint'     => 5,
             ]
         ]);
 

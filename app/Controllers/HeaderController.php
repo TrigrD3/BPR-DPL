@@ -393,10 +393,6 @@ class HeaderController extends BaseController
         return redirect()->to(base_url('adminPenghargaan'));
     }
 
-
-
-
-
     public function index_publikasi()
     {
         $data = [
@@ -428,6 +424,7 @@ class HeaderController extends BaseController
             'nama' => $this->request->getPost('nama'),
             'tahun' => $this->request->getPost('tahun'),
             'file' => $fileName,
+            'triwulan' => $this->request->getPost('triwulan'),
         ];
         $dataBerkas->move('uploads/Header/Publikasi', $fileName);
 
@@ -460,12 +457,14 @@ class HeaderController extends BaseController
                     'nama' => $this->request->getPost('nama'),
                     'tahun' => $this->request->getPost('tahun'),
                     'file' => $fileName,
+                    'triwulan' => $this->request->getPost('triwulan'),
                 ];
             } else {
                 $data = [
                     'nama' => $this->request->getPost('nama'),
                     'tahun' => $this->request->getPost('tahun'),
                     'file' => $fileName,
+                    'triwulan' => $this->request->getPost('triwulan'),
                 ];
             }
             $dataBerkas->move('uploads/Header/Publikasi', $fileName);
@@ -473,6 +472,7 @@ class HeaderController extends BaseController
             $data = [
                 'nama' => $this->request->getPost('nama'),
                 'tahun' => $this->request->getPost('tahun'),
+                'triwulan' => $this->request->getPost('triwulan'),
             ];
         }
 

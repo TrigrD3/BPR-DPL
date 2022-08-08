@@ -28,10 +28,10 @@
                             <label for="inputName">Triwulan</label>
                             <select name="triwulan" id="inputName" class="form-control" required>
                                 <option value="" selected disabled>-- Pilih Triwulan --</option>
-                                <option value="1">Triwulan 1</option>
-                                <option value="2">Triwulan 2</option>
-                                <option value="3">Triwulan 3</option>
-                                <option value="4">Triwulan 4</option>
+                                <option <?php if ($header_publikasi->triwulan == 1) { ?> selected <?php } ?> value="1">Triwulan 1</option>
+                                <option <?php if ($header_publikasi->triwulan == 2) { ?> selected <?php } ?> value="2">Triwulan 2</option>
+                                <option <?php if ($header_publikasi->triwulan == 3) { ?> selected <?php } ?> value="3">Triwulan 3</option>
+                                <option <?php if ($header_publikasi->triwulan == 4) { ?> selected <?php } ?> value="4">Triwulan 4</option>
                             </select>
                         </div>
                         <div class="form-group">

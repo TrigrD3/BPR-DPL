@@ -300,6 +300,15 @@ class HomeController extends BaseController
             $dataBerkasTabungan->move('uploads/Home/Logo/', $fileNameTabungan);
         }
 
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+            return redirect()->to(base_url('AdminHome'));
+        }
+
         $this->HomeModel->update_foto_logo($id, $data);
 
         $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.

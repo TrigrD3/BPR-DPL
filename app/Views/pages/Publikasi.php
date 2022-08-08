@@ -23,44 +23,40 @@
             <table class="table table-borderless report d-flex justify-content-center">
                 <tr class="text-color trawal">
                     <!-- <td rowspan="<?= $jumlah[0]->jumlah + 1; ?>"></td> -->
-                    <td>
+                    <td colspan="2">
                         <h2>REPORT</h2>
                     </td>
                 </tr>
                 <?php foreach ($file as $data) : ?>
-                    <tr class="text-color trawal">
-                        <td>Triwulan 1 :</td>
-                    </tr>
-                    <tr class="text-color text-left">
-                        <td>
-                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
-                        </td>
-                    </tr>
-                    <tr class="text-color trawal">
-                        <td>Triwulan 2 :</td>
-                    </tr>
-                    <tr class="text-color text-left">
-                        <td>
-                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
-                        </td>
-                    </tr>
-                    <tr class="text-color trawal">
-                        <td>Triwulan 3 :</td>
-                    </tr>
-                    <tr class="text-color text-left">
-                        <td>
-                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
-                        </td>
-                    </tr>
-                    <tr class="text-color trawal">
-                        <td>Triwulan 4 :</td>
-                    </tr>
-
-                    <tr class="text-color text-left">
-                        <td>
-                            <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
-                        </td>
-                    </tr>
+                    <?php if ($data->triwulan == 1) { ?>
+                        <tr class="text-color trawal">
+                            <td>Triwulan 1 :</td>
+                            <td>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
+                            </td>
+                        </tr>
+                    <?php } elseif ($data->triwulan == 2) { ?>
+                        <tr class="text-color trawal">
+                            <td>Triwulan 2 :</td>
+                            <td>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
+                            </td>
+                        </tr>
+                    <?php } elseif ($data->triwulan == 3) { ?>
+                        <tr class="text-color trawal">
+                            <td>Triwulan 3 :</td>
+                            <td>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
+                            </td>
+                        </tr>
+                    <?php } elseif ($data->triwulan == 4) { ?>
+                        <tr class="text-color trawal">
+                            <td>Triwulan 4 :</td>
+                            <td>
+                                <a href="<?= base_url('uploads/Header/Publikasi') . '/' . $data->file ?>" target="_blank"><?= $data->nama ?> - <?= $data->tahun ?></a>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 <?php endforeach; ?>
             </table>
         </div>

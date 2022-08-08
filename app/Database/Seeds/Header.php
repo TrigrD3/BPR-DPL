@@ -21,7 +21,8 @@ class Header extends Seeder
             [
                 'nama'  => 'publikasi',
                 'file' => 'Laporan Publikasi tahun 2012.pdf',
-                'tahun' => '2012'
+                'tahun' => '2012',
+                'triwulan' => 1
             ]
         ];
 
