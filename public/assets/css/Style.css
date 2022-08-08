@@ -173,6 +173,10 @@ a:active {
   -webkit-box-orient: vertical;
 }
 
+.form {
+  width: 75%;
+}
+
 .trawal {
   text-transform: uppercase !important;
 }

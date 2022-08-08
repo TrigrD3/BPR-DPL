@@ -18,13 +18,22 @@
                         <?= $data->judul ?>
                     </h2>
                     <p><?= $data->deskripsi ?></p>
+                    <div class="form">
+                        <h4>Form :</h4>
+                        <a href="<?= $data->link ?>"><img src="<?= base_url('/assets/img/form-loker.png'); ?>" class="img-fluid form-transition"></a>
+                        <div class="mt-3">
+                            <h4>Email :</h4>
+                            <a href="mailto:hrd@banklestari.co.id"><img src="<?= base_url('/assets/img/loker-email.png'); ?>" class="img-fluid form-transition"></a>
+                        </div>
+                    </div>
 
-                    <a href="<?= $data->link ?>"><img src="<?= base_url('/assets/img/form-loker.png'); ?>" class="img-fluid form-transition"></a>
+
                 </div>
             </div>
         </div>
     <?php
     endforeach; ?>
+
 </div>
 
 <?= $this->endSection(); ?>
