@@ -2,7 +2,18 @@
 
 <?= $this->section('content'); ?>
 
-
+<script>
+// get days difference between two dates from input fields
+function getDaysDifference() {
+    d1 = document.getElementById("dateAwal").value;
+    d2 = document.getElementById("dateAkhir").value;
+    const date1 = new Date(d1);
+    const date2 = new Date(d2);
+    const time = Math.abs(date2 - date1);
+    const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+    document.getElementById("jangkaWaktu").value = days;
+}
+</script>
 <!-- Container -->
 <div class="flex-container">
     <main class=" container-simulasi ">
@@ -15,10 +26,18 @@
                     <span id="format-Rp"></span>
                     <input type="number" class="form-control" id="jumlahDeposito" name="jumlahDeposito" placeholder="Contoh: 150000000" value="">
                 </div>
+                
                 <div class="form-group">
-                    <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
-                    <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="">
+                    <label onchange="getDaysDifference()" for="dateAwal">Tanggal Mulai</label>
+                    <input type="date" class="form-control" id="dateAwal" name="dateAwal" placeholder="Contoh: 120" value="">
+                    <label for="dateAkhir" >Tanggal Akhir</label>
+                    <input onchange="getDaysDifference()" type="date" class="form-control" id="dateAkhir" name="dateAkhir" placeholder="Contoh: 120" value="">
                 </div>
+                <div class="form-group">
+                <label for="jangkaWaktu">Total Hari</label>
+                <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="">
+                </div>
+
                 <div class="form-group">
                     <label for="bungaPertahun">Bunga<em>(%)</em>: </label>
                     <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun" placeholder="Contoh: 10.5" value="">
@@ -45,7 +64,7 @@
             <div class="col-4 border">: <span id="resultNominalDeposito"></span></div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-4 border">Jangka Waktu (Bulan)</div>
+            <div class="col-4 border">Jangka Waktu (hari)</div>
             <div class="col-4 border">: <span id="resultJangkaWaktu"></span></div>
         </div>
         <div class="row d-flex justify-content-center">
