@@ -78,16 +78,19 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+                        <?php
+                        if ($_SESSION['level'] == "super_admin") {
+                        ?>
+                            <li class="nav-item">
+                                <a href="<?= base_url('adminIdentitas') ?>" class="nav-link">
+                                    <i class="nav-icon fas fa-id-badge"></i>
+                                    <p>
+                                        Identitas Website
 
-                        <li class="nav-item">
-                            <a href="<?= base_url('adminIdentitas') ?>" class="nav-link">
-                                <i class="nav-icon fas fa-id-badge"></i>
-                                <p>
-                                    Identitas Website
-
-                                </p>
-                            </a>
-                        </li>
+                                    </p>
+                                </a>
+                            </li>
+                        <?php } ?>
                         <li class="nav-item">
                             <a href="<?= base_url('AdminHome') ?>" class="nav-link">
                                 <i class="nav-icon fas fa-home"></i>
@@ -227,7 +230,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
                                         Akun
-                                        <i class="fas fa-angle-left right"></i>
+
                                     </p>
                                 </a>
                             </li>

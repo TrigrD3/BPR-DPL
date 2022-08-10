@@ -25,14 +25,17 @@
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 20%">
+                        <th style="width: 15%">
                             Nama
                         </th>
-                        <th style="width: 30%">
+                        <th style="width: 25%">
                             Deskripsi
                         </th>
                         <th>
                             Foto
+                        </th>
+                        <th>
+                            Foto Depan
                         </th>
                         <th style="width: 20%">
                         </th>
@@ -50,13 +53,15 @@
                                 <?= $data->nama; ?>
                             </td>
                             <td class="deskripsi">
-                                <p><?= 
-                                $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
-                                echo $new;?></p>
+                                <p><?=
+                                    $new = htmlspecialchars($data->deskripsi, ENT_QUOTES);
+                                    echo $new; ?></p>
                             </td>
                             <td class="project_progress">
                                 <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="50%" height="50%" alt="iklan-kredit" class="img-thumbnail">
-
+                            </td>
+                            <td>
+                                <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto_depan; ?>" width="50%" height="50%" alt="iklan-kredit" class="img-thumbnail">
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditProdukKredit/$data->id_produk") ?>">

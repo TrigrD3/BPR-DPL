@@ -20,8 +20,14 @@ class User extends Seeder
                 'nama' => 'Bank BPR',
                 'username'  => 'adminbank',
                 'password' => password_hash('adminbank', PASSWORD_BCRYPT),
+                'level' => 'super_admin',
+            ],
+            [
+                'nama' => 'Operator',
+                'username'  => 'operator',
+                'password' => password_hash('operator', PASSWORD_BCRYPT),
                 'level' => 'admin',
-            ]
+            ],
         ];
 
         foreach ($user_data as $data) {

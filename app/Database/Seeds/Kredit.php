@@ -20,6 +20,7 @@ class Kredit extends Seeder
                 'nama'  => 'produk',
                 'deskripsi' => 'Pemerataan produk dalam beberapa tahun',
                 'foto'  => 'produk.jpg',
+                'foto_depan' => 'produk_depan.jpg',
                 'slug' => 'produk-kredit',
             ]
         ];

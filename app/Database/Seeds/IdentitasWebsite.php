@@ -11,7 +11,7 @@ class IdentitasWebsite extends Seeder
         //
         $all_data = [
             [
-                'whatsapp' => 'https://chat.whatsapp.com/LQx0EwxWRkM9jZE6mGdJeX',
+                'whatsapp' => 'https://wa.me/+628115028311?text=Permisi',
                 'facebook'  => 'https://Facebook.com/LQx0EwxWRkM9jZE6mGdJeX',
                 'instagram' => 'https://Instagram.com/',
                 'logo' => 'logo.jpg',

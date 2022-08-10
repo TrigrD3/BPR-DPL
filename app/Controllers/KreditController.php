@@ -70,6 +70,13 @@ class KreditController extends BaseController
 
     public function AddKredit()
     {
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (is_file('uploads/Kredit/ProdukKredit' . '/' . $fileNameDepan)) {
+            $fileNameDepan = date('YmdHis') . '-' . $fileNameDepan;
+        }
+        $dataBerkasDepan->move('uploads/Kredit/ProdukKredit', $fileNameDepan);
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (is_file('uploads/Kredit/ProdukKredit' . '/' . $fileName)) {
@@ -78,6 +85,7 @@ class KreditController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
+            'foto_depan' => $fileNameDepan,
             'foto' => $fileName,
         ];
         $dataBerkas->move('uploads/Kredit/ProdukKredit', $fileName);
@@ -112,29 +120,32 @@ class KreditController extends BaseController
 
     public function UpdateKredit($id)
     {
+        $data = [
+            'nama' => $this->request->getVar('nama'),
+            'deskripsi' => $this->request->getVar('editor1'),
+        ];
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (!empty($fileNameDepan)) {
+            if (is_file('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto_depan'))) {
+                unlink('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto_depan'));
+                $data['foto_depan'] = $fileNameDepan;
+            } else {
+                $data['foto_depan'] = $fileNameDepan;
+            }
+            $dataBerkasDepan->move('uploads/Kredit/ProdukKredit', $fileNameDepan);
+        }
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
             if (is_file('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto'))) {
                 unlink('uploads/Kredit/ProdukKredit' . '/' . $this->request->getVar('namafoto'));
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             } else {
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             }
             $dataBerkas->move('uploads/Kredit/ProdukKredit', $fileName);
-        } else {
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-                'deskripsi' => $this->request->getVar('editor1'),
-            ];
         }
 
         $this->KreditModel->update_kredit($id, $data);
@@ -183,6 +194,9 @@ class KreditController extends BaseController
         }
         if (is_file('uploads/Kredit/ProdukKredit' . '/' . $data->foto)) {
             unlink('uploads/Kredit/ProdukKredit' . '/' . $data->foto);
+        }
+        if (is_file('uploads/Kredit/ProdukKredit' . '/' . $data->foto_depan)) {
+            unlink('uploads/Kredit/ProdukKredit' . '/' . $data->foto_depan);
         }
         $this->KreditModel->delete_kredit($id);
         session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.

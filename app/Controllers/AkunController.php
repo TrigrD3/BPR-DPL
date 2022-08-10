@@ -43,12 +43,13 @@ class AkunController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
             'username' => $this->request->getPost('username'),
+            'level' => $this->request->getPost('level'),
             'password' => password_hash($this->request->getPost('password'), PASSWORD_BCRYPT),
         ];
 
         $this->AkunModel->add_user($data);
 
-        session()->setFlashdata('message', 'Tambah User Berhasil');
+        session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Akun Berhasil ditambahkan!</div>');
         return redirect()->to(base_url('AdminUser'))->with('success', 'Data Added Successfully');
     }
 
@@ -75,6 +76,7 @@ class AkunController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
             'username' => $this->request->getPost('username'),
+            'level' => $this->request->getPost('level'),
             'password' => $pass,
         ];
 
@@ -95,7 +97,7 @@ class AkunController extends BaseController
             throw new \CodeIgniter\Exceptions\PageNotFoundException('User Tidak ditemukan !');
         }
         $this->AkunModel->delete_user($id);
-        session()->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+        session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

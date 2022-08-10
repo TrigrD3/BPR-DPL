@@ -42,6 +42,12 @@ class TabunganModel extends Model
                     'required' => '{field} Harus diisi'
                 ]
             ],
+            'foto_depan' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
 
         ])) {
             session()->setFlashdata('error', $this->validator->listErrors());
@@ -85,6 +91,12 @@ class TabunganModel extends Model
                 ]
             ],
             'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+            'foto_depan' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Harus diisi'

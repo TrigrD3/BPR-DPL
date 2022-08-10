@@ -13,9 +13,7 @@
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
                 </button>
-                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                    <i class="fas fa-times"></i>
-                </button>
+
             </div>
         </div>
         <div class="card-body p-0">
@@ -25,16 +23,19 @@
                         <th style="width: 1%">
                             No
                         </th>
-                        <th style="width: 30%">
+                        <th style="width: 20%">
                             Nama
                         </th>
                         <th style="width: 30%">
                             Username
                         </th>
-                        <th>
+                        <!-- <th>
                             Password
+                        </th> -->
+                        <th style="width: 30%">
+                            Level
                         </th>
-                        <th style="width: 20%">
+                        <th>
                         </th>
                     </tr>
                 </thead>
@@ -52,8 +53,16 @@
                             <td>
                                 <?= $data->username; ?>
                             </td>
-                            <td class="project_progress">
+                            <!-- <td class="project_progress">
                                 <?= $data->password; ?>
+                            </td> -->
+                            <td>
+                                <?php if ($data->level == "super_admin") { ?>
+                                    <span class="badge badge-success">Admin Utama</span>
+                                <?php } else { ?>
+                                    <span class="badge badge-warning">Operator</span>
+                                <?php } ?>
+                                <!-- <?= $data->level; ?> -->
                             </td>
                             <td class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="<?= base_url("/EditUser/$data->id_user") ?>">

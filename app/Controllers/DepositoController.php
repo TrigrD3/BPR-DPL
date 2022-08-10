@@ -76,6 +76,13 @@ class DepositoController extends BaseController
 
     public function AddDeposito()
     {
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (is_file('uploads/Deposito/ProdukDeposito' . '/' . $fileNameDepan)) {
+            $fileNameDepan = date('YmdHis') . '-' . $fileNameDepan;
+        }
+        $dataBerkasDepan->move('uploads/Deposito/ProdukDeposito', $fileNameDepan); //memindahkan file ke folder uploads/Deposito/ProdukDeposito
+
 
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
@@ -85,6 +92,7 @@ class DepositoController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
+            'foto_depan' => $fileNameDepan,
             'foto' => $fileName,
         ];
         $dataBerkas->move('uploads/Deposito/ProdukDeposito', $fileName);
@@ -122,29 +130,32 @@ class DepositoController extends BaseController
 
     public function UpdateDeposito($id)
     {
+        $data = [
+            'nama' => $this->request->getVar('nama'),
+            'deskripsi' => $this->request->getVar('editor1'),
+        ];
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (!empty($fileNameDepan)) {
+            if (is_file('uploads/Deposito/ProdukDeposito' . '/' . $this->request->getVar('namafoto_depan'))) {
+                unlink('uploads/Deposito/ProdukDeposito' . '/' . $this->request->getVar('namafoto_depan'));
+                $data['foto_depan'] = $fileNameDepan;
+            } else {
+                $data['foto_depan'] = $fileNameDepan;
+            }
+            $dataBerkasDepan->move('uploads/Deposito/ProdukDeposito', $fileNameDepan);
+        }
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
             if (is_file('uploads/Deposito/ProdukDeposito' . '/' . $this->request->getVar('namafoto'))) {
                 unlink('uploads/Deposito/ProdukDeposito' . '/' . $this->request->getVar('namafoto'));
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             } else {
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             }
             $dataBerkas->move('uploads/Deposito/ProdukDeposito', $fileName);
-        } else {
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-                'deskripsi' => $this->request->getVar('editor1'),
-            ];
         }
 
         $this->DepositoModel->update_deposito($id, $data);
@@ -194,6 +205,9 @@ class DepositoController extends BaseController
 
         if (is_file('uploads/Deposito/ProdukDeposito' . '/' . $data->foto)) {
             unlink('uploads/Deposito/ProdukDeposito' . '/' . $data->foto);
+        }
+        if (is_file('uploads/Deposito/ProdukDeposito' . '/' . $data->foto_depan)) {
+            unlink('uploads/Deposito/ProdukDeposito' . '/' . $data->foto_depan);
         }
         $this->DepositoModel->delete_deposito($id);
         session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.

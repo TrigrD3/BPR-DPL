@@ -32,6 +32,10 @@
                             <label for="inputClientCompany">Pilih Foto (800x600)</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
+                        <div class="form-group">
+                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
+                            <input type="File" name="foto_depan" id="inputClientCompany" class="form-control" required>
+                        </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>

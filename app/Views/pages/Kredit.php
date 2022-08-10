@@ -14,7 +14,7 @@
         ?>
             <a href="<?= base_url("/LihatIklanKredit/$data->id_produk") ?>">
                 <div class="card col-auto card-layanan bg-dark text-light border-0 my-4">
-                    <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto; ?>" width="100%" height="225" class="card-img" alt="...">
+                    <img src="<?= base_url('uploads/Kredit/ProdukKredit') . '/' . $data->foto_depan; ?>" width="100%" height="225" class="card-img" alt="...">
                     <div class="card-img-overlay card-heading">
 
                         <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">

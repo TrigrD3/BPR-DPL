@@ -77,6 +77,13 @@ class TabunganController extends BaseController
 
     public function AddTabungan()
     {
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (is_file('uploads/Tabungan/Produk' . '/' . $fileNameDepan)) {
+            $fileNameDepan = date('YmdHis') . '-' . $fileNameDepan;
+        }
+        $dataBerkasDepan->move('uploads/Tabungan/Produk', $fileNameDepan);
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (is_file('uploads/Tabungan/Produk' . '/' . $fileName)) {
@@ -85,10 +92,12 @@ class TabunganController extends BaseController
         $data = [
             'nama' => $this->request->getPost('nama'),
             'deskripsi' => $this->request->getPost('editor1'),
+            'foto_depan' => $fileNameDepan,
             'foto' => $fileName,
         ];
 
         $dataBerkas->move('uploads/Tabungan/Produk', $fileName);
+
         $this->TabunganModel->add_tabungan($data);
 
         session()->setFlashdata('message', '<div class="alert alert-info" role="alert">Data berhasil ditambahkan.
@@ -121,29 +130,32 @@ class TabunganController extends BaseController
 
     public function UpdateTabungan($id)
     {
+        $data = [
+            'nama' => $this->request->getVar('nama'),
+            'deskripsi' => $this->request->getVar('editor1'),
+        ];
+        $dataBerkasDepan = $this->request->getFile('foto_depan');
+        $fileNameDepan = $dataBerkasDepan->getName();
+        if (!empty($fileNameDepan)) {
+            if (is_file('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto_depan'))) {
+                unlink('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto_depan'));
+                $data['foto_depan'] = $fileNameDepan;
+            } else {
+                $data['foto_depan'] = $fileNameDepan;
+            }
+            $dataBerkasDepan->move('uploads/Tabungan/Produk', $fileNameDepan);
+        }
+
         $dataBerkas = $this->request->getFile('foto');
         $fileName = $dataBerkas->getName();
         if (!empty($fileName)) {
             if (is_file('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto'))) {
                 unlink('uploads/Tabungan/Produk' . '/' . $this->request->getVar('namafoto'));
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             } else {
-                $data = [
-                    'nama' => $this->request->getVar('nama'),
-                    'deskripsi' => $this->request->getVar('editor1'),
-                    'foto' => $fileName,
-                ];
+                $data['foto'] = $fileName;
             }
             $dataBerkas->move('uploads/Tabungan/Produk', $fileName);
-        } else {
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-                'deskripsi' => $this->request->getVar('editor1'),
-            ];
         }
 
         $this->TabunganModel->update_tabungan($id, $data);
@@ -192,6 +204,9 @@ class TabunganController extends BaseController
         if (is_file('uploads/Tabungan/Produk' . '/' . $data->foto)) {
             unlink('uploads/Tabungan/Produk' . '/' . $data->foto);
         }
+        if (is_file('uploads/Tabungan/Produk' . '/' . $data->foto_depan)) {
+            unlink('uploads/Tabungan/Produk' . '/' . $data->foto_depan);
+        }
         $this->TabunganModel->delete_tabungan($id);
         session()->setFlashdata('message', '<div class="alert alert-danger" role="alert">Data berhasil dihapus.
         <button class="close" type="button" data-dismiss="alert" aria-label="Close">
@@ -228,6 +243,7 @@ class TabunganController extends BaseController
         if (is_file('uploads/Tabungan/Iklan' . '/' . $data->foto)) {
             unlink('uploads/Tabungan/Iklan' . '/' . $data->foto);
         }
+
         $data['form_tabungan'] = $dataAll;
         echo view('admin/Tabungan/EditFormTabungan', $data);
     }

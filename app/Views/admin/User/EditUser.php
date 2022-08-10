@@ -23,6 +23,14 @@
                             <label for="inputClientCompany">Password</label>
                             <input type="text" id="inputClientCompany" name="password" value="<?= $Akun->password ?>" class="form-control" required>
                         </div>
+                        <div class="form-group">
+                            <label for="inputName">Level</label>
+                            <select name="level" id="inputName" class="form-control" required>
+                                <option value="" selected disabled>-- Pilih Level Admin --</option>
+                                <option <?php if ($Akun->level == "super_admin") { ?> selected <?php }  ?> value="super_admin">Admin Utama</option>
+                                <option <?php if ($Akun->level == "admin") { ?> selected <?php }  ?> value="oprator">Operator</option>
+                            </select>
+                        </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>

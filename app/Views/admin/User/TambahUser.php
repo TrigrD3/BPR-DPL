@@ -32,6 +32,14 @@
                             <label for="inputClientCompany">Password</label>
                             <input type="text" id="inputClientCompany" name="password" class="form-control" required>
                         </div>
+                        <div class="form-group">
+                            <label for="inputName">Level</label>
+                            <select name="level" id="inputName" class="form-control" required>
+                                <option value="" selected disabled>-- Pilih Level Admin --</option>
+                                <option value="super_admin">Admin Utama</option>
+                                <option value="admin">Operator</option>
+                            </select>
+                        </div>
                         <div class="row">
                             <div class="col-1">
                                 <a href="#" class="btn btn-secondary" onclick="history.back()">Cancel</a>

@@ -40,6 +40,10 @@ class Deposito extends Migration
                 'type'           => 'VARCHAR',
                 'constraint'     => '255'
             ],
+            'foto_depan'            => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ],
             'slug VARCHAR(100) UNIQUE',
         ]);
 

@@ -44,6 +44,14 @@ class KreditModel extends Model
                     'max_size' => 'Ukuran File Maksimal 2 MB'
                 ]
             ],
+            'foto_depan' => [
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
+                'errors' => [
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
+                ]
+            ],
 
         ])) {
             session()->setFlashdata('error', $this->validator->listErrors());
@@ -89,6 +97,14 @@ class KreditModel extends Model
                 ]
             ],
             'foto' => [
+                'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
+                'errors' => [
+                    'uploaded' => 'Harus Ada File yang diupload',
+                    'mime_in' => 'File Extention Harus Berupa jpg,jpeg,gif,png',
+                    'max_size' => 'Ukuran File Maksimal 2 MB'
+                ]
+            ],
+            'foto_depan' => [
                 'rules' => 'uploaded[foto]|mime_in[foto,image/jpg,image/jpeg,image/gif,image/png]|max_size[foto,2048]',
                 'errors' => [
                     'uploaded' => 'Harus Ada File yang diupload',
