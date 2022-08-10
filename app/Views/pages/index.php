@@ -198,7 +198,7 @@
                                             </div>
                                         <?php
                                         } elseif ($no == 3) { ?>
-                                            <div class="row g-0" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
+                                            <div class="row g-0 pt-1" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
                                                 <div class="col-md-4">
                                                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
                                                 </div>
@@ -213,7 +213,7 @@
                                             </div>
                                         <?php
                                         } elseif ($no == 4) { ?>
-                                            <div class="row g-0" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
+                                            <div class="row g-0 pt-1" onClick="location.href='<?= base_url("/LihatBerita/$data->id_berita") ?>'">
                                                 <div class="col-md-4">
                                                     <img src="<?= base_url('uploads/Home/Berita') . '/' . $data->foto ?>" class="img-fluid rounded-start" alt="...">
                                                 </div>

@@ -29,7 +29,7 @@
                             <textarea name="editor1" id="editor" class="form-control" rows="4" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto (800x600)</label>
+                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="form-group">
