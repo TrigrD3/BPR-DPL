@@ -44,6 +44,7 @@ $routes->get('/PusatBerita', 'HomeController::PusatBerita');
 $routes->get('/Kredit', 'KreditController::Kredit');
 $routes->get('/LihatIklanKredit/(:num)', 'KreditController::LihatIklanKredit/$1');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
+$routes->get('/TentangLestari', 'Pages::TentangLestari');
 
 $routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
 $routes->get('/Deposito', 'DepositoController::Deposito');

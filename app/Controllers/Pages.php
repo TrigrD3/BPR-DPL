@@ -17,6 +17,19 @@ class Pages extends BaseController
         echo view('pages/index', $data);
     }
 
+    public function TentangLestari()
+    {
+        $data = [
+            'title' => 'Tentang | BANK LESTARI',
+            'css' => 'tentang',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        echo view('pages/TentangLestari', $data);
+    }
+
     public function SimulasiKredit()
     {
         $data = [
@@ -45,7 +58,7 @@ class Pages extends BaseController
 
 
 
-    
+
 
     public function ProdukDeposito()
     {
@@ -112,7 +125,7 @@ class Pages extends BaseController
         echo view('pages/PusatBerita', $data);
     }
 
-    
+
 
     public function Tabungan()
     {
@@ -140,7 +153,7 @@ class Pages extends BaseController
         echo view('pages/ProdukTabungan', $data);
     }
 
-    
+
 
     public function VisiMisi()
     {
@@ -181,8 +194,8 @@ class Pages extends BaseController
         echo view('pages/Profil', $data);
     }
 
-    
-    
+
+
     public function Admin()
     {
         $data = [

@@ -17,6 +17,27 @@ class TentangLestariController extends BaseController
 
     }
 
+    public function TentangLestari()
+    {
+        $data = [
+            'title' => 'Tentang | BANK LESTARI',
+            'css' => 'tentang',
+            'font' => 'font',
+            'navbar' => 'navbar',
+            'footer' => 'footer',
+            'header' => 'header'
+        ];
+        $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
+        $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
+        $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
+        $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
+        $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
+
+
+
+        echo view('pages/TentangLestari', $data);
+    }
+
 
     public function index_alamat()
     {
