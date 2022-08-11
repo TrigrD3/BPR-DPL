@@ -18,13 +18,11 @@
 
     <div class="album py-5 pt-3">
         <div class="container">
-            <?php
-            foreach ($HomeFotoLogo as $data) :
-            ?>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
 
-                        <!-- <a href="<?= base_url("/Kredit") ?>">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+
+                    <!-- <a href="<?= base_url("/Kredit") ?>">
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
@@ -36,26 +34,26 @@
                             </div>
                         </a> -->
 
-                        <a href="<?= base_url("/Kredit") ?>">
-                            <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
-                                <div class="card-img-overlay card-heading">
+                    <a href="<?= base_url("/Kredit") ?>">
+                        <div class="card col-auto card-layanan bg-dark text-light border-0">
+                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
 
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
-                                        <div class="mt-1">KREDIT</div>
-                                    </h5>
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
+                                    <div class="mt-1">KREDIT</div>
+                                </h5>
 
-                                    <div class="card-img-detail deskripsi">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle ">KREDIT</p>
-                                    </div>
+                                <div class="card-img-detail deskripsi">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle ">KREDIT</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                    </div>
+                </div>
 
-                    <div class="col">
-                        <!-- <a href="<?= base_url("/Deposito") ?>">
+                <div class="col">
+                    <!-- <a href="<?= base_url("/Deposito") ?>">
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
@@ -67,26 +65,26 @@
                             </div>
                         </a> -->
 
-                        <a href="<?= base_url("/Deposito") ?>">
-                            <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
-                                <div class="card-img-overlay card-heading">
+                    <a href="<?= base_url("/Deposito") ?>">
+                        <div class="card col-auto card-layanan bg-dark text-light border-0">
+                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
 
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
-                                        <div class="mt-1">DEPOSITO</div>
-                                    </h5>
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
+                                    <div class="mt-1">DEPOSITO</div>
+                                </h5>
 
-                                    <div class="card-img-detail deskripsi">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle ">DEPOSITO</p>
-                                    </div>
+                                <div class="card-img-detail deskripsi">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle ">DEPOSITO</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                    </div>
-                    <div class="col">
+                </div>
+                <div class="col">
 
-                        <!-- <a href="<?= base_url("/Tabungan") ?>">
+                    <!-- <a href="<?= base_url("/Tabungan") ?>">
                             <div class="card card-layanan bg-dark text-dark border-0">
                                 <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
@@ -98,25 +96,25 @@
                             </div>
                         </a> -->
 
-                        <a href="<?= base_url("/Tabungan") ?>">
-                            <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
-                                <div class="card-img-overlay card-heading">
+                    <a href="<?= base_url("/Tabungan") ?>">
+                        <div class="card col-auto card-layanan bg-dark text-light border-0">
+                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
+                            <div class="card-img-overlay card-heading">
 
-                                    <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
-                                        <div class="mt-1">TABUNGAN</div>
-                                    </h5>
+                                <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
+                                    <div class="mt-1">TABUNGAN</div>
+                                </h5>
 
-                                    <div class="card-img-detail deskripsi">
-                                        <p class="card-text position-absolute top-50 start-50 translate-middle ">TABUNGAN</p>
-                                    </div>
+                                <div class="card-img-detail deskripsi">
+                                    <p class="card-text position-absolute top-50 start-50 translate-middle ">TABUNGAN</p>
                                 </div>
                             </div>
-                        </a>
+                        </div>
+                    </a>
 
-                    </div>
                 </div>
-            <?php endforeach; ?>
+            </div>
+
         </div>
     </div>
 
