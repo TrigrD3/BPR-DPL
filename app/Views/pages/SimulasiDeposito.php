@@ -3,16 +3,16 @@
 <?= $this->section('content'); ?>
 
 <script>
-// get days difference between two dates from input fields
-function getDaysDifference() {
-    d1 = document.getElementById("dateAwal").value;
-    d2 = document.getElementById("dateAkhir").value;
-    const date1 = new Date(d1);
-    const date2 = new Date(d2);
-    const time = Math.abs(date2 - date1);
-    const days = Math.ceil(time / (1000 * 60 * 60 * 24));
-    document.getElementById("jangkaWaktu").value = days;
-}
+    // get days difference between two dates from input fields
+    function getDaysDifference() {
+        d1 = document.getElementById("dateAwal").value;
+        d2 = document.getElementById("dateAkhir").value;
+        const date1 = new Date(d1);
+        const date2 = new Date(d2);
+        const time = Math.abs(date2 - date1);
+        const days = Math.ceil(time / (1000 * 60 * 60 * 24));
+        document.getElementById("jangkaWaktu").value = days;
+    }
 </script>
 <!-- Container -->
 <div class="flex-container">
@@ -26,16 +26,16 @@ function getDaysDifference() {
                     <span id="format-Rp"></span>
                     <input type="number" class="form-control" id="jumlahDeposito" name="jumlahDeposito" placeholder="Contoh: 150000000" value="">
                 </div>
-                
+
                 <div class="form-group">
                     <label onchange="getDaysDifference()" for="dateAwal">Tanggal Mulai</label>
                     <input type="date" class="form-control" id="dateAwal" name="dateAwal" placeholder="Contoh: 120" value="">
-                    <label for="dateAkhir" >Tanggal Akhir</label>
+                    <label for="dateAkhir">Tanggal Akhir</label>
                     <input onchange="getDaysDifference()" type="date" class="form-control" id="dateAkhir" name="dateAkhir" placeholder="Contoh: 120" value="">
                 </div>
                 <div class="form-group">
-                <label for="jangkaWaktu">Total Hari</label>
-                <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="">
+                    <label for="jangkaWaktu">Total Hari</label>
+                    <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" readonly value="">
                 </div>
 
                 <div class="form-group">
