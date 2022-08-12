@@ -5,8 +5,6 @@ $(document).ready(function () {
   let $jumlahDeposito = $("#jumlahDeposito");
   let $jangkaWaktu = $("#jangkaWaktu");
   let $bungaPertahun = $("#bungaPertahun");
-  let $date1 = $("#dateAwal");
-  let $date2 = $("#dateAkhir");
   let $pajak = $("#pajak");
   let submited = false;
 
@@ -64,8 +62,6 @@ $(document).ready(function () {
   function ulangi() {
     $("aside").hide();
     $jumlahDeposito.val("");
-    $date1.val("");
-    $date2.val("");
     $jangkaWaktu.val("");
     $bungaPertahun.val("");
   }

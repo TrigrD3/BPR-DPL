@@ -40,10 +40,11 @@ function hitung_deposito($jumlahDeposito, $jangkaWaktu, $sukuBunga, $pajak)
 {
     $angsuran = [];
     $sukuBunga = $sukuBunga / 100;
-    $keuntunganBunga = ($jumlahDeposito * $sukuBunga * $jangkaWaktu) / 365;
+    $jangkaWaktuBulan = $jangkaWaktu * 30;
+    $keuntunganBunga = ($jumlahDeposito * $sukuBunga * $jangkaWaktuBulan) / 365;
     $potonganPajak = $keuntunganBunga * ($pajak / 100);
     $totalBunga = $keuntunganBunga - $potonganPajak;
-    $bungaPerbulan = ($keuntunganBunga / ($jangkaWaktu/30)) * (1 - ($pajak / 100));
+    $bungaPerbulan = ($keuntunganBunga / $jangkaWaktu) * (1 - ($pajak / 100));
     $depositoAkhir = $jumlahDeposito + $totalBunga;
 
     array_push($angsuran, [

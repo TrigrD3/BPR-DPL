@@ -2,18 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<script>
-    // get days difference between two dates from input fields
-    function getDaysDifference() {
-        d1 = document.getElementById("dateAwal").value;
-        d2 = document.getElementById("dateAkhir").value;
-        const date1 = new Date(d1);
-        const date2 = new Date(d2);
-        const time = Math.abs(date2 - date1);
-        const days = Math.ceil(time / (1000 * 60 * 60 * 24));
-        document.getElementById("jangkaWaktu").value = days;
-    }
-</script>
+
 <!-- Container -->
 <div class="flex-container">
     <main class=" container-simulasi ">
@@ -24,31 +13,37 @@
                     <label for="jumlahDeposito">Jumlah Deposito <em>(rupiah)</em>: </label>
                     <br>
                     <span id="format-Rp"></span>
-                    <input type="number" class="form-control" id="jumlahDeposito" name="jumlahDeposito" placeholder="Contoh: 150000000" value="">
+                    <input type="number" class="form-control" id="jumlahDeposito" name="jumlahDeposito" placeholder="Contoh: 150000000">
                 </div>
+                <!-- <div class="form-group">
+                    <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
+                    <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" placeholder="Contoh: 120" value="6">
+
+
+                </div> -->
 
                 <div class="form-group">
-                    <label onchange="getDaysDifference()" for="dateAwal">Tanggal Mulai</label>
-                    <input type="date" class="form-control" id="dateAwal" name="dateAwal" placeholder="Contoh: 120" value="">
-                    <label for="dateAkhir">Tanggal Akhir</label>
-                    <input onchange="getDaysDifference()" type="date" class="form-control" id="dateAkhir" name="dateAkhir" placeholder="Contoh: 120" value="">
-                </div>
-                <div class="form-group">
-                    <label for="jangkaWaktu">Total Hari</label>
-                    <input type="number" class="form-control" id="jangkaWaktu" name="jangkaWaktu" readonly value="">
-                </div>
+                    <label for="jangkaWaktu">Jangka Waktu <em>(bulan)</em>: </label>
+                    <select id="jangkaWaktu" name="jangkaWaktu" class="form-control" required>
+                        <option value="" selected disabled>-- Pilih Jangka Waktu --</option>
+                        <option value="1">1 Bulan</option>
+                        <option value="3">3 Bulan</option>
+                        <option value="6">6 Bulan</option>
+                        <option value="12">12 Bulan</option>
 
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="bungaPertahun">Bunga<em>(%)</em>: </label>
-                    <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun" placeholder="Contoh: 10.5" value="">
+                    <input type="number" class="form-control" id="bungaPertahun" name="bungaPertahun" placeholder="Contoh: 10.5" value="6">
                 </div>
                 <div class="form-group">
                     <label for="pajak">Pajak<em>(%)</em>: </label>
                     <input type="number" class="form-control" id="pajak" name="pajak" placeholder="Contoh: 10.5" value="20">
                 </div>
                 <div class="form-group mb-3 mt-3">
-                    <button id="btnHitung" type="submit" class="btn btn-primary mt-1">Hitung</button>
-                    <button id="btnUlangi" type="submit" class="btn btn-secondary mt-1">Ulangi</button>
+                    <button id="btnHitung" type="submit" class="btn btn-primary">Hitung</button>
+                    <button id="btnUlangi" type="submit" class="btn btn-secondary">Ulangi</button>
                 </div>
             </form>
         </div>
@@ -64,7 +59,7 @@
             <div class="col-4 border">: <span id="resultNominalDeposito"></span></div>
         </div>
         <div class="row d-flex justify-content-center">
-            <div class="col-4 border">Jangka Waktu (hari)</div>
+            <div class="col-4 border">Jangka Waktu (Bulan)</div>
             <div class="col-4 border">: <span id="resultJangkaWaktu"></span></div>
         </div>
         <div class="row d-flex justify-content-center">
@@ -83,10 +78,10 @@
             <div class="col-4 border">Total Akumulasi Bunga</div>
             <div class="col-4 border">: <span id="resultTotalAkumulasiBunga"></span></div>
         </div>
-        <!-- <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center">
             <div class="col-4 border">Total Deposito Akhir</div>
             <div class="col-4 border">: <span id="resultTotalDepositoAkhir"></span></div>
-        </div> -->
+        </div>
     </aside>
 </div>
 <script src="<?= base_url(); ?>/assets/js/numeral.min.js"></script>
