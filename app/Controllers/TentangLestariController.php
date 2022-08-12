@@ -33,8 +33,6 @@ class TentangLestariController extends BaseController
         $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
         $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
 
-
-
         echo view('pages/TentangLestari', $data);
     }
 

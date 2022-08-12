@@ -21,7 +21,7 @@ class Pages extends BaseController
     {
         $data = [
             'title' => 'Tentang | BANK LESTARI',
-            'css' => 'tentang',
+            'css' => 'index',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
