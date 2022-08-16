@@ -17,18 +17,7 @@ class Pages extends BaseController
         echo view('pages/index', $data);
     }
 
-    public function TentangLestari()
-    {
-        $data = [
-            'title' => 'Tentang | BANK LESTARI',
-            'css' => 'index',
-            'font' => 'font',
-            'navbar' => 'navbar',
-            'footer' => 'footer',
-            'header' => 'header'
-        ];
-        echo view('pages/TentangLestari', $data);
-    }
+
 
     public function SimulasiKredit()
     {

@@ -6,6 +6,154 @@ use CodeIgniter\Model;
 
 class TentangLestariModel extends Model
 {
+    function get_all_depan_profil()
+    {
+        $data['TentangLestariDepanProfil'] = $this->db->table('tentang_depan_profil')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanProfil'];
+    }
+    function get_id_depan_profil($id)
+    {
+        $data = $this->db->table('tentang_depan_profil')->select('*')->where('id_depan_profil', $id)->get()->getRow();
+        return $data;
+    }
+
+    public function update_depan_profil($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
+        $this->db->table('tentang_depan_profil')->select('*')->where('id_depan_profil', $id)->update($data);
+        session()->setFlashdata('message', 'Edit profil Berhasil');
+    }
+
+    function get_all_depan_sejarah()
+    {
+        $data['TentangLestariDepanSejarah'] = $this->db->table('tentang_depan_sejarah')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanSejarah'];
+    }
+    function get_id_depan_sejarah($id)
+    {
+        $data = $this->db->table('tentang_depan_sejarah')->select('*')->where('id_depan_sejarah', $id)->get()->getRow();
+        return $data;
+    }
+
+    function update_depan_sejarah($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+        $this->db->table('tentang_depan_sejarah')->select('*')->where('id_depan_sejarah', $id)->update($data);
+        session()->setFlashdata('message', 'Edit sejarah Berhasil');
+    }
+
+    function get_all_depan_alamat()
+    {
+        $data['TentangLestariDepanAlamat'] = $this->db->table('tentang_depan_alamat_kantor')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanAlamat'];
+    }
+    function get_id_depan_alamat($id)
+    {
+        $data = $this->db->table('tentang_depan_alamat_kantor')->select('*')->where('id_depan_alamat_kantor', $id)->get()->getRow();
+        return $data;
+    }
+
+    function update_depan_alamat($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+        $this->db->table('tentang_depan_alamat_kantor')->select('*')->where('id_depan_alamat_kantor', $id)->update($data);
+        session()->setFlashdata('message', 'Edit alamat Berhasil');
+    }
+
+
+    function get_all_depan_visimisi()
+    {
+        $data['TentangLestariDepanVisiMisi'] = $this->db->table('tentang_depan_visi_misi')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanVisiMisi'];
+    }
+    function get_id_depan_visimisi($id)
+    {
+        $data = $this->db->table('tentang_depan_visi_misi')->select('*')->where('id_depan_visi_misi', $id)->get()->getRow();
+        return $data;
+    }
+
+    function update_depan_visimisi($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+        $this->db->table('tentang_depan_visi_misi')->select('*')->where('id_depan_visi_misi', $id)->update($data);
+        session()->setFlashdata('message', 'Edit visi misi Berhasil');
+    }
+
+    function get_all_depan_struktur_organisasi()
+    {
+        $data['TentangLestariDepanStrukturOrganisasi'] = $this->db->table('tentang_depan_struktur_organisasi')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanStrukturOrganisasi'];
+    }
+    function get_id_depan_struktur_organisasi($id)
+    {
+        $data = $this->db->table('tentang_depan_struktur_organisasi')->select('*')->where('id_depan_struktur_organisasi', $id)->get()->getRow();
+        return $data;
+    }
+
+    function update_depan_struktur_organisasi($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+        $this->db->table('tentang_depan_struktur_organisasi')->select('*')->where('id_depan_struktur_organisasi', $id)->update($data);
+        session()->setFlashdata('message', 'Edit struktur organisasi Berhasil');
+    }
+
+
     function get_all_profil()
     {
         $data['TentangLestariProfil'] = $this->db->table('tentang_profil')->select('*')->get()->getResult();
@@ -283,5 +431,35 @@ class TentangLestariModel extends Model
 
         $this->db->table('tentang_struktur_organisasi')->select('*')->where('id_struktur_organisasi', $id)->update($data);
         session()->setFlashdata('message', 'Edit strukturorganisasi Berhasil');
+    }
+
+    function get_all_depan_berita()
+    {
+        $data['TentangLestariDepanBerita'] = $this->db->table('tentang_depan_berita')->select('*')->get()->getResult();
+        return $data['TentangLestariDepanBerita'];
+    }
+    function get_id_depan_berita($id)
+    {
+        $data = $this->db->table('tentang_depan_berita')->select('*')->where('id_depan_berita', $id)->get()->getRow();
+        return $data;
+    }
+
+    public function update_depan_berita($id, $data)
+    {
+        if (!$this->validate([
+            'foto' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} Harus diisi'
+                ]
+            ],
+
+        ])) {
+            session()->setFlashdata('error', $this->validator->listErrors());
+            return redirect()->back()->withInput();
+        }
+
+        $this->db->table('tentang_depan_berita')->select('*')->where('id_depan_berita', $id)->update($data);
+        session()->setFlashdata('message', 'Edit berita Berhasil');
     }
 }

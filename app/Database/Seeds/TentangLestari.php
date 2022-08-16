@@ -13,6 +13,12 @@ class TentangLestari extends Seeder
         $this->alamat_kantor();
         $this->visi_misi();
         $this->struktur_organisasi();
+        $this->depan_profil();
+        $this->depan_sejarah();
+        $this->depan_alamat_kantor();
+        $this->depan_visi_misi();
+        $this->depan_struktur_organisasi();
+        $this->depan_berita();
     }
 
     public function profil()
@@ -95,6 +101,80 @@ class TentangLestari extends Seeder
         foreach ($all_data as $data) {
             // insert semua data ke tabel
             $this->db->table('tentang_struktur_organisasi')->insert($data);
+        }
+    }
+    public function depan_profil()
+    {
+        $all_data = [
+            [
+                'foto'  => 'depan_profil.jpg',
+            ]
+        ];
+
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_profil')->insert($data);
+        }
+    }
+    public function depan_sejarah()
+    {
+        $all_data = [
+            [
+                'foto'  => 'depan_sejarah.jpg',
+            ]
+        ];
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_sejarah')->insert($data);
+        }
+    }
+    public function depan_alamat_kantor()
+    {
+        $all_data = [
+            [
+                'foto'  => 'depan_alamat_kantor.jpg',
+            ]
+        ];
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_alamat_kantor')->insert($data);
+        }
+    }
+    public function depan_visi_misi()
+    {
+        $all_data = [
+            [
+                'foto'  => 'depan_visi_misi.jpg',
+            ]
+        ];
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_visi_misi')->insert($data);
+        }
+    }
+    public function depan_struktur_organisasi()
+    {
+        $all_data = [
+            [
+                'foto'  => 'depan_struktur_organisasi.jpg',
+            ]
+        ];
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_struktur_organisasi')->insert($data);
+        }
+    }
+
+    public function depan_berita()
+    {
+        $all_data = [
+            [
+                'foto' => 'berita.jpg',
+            ]
+        ];
+        foreach ($all_data as $data) {
+            // insert semua data ke tabel
+            $this->db->table('tentang_depan_berita')->insert($data);
         }
     }
 }

@@ -13,6 +13,12 @@ class TentangLestari extends Migration
         $this->alamat_kantor();
         $this->visi_misi();
         $this->struktur_organisasi();
+        $this->depan_profil();
+        $this->depan_sejarah();
+        $this->depan_alamat_kantor();
+        $this->depan_visi_misi();
+        $this->depan_struktur_organisasi();
+        $this->depan_berita();
     }
 
     public function down()
@@ -22,6 +28,12 @@ class TentangLestari extends Migration
         $this->forge->dropTable('tentang_alamat_kantor');
         $this->forge->dropTable('tentang_visi_misi');
         $this->forge->dropTable('tentang_struktur_organisasi');
+        $this->forge->dropTable('tentang_depan_profil');
+        $this->forge->dropTable('tentang_depan_sejarah');
+        $this->forge->dropTable('tentang_depan_alamat_kantor');
+        $this->forge->dropTable('tentang_depan_visi_misi');
+        $this->forge->dropTable('tentang_depan_struktur_organisasi');
+        $this->forge->dropTable('tentang_depan_berita');
     }
 
     public function profil()
@@ -148,5 +160,108 @@ class TentangLestari extends Migration
         $this->forge->addKey('id_struktur_organisasi', TRUE);
 
         $this->forge->createTable('tentang_struktur_organisasi', TRUE);
+    }
+    public function depan_profil()
+    {
+        $this->forge->addField([
+            'id_depan_profil'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_profil', TRUE);
+        $this->forge->createTable('tentang_depan_profil', TRUE);
+    }
+    public function depan_sejarah()
+    {
+        $this->forge->addField([
+            'id_depan_sejarah'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_sejarah', TRUE);
+        $this->forge->createTable('tentang_depan_sejarah', TRUE);
+    }
+    public function depan_alamat_kantor()
+    {
+        $this->forge->addField([
+            'id_depan_alamat_kantor'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_alamat_kantor', TRUE);
+        $this->forge->createTable('tentang_depan_alamat_kantor', TRUE);
+    }
+    public function depan_visi_misi()
+    {
+        $this->forge->addField([
+            'id_depan_visi_misi'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_visi_misi', TRUE);
+        $this->forge->createTable('tentang_depan_visi_misi', TRUE);
+    }
+    public function depan_struktur_organisasi()
+    {
+        $this->forge->addField([
+            'id_depan_struktur_organisasi'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_struktur_organisasi', TRUE);
+        $this->forge->createTable('tentang_depan_struktur_organisasi', TRUE);
+    }
+
+    public function depan_berita()
+    {
+        $this->forge->addField([
+            'id_depan_berita'          => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
+            'foto'              => [
+                'type'           => 'VARCHAR',
+                'constraint'     => '255'
+            ]
+        ]);
+        $this->forge->addKey('id_depan_berita', TRUE);
+        $this->forge->createTable('tentang_depan_berita', TRUE);
     }
 }

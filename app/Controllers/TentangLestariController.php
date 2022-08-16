@@ -17,21 +17,25 @@ class TentangLestariController extends BaseController
 
     }
 
+
+
     public function TentangLestari()
     {
         $data = [
             'title' => 'Tentang | BANK LESTARI',
-            'css' => 'tentang',
+            'css' => 'index',
             'font' => 'font',
             'navbar' => 'navbar',
             'footer' => 'footer',
             'header' => 'header'
         ];
-        $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
-        $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
-        $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
-        $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
-        $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
+
+        $data['TentangLestariDepanSejarah'] = $this->TentangLestariModel->get_all_depan_sejarah();
+        $data['TentangLestariDepanProfil'] = $this->TentangLestariModel->get_all_depan_profil();
+        $data['TentangLestariDepanStrukturOrganisasi'] = $this->TentangLestariModel->get_all_depan_struktur_organisasi();
+        $data['TentangLestariDepanVisiMisi'] = $this->TentangLestariModel->get_all_depan_visimisi();
+        $data['TentangLestariDepanAlamat'] = $this->TentangLestariModel->get_all_depan_alamat();
+        $data['TentangLestariDepanBerita'] = $this->TentangLestariModel->get_all_depan_berita();
 
         echo view('pages/TentangLestari', $data);
     }
@@ -45,6 +49,7 @@ class TentangLestariController extends BaseController
             'font' => 'font',
         ];
         $data['TentangLestariAlamat'] = $this->TentangLestariModel->get_all_alamat();
+        $data['TentangLestariDepanAlamat'] = $this->TentangLestariModel->get_all_depan_alamat();
         return view('Admin/TentangLestari/Alamat/AdminAlamat', $data);
     }
     public function TambahAlamat()
@@ -160,6 +165,7 @@ class TentangLestariController extends BaseController
             'font' => 'font',
         ];
         $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
+        $data['TentangLestariDepanVisiMisi'] = $this->TentangLestariModel->get_all_depan_visimisi();
         return view('Admin/TentangLestari/VisiMisi/adminVisiMisi', $data);
     }
 
@@ -199,6 +205,7 @@ class TentangLestariController extends BaseController
             'font' => 'font',
         ];
         $data['TentangLestariStrukturOrganisasi'] = $this->TentangLestariModel->get_all_struktur_organisasi();
+        $data['TentangLestariDepanStrukturOrganisasi'] = $this->TentangLestariModel->get_all_depan_struktur_organisasi();
         return view('Admin/TentangLestari/StrukturOrganisasi/adminStrukturOrganisasi', $data);
     }
 
@@ -248,6 +255,7 @@ class TentangLestariController extends BaseController
             'font' => 'font',
         ];
         $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
+        $data['TentangLestariDepanProfil'] = $this->TentangLestariModel->get_all_depan_profil();
         return view('Admin/TentangLestari/Profil/AdminProfil', $data);
     }
     public function EditProfil($id)
@@ -285,6 +293,7 @@ class TentangLestariController extends BaseController
             'font' => 'font',
         ];
         $data['TentangLestariSejarah'] = $this->TentangLestariModel->get_all_sejarah();
+        $data['TentangLestariDepanSejarah'] = $this->TentangLestariModel->get_all_depan_sejarah();
         return view('Admin/TentangLestari/Sejarah/AdminSejarah', $data);
     }
     public function TambahSejarah()
@@ -364,6 +373,289 @@ class TentangLestariController extends BaseController
         echo view('admin/Kredit/EditIklanKredit', $data);
     }
 
+    public function EditDepanProfil($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_profil($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_profil'] = $dataAll;
+        echo view('admin/TentangLestari/Profil/EditDepanProfil', $data);
+    }
+
+    public function UpdateDepanProfil($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/Profil/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/Profil/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/Profil/depan', $fileName);
+        }
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('AdminProfil'));
+        }
+
+        $this->TentangLestariModel->update_depan_profil($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminProfil'));
+    }
+
+    public function EditDepanSejarah($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_sejarah($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_sejarah'] = $dataAll;
+        echo view('admin/TentangLestari/Sejarah/EditDepanSejarah', $data);
+    }
+    public function UpdateDepanSejarah($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/Sejarah/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/Sejarah/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/Sejarah/depan', $fileName);
+        }
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('AdminSejarah'));
+        }
+
+        $this->TentangLestariModel->update_depan_sejarah($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminSejarah'));
+    }
+    public function EditDepanAlamat($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_alamat($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_alamat_kantor'] = $dataAll;
+        echo view('admin/TentangLestari/Alamat/EditDepanAlamat', $data);
+    }
+    public function UpdateDepanAlamat($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/Alamat/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/Alamat/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/Alamat/depan', $fileName);
+        }
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('AdminAlamat'));
+        }
+
+        $this->TentangLestariModel->update_depan_alamat($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminAlamat'));
+    }
+
+    public function EditDepanVisiMisi($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_visimisi($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_visi_misi'] = $dataAll;
+        echo view('admin/TentangLestari/VisiMisi/EditDepanVisiMisi', $data);
+    }
+
+    public function UpdateDepanVisiMisi($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/VisiMisi/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/VisiMisi/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/VisiMisi/depan', $fileName);
+        }
+
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('adminVisiMisi'));
+        }
+        $this->TentangLestariModel->update_depan_visimisi($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('adminVisiMisi'));
+    }
+
+    public function EditDepanStrukturOrganisasi($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_struktur_organisasi($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_struktur_organisasi'] = $dataAll;
+        echo view('admin/TentangLestari/StrukturOrganisasi/EditDepanStrukturOrganisasi', $data);
+    }
+    public function UpdateDepanStrukturOrganisasi($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/StrukturOrganisasi/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/StrukturOrganisasi/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/StrukturOrganisasi/depan', $fileName);
+        }
+
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('adminStrukturOrganisasi'));
+        }
+        $this->TentangLestariModel->update_depan_struktur_organisasi($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('adminStrukturOrganisasi'));
+    }
+
+    public function index_berita()
+    {
+        $data = [
+            'title' => 'Admin Berita;',
+            'css' => 'Style',
+            'font' => 'font',
+        ];
+        $data['TentangLestariDepanBerita'] = $this->TentangLestariModel->get_all_depan_berita();
+        return view('Admin/TentangLestari/Berita/AdminBerita', $data);
+    }
+
+    public function EditDepanBerita($id)
+    {
+        $dataAll = $this->TentangLestariModel->get_id_depan_berita($id);
+        if (empty($dataAll)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data Depan Tidak ditemukan !');
+        }
+        $data['tentang_depan_berita'] = $dataAll;
+        echo view('admin/TentangLestari/Berita/EditDepanBerita', $data);
+    }
+
+    public function UpdateDepanBerita($id)
+    {
+        $dataBerkas = $this->request->getFile('foto');
+        $fileName = $dataBerkas->getName();
+        if (!empty($fileName)) {
+            if (is_file('uploads/TentangLestari/Berita/depan' . '/' . $this->request->getVar('namafoto'))) {
+                unlink('uploads/TentangLestari/Berita/depan' . '/' . $this->request->getVar('namafoto'));
+                $data = [
+                    'foto' => $fileName,
+                ];
+            } else {
+                $data = [
+                    'foto' => $fileName,
+                ];
+            }
+            $dataBerkas->move('uploads/TentangLestari/Berita/depan', $fileName);
+        }
+
+        if (empty($data)) {
+            $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+                <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            return redirect()->to(base_url('AdminBerita'));
+        }
+
+        $this->TentangLestariModel->update_depan_berita($id, $data);
+        $this->session->setFlashdata('message', '<div class="alert alert-warning" role="alert">Data berhasil diedit.
+            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>');
+        return redirect()->to(base_url('AdminBerita'));
+    }
+
     //USER
     public function Profil()
     {
@@ -376,6 +668,7 @@ class TentangLestariController extends BaseController
             'header' => 'header'
         ];
         $data['TentangLestariProfil'] = $this->TentangLestariModel->get_all_profil();
+        $data['TentangLestariDepanProfil'] = $this->TentangLestariModel->get_all_depan_profil();
         return view('pages/Profil', $data);
     }
 
@@ -391,6 +684,7 @@ class TentangLestariController extends BaseController
         ];
 
         $data['TentangLestariVisiMisi'] = $this->TentangLestariModel->get_all_visimisi();
+        $data['TentangLestariDepanVisiMisi'] = $this->TentangLestariModel->get_all_depan_visimisi();
         return view('pages/VisiMisi', $data);
     }
     public function StrukturOrganisasi()

@@ -44,7 +44,7 @@ $routes->get('/PusatBerita', 'HomeController::PusatBerita');
 $routes->get('/Kredit', 'KreditController::Kredit');
 $routes->get('/LihatIklanKredit/(:num)', 'KreditController::LihatIklanKredit/$1');
 $routes->get('/SimulasiKredit', 'Pages::SimulasiKredit');
-$routes->get('/TentangLestari', 'Pages::TentangLestari');
+$routes->get('/TentangLestari', 'TentangLestariController::TentangLestari');
 
 $routes->get('/SimulasiDeposito', 'Pages::SimulasiDeposito');
 $routes->get('/Deposito', 'DepositoController::Deposito');
@@ -181,6 +181,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/AdminProfil', 'TentangLestariController::index_profil');
     $routes->get('/EditProfil/(:num)', 'TentangLestariController::EditProfil/$1');
     $routes->post('/EditProfil/(:num)', 'TentangLestariController::UpdateProfil/$1');
+    $routes->get('EditDepanProfil/(:num)', 'TentangLestariController::EditDepanProfil/$1');
+    $routes->post('EditDepanProfil/(:num)', 'TentangLestariController::UpdateDepanProfil/$1');
     //Sejarah
     $routes->get('/AdminSejarah', 'TentangLestariController::index_sejarah');
     $routes->get('/TambahSejarah', 'TentangLestariController::TambahSejarah');
@@ -188,6 +190,8 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/EditSejarah/(:num)', 'TentangLestariController::EditSejarah/$1');
     $routes->post('/EditSejarah/(:num)', 'TentangLestariController::UpdateSejarah/$1');
     $routes->get('/HapusSejarah/(:num)', 'TentangLestariController::DeleteSejarah/$1');
+    $routes->get('EditDepanSejarah/(:num)', 'TentangLestariController::EditDepanSejarah/$1');
+    $routes->post('EditDepanSejarah/(:num)', 'TentangLestariController::UpdateDepanSejarah/$1');
     //Alamat
     $routes->get('/AdminAlamat', 'TentangLestariController::index_Alamat');
     $routes->get('/TambahAlamat', 'TentangLestariController::TambahAlamat');
@@ -195,14 +199,24 @@ $routes->group('', ['filter' => 'auth'], function ($routes) {
     $routes->get('/EditAlamat/(:num)', 'TentangLestariController::EditAlamat/$1');
     $routes->post('/EditAlamat/(:num)', 'TentangLestariController::UpdateAlamat/$1');
     $routes->get('/HapusAlamat/(:num)', 'TentangLestariController::DeleteAlamat/$1');
+    $routes->get('EditDepanAlamat/(:num)', 'TentangLestariController::EditDepanAlamat/$1');
+    $routes->post('EditDepanAlamat/(:num)', 'TentangLestariController::UpdateDepanAlamat/$1');
     //Visi misi
     $routes->get('/adminVisiMisi', 'TentangLestariController::index_visi_misi');
     $routes->get('/EditVisiMisi/(:num)', 'TentangLestariController::EditVisiMisi/$1');
     $routes->post('/EditVisiMisi/(:num)', 'TentangLestariController::UpdateVisiMisi/$1');
+    $routes->get('EditDepanVisiMisi/(:num)', 'TentangLestariController::EditDepanVisiMisi/$1');
+    $routes->post('EditDepanVisiMisi/(:num)', 'TentangLestariController::UpdateDepanVisiMisi/$1');
     //Struktur Organisasi
     $routes->get('/adminStrukturOrganisasi', 'TentangLestariController::index_struktur_organisasi');
     $routes->get('/EditStrukturOrganisasi/(:num)', 'TentangLestariController::EditStrukturOrganisasi/$1');
     $routes->post('/EditStrukturOrganisasi/(:num)', 'TentangLestariController::UpdateStrukturOrganisasi/$1');
+    $routes->get('EditDepanStrukturOrganisasi/(:num)', 'TentangLestariController::EditDepanStrukturOrganisasi/$1');
+    $routes->post('EditDepanStrukturOrganisasi/(:num)', 'TentangLestariController::UpdateDepanStrukturOrganisasi/$1');
+    //Depan Berita
+    $routes->get('/AdminBerita', 'TentangLestariController::index_berita');
+    $routes->get('EditDepanBerita/(:num)', 'TentangLestariController::EditDepanBerita/$1');
+    $routes->post('EditDepanBerita/(:num)', 'TentangLestariController::UpdateDepanBerita/$1');
 
     //Admin Header
     //Publikasi

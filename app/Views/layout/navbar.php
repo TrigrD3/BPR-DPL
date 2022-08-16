@@ -17,7 +17,7 @@
         <a class="nav-link text-white mx-3" href="<?= base_url('LayananLainnya') ?>">Layanan Lainnya</a>
 
         <div class="dropdown">
-            <a class="nav-link text-white mx-3 " href="#" id="dropdownMenuLink" aria-expanded="false">Tentang Lestari</a>
+            <a class="nav-link text-white mx-3 " href="<?= base_url('TentangLestari') ?>" id="dropdownMenuLink" aria-expanded="false">Tentang Lestari</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuLink">
                 <li><a class="dropdown-item" href="<?= base_url('Sejarah') ?>">Sejarah BPR</a></li>
                 <li><a class="dropdown-item" href="<?= base_url('Profil') ?>">Profil Bank</a></li>

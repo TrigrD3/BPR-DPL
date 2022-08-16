@@ -32,7 +32,7 @@
         <section class="my-5">
             <h1>Produk Yang Ditawarkan</h1>
 
-            <div class="row row-cols-md-6 row-cols-sm-1 justify-content-center">
+            <div class="row row-cols-md-5 row-cols-sm-1 justify-content-center">
                 <?php
                 foreach ($LayananLainProduk as $data) :
                 ?>
