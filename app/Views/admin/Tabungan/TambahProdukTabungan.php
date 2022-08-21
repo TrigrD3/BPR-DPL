@@ -33,7 +33,7 @@
                             <input type="File" name="foto" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Depan(1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <input type="File" name="foto_depan" id="inputClientCompany" class="form-control" required>
                         </div>
                         <div class="row">

@@ -68,7 +68,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">foto Halaman Utama</h3>
+            <h3 class="card-title">Thumbnail</h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">

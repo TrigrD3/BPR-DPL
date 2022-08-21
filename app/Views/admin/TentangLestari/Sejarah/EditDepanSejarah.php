@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditDepanSejarah') . '/' . $tentang_depan_sejarah->id_depan_sejarah ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_depan_sejarah->foto ?>">
                             <img src="<?= base_url('uploads/TentangLestari/Sejarah/depan') . '/' . $tentang_depan_sejarah->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

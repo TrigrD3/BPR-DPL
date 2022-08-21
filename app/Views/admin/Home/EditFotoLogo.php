@@ -17,24 +17,24 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditFotoLogo') . '/' . $foto_logo->id_foto_logo ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Logo Kredit (1920X600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail Kredit(800x600)</label>
                             <br>
                             <input type="text" name="namafotokredit" hidden value="<?= $foto_logo->foto_kredit ?>" required>
-                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $foto_logo->foto_kredit ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Home/Logo/Kredit') . '/' . $foto_logo->foto_kredit ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto_kredit" id="foto_kredit" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Logo Deposito (1920X600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail Deposito(800x600)</label>
                             <br>
                             <input type="text" name="namafotodeposito" hidden value="<?= $foto_logo->foto_deposito ?>" required>
-                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $foto_logo->foto_deposito ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Home/Logo/Deposito') . '/' . $foto_logo->foto_deposito ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto_deposito" id="foto_deposito" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Logo Tabungan (1920X600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail Tabungan (800x600)</label>
                             <br>
                             <input type="text" name="namafototabungan" hidden value="<?= $foto_logo->foto_tabungan ?>" required>
-                            <img src="<?= base_url('uploads/Home/Logo') . '/' . $foto_logo->foto_tabungan ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                            <img src="<?= base_url('uploads/Home/Logo/Tabungan') . '/' . $foto_logo->foto_tabungan ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             <input type="File" name="foto_tabungan" id="foto_tabungan" class="form-control">
                         </div>
                         <div class="row">

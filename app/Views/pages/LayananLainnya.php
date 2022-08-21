@@ -36,7 +36,7 @@
                 <?php
                 foreach ($LayananLainProduk as $data) :
                 ?>
-                    <a href="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" target="_blank">
+                    <a>
                         <div class="my-3 mx-2 ">
                             <div class="card col-auto">
                                 <img class="card-img-top card-image img-fit" src="<?= base_url('uploads/LayananLain/ProdukLL') . '/' . $data->foto; ?>" alt="Card image cap">
@@ -47,7 +47,7 @@
             </div>
             <div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
 
-                <a href="<?= $IdentitasWebsite->whatsapp ?>">
+                <a target="_blank" href="<?= $IdentitasWebsite->whatsapp ?>">
                     <button type="button" class=" ">
                         <img src="images/LB.png" alt=""> Informasi Lebih Lanjut
                     </button>

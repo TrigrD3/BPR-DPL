@@ -267,37 +267,37 @@ class HomeController extends BaseController
         $dataBerkasKredit = $this->request->getFile('foto_kredit');
         $fileNameKredit = $dataBerkasKredit->getName();
         if (!empty($fileNameKredit)) {
-            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafotokredit'))) {
-                unlink('uploads/Home/Logo/' . $this->request->getVar('namafotokredit'));
+            if (is_file('uploads/Home/Logo/Kredit' . '/'  . $this->request->getVar('namafotokredit'))) {
+                unlink('uploads/Home/Logo/Kredit' . '/'  . $this->request->getVar('namafotokredit'));
                 $data['foto_kredit'] = $fileNameKredit;
             } else {
                 $data['foto_kredit'] = $fileNameKredit;
             }
-            $dataBerkasKredit->move('uploads/Home/Logo/', $fileNameKredit);
+            $dataBerkasKredit->move('uploads/Home/Logo/Kredit', $fileNameKredit);
         }
 
         $dataBerkasDeposito = $this->request->getFile('foto_deposito');
         $fileNameDeposito = $dataBerkasDeposito->getName();
         if (!empty($fileNameDeposito)) {
-            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafotodeposito'))) {
-                unlink('uploads/Home/Logo/' . $this->request->getVar('namafotodeposito'));
+            if (is_file('uploads/Home/Logo/Deposito' . '/'  . $this->request->getVar('namafotodeposito'))) {
+                unlink('uploads/Home/Logo/Deposito' . '/'  . $this->request->getVar('namafotodeposito'));
                 $data['foto_deposito'] = $fileNameDeposito;
             } else {
                 $data['foto_deposito'] = $fileNameDeposito;
             }
-            $dataBerkasDeposito->move('uploads/Home/Logo/', $fileNameDeposito);
+            $dataBerkasDeposito->move('uploads/Home/Logo/Deposito', $fileNameDeposito);
         }
 
         $dataBerkasTabungan = $this->request->getFile('foto_tabungan');
         $fileNameTabungan = $dataBerkasTabungan->getName();
         if (!empty($fileNameTabungan)) {
-            if (is_file('uploads/Home/Logo/' . $this->request->getVar('namafototabungan'))) {
-                unlink('uploads/Home/Logo/' . $this->request->getVar('namafototabungan'));
+            if (is_file('uploads/Home/Logo/Tabungan' . '/'  . $this->request->getVar('namafototabungan'))) {
+                unlink('uploads/Home/Logo/Tabungan' . '/' . $this->request->getVar('namafototabungan'));
                 $data['foto_tabungan'] = $fileNameTabungan;
             } else {
                 $data['foto_tabungan'] = $fileNameTabungan;
             }
-            $dataBerkasTabungan->move('uploads/Home/Logo/', $fileNameTabungan);
+            $dataBerkasTabungan->move('uploads/Home/Logo/Tabungan', $fileNameTabungan);
         }
 
         if (empty($data)) {

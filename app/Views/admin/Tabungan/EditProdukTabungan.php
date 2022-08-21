@@ -36,11 +36,11 @@
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Depan (1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <br>
                             <input type="text" name="namafoto_depan" hidden value="<?= $produk_tabungan->foto_depan ?>">
                             <img src="<?= base_url('uploads/Tabungan/Produk') . '/' . $produk_tabungan->foto_depan ?>" width="50%" height="50%" alt="produk-tabungan" class="img-thumbnail">
-                            <input type="File" name="foto_depan" id="foto_depan" class="form-control" >
+                            <input type="File" name="foto_depan" id="foto_depan" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-1">

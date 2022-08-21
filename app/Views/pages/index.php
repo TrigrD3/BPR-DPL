@@ -68,7 +68,7 @@
 
                         <a href="<?= base_url("/Kredit") ?>">
                             <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
+                                <img src="<?= base_url('uploads/Home/Logo/Kredit') . '/' . $data->foto_kredit ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
 
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
@@ -99,7 +99,7 @@
 
                         <a href="<?= base_url("/Deposito") ?>">
                             <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
+                                <img src="<?= base_url('uploads/Home/Logo/Deposito') . '/' . $data->foto_deposito ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
 
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">
@@ -130,7 +130,7 @@
 
                         <a href="<?= base_url("/Tabungan") ?>">
                             <div class="card col-auto card-layanan bg-dark text-light border-0">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
+                                <img src="<?= base_url('uploads/Home/Logo/Tabungan') . '/' . $data->foto_tabungan ?>" width="100%" height="225" class="card-img" alt="...">
                                 <div class="card-img-overlay card-heading">
 
                                     <h5 class="card-title position-absolute top-0 start-50 translate-middle-x background-transparan hitam">

@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditLoker') . '/' . $header_loker->id_loker ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto</label>
+                            <label for="inputClientCompany">Pilih Foto (1600x1800)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $header_loker->foto ?>" required>
                             <img src="<?= base_url('uploads/Header/Loker') . '/' . $header_loker->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

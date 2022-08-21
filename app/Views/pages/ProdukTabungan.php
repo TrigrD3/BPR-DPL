@@ -14,17 +14,17 @@
     <div class="my-4">
         <?= $produk_tabungan->deskripsi ?>
     </div>
-</div>
-<div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
-    <?php
-    foreach ($TabunganForm as $data) :
-    ?>
-        <a href="<?= $data->g_form; ?>" target="_blank">
-            <button type="button" class="pengajuan">
-                <img src="images/b1.png" alt=""><b>PENGAJUAN TABUNGAN</b>
-            </button>
-        </a>
-    <?php endforeach; ?>
-</div>
 
+    <div class="row row-cols-md-4 row-cols-sm-1 justify-content-center">
+        <?php
+        foreach ($TabunganForm as $data) :
+        ?>
+            <a href="<?= $data->g_form; ?>" target="_blank">
+                <button type="button" class="pengajuan">
+                    <img src="images/b1.png" alt=""><b>PENGAJUAN TABUNGAN</b>
+                </button>
+            </a>
+        <?php endforeach; ?>
+    </div>
+</div>
 <?= $this->endSection(); ?>

@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditDepanAlamat') . '/' . $tentang_depan_alamat_kantor->id_depan_alamat_kantor ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_depan_alamat_kantor->foto ?>">
                             <img src="<?= base_url('uploads/TentangLestari/Alamat/depan') . '/' . $tentang_depan_alamat_kantor->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

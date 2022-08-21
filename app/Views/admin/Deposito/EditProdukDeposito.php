@@ -35,7 +35,7 @@
                             <input type="File" name="foto" id="foto" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto Depan (1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <br>
                             <input type="text" name="namafoto_depan" hidden value="<?= $produk_deposito->foto_depan ?>" required>
                             <img src="<?= base_url('uploads/Deposito/ProdukDeposito') . '/' . $produk_deposito->foto_depan ?>" width="50%" height="50%" alt="produk-deposito" class="img-thumbnail">

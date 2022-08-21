@@ -33,7 +33,7 @@
                             Foto
                         </th>
                         <th>
-                            Foto Depan
+                            Thumbnail
                         </th>
                         <th style="width: 20%">
                         </th>

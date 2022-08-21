@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <form action="<?= base_url('EditDepanStrukturOrganisasi') . '/' . $tentang_depan_struktur_organisasi->id_depan_struktur_organisasi ?>" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="inputClientCompany">Pilih Foto (1920x600)</label>
+                            <label for="inputClientCompany">Pilih Thumbnail (800x600)</label>
                             <br>
                             <input type="text" name="namafoto" hidden value="<?= $tentang_depan_struktur_organisasi->foto ?>">
                             <img src="<?= base_url('uploads/TentangLestari/StrukturOrganisasi/depan') . '/' . $tentang_depan_struktur_organisasi->foto ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">

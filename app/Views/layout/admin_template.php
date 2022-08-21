@@ -152,7 +152,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="AdminSejarah" class="nav-link">
+                                    <a href="<?= base_url('AdminProfil') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Sejarah</p>
                                         <i class="far nav-icon"></i>
@@ -179,7 +179,7 @@ $data['IdentitasWebsite'] = $this->IdentitasWebsiteModel->get_all();
                                 <li class="nav-item">
                                     <a href="<?= base_url('AdminBerita') ?>" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Foto Depan Berita</p>
+                                        <p>Thumbnail Berita</p>
                                     </a>
                                 </li>
                             </ul>

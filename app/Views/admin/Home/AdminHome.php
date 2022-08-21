@@ -206,7 +206,7 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Foto Logo</h3>
+            <h3 class="card-title"><b>Thumbnail</b> Kredit, Tabungan dan Deposito </h3>
 
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -239,10 +239,10 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                Foto Kredit
+                                Thumbnail Kredit
                             </td>
                             <td class="deskripsi">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_kredit ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Home/Logo/Kredit') . '/' . $data->foto_kredit ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
 
                             <td class="project-actions text-right">
@@ -259,10 +259,10 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                Foto Deposito
+                                Thumbnail Deposito
                             </td>
                             <td class="deskripsi">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_deposito ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Home/Logo/Deposito') . '/' . $data->foto_deposito ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
 
                             <td class="project-actions text-right">
@@ -279,10 +279,10 @@
                                 <?= $no; ?>
                             </td>
                             <td>
-                                Foto Tabungan
+                                Thumbnail Tabungan
                             </td>
                             <td class="deskripsi">
-                                <img src="<?= base_url('uploads/Home/Logo') . '/' . $data->foto_tabungan ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
+                                <img src="<?= base_url('uploads/Home/Logo/Tabungan') . '/' . $data->foto_tabungan ?>" width="50%" height="50%" alt="foto-bank" class="img-thumbnail">
                             </td>
 
                             <td class="project-actions text-right">
